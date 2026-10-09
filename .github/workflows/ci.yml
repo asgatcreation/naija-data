@@ -13,6 +13,21 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  detect:
+    name: Detect packages
+    runs-on: ubuntu-latest
+    outputs:
+      python: ${{ steps.check.outputs.python }}
+      js: ${{ steps.check.outputs.js }}
+      go: ${{ steps.check.outputs.go }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        run: |
+          echo "python=$([ -f packages/python/pyproject.toml ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          echo "js=$([ -f packages/js/package.json ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          echo "go=$([ -f go/go.mod ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
   data:
     name: Validate data
     runs-on: ubuntu-latest
@@ -31,8 +46,8 @@ jobs:
 
   python:
     name: Python package
-    needs: data
-    if: ${{ hashFiles('packages/python/pyproject.toml') != '' }}
+    needs: [data, detect]
+    if: needs.detect.outputs.python == 'true'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -47,8 +62,8 @@ jobs:
 
   js:
     name: JavaScript package
-    needs: data
-    if: ${{ hashFiles('packages/js/package.json') != '' }}
+    needs: [data, detect]
+    if: needs.detect.outputs.js == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -62,8 +77,8 @@ jobs:
 
   go:
     name: Go module
-    needs: data
-    if: ${{ hashFiles('go/go.mod') != '' }}
+    needs: [data, detect]
+    if: needs.detect.outputs.go == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
