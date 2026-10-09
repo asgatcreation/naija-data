@@ -1,0 +1,51 @@
+name: Data correction
+description: Something in the dataset is wrong (an LGA, ward, bank code, prefix...)
+title: "[Data] "
+labels: ["data", "correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the data accurate. **A source is required.** We can only fix data
+        that is backed by an official or otherwise verifiable publication.
+  - type: dropdown
+    id: dataset
+    attributes:
+      label: Dataset
+      options: [States, LGAs, Wards / registration areas, Banks, Phone prefixes, Postcode format, Other]
+    validations:
+      required: true
+  - type: input
+    id: record
+    attributes:
+      label: Which record?
+      description: Name and code if you know it
+      placeholder: "Ikeja LGA (NG025010)"
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is currently wrong
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should be
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source (required)
+      description: A link to an official publication (INEC, CBN, NCC, NIPOST, a state government, the Official Gazette...), plus page or section number for PDFs.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: My source is public and I've linked it above.
+          required: true

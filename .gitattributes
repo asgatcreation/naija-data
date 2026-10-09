@@ -1,0 +1,7 @@
+# Same bytes on every OS, so data checksums and parity tests match on Windows, macOS and Linux.
+* text=auto eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.pdf binary
+*.png binary
+*.zip binary

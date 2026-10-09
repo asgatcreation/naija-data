@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/asgatcreation/naija-data/security/advisories/new
+    about: Please report security issues privately, not as a public issue.
+  - name: Questions and ideas
+    url: https://github.com/asgatcreation/naija-data/discussions
+    about: Ask a question or suggest an idea in GitHub Discussions.
+  - name: Email the maintainer
+    url: mailto:asgatcreation@gmail.com
+    about: Akanji Oluwaseun Gabriel (@asgatcreation)

@@ -1,0 +1,24 @@
+name: New data
+description: Suggest missing records (a new bank, a new prefix) or a new dataset
+title: "[New data] "
+labels: ["data", "enhancement"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What should be added
+      description: For example, a newly licensed microfinance bank with its NIP code, or a new mobile prefix.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source (required)
+      description: An official link that confirms it. For bank codes, two independent sources if possible.
+    validations:
+      required: true
+  - type: input
+    id: licence
+    attributes:
+      label: Licence of the source, if known
+      placeholder: "e.g. CC BY 4.0, public government publication"

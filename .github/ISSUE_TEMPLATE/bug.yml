@@ -1,0 +1,32 @@
+name: Bug
+description: A package, the CLI, the API or the docs site doesn't work as expected
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where
+      options: [Python package, JavaScript/TypeScript package, Go module, CLI, REST API, Docs site]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: "naija-data 1.0.0, Node 22 / Python 3.12 / Go 1.23"
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal code or request to reproduce
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual result
+    validations:
+      required: true
