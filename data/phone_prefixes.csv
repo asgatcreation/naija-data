@@ -1,0 +1,52 @@
+prefix,range_start,range_end,operator,status,ncc_label,sources
+0700,0000000,9999999,,shared_vas,Shared by Value Added Service – Special Number Services (VAS – SNS) Licensees,ncc-mobile-allocation
+0701,0000000,9999999,Airtel,allocated,Airtel,ncc-mobile-allocation
+0702,0000000,0999999,Smile,allocated,Smile,ncc-mobile-allocation
+0702,1000000,1999999,,returned,Returned,ncc-mobile-allocation
+0702,2000000,2999999,ICN/Openskys,allocated,"ICN, Openskys",ncc-mobile-allocation
+0702,3000000,3999999,,withdrawn,Withdrawn,ncc-mobile-allocation
+0702,5000000,5999999,Visafone,allocated,Visafone,ncc-mobile-allocation
+0702,7000000,7999999,,withdrawn,Withdrawn,ncc-mobile-allocation
+0703,0000000,9999999,MTN,allocated,MTN,ncc-mobile-allocation
+0704,0000000,9999999,MTN,allocated,MTN,ncc-mobile-allocation
+0705,0000000,9999999,Glo,allocated,Glo,ncc-mobile-allocation
+0706,0000000,9999999,MTN,allocated,MTN,ncc-mobile-allocation
+0707,0000000,9999999,MTN,allocated,MTN,ncc-mobile-allocation
+0708,0000000,9999999,Airtel,allocated,Airtel,ncc-mobile-allocation
+0709,0000000,9999999,,withdrawn,Withdrawn,ncc-mobile-allocation
+0800,0000000,9999999,,shared_vas,Shared by Value Added Service – Special Number Services (VAS – SNS) Licensees,ncc-mobile-allocation
+0801,0000000,0999999,MAFAB,allocated,MAFAB,ncc-mobile-allocation
+0802,0000000,9999999,Airtel,allocated,Airtel,ncc-mobile-allocation
+0803,0000000,9999999,MTN,allocated,MTN,ncc-mobile-allocation
+0804,0000000,9999999,M-Tel,allocated,M-Tel,ncc-mobile-allocation
+0805,0000000,9999999,Glo,allocated,Glo,ncc-mobile-allocation
+0806,0000000,9999999,MTN,allocated,MTN,ncc-mobile-allocation
+0807,0000000,9999999,Glo,allocated,Glo,ncc-mobile-allocation
+0808,0000000,9999999,Airtel,allocated,Airtel,ncc-mobile-allocation
+0809,0000000,9999999,9mobile,allocated,EMTS (9Mobile),ncc-mobile-allocation
+0810,0000000,9999999,MTN,allocated,MTN,ncc-mobile-allocation
+0811,0000000,9999999,Glo,allocated,Glo,ncc-mobile-allocation
+0812,0000000,9999999,Airtel,allocated,Airtel,ncc-mobile-allocation
+0813,0000000,9999999,MTN,allocated,MTN,ncc-mobile-allocation
+0814,0000000,9999999,MTN,allocated,MTN,ncc-mobile-allocation
+0815,0000000,9999999,Glo,allocated,Glo,ncc-mobile-allocation
+0816,0000000,9999999,MTN,allocated,MTN,ncc-mobile-allocation
+0817,0000000,9999999,9mobile,allocated,EMTS (9Mobile),ncc-mobile-allocation
+0818,0000000,9999999,9mobile,allocated,EMTS (9Mobile),ncc-mobile-allocation
+0819,0000000,0999999,,withdrawn,Withdrawn,ncc-mobile-allocation
+0819,2000000,2999999,,available,Available,ncc-mobile-allocation
+0900,0000000,9999999,,reserved_vanity,Reserved for Vanity Number Telephone Services,ncc-mobile-allocation
+0901,0000000,9999999,Airtel,allocated,Airtel,ncc-mobile-allocation
+0902,0000000,9999999,Airtel,allocated,Airtel,ncc-mobile-allocation
+0903,0000000,9999999,MTN,allocated,MTN,ncc-mobile-allocation
+0904,0000000,9999999,Airtel,allocated,Airtel,ncc-mobile-allocation
+0905,0000000,9999999,Glo,allocated,Glo,ncc-mobile-allocation
+0906,0000000,9999999,MTN,allocated,MTN,ncc-mobile-allocation
+0907,0000000,9999999,Airtel,allocated,Airtel,ncc-mobile-allocation
+0908,0000000,9999999,9mobile,allocated,EMTS (9Mobile),ncc-mobile-allocation
+0909,0000000,9999999,9mobile,allocated,EMTS (9Mobile),ncc-mobile-allocation
+0911,0000000,9999999,Airtel,allocated,Airtel,ncc-mobile-allocation
+0912,0000000,9999999,Airtel,allocated,Airtel,ncc-mobile-allocation
+0913,0000000,9999999,MTN,allocated,MTN,ncc-mobile-allocation
+0915,0000000,9999999,Glo,allocated,Glo,ncc-mobile-allocation
+0916,0000000,9999999,MTN,allocated,MTN,ncc-mobile-allocation

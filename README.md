@@ -23,16 +23,19 @@ and give no source. naija-data aims to be the trusted alternative:
 - **One dataset, three languages.** The Python, JS and Go packages are generated from the same data,
   and shared tests check that they return identical results.
 
-## Planned coverage
+## Coverage
 
-| Dataset | Source | Status |
-|---|---|---|
-| States + FCT | Constitution, OCHA COD-AB, geoBoundaries | planned |
-| 774 LGAs | Constitution, INEC, OCHA COD-AB | planned |
-| Wards / registration areas | INEC | planned |
-| Banks and financial institutions + NUBAN validation | CBN, NIBSS | planned |
-| Mobile number prefixes | NCC | planned |
-| Postcode format check | NIPOST (records are not redistributable) | planned |
+| Dataset | Rows | Main sources | Status |
+|---|---|---|---|
+| States + FCT | 37 | INEC, Constitution, OCHA COD-AB, Unicode CLDR | ✅ data ready |
+| LGAs (incl. 6 FCT area councils) | 774 | INEC, Constitution, OCHA COD-AB | ✅ data ready |
+| Wards / registration areas | 8,809 | INEC (live list + 2015 directory) | ✅ data ready |
+| Banks and licensed financial institutions | 899 | CBN register; codes from Paystack + Monnify | ✅ data ready, codes partial |
+| Mobile number prefixes | 45 | NCC | ✅ data ready |
+| Postcode format check | – | NIPOST (records are not redistributable) | planned |
+
+The cross-checks between sources, the upstream errors they caught, and the known gaps are documented in
+[docs/data/coverage-and-gaps.md](docs/data/coverage-and-gaps.md).
 
 ## Contributing
 

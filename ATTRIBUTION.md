@@ -22,13 +22,19 @@ The machine-readable list, including the date each source was retrieved, is
 
 | Source | Publisher | Licence / terms | Used for |
 |---|---|---|---|
-| Constitution of the Federal Republic of Nigeria 1999, First Schedule | Federal Government of Nigeria | Public law | Canonical state and LGA names |
-| Nigeria Subnational Administrative Boundaries (COD-AB) | OCHA, from OSGOF, eHealth Africa, UN Cartographic Section | CC BY-IGO 3.0 | P-codes, cross-checks |
-| geoBoundaries gbOpen NGA ADM1/ADM2 | William & Mary geoLab, from GRID3 (2022) | CC BY 4.0 | Boundaries, centroid coordinates |
-| Polling Unit Directories and polling unit statistics | Independent National Electoral Commission (INEC) | Public government publications (factual data only) | Wards / registration areas |
-| INEC LGA and Wards | OCHA Nigeria / INEC | CC0 | Ward cross-check |
+| CVR polling unit locator (live lists) | Independent National Electoral Commission (INEC) | Public government information (factual data only) | State/LGA/ward codes and names |
+| Directory of Polling Units, Jan 2015 (Internet Archive copies) | INEC | Public government publication (factual data only) | Ward cross-check, aliases |
+| Constitution of the Federal Republic of Nigeria 1999, First Schedule | Federal Republic of Nigeria | Public law | Capitals, FCT council HQs, legal totals, aliases |
+| Nigeria Subnational Administrative Boundaries (COD-AB) | OCHA, from OSGOF, eHealth Africa, UN Cartographic Section | CC BY-IGO 3.0 | P-codes, centroids, senatorial districts, LGA HQs |
+| geoBoundaries gbOpen NGA ADM1/ADM2 | William & Mary geoLab, from GRID3 (2022) | CC BY 4.0 | Optional boundaries package |
+| CLDR subdivisions | Unicode Consortium | Unicode License v3 | ISO 3166-2 state codes |
+| Country Guidance: Nigeria (2021) | European Union Agency for Asylum | Reuse authorised with acknowledgement (factual data only) | Geopolitical zones |
+| State creation dates article | BusinessDay Nigeria | Factual data only | State creation dates (unverified) |
 | Lists of licensed financial institutions | Central Bank of Nigeria (CBN) | Public regulatory information (factual data only) | Bank names, types, status |
-| Revised Standards on NUBAN (2020) | Central Bank of Nigeria | Public standard | NUBAN algorithm |
+| Revised Standards on NUBAN | Central Bank of Nigeria | Public standard | NUBAN algorithm |
+| Public bank lists | Paystack, Monnify | Public API responses (factual data only) | Bank codes, USSD codes |
+| Heritage Bank revocation press release | CBN | Public | Bank status history |
+| Access–Diamond merger reports | Nairametrics, TheCable | Factual data only | Bank status history |
 | Mobile Number Allocation Table | Nigerian Communications Commission (NCC) | Public regulatory information (factual data only) | Phone prefixes |
 | National Digital Alphanumeric Postcode System | NIPOST | Not redistributable; only the published format is described | Postcode format check |
 

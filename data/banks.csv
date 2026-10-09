@@ -1,0 +1,900 @@
+id,name,short_name,type,cbn_code,nip_code,ussd,status,status_date,merged_into,aliases,unverified_fields,sources
+access-bank,Access Bank Plc,Access Bank,commercial,044,000014,*901#,active,,,Access,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+alpha-morgan-bank,Alpha Morgan Bank Limited,,commercial,108,000041,,active,,,,nip_code,cbn-financial-institutions|monnify-banks|paystack-banks
+citibank,Citibank Nigeria Limited,Citibank,commercial,023,,,active,,,Citi,cbn_code,cbn-financial-institutions|paystack-banks
+diamond-bank,Diamond Bank Plc,Diamond Bank,commercial,063,000005,*710#,merged,2019-04-01,access-bank,Diamond,nip_code|ussd,monnify-banks|nairametrics-access-diamond-2019|paystack-banks|thecable-access-diamond-2019
+ecobank,Ecobank Nigeria Plc,Ecobank,commercial,050,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+fidelity-bank,Fidelity Bank Plc,Fidelity Bank,commercial,070,000007,*770#,active,,,Fidelity,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+first-bank,First Bank Nigeria Limited,First Bank,commercial,011,000016,*894#,active,,,FBN|First Bank of Nigeria,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+fcmb,First City Monument Bank Plc,FCMB,commercial,214,000003,*329#,active,,,First City Monument Bank,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+globus-bank,Globus Bank Limited,,commercial,103,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+gtbank,Guaranty Trust Bank Plc,GTBank,commercial,058,000013,*737#,active,,,GTB|GTCO|Guaranty Trust Bank,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+heritage-bank,Heritage Bank Plc,Heritage Bank,commercial,030,000020,*322#,licence_revoked,2024-06-03,,Heritage,cbn_code|nip_code|ussd,cbn-heritage-revocation-2024|monnify-banks
+keystone-bank,Keystone Bank Limited,Keystone Bank,commercial,082,000002,*7111#,active,,,Keystone,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+nova-bank,Nova Commercial Bank Limited,Nova Bank,commercial,561,,,active,,,Nova,cbn_code,cbn-financial-institutions|paystack-banks
+optimus-bank,Optimus Bank,,commercial,107,000036,,active,,,,nip_code,cbn-financial-institutions|monnify-banks|paystack-banks
+parallex-bank,Parallex Bank Ltd,,commercial,104,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+polaris-bank,Polaris Bank Plc,Polaris Bank,commercial,076,000008,*833#,active,,,Polaris,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+premium-trust-bank,Premium Trust Bank,,commercial,105,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+providus-bank,Providus Bank,,commercial,101,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+signature-bank,Signature Bank Limited,,commercial,106,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+stanbic-ibtc,Stanbic IBTC Bank Plc,Stanbic IBTC,commercial,221,000012,*909#,active,,,Stanbic,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+standard-chartered,Standard Chartered Bank Nigeria Ltd.,Standard Chartered,commercial,068,,,active,,,StanChart,cbn_code,cbn-financial-institutions|paystack-banks
+sterling-bank,Sterling Bank Plc,Sterling Bank,commercial,232,000001,*822#,active,,,Sterling,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+suntrust-bank,SunTrust Bank Nigeria Limited,,commercial,100,000022,,active,,,,nip_code,cbn-financial-institutions|monnify-banks|paystack-banks
+tatum-bank,Tatum Bank Limited,,commercial,109,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+titan-trust-bank,Titan Trust Bank Ltd,Titan Trust Bank,commercial,102,,,active,,,Titan Bank|Titan,cbn_code,cbn-financial-institutions|paystack-banks
+union-bank,Union Bank of Nigeria Plc,Union Bank,commercial,032,000018,*826#,active,,,,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+uba,United Bank For Africa Plc,UBA,commercial,033,000004,*919#,active,,,United Bank for Africa,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+unity-bank,Unity Bank Plc,Unity Bank,commercial,215,000011,*7799#,active,,,,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+wema-bank,Wema Bank Plc,Wema Bank,commercial,035,000017,*945#,active,,,Wema|ALAT,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+zenith-bank,Zenith Bank Plc,Zenith Bank,commercial,057,000015,*966#,active,,,Zenith,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+bank-of-agriculture-boa,Bank of Agriculture (BOA),,development_finance,90367,090367,,active,,,,cbn_code|nip_code,cbn-financial-institutions|monnify-banks|paystack-banks
+bank-of-industry,BANK OF INDUSTRY,,development_finance,,,,active,,,,,cbn-financial-institutions
+development-bank-of,Development Bank of Nigeria PLC,,development_finance,,,,active,,,,,cbn-financial-institutions
+federal-mortgage-bank-of,FEDERAL MORTGAGE BANK OF NIGERIA,,development_finance,,,,active,,,,,cbn-financial-institutions
+national-credit-guarantee-company,NATIONAL CREDIT GUARANTEE COMPANY LIMITED,,development_finance,,,,active,,,,,cbn-financial-institutions
+export-import-bank,NIGERIA EXPORT IMPORT BANK,,development_finance,,,,active,,,,,cbn-financial-institutions
+nigerian-consumer-credit-corporation,NIGERIAN CONSUMER CREDIT CORPORATION,,development_finance,,,,active,,,,,cbn-financial-institutions
+the-infrastructure-bank,The Infrastructure Bank,,development_finance,,,,active,,,,,cbn-financial-institutions
+coronation-merchant-bank,CORONATION MERCHANT BANK,,merchant,559,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+fsdh-merchant-bank,FSDH MERCHANT BANK,,merchant,501,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+greenwich-merchant-bank,GREENWICH MERCHANT BANK,,merchant,562,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+quest-merchant-bank,QUEST MERCHANT BANK,,merchant,,,,active,,,,,cbn-financial-institutions
+rand-merchant-bank,RAND MERCHANT BANK,,merchant,502,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+1trust-microfinance-bank,1Trust Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+5tt-microfinance-bank,5TT Microfinance Bank Limited,,microfinance,51455,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+aacb-microfinance-bank,AACB Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+ab-microfinance-bank,AB Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+abia-state-university-microfinance-bank,Abia State University Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+abigi-microfinance-bank,Abigi Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+above-only-microfinance-bank,Above Only Microfinance Bank,,microfinance,51204,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+abubakar-tafawa-balewa-university-atbu-microfinance-bank,Abubakar Tafawa Balewa University (ATBU) Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+abucoop-microfinance-bank,Abucoop Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+abulesoro-microfinance-bank,Abulesoro Microfinance Bank,,microfinance,51312,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+accion-microfinance-bank,Accion Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+ace-microfinance-bank,ACE Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+achina-microfinance-bank,Achina Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+ada-microfinance-bank,ADA Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+adazi-enu-microfinance-bank,Adazi-Enu Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+adazi-nnukwu-microfinance-bank,Adazi-Nnukwu Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+addosser-microfinance-bank,Addosser Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+adeyemi-college-staff-microfinance-bank,Adeyemi College Staff Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+adike-microfinance-bank,Adike Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+advancly-microfinance-bank,Advancly Microfinance Bank Limited,,microfinance,,090759,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+afekhafe-microfinance-bank,Afekhafe Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+afemai-microfinance-bank,Afemai Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+afole-microfinance-bank,Afole Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+agosasa-microfinance-bank,Agosasa Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+ahmadu-bello-university-microfinance-bank,Ahmadu Bello University Microfinance Bank Limited,,microfinance,50036,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+aibio-microfinance-bank,Aibio Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+ajewole-microfinance-bank,Ajewole Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+ajose-microfinance-bank,Ajose Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+ajuta-microfinance-bank,Ajuta Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+akalabo-microfinance-bank,Akalabo Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+akata-microfinance-bank,Akata Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+akokwa-microfinance-bank,Akokwa Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+akpo-microfinance-bank,Akpo Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+aku-diewa-microfinance-bank,Aku Diewa Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+akuchukwu-microfinance-bank,Akuchukwu Microfinance Bank Limited,,microfinance,,090561,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+alhikma-microfinance-bank,Al'Hikma Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+al-barakah-microfinance-bank,Al-Barakah Microfinance Bank Limited,,microfinance,50055,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+al-hayat-microfinance-bank,Al-Hayat Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+albasu-microfinance-bank,Albasu Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+alekun-microfinance-bank,Alekun Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+alert-microfinance-bank,Alert Microfinance Bank,,microfinance,51074,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+algreb-microfinance-bank,Algreb Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+aliero-microfinance-bank,Aliero Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+all-workers-microfinance-bank,All Workers Microfinance Bank Limited,,microfinance,50059,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+alor-microfinance-bank,Alor Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+alpha-kapital-microfinance-bank,Alpha Kapital Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+alvana-microfinance-bank,Alvana Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+amac-microfinance-bank,AMAC Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+amazu-microfinance-bank,Amazu Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+amegy-microfinance-bank,Amegy Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+amju-unique-microfinance-bank,AMJU-Unique Microfinance Bank Limited,,microfinance,50926,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+amml-microfinance-bank-abuja-markets-management,AMML Microfinance Bank Limited (Abuja Markets Management Ltd),,microfinance,,,,active,,,,,cbn-financial-institutions
+ampersand-microfinance-bank,Ampersand Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+ample-microfinance-bank,Ample Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+amucha-microfinance-bank,Amucha Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+anchorage-microfinance-bank,Anchorage Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+aniocha-microfinance-bank,Aniocha Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+annointed-microfinance-bank,Annointed Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+aogo-microfinance-bank,Aogo Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+apa-microfinance-bank,Apa Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+apex-trust-microfinance-bank,Apex Trust Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+aramoko-microfinance-bank,Aramoko Microfinance Bank Limited,,microfinance,50083,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+aris-microfinance-bank,Aris Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+asha-microfinance-bank,Asha Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+aspire-microfinance-bank,Aspire Microfinance Bank LImited,,microfinance,,,,active,,,,,cbn-financial-institutions
+asset-matrix-microfinance-bank,Asset Matrix Microfinance Bank Limited,,microfinance,90287,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+assets-microfinance-bank,Assets Microfinance Bank Limited,,microfinance,50092,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+astra-polaris-microfinance-bank,Astra Polaris Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+auchi-microfinance-bank,Auchi Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+auchi-polytechnic-microfinance-bank,Auchi Polytechnic Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+ave-maria-mfb,AVE MARIA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+avest-microfinance-bank,Avest Microfinance bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+avunegbe-microfinance-bank,Avunegbe Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+avvic-microfinance-bank,AVVIC MICROFINANCE BANK LIMITED,,microfinance,,,,active,,,,,cbn-financial-institutions
+awe-microfinance-bank,Awe Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+awesome-mfb,AWESOME MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+awka-etiti-microfinance-bank,Awka-Etiti Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+awkuzu-microfinance-bank,Awkuzu Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+azsa-microfinance-bank,AZSA Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+b-c-kash-microfinance-bank,B C Kash Microfinance Bank,,microfinance,51212,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+babba-microfinance-bank,Babba Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+babcock-microfinance-bank,Babcock Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+babura-microfinance-bank,Babura Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+baige-microfinance-bank,BAIGE MICROFINANCE BANK LIMITED,,microfinance,,,,active,,,,,cbn-financial-institutions
+baines-credit-microfinance-bank,Baines Credit Microfinance bank,,microfinance,51229,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+balera-microfinance-bank,Balera Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+balogun-fulani-microfinance-bank,Balogun Fulani Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+balogun-gambari-microfinance-bank,Balogun Gambari Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+bam-microfinance-bank,Bam Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+banex-microfinance-bank,Banex Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+bankeasy-microfinance-bank,Bankeasy Microfinance bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+baobab-microfinance-bank,Baobab Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+barnawa-microfinance-bank,Barnawa Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+basawa-microfinance-bank,Basawa Microfinance bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+batagwara-mfb,BATAGWARA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+bauchi-cfa-mirofinance-bank,Bauchi CFA Mirofinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+bauchi-investment-corporation-mfb-bic,Bauchi Investment Corporation MFB Limited (BIC),,microfinance,,,,active,,,,,cbn-financial-institutions
+baure-mfb,BAURE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+bawyi-microfinance-bank,Bawyi Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+bayajidda-microfinance-bank,Bayajidda Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+bayero-university-microfinance-bank,Bayero University Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+bayetin-microfinance-bank,Bayetin Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+benue-microfinance-bank,Benue Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+benysta-microfinance-bank,Benysta Microfinance Bank,,microfinance,51267,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+berachah-microfinance-bank,Berachah Microfinance Bank Limited,,microfinance,50122,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+best-star-microfinance-bank,Best Star Microfinance Bank Limited,,microfinance,50123,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+bethel-microfinance-bank,Bethel Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+better-life-microfinace-bank,Better Life Microfinace Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+bichi-microfinance-bank,Bichi Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+bida-polytechnic-microfinance-bank,Bida Polytechnic Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+bkd-new-microfinance-bank,BKD NEW Microfinance bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+bloc-microfinance-bank,Bloc Microfinance bank Limited,,microfinance,51411,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+blooms-microfinance-bank,Blooms Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+blucon-mfb,BLUCON MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+blue-ridge-mfb,BLUE RIDGE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+blueprint-investments-mfb,BLUEPRINT INVESTMENTS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+boctrust-mfb,BOCTRUST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+boi-mfb,BOI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+boji-boji-mfb,BOJI BOJI MFB LTD.,,microfinance,,,,active,,,,,cbn-financial-institutions
+bokkos-mfb,BOKKOS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+bold-microfinance-bank,Bold Microfinance bank Limited,,microfinance,50725,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+bonghe-mfb,BONGHE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+boost-microfinance-bank,Boost Microfinance Bank Limited,,microfinance,51449,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+borgu-mfb,BORGU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+borno-renaissance-mfb,BORNO RENAISSANCE MFB LTD.,,microfinance,,,,active,,,,,cbn-financial-institutions
+boromu-mfb,BOROMU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+borstal-mfb,BORSTAL MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+bosak-mfb,BOSAK MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+bowen-mfb,BOWEN MFB,,microfinance,50931,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+bowman-mfb,BOWMAN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+brethren-mfb,BRETHREN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+brightway-mfb,BRIGHTWAY MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+broadview-mfb,BROADVIEW MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+brooks-mfb,BROOKS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+bubayero-mfb,BUBAYERO MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+bundi-mfb,BUNDI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+bungudu-mfb,BUNGUDU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+bunkasa-mfb,BUNKASA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+bunkure-mfb,BUNKURE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+bway-microfinance-bank,BWAY Microfinance bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+bway-microfinance-bank-microfinance,BWAY Microfinance bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+canaan-mfb,CANAAN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+capitalmetriq-swift-mfb,CAPITALMETRIQ SWIFT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+capstone-mfb,CAPSTONE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+carbon-mfb,CARBON MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+caretaker-mfb,CARETAKER MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+casa-microfinance-bank,Casa Microfinance bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+cash-rite-mfb,CASH RITE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+cashconnect-mfb,CASHCONNECT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+cashwise-microfinance-bank,CASHWISE MICROFINANCE BANK LIMITED,,microfinance,,,,active,,,,,cbn-financial-institutions
+castle-mfb,CASTLE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+catland-mfb,CATLAND MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+cedar-mfb,CEDAR MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+cedrus-microfinance-bank,Cedrus Microfinance Bank Limited,,microfinance,51437,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+challenge-mfb,CHALLENGE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+chanelle-mfb,CHANELLE MFB,,microfinance,50171,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+changan-rts-mfb,CHANGAN RTS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+charis-microfinance-bank,Charis Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+chase-mfb,CHASE MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+chevron-employee-co-operative-mfb-cemcs,CHEVRON EMPLOYEE CO-OPERATIVE MFB (CEMCS),,microfinance,,,,active,,,,,cbn-financial-institutions
+chibueze-mfb,CHIBUEZE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+chikum-mfb,CHIKUM MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+chrisore-mfb,CHRISORE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+chronicles-mfb,CHRONICLES MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+chukwunenye-mfb,CHUKWUNENYE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+cintrust-mfb,CINTRUST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+cit-mfb,CIT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+citizen-trust-mfb,CITIZEN TRUST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+city-mission-methodist-mfb,CITY MISSION METHODIST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+civic-mfb,CIVIC MFB,,microfinance,50186,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+cloverleaf-mfb,CLOVERLEAF MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+coal-camp-mfb,COAL CAMP MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+coastline-mfb,COASTLINE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+coeminna-mfb,COEMINNA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+confidence-mfb,CONFIDENCE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+consistent-trust-mfb,CONSISTENT TRUST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+consumer-mfb,CONSUMER MFB,,microfinance,50910,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+cool-microfinance-bank,Cool Microfinance Bank Limited,,microfinance,51458,090842,,active,,,,nip_code,cbn-financial-institutions|monnify-banks|paystack-banks
+corestep-mfb,CORESTEP MFB,,microfinance,50204,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+covenant-mfb,COVENANT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+crescent-mfb,CRESCENT MFB,,microfinance,51297,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+crest-mfb,CREST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+crossriver-mfb,CROSSRIVER MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+crutech-mfb,CRUTECH MFB,,microfinance,50216,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+crystabel-mfb,CRYSTABEL MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+csd-mfb,CSD MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+custodian-mfb,CUSTODIAN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+dabtikir-microfinance-bank,Dabtikir Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+daily-trust-mfb,DAILY-TRUST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+dal-mfb,DAL MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+dambatta-makoda-mfb,DAMBATTA- MAKODA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+dash-microfinance-bank,Dash Microfinance Bank Limited,,microfinance,51368,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+davenport-microfinance-bank,Davenport Microfinance Bank Limited,,microfinance,51334,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+davodani-mfb,DAVODANI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+dawakin-kudu-mfb,DAWAKIN KUDU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+daylight-mfb,DAYLIGHT MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+dec-enugu-mfb,DEC-ENUGU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+destiny-mfb,DESTINY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+diobu-mfb,DIOBU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+doguwa-mfb,DOGUWA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+dolphin-mfb,DOLPHIN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+dorben-mfb,DORBEN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+dsc-microfinance-bank,DSC Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+dutse-mfb,DUTSE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+dutsin-ma-mfb,DUTSIN-MA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+duxbank-microfinance-bank,Duxbank Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+e-barcs-mfb,e-BARCS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+eagle-flight-mfb,EAGLE FLIGHT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+earnwell-mfb,EARNWELL MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+east-gate-mfb,EAST GATE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+eastman-mfb,EASTMAN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+easy-access-mfb,EASY ACCESS MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+ebedi-mfb,EBEDI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ebonyi-state-university-mfb-ebsu,EBONYI STATE UNIVERSITY MFB (EBSU),,microfinance,,,,active,,,,,cbn-financial-institutions
+edfin-mfb,EDFIN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+edo-mfb,EDO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+edusoko-microfinance-bank,Edusoko Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+egbe-mfb,EGBE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+egbemoha-mfb,EGBEMOHA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+egwafin-mfb,EGWAFIN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ehinoma-microfinance-bank,Ehinoma Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+ejindu-mfb,EJINDU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ek-reliable-mfb,EK-RELIABLE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ekimogun-mfb,EKIMOGUN MFB,,microfinance,50263,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+ekondo-mfb,EKONDO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ekwulobia-mfb,EKWULOBIA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ellington-microfinance-bank,Ellington Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+elo-emede-mfb,ELO-EMEDE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+emerald-mfb,EMERALD MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+empire-trust-mfb,EMPIRE TRUST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+endwell-mfb,ENDWELL MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+enede-mfb,ENEDE MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+enrich-mfb,ENRICH MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+equator-mfb,EQUATOR MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+equinox-mfb,EQUINOX MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+eso-e-mfb,ESO-E MFB,,microfinance,50280,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+evergreen-mfb,EVERGREEN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ewt-mfb,EWT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+excel-mfb,EXCEL MFB,,microfinance,,090678,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+ezebo-mfb,EZEBO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+faida-mfb,FAIDA MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+fairmoney-mfb,FAIRMONEY MFB LTD,,microfinance,51318,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+fame-mfb,FAME MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+fast-mfb,FAST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+fcmb-mfb,FCMB MFB LTD.,,microfinance,51241,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+fecetu-mfb,FECETU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+federal-polytechnic-nekede-mfb,"FEDERAL POLYTECHNIC, NEKEDE MFB LTD",,microfinance,,,,active,,,,,cbn-financial-institutions
+fedeth-co-op-mfb,FEDETH CO-OP MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+fedpoly-nasarawa-mfb,FEDPOLY NASARAWA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ffs-mfb,FFS MFB,,microfinance,51110,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+fidfund-mfb,FIDFUND MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+fims-mfb,FIMS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+finatrust-mfb,FINATRUST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+finca-mfb,FINCA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+finex-mfb,FINEX MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+firmus-mfb,FIRMUS MFB,,microfinance,51314,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+first-access-mfb,FIRST ACCESS MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+first-heritage-mfb,FIRST HERITAGE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+first-low-land-mfb,FIRST LOW-LAND MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+first-mutual-mfb,FIRST MUTUAL MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+first-option-mfb,FIRST OPTION MFB,,microfinance,50934,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+first-royal-mfb,FIRST ROYAL MFB,,microfinance,,090164,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+flexi-microfinance-bank,Flexi Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+flourish-mfb,FLOURISH MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+foresight-mfb,FORESIGHT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+fortress-mfb,FORTRESS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+forward-mfb,FORWARD MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+frontline-mfb,FRONTLINE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+fta-funtua-mfb,FTA FUNTUA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+fud-mfb,FUD MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+fullrange-microfinance-bank,Fullrange Microfinance Bank Ltd,,microfinance,,,,active,,,,,cbn-financial-institutions
+fut-minna,FUT MINNA,,microfinance,,,,active,,,,,cbn-financial-institutions
+futo-mfb,FUTO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+gaa-akanbi-mfb,GAA AKANBI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+gabasawa-mfb,GABASAWA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+gamawa-mfb,GAMAWA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+garewa-mfb,GAREWA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+garki-mfb,GARKI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+garu-mallam-mfb,GARU MALLAM MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+gashua-mfb,GASHUA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+gaya-mfb,GAYA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+gbede-mfb,GBEDE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+giant-stride-mfb,GIANT STRIDE MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+gidauniya-alheri-mfb,Gidauniya Alheri MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+giginya-mfb,GIGINYA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+girei-mfb,GIREI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+giwa-mfb,GIWA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+global-initiative-mfb,GLOBAL INITIATIVE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+glory-mfb,GLORY MFB,,microfinance,90278,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+gmb-mfb,GMB MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+gobarau-mfb,GOBARAU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+golden-choice-mfb,GOLDEN CHOICE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+goldman-mfb,GOLDMAN MFB,,microfinance,,090574,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+gombe-mfb,GOMBE MFB,,microfinance,90586,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+good-neighbours-mfb,GOOD NEIGHBOURS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+good-news-mfb,GOOD NEWS MFB,,microfinance,50739,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+good-shepherd-mfb,GOOD SHEPHERD MFB,,microfinance,,090664,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+gowans-mfb,GOWANS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+grants-mfb,GRANTS MFB,,microfinance,90335,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+granule-microfinance-bank,GRANULE MICROFINANCE BANK,,microfinance,,,,active,,,,,cbn-financial-institutions
+green-acres-mfb,GREEN ACRES MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+green-energy-mfb,GREEN ENERGY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+green-bank-mfb,GREEN-BANK MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+greenville-mfb,GREENVILLE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+grooming-mfb,GROOMING MFB,,microfinance,51276,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+gti-mfb,GTI MFB,,microfinance,50368,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+gudusisa-mfb,GUDUSISA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+gulfare-mfb,GULFARE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+gwong-mfb,GWONG MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+hadeija-mfb,HADEIJA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+halal-credit-mfb,HALAL CREDIT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+hallowed-mfb,HALLOWED MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+hamada-mfb,HAMADA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+hamda-mfb,HAMDA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+hasal-mfb,HASAL MFB,,microfinance,50383,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+headway-mfb,HEADWAY MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+hedge-microfinance-bank,HEDGE MICROFINANCE BANK LIMITED,,microfinance,,,,active,,,,,cbn-financial-institutions
+highland-mfb,HIGHLAND MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+hinache-mfb,HINACHE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+honey-mfb,HONEY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+hope-alive-mfb,HOPE ALIVE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+i-care-microfinance-bank,I-Care Microfinance Bank Ltd,,microfinance,,,,active,,,,,cbn-financial-institutions
+ibeto-mfb,IBETO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ibile-mfb,IBILE MFB,,microfinance,51244,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+ibolo-mfb,IBOLO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ibom-fadama-mfb,IBOM FADAMA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ibrahim-badamasi-babangida-university-mfb,IBRAHIM BADAMASI BABANGIDA UNIVERSITY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ibu-aje-mfb,IBU-AJE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ichi-mfb,ICHI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ideato-mfb,IDEATO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+idemili-mfb,IDEMILI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ifedapo-mfb,IFEDAPO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ifelodun-mfb,IFELODUN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+igbo-ukwu-mfb,IGBO-UKWU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+igboora-mfb,IGBOORA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ihiala-mfb,IHIALA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ijare-mfb,IJARE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ijebu-ife-mfb,IJEBU IFE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ikenne-mfb,IKENNE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ikere-microfinance-bank,Ikere Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+ikire-mfb,IKIRE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ikorodu-division-mfb,IKORODU DIVISION MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ikoyi-ile-mfb,IKOYI-ILE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ikoyi-osun-mfb,IKOYI-OSUN MFB,,microfinance,50439,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+ilaro-polytechnic-mfb,ILARO POLYTECHNIC MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ile-oluji-mfb,ILE-OLUJI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ilisan-mfb,ILISAN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ilobu-mfb,ILOBU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+iloffa-mfb,ILOFFA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ilora-mfb,ILORA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ilorin-mfb,ILORIN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+iludun-oro-mfb,ILUDUN ORO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ilutuntun-osoro-mfb,ILUTUNTUN-OSORO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+imo-state-microfinance-bank,IMO STATE MICROFINANCE BANK,,microfinance,,,,active,,,,,cbn-financial-institutions
+imodi-imosan-mfb,IMODI-IMOSAN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+imopoly-mfb,IMOPOLY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+imowo-mfb,IMOWO MFB,,microfinance,50453,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+imsu-mfb,IMSU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+imt-mfb,IMT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+indulge-microfinance-bank,Indulge Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+infinity-mfb,INFINITY MFB,,microfinance,50457,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+insight-mfb,INSIGHT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ipapo-mfb,IPAPO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+iperu-mfb,IPERU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+irl-mfb,IRL MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+isale-oyo-mfb,ISALE OYO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ishiagu-mfb,ISHIAGU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ishie-mfb,ISHIE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+isi-ego-microfinance-bank,Isi-Ego Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+isi-uzo-mfb,ISI-UZO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+island-mfb,ISLAND MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+isua-mfb,ISUA MFB,,microfinance,,090701,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+isuofia-mfb,ISUOFIA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+iwa-mfb,IWA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+iwade-mfb,IWADE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+iwoye-ijesa-mfb,IWOYE-IJESA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+iya-zakari-mashi-mfb,IYA-ZAKARI (MASHI) MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+iyamoye-mfb,IYAMOYE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+iyeru-okin-mfb,IYERU OKIN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+iyin-ekiti-mfb,IYIN EKITI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+izon-mfb,IZON MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+janzama-mfb,JANZAMA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+jen-mfb,JEN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+jessefield-mfb,JESSEFIELD MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+jewel-coop-mfb,JEWEL COOP MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kabo-mfb,KABO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kadpoly-mfb,KADPOLY MFB,,microfinance,50502,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+kadupe-mfb,KADUPE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kaizen-microfinance-bank,Kaizen Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+kamba-mfb,KAMBA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kankara-mfb,KANKARA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kankia-mfb,KANKIA MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+kano-west-mfb,KANO-WEST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+katagum-mfb,KATAGUM MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+katsu-microfinance-bank,Katsu Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+katsu-microfinance-bank-microfinance,Katsu Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+kayvee-mfb,KAYVEE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kc-mfb,KC MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kcmb-mfb,KCMB MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kenechukwu-mfb,KENECHUKWU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+khb-mfb,KHB MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kingdom-college-mfb,KINGDOM COLLEGE MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+kisi-mfb,KISI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kku-microfinance,KKU Microfinance,,microfinance,,,,active,,,,,cbn-financial-institutions
+kmc-mfb,KMC MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+koboweb-microfinance-bank,Koboweb Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+koins-microfinance-bank,Koins Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+kolisa-microfinance-bank,Kolisa Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+kontagora-mfb,KONTAGORA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kopo-kope-mfb,KOPO-KOPE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kredi-money-mfb-formerly-conpro-mfb,KREDI MONEY MFB (Formerly CONPRO MFB),,microfinance,50200,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+kuda,KUDA MFB,Kuda,microfinance,50211,,,active,,,Kuda Bank,cbn_code,cbn-financial-institutions|paystack-banks
+kumbotso-mfb,KUMBOTSO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kunagaba-mfb,KUNAGABA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kunchi-mfb,KUNCHI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kura-mfb,KURA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kusalla-mfb,KUSALLA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kwacofocus-mfb,KWACOFOCUS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kwara-polytechnic-microfinance-bank,KWARA POLYTECHNIC MICROFINANCE BANK LIMITED,,microfinance,,,,active,,,,,cbn-financial-institutions
+kwasu-mfb,KWASU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+kwatashi-mfb,KWATASHI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+la-fayette-mfb,LA FAYETTE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ladder-microfinance-bank,Ladder Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+landgold-mfb,LANDGOLD MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+lapo-mfb,LAPO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+lavender,LAVENDER,,microfinance,,,,active,,,,,cbn-financial-institutions
+lawyers-mfb,LAWYERS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+layelu-mfb,LAYELU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+leadcity-mfb,LEADCITY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+legacy-mfb,LEGACY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+legend-mfb,LEGEND MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+letshego-mfb,LETSHEGO MFB,,microfinance,,090420,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+levite-mfb,LEVITE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+lifegate-mfb,LIFEGATE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+light-mfb,LIGHT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+lightway-microfinance-bank,Lightway Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+links-mfb,LINKS MFB,,microfinance,50549,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+living-spring-mfb,LIVING SPRING MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+lobrem-mfb,LOBREM MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+lovonus-mfb,LOVONUS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+m-m-mfb,M & M MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+mab-allianz-mfb,MAB ALLIANZ MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+macrod-mfb,MACROD MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+madelyn-mfb,MADELYN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+madobi-mfb,MADOBI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+magajin-giri-mfb,MAGAJIN-GIRI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+magnet-mfb,MAGNET MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+maigatari-mfb,MAIGATARI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+main-trust-mfb,MAIN TRUST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+mainland-mfb,MAINLAND MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+mainstreet-mfb,MAINSTREET MFB,,microfinance,,090171,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+malachy-mfb,MALACHY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+mapoly-mfb,MAPOLY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+maritime-mfb,MARITIME MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+matazu-mfb,MATAZU MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+maxitrust-mfb,MAXITRUST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+mayden-microfinance-bank,MAYDEN MICROFINANCE BANK,,microfinance,51474,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+mbaitoli-mfb,MBAITOLI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+mbawulu-mfb,MBAWULU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+mega-mfb,MEGA MFB,,microfinance,50570,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+megapraise-mfb,MEGAPRAISE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+memento-mfb,MEMENTO MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+memphis-microfinance-bank,MEMPHIS MICROFINANCE BANK LIMITED,,microfinance,,,,active,,,,,cbn-financial-institutions
+meridian-mfb,MERIDIAN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+mgbidi-mfb,MGBIDI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+mia-microfinance-bank,Mia Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+micheal-okpara-university-mfb,MICHEAL OKPARA UNIVERSITY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+microvis-mfb,MICROVIS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+midland-mfb,MIDLAND MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+mkobo-mfb,MKOBO MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+moddibo-adama-university-microfinance-bank,Moddibo Adama University Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+model-mfb,MODEL MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+modiya-yekokpe-mfb,MODIYA YEKOKPE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+molusi-mfb,MOLUSI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+monarch-mfb,MONARCH MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+moneytronics-mfb-formerly-ipodo-ikeja-mfb,MONEYTRONICS MFB (Formerly Ipodo-Ikeja MFB),,microfinance,,,,active,,,,,cbn-financial-institutions
+moneytrust-mfb,Moneytrust MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+moniepoint,Moniepoint MFB,Moniepoint,microfinance,50515,,,active,,,TeamApt,cbn_code,cbn-financial-institutions|paystack-banks
+movasco-op-microfinance-bank,Movasco-Op Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+moyofade-mfb,MOYOFADE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+mozfin-mfb,MOZFIN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+muamala-microfinance-bank,Muamala Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+multivest-mfb,MULTIVEST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+mutual-benefit-mfb,MUTUAL BENEFIT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+mutual-trust-mfb,MUTUAL TRUST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nagarta-mfb,NAGARTA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+naisa-mfb,NAISA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nakowa-mfb,NAKOWA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+namoda-mfb,NAMODA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nasarawa-mfb,NASARAWA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ndiolu-mfb,NDIOLU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ndiorah-mfb,NDIORAH MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nenzit-mfb,NENZIT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+neptune-mfb,NEPTUNE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+new-dawn-mfb,NEW DAWN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+new-era-mfb,NEW ERA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+new-golden-pastures-mfb,NEW GOLDEN PASTURES MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+new-womens-mfb,NEW WOMEN'S MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nexton-microfinance-bank,Nexton Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+ngbo-mfb,NGBO MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+nice-mfb,NICE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nigerian-navy-mfb,NIGERIAN NAVY MFB LTD,,microfinance,51142,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+nigerian-prisons-mfb,NIGERIAN PRISONS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ningi-mfb,NINGI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nirsal-mfb,NIRSAL MFB,,microfinance,51304,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+nkpa-mfb,NKPA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nkpologwu-mfb,NKPOLOGWU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nkpolu-ust-mfb,NKPOLU-UST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nnokwa-mfb,NNOKWA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+noble-mfb,NOBLE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nomase-microfinance-bank,NOMASE MICROFINANCE BANK LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+noun-mfb,NOUN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+novel-mfb,NOVEL MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+novus-microfinance-bank,Novus Microfinance Bank Limited,,microfinance,51371,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+npf-mfb,NPF MFB,,microfinance,50629,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+nri-mfb,NRI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nsu-mfb,NSU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nsuk-mfb,NSUK MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nsukka-township-mfb,NSUKKA TOWNSHIP MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nuggets-mfb,NUGGETS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+numo-mfb,NUMO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nun-mfb,NUN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nut-okebola-mfb,NUT OKEBOLA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+nwannegadi-mfb,NWANNEGADI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+oakland-mfb,OAKLAND MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+oba-mfb,OBA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+obafemi-awolowo-university-mfb,OBAFEMI AWOLOWO UNIVERSITY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+obeledu-mfb,OBELEDU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+obodoukwu-mfb,OBODOUKWU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+obokun-mfb,OBOKUN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+obollo-mfb,OBOLLO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+oche-mfb,OCHE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ocon-success-mfb,OCON SUCCESS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+octopus-mfb,OCTOPUS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+odoakpu-mfb,ODOAKPU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+odu-mfb,ODU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+oganiru-microfinance-bank,Oganiru Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+ogberuru-mfb,OGBERURU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ogbete-mfb,OGBETE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ogboefere-mfb,OGBOEFERE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ogige-mfb,OGIGE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ogiyan-mfb,OGIYAN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ohafia-mfb,OHAFIA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ohha-mfb,OHHA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ojokoro-mfb,OJOKORO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+okada-microfinance-bank,Okada Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+oke-aro-oredegbe-mfb,OKE- ARO OREDEGBE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+okeagbe-mfb,OKEAGBE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+okengwe-mfb,OKENGWE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+oko-mfb,OKO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+okpe-mfb,OKPE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+okpofe-mfb,OKPOFE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+okpoga-mfb,OKPOGA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+okuku-mfb,OKUKU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+okuta-mfb,OKUTA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+okwo-oha-mfb,OKWO-OHA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+olabisi-onabanjo-university-mfb,OLABISI ONABANJO UNIVERSITY MFB,,microfinance,50689,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+olive-mfb,OLIVE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+olomu-aperan-microfinance-bank,Olomu Aperan Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+olowolagba-mfb,OLOWOLAGBA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+olu-basiri-mfb,OLU-BASIRI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+oluchukwu-mfb,OLUCHUKWU MFB,,microfinance,50697,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+omak-mfb,OMAK MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+omiye-mfb,OMIYE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+omuma-mfb,OMUMA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+onewallet-microfinance-bank,Onewallet Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+onibu-ore-mfb,ONIBU-ORE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+opay,OPAY MFB LIMITED,OPay,microfinance,,999992,,active,,,OPay Digital Services|Paycom,nip_code,cbn-financial-institutions|paystack-banks
+optimum-global-microfinance-bank,Optimum Global Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+oraukwu-mfb,ORAUKWU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+orilonise-mfb,ORILONISE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+orisun-mfb,ORISUN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+orita-basorun-mfb,ORITA BASORUN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+orokam-mfb,OROKAM MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+orsu-mfb,ORSU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+osanta-mfb,OSANTA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+osct-mfb,OSCT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+osi-mfb,OSI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+osomhe-mfb,OSOMHE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ospoly-mfb,OSPOLY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+osumenyi-mfb,OSUMENYI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+otuo-mfb,OTUO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ours-mfb,OURS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+owotutu-mfb,OWOTUTU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+oyan-mfb,OYAN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+oye-versity-microfinance-bank,OYE VERSITY MICROFINANCE BANK LIMITED,,microfinance,,,,active,,,,,cbn-financial-institutions
+pact-microfinance-bank,PACT MICROFINANCE BANK,,microfinance,51477,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+palmcoast-mfb,PALMCOAST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+palmera-mfb,PALMERA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+pana-mfb,PANA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+paragon-microfinance-bank,Paragon Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+paragon-microfinance-bank-microfinance,Paragon Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+parkway-mfb,PARKWAY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+pathfinder-mfb,PATHFINDER MFB,,microfinance,,090680,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+patrickgold-mfb,PATRICKGOLD MFB,,microfinance,90317,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+payrep-microfinance-bank,Payrep Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+peace-mfb,PEACE MFB,,microfinance,50743,090402,,active,,,,nip_code,cbn-financial-institutions|monnify-banks|paystack-banks
+pecan-trust-mfb,PECAN TRUST MFB,,microfinance,51226,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+peninsula-mfb,PENINSULA MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+pennywise-mfb,PENNYWISE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+pentecost-mfb,PENTECOST MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+personal-trust-mfb,PERSONAL TRUST MFB,,microfinance,51146,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+petra-mfb,PETRA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+phoenix-mfb,PHOENIX MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+pillar-mfb,PILLAR MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+pioneer-microfinance-bank,Pioneer Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+platinum-microfinance-bank,Platinum Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+plusone-microfinance-bank,Plusone Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+pointone-microfinance-bank,Pointone Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+polybadan-mfb,POLYBADAN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+polyunwanna-mfb,POLYUNWANNA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+preeminent-mfb,PREEMINENT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+premier-microfinance-bank,Premier Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+prestige-mfb,PRESTIGE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+prisco-mfb,PRISCO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+pristine-divitis-mfb,PRISTINE DIVITIS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+projects-mfb,PROJECTS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+prospects-mfb,PROSPECTS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+prosperity-mfb,PROSPERITY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+prudent-mfb,PRUDENT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+pyramid-mfb,PYRAMID MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+qube-mfb,QUBE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+quickfund-mfb,QUICKFUND MFB,,microfinance,51293,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+rahama-mfb,RAHAMA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+rakib-mfb,RAKIB MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ramilowo-mfb,RAMILOWO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+randalpha,RANDALPHA,,microfinance,,090496,,active,,,,,cbn-financial-institutions|monnify-banks|paystack-banks
+rano-mfb,RANO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+refined-benefits-mfb,REFINED BENEFITS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+regent-mfb,REGENT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+rehoboth-mfb,REHOBOTH MFB,,microfinance,50761,090463,*000#,active,,,,cbn_code|nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+reliance-mfb,RELIANCE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+renmoney-mfb,RENMONEY MFB,,microfinance,51049,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+rephidim-mfb,REPHIDIM MFB,,microfinance,50994,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+ric-mfb,RIC MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+richway-mfb,RICHWAY MFB LTD.,,microfinance,,,,active,,,,,cbn-financial-institutions
+ricia-capital-microfinance-bank,Ricia Capital Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+rigo-mfb,RIGO MFB,,microfinance,51286,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+rima-growth-pathway-mfb,RIMA GROWTH PATHWAY MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+rima-mfb,RIMA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+riverside-mfb,RIVERSIDE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+rockshield-mfb,ROCKSHIELD MFB,,microfinance,50767,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+royal-blue-mfb,ROYAL BLUE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+royal-excellent-microfinance-bank,Royal Excellent Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+royal-exchange-mfb,ROYAL EXCHANGE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+royal-life-key-mfb,ROYAL LIFE KEY MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+royal-mfb,ROYAL MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+rubies-mfb,RUBIES MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+run-microfinance-bank,Run Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+sabi-mfb,SABI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+sabon-yelwa-mfb,SABON YELWA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+sabuwa-mfb,SABUWA MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+safana-mfb,SAFANA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+safe-haven-mfb,SAFE HAVEN MFB,,microfinance,51113,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+safeline-mfb,SAFELINE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+sagamu-mfb,SAGAMU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+sandamu-mfb,SANDAMU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+sapida-mfb,SAPIDA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+sarkin-kudu-mfb,SARKIN KUDU MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+savesimple-microfinance-bank,Savesimple Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+seal-microfinance-bank,SEAL MICROFINANCE BANK LIMITED,,microfinance,,,,active,,,,,cbn-financial-institutions
+seap-mfb,SEAP MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+seedvest-mfb,SEEDVEST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+senchi-mfb,SENCHI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+shalom-mfb,Shalom MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+shepherd-trust-mfb,SHEPHERD TRUST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+shield-mfb,SHIELD MFB,,microfinance,50582,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+shine-microfinance-bank,Shine Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+shongom-mfb,SHONGOM MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+silverend-microfinance-bank,Silverend Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+sincere-mfb,SINCERE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+sls-mfb,SLS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+smartmicro-mfb,SMARTMICRO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+snow-mfb,SNOW MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+solid-allianz-mfb,SOLID ALLIANZ MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+solid-rock-mfb,SOLID ROCK MFB,,microfinance,50800,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+solid-trust-mfb,Solid Trust MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+soroman-mfb,SOROMAN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+sosa-microfinance-bank,Sosa Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+source-microfinance-bank,SOURCE MICROFINANCE BANK LIMITED,,microfinance,90641,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+sparkle-mfb,SPARKLE MFB,,microfinance,51310,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+spectrum-mfb,SPECTRUM MFB,,microfinance,50756,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+springfield-microfinance-bank,Springfield Microfinance Bank Limited,,microfinance,51429,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+springville-microfinance-bank,Springville Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+standard-mfb,STANDARD MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+stateside-mfb,STATESIDE MFB,,microfinance,50809,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+stellas-mfb,STELLAS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions|paystack-banks
+step-by-step-mfb,STEP BY STEP MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+stillwaters-mfb,STILLWATERS MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+stockcorp-mfb,STOCKCORP MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+sulspap-mfb,SULSPAP MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+sunbeam-mfb,SUNBEAM MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+suntop-microfinance-bank,Suntop Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+support-mfb,SUPPORT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+sure-anchor-mfb,SURE ANCHOR MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+swifttrust-microfinance-bank,Swifttrust Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+tanadi-mfb,TANADI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+tangale-mfb,TANGALE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+tangerine-money-microfinance-bank,Tangerine Money Microfinance Bank,,microfinance,51269,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+tasued-mfb,TASUED MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+tcf-mfb,TCF MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+teerus-microfinance-bank,TEERUS MICROFINANCE BANK LIMITED,,microfinance,,,,active,,,,,cbn-financial-institutions
+teerus-microfinance-bank-microfinance,Teerus Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+tellerone-fi-microfinance-bank,Tellerone FI Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+tenn-microfinance-bank,Tenn Microfinance Bank Limited,,microfinance,51403,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+tf-mfb,TF MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+the-millennium-mfb,The Millennium MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+top-rate-mfb,TOP RATE MFB,,microfinance,90801,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+topclass-mfb,TOPCLASS MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+total-trust-mfb,TOTAL TRUST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+touchgold-mfb,TOUCHGOLD MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+townserve-mfb,TOWNSERVE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+transpay-microfinance-bank,Transpay Microfinance Bank Limited,,microfinance,,090708,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+treasures-mfb,TREASURES MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+trident-mfb,TRIDENT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+tripple-a-mfb,TRIPPLE A MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+triumphant-microfinance-bank,TRIUMPHANT MICROFINANCE BANK LIMITED,,microfinance,,,,active,,,,,cbn-financial-institutions
+trust-mfb,TRUST MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+trustbanc-j6,TRUSTBANC J6,,microfinance,51118,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+trustfund-mfb,TRUSTFUND MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+tudunwada-mfb,TUDUNWADA MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+u-c-mfb,U & C MFB,,microfinance,50840,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+ubj-microfinance-bank,UBJ Microfinance Bank Limited,,microfinance,51396,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+ucb-mfb,UCB MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+uda-mfb,UDA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+udoka-mfb,UDOKA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+uforo-microfinance-bank,Uforo Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+uga-mfb,UGA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ugborimili-mfb,UGBORIMILI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+uhuru-mfb,UHURU MFB,,microfinance,51322,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+ukpor-mfb,UKPOR MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ukwala-mfb,UKWALA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ultimate-mfb,ULTIMATE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ultraviolet-microfinance-bank,Ultraviolet Microfinance Bank Limited,,microfinance,51080,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+ummah-mfb,UMMAH MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+umuawulu-mfb,UMUAWULU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+umuchinemere-procredit-mfb,UMUCHINEMERE PROCREDIT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+umuchukwu-mfb,UMUCHUKWU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+umunnachi-mfb,UMUNNACHI MFB,,microfinance,51097,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+umunri-microfinance-bank,Umunri Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+umuoji-mfb,UMUOJI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+umyu-microfinance-bank,UMYU Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+unaab-mfb,UNAAB MFB,,microfinance,50870,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+ungogo-mfb,UNGOGO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+unibadan-mfb,UNIBADAN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+unical-mfb,UNICAL MFB,,microfinance,50871,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+unicorn-microfinance-bank,Unicorn Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+unifund-mfb,UNIFUND MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+unilag-mfb,UNILAG MFB LTD,,microfinance,51316,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+unilorin-mfb,UNILORIN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+unimaid-mfb,UNIMAID MFB,,microfinance,50875,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+united-capital-mfb,UNITED CAPITAL MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+uniuyo-mfb,UNIUYO MFB,,microfinance,50880,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+university-of-benin-mfb,UNIVERSITY OF BENIN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+unn-mfb,UNN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+unubi-mfb,UNUBI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+urban-mfb,URBAN MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+ure-mfb,URE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+utako-mfb,UTAKO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+utuh-mfb,UTUH MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+uvuoma-mfb,UVUOMA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+uvuru-mfb,UVURU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+uzondu-mfb,UZONDU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+vangel-microfinance-bank,Vangel Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+vcl-mfb,VCL MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+vfd-mfb,VFD MFB LTD,,microfinance,,,,active,,,,,cbn-financial-institutions
+victory-mfb,VICTORY MFB,,microfinance,51085,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+visa-mfb,VISA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+viscount-mfb,VISCOUNT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+vista-microfinance-bank,Vista Microfinance Bank Limited,,microfinance,90787,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+waila-mfb,WAILA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+wallet-microfinance-bank,Wallet Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions
+waya-mfb,WAYA MFB,,microfinance,51355,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+we-microfinance-bank,WE MICROFINANCE BANK LIMITED,,microfinance,,,,active,,,,,cbn-financial-institutions
+welfare-mfb,WELFARE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+weston-charis-microfinance-bank,Weston-Charis Microfinance Bank Limited,,microfinance,51386,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+wetland-mfb,WETLAND MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+willows-microfinance-bank,Willows Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+woliwo-mfb,WOLIWO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+women-development-mfb,WOMEN DEVELOPMENT MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+wra-mfb,WRA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+wudil-mfb,WUDIL MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+xslnce-mfb,XSLNCE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+yabo-mfb,YABO MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+yankari-mfb,Yankari MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+yauri-emirates-mfb,YAURI EMIRATES MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+yct-microfinance-bank,YCT Microfinance Bank,,microfinance,,,,active,,,,,cbn-financial-institutions|paystack-banks
+yes-mfb,YES MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+yobe-state-mfb,YOBE STATE MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+zazzau-mfb,ZAZZAU MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+zefa-mfb,ZEFA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+zikora-mfb,ZIKORA MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+zion-mfb,ZION MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+zircon-microfinance-bank,Zircon Microfinance Bank Limited,,microfinance,,,,active,,,,,cbn-financial-institutions
+zitra-microfinance-bank,Zitra Microfinance Bank Limited,,microfinance,51373,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+zurmi-mfb,ZURMI MFB,,microfinance,,,,active,,,,,cbn-financial-institutions
+abeg-technologies,ABEG TECHNOLOGIES LIMITED,,mobile_money_operator,,,,active,,,,,cbn-financial-institutions
+chams-mobile,CHAMS MOBILE LIMITED,,mobile_money_operator,,100036,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+etranzact-international,ETRANZACT INTERNATIONAL LIMITED,,mobile_money_operator,,,,active,,,,,cbn-financial-institutions
+fortis-mobile-money,FORTIS MOBILE MONEY LIMITED,,mobile_money_operator,,,,active,,,,,cbn-financial-institutions
+funds-and-electronic-transfer-fets,FUNDS AND ELECTRONIC TRANSFER (FETS) LIMITED,,mobile_money_operator,,,,active,,,,,cbn-financial-institutions
+hedonmark-management-services,HEDONMARK MANAGEMENT SERVICES LIMITED,,mobile_money_operator,,,,active,,,,,cbn-financial-institutions
+kongapay-technologies-formerly-zinternet,KONGAPAY TECHNOLOGIES LIMITED (FORMERLY ZINTERNET LIMITED ),,mobile_money_operator,,,,active,,,,,cbn-financial-institutions
+mkudi,MKUDI LIMITED,,mobile_money_operator,,,,active,,,,,cbn-financial-institutions
+nownow-digital-systems-formerly-contec-global-infotech,NOWNOW DIGITAL SYSTEMS LIMITED (FORMERLY CONTEC GLOBAL INFOTECH LIMITED),,mobile_money_operator,,,,active,,,,,cbn-financial-institutions
+paga,PAGATECH LIMITED,Paga,mobile_money_operator,,100002,,active,,,Pagatech,nip_code,cbn-financial-institutions|paystack-banks
+palmpay,PALMPAY LIMITED,PalmPay,mobile_money_operator,,999991,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+parkway-projects,PARKWAY PROJECTS LIMITED,,mobile_money_operator,,,,active,,,,,cbn-financial-institutions
+teasy-international-company,TEASY INTERNATIONAL COMPANY LTD.,,mobile_money_operator,,,,active,,,,,cbn-financial-institutions
+visual-ict,VISUAL ICT LIMITED,,mobile_money_operator,,100023,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+vtnetwork,VTNETWORK LIMITED,,mobile_money_operator,,,,active,,,,,cbn-financial-institutions
+xpress-mts,XPRESS MTS LIMITED,,mobile_money_operator,,,,active,,,,,cbn-financial-institutions
+abbey-mortgage-bank,ABBEY MORTGAGE BANK,,mortgage,,,,active,,,,,cbn-financial-institutions
+adamawa-mortgage-bank,Adamawa Mortgage Bank Limited,,mortgage,90102,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+ag-homes,AG HOMES,,mortgage,,,,active,,,,,cbn-financial-institutions
+akwa-savings,AKWA SAVINGS,,mortgage,,,,active,,,,,cbn-financial-institutions
+aso-savings-loans,ASO SAVINGS & LOANS,,mortgage,,,,active,,,,,cbn-financial-institutions
+brent-skyfield-savings,BRENT (SKYFIELD) SAVINGS,,mortgage,,,,active,,,,,cbn-financial-institutions
+centage-savings-loans,CENTAGE SAVINGS & LOANS,,mortgage,,,,active,,,,,cbn-financial-institutions
+city-code,CITY CODE,,mortgage,,070027,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+coop-savings-loans,COOP SAVINGS & LOANS,,mortgage,,,,active,,,,,cbn-financial-institutions
+delta-mortgage-finance,DELTA MORTGAGE FINANCE,,mortgage,,,,active,,,,,cbn-financial-institutions
+fbn-mortgages,FBN MORTGAGES,,mortgage,,,,active,,,,,cbn-financial-institutions
+fha-homes,FHA HOMES LTD.,,mortgage,,,,active,,,,,cbn-financial-institutions
+first-generation-homes,FIRST GENERATION HOMES,,mortgage,,,,active,,,,,cbn-financial-institutions
+gateway-savings,GATEWAY SAVINGS,,mortgage,,,,active,,,,,cbn-financial-institutions
+global-trust,GLOBAL TRUST,,mortgage,,,,active,,,,,cbn-financial-institutions
+haggai-mortgage-bank,HAGGAI MORTGAGE BANK,,mortgage,90065,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+home-base-mortgage,HOME-BASE MORTGAGE,,mortgage,,,,active,,,,,cbn-financial-institutions
+imperial-homes,IMPERIAL HOMES,,mortgage,,,,active,,,,,cbn-financial-institutions
+infinity-trust,INFINITY TRUST,,mortgage,,070016,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+jigawa-savings-loans,JIGAWA SAVINGS & LOANS,,mortgage,,,,active,,,,,cbn-financial-institutions
+jubilee-life-mortgage-bank,JUBILEE-LIFE MORTGAGE BANK,,mortgage,,,,active,,,,,cbn-financial-institutions
+kebbi-state-homes,KEBBI STATE HOMES,,mortgage,,,,active,,,,,cbn-financial-institutions
+lagos-building-investment,LAGOS BUILDING & INVESTMENT,,mortgage,90052,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+mayfresh-mortgage-bank,MAYFRESH MORTGAGE BANK,,mortgage,90003,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+mgsl-mortgage-bank,MGSL MORTGAGE BANK,,mortgage,,,,active,,,,,cbn-financial-institutions
+mutual-alliance,MUTUAL ALLIANCE,,mortgage,,,,active,,,,,cbn-financial-institutions
+new-prudential,NEW PRUDENTIAL,,mortgage,,,,active,,,,,cbn-financial-institutions
+police-mortgage-bank,NIGERIA POLICE MORTGAGE BANK,,mortgage,,,,active,,,,,cbn-financial-institutions
+omoluabi-livingspring,OMOLUABI (LIVINGSPRING),,mortgage,,,,active,,,,,cbn-financial-institutions
+platinum-mortgage-bank,PLATINUM MORTGAGE BANK,,mortgage,,,,active,,,,,cbn-financial-institutions
+refuge-homes,REFUGE HOMES,,mortgage,,,,active,,,,,cbn-financial-institutions
+stb-building-society,STB BUILDING SOCIETY,,mortgage,,,,active,,,,,cbn-financial-institutions
+trustbond-mortgage-bank,TRUSTBOND MORTGAGE BANK,,mortgage,,,,active,,,,,cbn-financial-institutions
+alternative-bank,Alternative Bank Limited,,non_interest,,000304,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+jaiz-bank,JAIZ BANK PLC,,non_interest,301,000006,*389#,active,,,,nip_code|ussd,cbn-financial-institutions|monnify-banks|paystack-banks
+lotus-bank,LOTUS BANK LTD,,non_interest,303,000029,,active,,,,nip_code,cbn-financial-institutions|monnify-banks|paystack-banks
+mint-microfinance-bank,Mint Microfinance Bank Limited,,non_interest,,,,active,,,,,cbn-financial-institutions
+summit-bank,SUMMIT BANK LIMITED,,non_interest,305,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+taj,TAJ,,non_interest,302,,,active,,,,cbn_code,cbn-financial-institutions|paystack-banks
+9psb,9 PSB Ltd,9PSB,payment_service_bank,,120001,,active,,,9mobile 9Payment Service Bank|9Payment Service Bank,nip_code,cbn-financial-institutions|paystack-banks
+hopepsb,Hope PSB Ltd,HopePSB,payment_service_bank,,120002,,active,,,,nip_code,cbn-financial-institutions|paystack-banks
+momo-psb,MOMO PAYMENT SERVICE BANK,MoMo PSB,payment_service_bank,,120003,,active,,,MTN MoMo|MTN Momo PSB,nip_code,cbn-financial-institutions|paystack-banks
+moneymaster-psb,Moneymaster PSB Ltd,Moneymaster PSB,payment_service_bank,,120005,,active,,,,nip_code,cbn-financial-institutions|monnify-banks
+smartcash-psb,SMARTCASH PSB LIMITED,SmartCash PSB,payment_service_bank,,120004,,active,,,Airtel SmartCash|Airtel Smartcash PSB,nip_code,cbn-financial-institutions|paystack-banks

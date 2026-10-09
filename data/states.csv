@@ -1,0 +1,38 @@
+code,iso_code,name,slug,inec_code,pcode,capital,zone,created,lat,lon,aliases,unverified_fields,sources
+AB,NG-AB,Abia,abia,01,NG001,Umuahia,South-East,1991-08-27,5.43182,7.48834,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+AD,NG-AD,Adamawa,adamawa,02,NG002,Yola,North-East,1991-08-27,9.16265,12.29156,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+AK,NG-AK,Akwa Ibom,akwa-ibom,03,NG003,Uyo,South-South,1987-09-23,4.99047,7.79557,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+AN,NG-AN,Anambra,anambra,04,NG004,Awka,South-East,1991-08-27,6.24853,6.93787,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+BA,NG-BA,Bauchi,bauchi,05,NG005,Bauchi,North-East,1976-02-03,10.99789,9.32582,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+BY,NG-BY,Bayelsa,bayelsa,06,NG006,Yenagoa,South-South,1996-10-01,4.82682,5.95114,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+BE,NG-BE,Benue,benue,07,NG007,Makurdi,North-Central,1976-02-03,7.30094,8.81239,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+BO,NG-BO,Borno,borno,08,NG008,Maiduguri,North-East,1976-02-03,11.87007,13.42762,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+CR,NG-CR,Cross River,cross-river,09,NG009,Calabar,South-South,1967-05-27,5.79133,8.40345,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+DE,NG-DE,Delta,delta,10,NG010,Asaba,South-South,1991-08-27,5.75656,5.49967,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+EB,NG-EB,Ebonyi,ebonyi,11,NG011,Abakaliki,South-East,1996-10-01,6.23983,8.06674,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+ED,NG-ED,Edo,edo,12,NG012,Benin City,South-South,1991-08-27,6.66545,5.87368,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+EK,NG-EK,Ekiti,ekiti,13,NG013,Ado Ekiti,South-West,1996-10-01,7.69516,5.29793,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+EN,NG-EN,Enugu,enugu,14,NG014,Enugu,South-East,1991-08-27,6.51981,7.39276,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+FC,NG-FC,Federal Capital Territory,fct,37,NG015,Abuja,North-Central,1976-02-04,9.01307,7.19102,FCT|Abuja|FCT Abuja|Abuja FCT,,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021
+GO,NG-GO,Gombe,gombe,15,NG016,Gombe,North-East,1996-10-01,10.43059,11.22469,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+IM,NG-IM,Imo,imo,16,NG017,Owerri,South-East,1976-02-03,5.56573,7.03321,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+JI,NG-JI,Jigawa,jigawa,17,NG018,Dutse,North-West,1991-08-27,11.98106,9.62485,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+KD,NG-KD,Kaduna,kaduna,18,NG019,Kaduna,North-West,1967-05-27,10.25721,7.8594,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+KN,NG-KN,Kano,kano,19,NG020,Kano,North-West,1967-05-27,11.57313,8.54339,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+KT,NG-KT,Katsina,katsina,20,NG021,Katsina,North-West,1987-09-23,12.23621,7.50026,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+KE,NG-KE,Kebbi,kebbi,21,NG022,Birnin Kebbi,North-West,1991-08-27,11.69076,3.96605,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+KO,NG-KO,Kogi,kogi,22,NG023,Lokoja,North-Central,1991-08-27,7.63636,6.84925,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+KW,NG-KW,Kwara,kwara,23,NG024,Ilorin,North-Central,1967-05-27,9.09346,4.56687,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+LA,NG-LA,Lagos,lagos,24,NG025,Ikeja,South-West,1967-05-27,6.53464,3.71157,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+NA,NG-NA,Nasarawa,nasarawa,25,NG026,Lafia,North-Central,1996-10-01,8.5892,8.21097,Nassarawa,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+NI,NG-NI,Niger,niger,26,NG027,Minna,North-Central,1976-02-03,9.7736,5.71139,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+OG,NG-OG,Ogun,ogun,27,NG028,Abeokuta,South-West,1976-02-03,7.12736,3.26276,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+ON,NG-ON,Ondo,ondo,28,NG029,Akure,South-West,1976-02-03,6.82406,4.86944,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+OS,NG-OS,Osun,osun,29,NG030,Osogbo,South-West,1991-08-27,7.53809,4.5211,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+OY,NG-OY,Oyo,oyo,30,NG031,Ibadan,South-West,1976-02-03,8.13543,3.61298,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+PL,NG-PL,Plateau,plateau,31,NG032,Jos,North-Central,1976-02-03,9.3802,9.62822,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+RI,NG-RI,Rivers,rivers,32,NG033,Port Harcourt,South-South,1967-05-27,5.02334,6.83575,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+SO,NG-SO,Sokoto,sokoto,33,NG034,Sokoto,North-West,1976-02-03,12.73948,5.23697,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+TA,NG-TA,Taraba,taraba,34,NG035,Jalingo,North-East,1991-08-27,8.05858,10.38634,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+YO,NG-YO,Yobe,yobe,35,NG036,Damaturu,North-East,1991-08-27,11.97363,11.52418,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation
+ZA,NG-ZA,Zamfara,zamfara,36,NG037,Gusau,North-West,1996-10-01,12.01302,6.051,,created,inec-cvr|ocha-cod-ab-nga|unicode-cldr|constitution-1999|euaa-nigeria-2021|businessday-state-creation

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/asgatcreation/naija-data/schemas/wards.schema.json",
+  "title": "Ward / INEC registration area",
+  "description": "One row of the CSV file. Empty cells are empty strings; lists are separated by '|'.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "code",
+    "lga_code",
+    "state_code",
+    "name",
+    "slug",
+    "aliases",
+    "sources"
+  ],
+  "properties": {
+    "code": {
+      "type": "string",
+      "pattern": "^\\d{2}-\\d{2}-\\d{2}$"
+    },
+    "lga_code": {
+      "type": "string",
+      "pattern": "^NG\\d{6}$"
+    },
+    "state_code": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^\\S(.*\\S)?$"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "aliases": {
+      "type": "string",
+      "pattern": "^$|^[^|\\s][^|]*[^|\\s]?(\\|[^|\\s][^|]*[^|\\s]?)*$"
+    },
+    "sources": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+(\\|[a-z0-9-]+)*$"
+    }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "code": {
+          "minLength": 1
+        },
+        "name": {
+          "minLength": 1
+        },
+        "slug": {
+          "minLength": 1
+        }
+      }
+    }
+  ]
+}

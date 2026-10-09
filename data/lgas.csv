@@ -1,0 +1,775 @@
+code,state_code,inec_code,name,slug,headquarters,senatorial_district,lat,lon,aliases,unverified_fields,sources
+NG001001,AB,01-01,Aba North,aba-north,,Abia South,5.10828,7.3421,,,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001002,AB,01-02,Aba South,aba-south,Aba,Abia South,5.08425,7.34909,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001003,AB,01-03,Arochukwu,arochukwu,Arochukwu,Abia North,5.51852,7.8694,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001004,AB,01-04,Bende,bende,Bende,Abia North,5.63716,7.56902,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001005,AB,01-05,Ikwuano,ikwuano,Oboro District Court,Abia Central,5.40928,7.57299,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001006,AB,01-06,Isiala Ngwa North,isiala-ngwa-north,Omoba Station,Abia Central,5.27979,7.3921,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001007,AB,01-07,Isiala Ngwa South,isiala-ngwa-south,,Abia Central,5.37976,7.4154,,,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001008,AB,01-08,Isuikwuato,isuikwuato,Nbalano,Abia North,5.80034,7.47096,Isiukwuato|Isuikwato,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001009,AB,01-09,Obingwa,obingwa,Mboko,Abia South,5.15227,7.44781,Obi Nwa,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001010,AB,01-10,Ohafia,ohafia,Ebem,Abia North,5.66291,7.83249,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001011,AB,01-11,Osisioma Ngwa,osisioma-ngwa,,Abia South,5.17307,7.32438,Osisioma,,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001012,AB,01-12,Ugwunagbo,ugwunagbo,,Abia South,5.0254,7.35481,,,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001013,AB,01-13,Ukwa East,ukwa-east,Akwete,Abia South,4.93693,7.4028,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001014,AB,01-14,Ukwa West,ukwa-west,,Abia South,4.97925,7.25148,,,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001017,AB,01-17,Umu-Nneochi,umu-nneochi,Ishiagu,Abia North,5.972,7.40509,Umu-Neochi,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001015,AB,01-15,Umuahia North,umuahia-north,,Abia Central,5.60511,7.47718,,,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG001016,AB,01-16,Umuahia South,umuahia-south,,Abia Central,5.49881,7.43624,,,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG002001,AD,02-01,Demsa,demsa,Demsa,Adamawa South,9.421,12.06158,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002002,AD,02-02,Fufore,fufore,Fufore,Adamawa Central,9.24745,12.75536,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002003,AD,02-03,Ganye,ganye,Ganye,Adamawa South,8.43774,11.95468,Ganaye,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002005,AD,02-04,Girei,girei,,Adamawa Central,9.42044,12.4602,Girie|Gireri,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002004,AD,02-05,Gombi,gombi,Gombi,Adamawa Central,10.21915,12.51449,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002006,AD,02-06,Guyuk,guyuk,Guyuk,Adamawa South,9.8491,11.9195,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002007,AD,02-07,Hong,hong,Hong,Adamawa Central,10.27076,13.00011,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002008,AD,02-08,Jada,jada,Jada,Adamawa South,8.70004,12.32738,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002009,AD,02-09,Lamurde,lamurde,Lamurde,Adamawa South,9.55365,11.70147,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002010,AD,02-10,Madagali,madagali,Madagali,Adamawa North,10.79924,13.48153,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002011,AD,02-11,Maiha,maiha,Maiha,Adamawa North,9.87445,13.14138,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002012,AD,02-12,Mayo-Belwa,mayo-belwa,Mayo Belwa,Adamawa South,8.9075,12.04409,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002013,AD,02-13,Michika,michika,Michika,Adamawa North,10.57853,13.38419,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002014,AD,02-14,Mubi North,mubi-north,Mubi,Adamawa North,10.3592,13.36565,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002015,AD,02-15,Mubi South,mubi-south,,Adamawa North,10.17145,13.31206,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002016,AD,02-16,Numan,numan,Numan,Adamawa South,9.45149,11.84109,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002017,AD,02-17,Shelleng,shelleng,Shelleng,Adamawa South,9.90315,12.10576,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002018,AD,02-18,Song,song,Song,Adamawa Central,9.84109,12.62071,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002019,AD,02-19,Toungo,toungo,Toungo,Adamawa South,7.90223,11.87424,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002020,AD,02-20,Yola North,yola-north,,Adamawa Central,9.25846,12.4402,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG002021,AD,02-21,Yola South,yola-south,,Adamawa Central,9.27205,12.26059,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003001,AK,03-01,Abak,abak,,Akwa Ibom North West,5.0044,7.79894,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003002,AK,03-02,Eastern Obolo,eastern-obolo,Okoro Ete,Akwa Ibom South,4.51471,7.69643,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003003,AK,03-03,Eket,eket,Eket,Akwa Ibom South,4.63581,7.95718,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003004,AK,03-04,Esit Eket,esit-eket,,Akwa Ibom South,4.64161,8.07477,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003005,AK,03-05,Essien Udim,essien-udim,Ikot Ebak Efagha,Akwa Ibom North West,5.10069,7.65665,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003006,AK,03-06,Etim Ekpo,etim-ekpo,"Etim Ekpo, River",Akwa Ibom North West,4.95308,7.57061,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003007,AK,03-07,Etinan,etinan,Etinan,Akwa Ibom North East,4.84574,7.84315,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003008,AK,03-08,Ibeno,ibeno,Ibeno,Akwa Ibom South,4.56346,8.08897,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003009,AK,03-09,Ibesikpo Asutan,ibesikpo-asutan,Afaha Ibesikpo,Akwa Ibom North East,4.89636,7.96618,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003010,AK,03-10,Ibiono Ibom,ibiono-ibom,Oko Ita,Akwa Ibom North East,5.20024,7.89535,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003011,AK,03-11,Ika,ika,Urua Inyang,Akwa Ibom North West,5.01641,7.54293,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003012,AK,03-12,Ikono,ikono,Ikon I,Akwa Ibom North West,5.17807,7.79329,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003013,AK,03-13,Ikot Abasi,ikot-abasi,Opobo,Akwa Ibom South,4.60888,7.62169,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003014,AK,03-14,Ikot Ekpene,ikot-ekpene,Ikot-Ekpene,Akwa Ibom North West,5.20044,7.70544,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003015,AK,03-15,Ini,ini,Odoro-Ikpe,Akwa Ibom North West,5.40397,7.75152,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003016,AK,03-16,Itu,itu,Itu,Akwa Ibom North East,5.13849,7.99963,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003017,AK,03-17,Mbo,mbo,,Akwa Ibom South,4.62622,8.23591,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003018,AK,03-18,Mkpat Enin,mkpat-enin,Mkpat Enin,Akwa Ibom South,4.70473,7.76101,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003019,AK,03-19,Nsit Atai,nsit-atai,Odot,Akwa Ibom North East,4.81856,8.01398,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003020,AK,03-20,Nsit Ibom,nsit-ibom,,Akwa Ibom North East,4.90363,7.89285,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003021,AK,03-21,Nsit Ubium,nsit-ubium,,Akwa Ibom North East,4.75973,7.94872,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003022,AK,03-22,Obot Akara,obot-akara,Obot-Akara,Akwa Ibom North West,5.24345,7.6007,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003023,AK,03-23,Okobo,okobo,Okobo,Akwa Ibom South,4.81342,8.12659,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003024,AK,03-24,Onna,onna,Abat,Akwa Ibom South,4.63873,7.8734,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003025,AK,03-25,Oron,oron,Oron,Akwa Ibom South,4.81573,8.22601,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003026,AK,03-26,Oruk Anam,oruk-anam,Ikot Ibritam,Akwa Ibom North West,4.82782,7.69682,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003027,AK,03-27,Udung Uko,udung-uko,Udung Uko,Akwa Ibom South,4.74926,8.26546,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003028,AK,03-28,Ukanafun,ukanafun,,Akwa Ibom North West,4.87634,7.58544,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003029,AK,03-29,Uruan,uruan,Abak-Ibiaku Uruan,Akwa Ibom North East,5.00348,8.07489,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003030,AK,03-30,Urue Offong/Oruko,urue-offong-oruko,Oruko,Akwa Ibom South,4.72304,8.15493,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG003031,AK,03-31,Uyo,uyo,,Akwa Ibom North East,4.98822,7.99818,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004001,AN,04-01,Aguata,aguata,Ekwulobia,Anambra South,5.98252,7.09285,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004002,AN,04-03,Anambra East,anambra-east,Aguleri,Anambra North,6.31344,6.90046,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004003,AN,04-04,Anambra West,anambra-west,Nzam,Anambra North,6.49257,6.77658,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004004,AN,04-05,Anaocha,anaocha,Agulu,Anambra Central,6.09115,7.02616,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004005,AN,04-06,Awka North,awka-north,Achalla,Anambra Central,6.33975,7.06049,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004006,AN,04-07,Awka South,awka-south,,Anambra Central,6.19303,7.09344,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004007,AN,04-02,Ayamelum,ayamelum,Omo,Anambra North,6.53462,6.9748,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004008,AN,04-08,Dunukofia,dunukofia,Ukwulu,Anambra Central,6.27902,6.98014,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004009,AN,04-09,Ekwusigo,ekwusigo,Ekwusigo,Anambra South,5.99359,6.8387,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004010,AN,04-10,Idemili North,idemili-north,Uke,Anambra Central,6.13671,6.89332,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004011,AN,04-11,Idemili-South,idemili-south,,Anambra Central,6.06113,6.82858,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004012,AN,04-12,Ihiala,ihiala,Ihiala,Anambra South,5.84458,6.85813,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004013,AN,04-13,Njikoka,njikoka,,Anambra Central,6.19021,7.00788,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004014,AN,04-14,Nnewi North,nnewi-north,Nnewi,Anambra South,6.01919,6.9149,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004015,AN,04-15,Nnewi South,nnewi-south,Ukpor,Anambra South,5.95806,6.97695,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004016,AN,04-16,Ogbaru,ogbaru,Atani,Anambra North,5.91184,6.75067,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004017,AN,04-17,Onitsha-North,onitsha-north,,Anambra North,6.16355,6.79748,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004018,AN,04-18,Onitsha-South,onitsha-south,Onitsha,Anambra North,6.13972,6.77329,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004019,AN,04-19,Orumba North,orumba-north,Ufuma,Anambra South,6.11451,7.15968,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004020,AN,04-20,Orumba South,orumba-south,Umueje,Anambra South,5.98988,7.20506,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG004021,AN,04-21,Oyi,oyi,Nkwelle,Anambra North,6.22739,6.90029,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005001,BA,05-01,Alkaleri,alkaleri,Alkaleri,Bauchi South,9.89625,10.44515,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005002,BA,05-02,Bauchi,bauchi,,Bauchi South,10.24458,9.95556,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005003,BA,05-03,Bogoro,bogoro,Bogoro,Bauchi South,9.62523,9.6277,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005004,BA,05-04,Dambam,dambam,Damban,Bauchi Central,11.62945,10.76197,Damban,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005005,BA,05-05,Darazo,darazo,Darazo,Bauchi Central,11.10839,10.5096,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005006,BA,05-06,Dass,dass,Dass,Bauchi South,10.00855,9.47477,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005007,BA,05-07,Gamawa,gamawa,Gamawa,Bauchi North,12.02943,10.60841,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga
+NG005008,BA,05-08,Ganjuwa,ganjuwa,Ganjuwa,Bauchi Central,10.74718,10.04305,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005009,BA,05-09,Giade,giade,Giade,Bauchi North,11.40752,10.24185,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005010,BA,05-10,Itas/Gadau,itas-gadau,Itas,Bauchi North,11.87941,10.11037,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005011,BA,05-11,Jama'are,jamaare,Jamao?Çoare,Bauchi North,11.66738,9.94409,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005012,BA,05-12,Katagum,katagum,Azare,Bauchi North,11.66018,10.34509,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005013,BA,05-13,Kirfi,kirfi,Kirifi,Bauchi South,10.44168,10.52453,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005014,BA,05-14,Misau,misau,Misau,Bauchi Central,11.38882,10.46341,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005015,BA,05-15,Ningi,ningi,Ningi,Bauchi Central,11.06335,9.20696,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005016,BA,05-16,Shira,shira,Shira,Bauchi North,11.46193,10.04302,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005017,BA,05-17,Tafawa Balewa,tafawa-balewa,Tafawa-Balewa,Bauchi South,9.85774,9.61013,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005018,BA,05-18,Toro,toro,Toro,Bauchi South,10.3682,9.25214,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005019,BA,05-19,Warji,warji,Warji,Bauchi Central,11.1639,9.7437,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG005020,BA,05-20,Zaki,zaki,Katagum,Bauchi North,12.21215,10.24121,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007001,BE,07-01,Ado,ado,Igumale,Benue South,6.78013,8.06136,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007002,BE,07-02,Agatu,agatu,Obangedde,Benue South,7.87598,7.89511,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007003,BE,07-03,Apa,apa,Okpogu,Benue South,7.63221,7.90533,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007004,BE,07-04,Buruku,buruku,Buruku,Benue North West,7.38595,9.27204,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007005,BE,07-05,Gboko,gboko,Gboko,Benue North West,7.40536,8.88068,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007006,BE,07-06,Guma,guma,Gbajimba,Benue North West,7.86829,8.82865,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007007,BE,07-07,Gwer East,gwer-east,Aliade,Benue North West,7.37636,8.38306,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007008,BE,07-08,Gwer West,gwer-west,Naka,Benue North West,7.61295,8.26524,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007009,BE,07-09,Katsina-Ala,katsina-ala,Katsina Ala,Benue North East,7.35891,9.58963,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007010,BE,07-10,Konshisha,konshisha,Konshisha,Benue North East,7.10902,8.62141,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007011,BE,07-11,Kwande,kwande,Adikpo,Benue North East,6.7776,9.41318,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007012,BE,07-12,Logo,logo,Ugba,Benue North East,7.67106,9.24037,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007013,BE,07-13,Makurdi,makurdi,,Benue North West,7.73548,8.51828,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007014,BE,07-14,Obi,obi,,Benue South,7.02072,8.27244,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007015,BE,07-15,Ogbadibo,ogbadibo,Otukpa,Benue South,7.0214,7.63904,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007016,BE,07-17,Ohimini,ohimini,,Benue South,7.26002,7.95832,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007017,BE,07-16,Oju,oju,Oju,Benue South,6.87016,8.36362,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007018,BE,07-18,Okpokwu,okpokwu,,Benue South,7.04413,7.8933,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007019,BE,07-19,Otukpo,otukpo,Oturkpo,Benue South,7.32031,8.08696,Oturkpo,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007020,BE,07-20,Tarka,tarka,Wannune,Benue North West,7.60463,8.85851,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007021,BE,07-21,Ukum,ukum,Zaki Biam,Benue North East,7.64954,9.67692,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007022,BE,07-22,Ushongo,ushongo,,Benue North East,7.08219,9.0067,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG007023,BE,07-23,Vandeikya,vandeikya,Vande Ikya,Benue North East,6.84351,9.07869,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008001,BO,08-01,Abadam,abadam,Abadam,Borno North,13.39478,13.27447,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008002,BO,08-02,Askira/Uba,askira-uba,Askira,Borno South,10.63665,12.84627,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008003,BO,08-03,Bama,bama,Bama,Borno Central,11.54128,14.15376,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008004,BO,08-04,Bayo,bayo,,Borno South,10.44725,11.70468,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008005,BO,08-05,Biu,biu,Biu,Borno South,10.80412,12.12251,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008006,BO,08-06,Chibok,chibok,Chibok,Borno South,10.85562,12.82267,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008007,BO,08-07,Damboa,damboa,Damboa,Borno South,11.13676,12.73953,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008008,BO,08-08,Dikwa,dikwa,Dikwa,Borno Central,11.93475,14.08376,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008009,BO,08-09,Gubio,gubio,Gubio,Borno North,12.70879,12.76046,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008010,BO,08-10,Guzamala,guzamala,Gudumbali,Borno North,12.83553,13.31917,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008011,BO,08-11,Gwoza,gwoza,Gwoza,Borno South,11.17721,13.63155,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008012,BO,08-12,Hawul,hawul,Azare,Borno South,10.45743,12.29458,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008013,BO,08-13,Jere,jere,,Borno Central,11.92694,13.18697,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008014,BO,08-14,Kaga,kaga,Benisheik,Borno Central,11.58789,12.48621,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008015,BO,08-15,Kala Balge,kala-balge,Kala-Belgue,Borno Central,12.05785,14.48634,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008016,BO,08-16,Konduga,konduga,Konduga,Borno Central,11.68676,13.18348,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008017,BO,08-17,Kukawa,kukawa,Kukawa,Borno North,13.04582,13.7178,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008018,BO,08-18,Kwaya/Kusar,kwaya-kusar,Kwaya,Borno South,10.43091,11.9065,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008019,BO,08-19,Mafa,mafa,Mafa,Borno Central,12.04637,13.54125,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008020,BO,08-20,Magumeri,magumeri,Magumeri,Borno North,12.22527,12.71197,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008021,BO,08-21,Maiduguri,maiduguri,,Borno Central,11.83471,13.13357,Maiduguri Metropolitan Council|MMC,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008022,BO,08-22,Marte,marte,Marte,Borno North,12.40645,13.85788,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008023,BO,08-23,Mobbar,mobbar,Damasak,Borno North,13.0552,12.62657,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008024,BO,08-24,Monguno,monguno,Monguno,Borno North,12.52256,13.53365,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008025,BO,08-25,Ngala,ngala,Ngala,Borno Central,12.29337,14.19903,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008026,BO,08-26,Nganzai,nganzai,Gajiram,Borno North,12.45905,13.10732,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG008027,BO,08-27,Shani,shani,Shani,Borno South,10.19307,11.95265,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG006001,BY,06-01,Brass,brass,Brass,Bayelsa East,4.41717,6.10601,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG006002,BY,06-02,Ekeremor,ekeremor,Ekeremor,Bayelsa West,4.94131,5.71546,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG006003,BY,06-03,Kolokuma/Opokuma,kolokuma-opokuma,Opokuma,Bayelsa Central,5.06841,6.24085,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG006004,BY,06-04,Nembe,nembe,Nembe,Bayelsa East,4.5435,6.38135,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG006005,BY,06-05,Ogbia,ogbia,Ogbia,Bayelsa East,4.79574,6.31382,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG006006,BY,06-06,Sagbama,sagbama,Sagbama,Bayelsa West,5.09642,6.12385,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG006007,BY,06-07,Southern Ijaw,southern-ijaw,Oporoma,Bayelsa Central,4.71595,5.88058,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG006008,BY,06-08,Yenagoa,yenagoa,,Bayelsa Central,5.06539,6.37224,Yenegoa,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009001,CR,09-01,Abi,abi,,Cross River Central,5.88299,8.02916,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009002,CR,09-02,Akamkpa,akamkpa,Akankpa,Cross River South,5.38761,8.52823,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009003,CR,09-03,Akpabuyo,akpabuyo,Ikot Nakanda,Cross River South,4.9012,8.4823,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009005,CR,09-04,Bakassi,bakassi,,Cross River South,4.80714,8.56236,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009006,CR,09-05,Bekwarra,bekwarra,Bekwara,Cross River North,6.7051,8.89397,Bekwara,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009007,CR,09-06,Biase,biase,,Cross River North,5.54737,8.05203,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009008,CR,09-07,Boki,boki,Boji,Cross River Central,6.27065,9.04286,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009010,CR,09-08,Calabar Municipal,calabar-municipal,,Cross River South,5.01925,8.34685,Calabar Municipality,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009009,CR,09-09,Calabar South,calabar-south,,Cross River South,4.87796,8.31193,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009011,CR,09-10,Etung,etung,Efferaya,Cross River Central,5.87848,8.80857,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009012,CR,09-11,Ikom,ikom,Ikom,Cross River Central,6.06133,8.66787,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009013,CR,09-12,Obanliku,obanliku,Sankwala,Cross River North,6.49427,9.35416,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009014,CR,09-13,Obubra,obubra,Obubra,Cross River Central,6.01531,8.41467,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009015,CR,09-14,Obudu,obudu,Obudu,Cross River North,6.56036,9.08028,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009016,CR,09-15,Odukpani,odukpani,Odukpani,Cross River South,5.17935,8.20539,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009017,CR,09-16,Ogoja,ogoja,Ogoja,Cross River North,6.52681,8.68896,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009018,CR,09-17,Yakurr,yakurr,Ugep,Cross River Central,5.81761,8.17791,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG009019,CR,09-18,Yala,yala,Otukpo,Cross River North,6.58742,8.5122,Yala Cross,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG010001,DE,10-01,Aniocha North,aniocha-north,Issele-Uku,Delta North,6.36799,6.47028,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010002,DE,10-02,Aniocha-South,aniocha-south,Ogwashi-Uku,Delta North,6.14492,6.4739,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010003,DE,10-03,Bomadi,bomadi,Bomadi,Delta South,5.22553,5.80973,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010004,DE,10-04,Burutu,burutu,Burutu,Delta South,5.23414,5.57101,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010005,DE,10-05,Ethiope East,ethiope-east,Isiokolo,Delta Central,5.66729,5.97213,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010006,DE,10-06,Ethiope West,ethiope-west,,Delta Central,5.91132,5.77586,,,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010007,DE,10-07,Ika North-East,ika-north-east,Owa Oyiebu,Delta North,6.23677,6.32093,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010008,DE,10-08,Ika-South,ika-south,Agbor,Delta North,6.18731,6.13356,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010009,DE,10-09,Isoko North,isoko-north,Ozoro,Delta South,5.51388,6.12626,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010010,DE,10-10,Isoko South,isoko-south,Ole,Delta South,5.39735,6.2135,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010011,DE,10-11,Ndokwa East,ndokwa-east,Aboh,Delta North,5.66304,6.50312,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010012,DE,10-12,Ndokwa West,ndokwa-west,Kwale,Delta North,5.8261,6.41636,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010013,DE,10-13,Okpe,okpe,Orerokpe,Delta Central,5.69997,5.74271,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010014,DE,10-14,Oshimili-North,oshimili-north,Akwukwu-Igbo,Delta North,6.30432,6.6447,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010015,DE,10-15,Oshimili-South,oshimili-south,,Delta North,6.13036,6.73073,,,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010016,DE,10-16,Patani,patani,Patani,Delta South,5.18961,6.10387,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010017,DE,10-17,Sapele,sapele,,Delta Central,5.83616,5.65904,,,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010018,DE,10-18,Udu,udu,,Delta Central,5.47698,5.8121,,,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010019,DE,10-19,Ughelli North,ughelli-north,Ughelli,Delta Central,5.48688,6.01143,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010020,DE,10-20,Ughelli South,ughelli-south,,Delta Central,5.36021,5.96778,,,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010021,DE,10-21,Ukwuani,ukwuani,Obiaruku,Delta North,5.84944,6.25206,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010022,DE,10-22,Uvwie,uvwie,Effurun,Delta Central,5.56797,5.77983,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010023,DE,10-23,Warri North,warri-north,Koko,Delta South,5.93064,5.13695,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010024,DE,10-24,Warri South,warri-south,Warri,Delta South,5.66735,5.60257,,headquarters,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG010025,DE,10-25,Warri South West,warri-south-west,,Delta South,5.60559,5.33201,,,inec-cvr|ocha-cod-ab-nga|constitution-1999
+NG011001,EB,11-01,Abakaliki,abakaliki,,Ebonyi North,6.25661,8.24424,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG011002,EB,11-02,Afikpo North,afikpo-north,Afikpo,Ebonyi South,5.8584,7.92298,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG011003,EB,11-03,Afikpo South,afikpo-south,Edda,Ebonyi South,5.82746,7.78391,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG011004,EB,11-04,Ebonyi,ebonyi,,Ebonyi North,6.55762,8.11196,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG011005,EB,11-05,Ezza North,ezza-north,Okposi,Ebonyi Central,6.26368,7.97949,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG011006,EB,11-06,Ezza South,ezza-south,,Ebonyi Central,6.12604,7.99828,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG011007,EB,11-07,Ikwo,ikwo,Ikwo,Ebonyi Central,6.0814,8.17851,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG011008,EB,11-08,Ishielu,ishielu,Ezillo,Ebonyi Central,6.40961,7.84359,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG011009,EB,11-09,Ivo,ivo,Ishiagu,Ebonyi South,5.91383,7.64066,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG011010,EB,11-10,Izzi,izzi,,Ebonyi North,6.52472,8.27506,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG011011,EB,11-11,Ohaozara,ohaozara,Uburu,Ebonyi South,6.00203,7.78838,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG011012,EB,11-12,Ohaukwu,ohaukwu,,Ebonyi North,6.53889,8.00827,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG011013,EB,11-13,Onicha,onicha,Isu,Ebonyi South,6.11853,7.8166,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012001,ED,12-01,Akoko Edo,akoko-edo,Igarra,Edo North,7.35239,6.12524,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012002,ED,12-02,Egor,egor,Uselu,Edo South,6.35717,5.58687,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012003,ED,12-03,Esan Central,esan-central,Irrua,Edo Central,6.70471,6.20793,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012004,ED,12-04,Esan North East,esan-north-east,Uromi,Edo Central,6.78045,6.42212,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012005,ED,12-05,Esan South East,esan-south-east,Ubiaja,Edo Central,6.57681,6.48608,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012006,ED,12-06,Esan West,esan-west,Ekpoma,Edo Central,6.65465,6.13966,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012007,ED,12-07,Etsako Central,etsako-central,Fugar,Edo North,6.97566,6.51589,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012008,ED,12-08,Etsako East,etsako-east,Agenebode,Edo North,7.18764,6.51631,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012009,ED,12-09,Etsako West,etsako-west,Auchi,Edo North,7.00147,6.30193,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012010,ED,12-10,Igueben,igueben,Igueben,Edo Central,6.50944,6.24747,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012011,ED,12-11,Ikpoba/Okha,ikpoba-okha,Idogbo,Edo South,6.19977,5.66225,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012012,ED,12-12,Oredo,oredo,,Edo South,6.23302,5.56381,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012013,ED,12-13,Orhionmwon,orhionmwon,Abudu,Edo South,6.08842,5.94836,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012014,ED,12-14,Ovia North East,ovia-north-east,Okada,Edo South,6.39677,5.50307,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012015,ED,12-15,Ovia South West,ovia-south-west,Iguobazowa,Edo South,6.4715,5.29944,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012016,ED,12-16,Owan East,owan-east,Afuze,Edo North,7.02885,6.10572,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012017,ED,12-17,Owan West,owan-west,,Edo North,6.93397,5.88707,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG012018,ED,12-18,Uhunmwonde,uhunmwonde,Ehor,Edo South,6.52594,5.90007,Uhunmwode,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013001,EK,13-01,Ado Ekiti,ado-ekiti,,Ekiti Central,7.62739,5.25177,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013002,EK,13-07,Aiyekire,aiyekire,Ode,Ekiti South,7.60171,5.51244,Gboyin|Aiyekire (Gbonyin)|Gbonyin,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013003,EK,13-02,Efon,efon,Efon-Alaiye,Ekiti Central,7.6812,4.93083,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013004,EK,13-03,Ekiti East,ekiti-east,Omuo-Ekiti,Ekiti South,7.7248,5.66416,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013005,EK,13-05,Ekiti South West,ekiti-south-west,Ilawe-Ekiti,Ekiti South,7.52346,5.03336,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013006,EK,13-04,Ekiti West,ekiti-west,Aramoko-Ekiti,Ekiti Central,7.71942,5.04457,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013007,EK,13-06,Emure,emure,Emure-Ekiti,Ekiti South,7.4155,5.50871,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013008,EK,13-08,Ido/Osi,ido-osi,Osi Ekiti,Ekiti North,7.86335,5.19694,Idosi-Osi,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013009,EK,13-09,Ijero,ijero,Ijero-Ekiti,Ekiti Central,7.83174,5.05836,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013010,EK,13-10,Ikere,ikere,Ikere-Ekiti,Ekiti South,7.49361,5.20922,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013011,EK,13-11,Ikole,ikole,Ikole,Ekiti North,7.88315,5.51565,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013012,EK,13-12,Ilejemeje,ilejemeje,Iye,Ekiti North,7.96025,5.2307,Ilejemeji|Ilemeji,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013013,EK,13-13,Irepodun/Ifelodun,irepodun-ifelodun,Igede,Ekiti Central,7.70632,5.33901,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013014,EK,13-14,Ise/Orun,ise-orun,Ise-Ekiti,Ekiti South,7.41528,5.38669,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013015,EK,13-15,Moba,moba,Otun,Ekiti North,7.99315,5.13119,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG013016,EK,13-16,Oye,oye,Oye,Ekiti North,7.88054,5.33753,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014001,EN,14-01,Aninri,aninri,Ndeaboh,Enugu West,6.06793,7.59711,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014002,EN,14-02,Awgu,awgu,Awgu,Enugu West,6.17313,7.45125,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014003,EN,14-03,Enugu East,enugu-east,,Enugu East,6.5586,7.55743,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014004,EN,14-04,Enugu North,enugu-north,,Enugu East,6.44108,7.53832,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014005,EN,14-05,Enugu South,enugu-south,,Enugu East,6.39271,7.51625,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014006,EN,14-06,Ezeagu,ezeagu,Ezeagu,Enugu West,6.41706,7.23796,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014007,EN,14-07,Igbo Etiti,igbo-etiti,Ogbede,Enugu North,6.69041,7.39218,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014008,EN,14-08,Igbo Eze North,igbo-eze-north,Enugu-Ezike,Enugu North,7.01794,7.46799,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014009,EN,14-09,Igbo Eze South,igbo-eze-south,Ibegwa-Aka,Enugu North,6.95599,7.36209,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014010,EN,14-10,Isi Uzo,isi-uzo,Ikem,Enugu East,6.739,7.70744,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014011,EN,14-11,Nkanu East,nkanu-east,Amagunze,Enugu East,6.33503,7.67259,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014012,EN,14-12,Nkanu West,nkanu-west,Agbani,Enugu East,6.32815,7.5344,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014013,EN,14-13,Nsukka,nsukka,Nsukka,Enugu North,6.84727,7.37151,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014014,EN,14-14,Oji-River,oji-river,Oji River,Enugu West,6.16549,7.30302,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014015,EN,14-15,Udenu,udenu,Obolo,Enugu North,6.8977,7.56103,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014016,EN,14-16,Udi,udi,Udi,Enugu West,6.43615,7.39874,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG014017,EN,14-17,Uzo-Uwani,uzo-uwani,Umulokpa,Enugu North,6.68861,7.1583,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG015001,FC,37-01,Abaji,abaji,Abaji,Federal Capital Territory,8.83961,6.81854,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG015002,FC,37-06,Abuja Municipal,abuja-municipal,Garki,Federal Capital Territory,8.88218,7.4181,Municipal|AMAC|Abuja Municipal Area Council,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG015003,FC,37-02,Bwari,bwari,Bwari,Federal Capital Territory,9.23255,7.47,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG015004,FC,37-03,Gwagwalada,gwagwalada,Gwagwalada,Federal Capital Territory,9.07551,7.05435,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG015005,FC,37-04,Kuje,kuje,Kuje,Federal Capital Territory,8.69632,7.27827,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG015006,FC,37-05,Kwali,kwali,Kwali,Federal Capital Territory,8.71739,6.96268,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG016001,GO,15-01,Akko,akko,,Gombe Central,10.105,10.99443,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG016002,GO,15-02,Balanga,balanga,Balanga,Gombe South,9.81612,11.71644,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG016003,GO,15-03,Billiri,billiri,Billiri,Gombe South,9.84245,11.1273,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG016004,GO,15-04,Dukku,dukku,Dukku,Gombe North,10.78728,10.82156,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG016005,GO,15-05,Funakaye,funakaye,Bajoga,Gombe North,10.81425,11.44433,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG016006,GO,15-06,Gombe,gombe,,Gombe North,10.29494,11.15809,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG016007,GO,15-07,Kaltungo,kaltungo,Kaltungo,Gombe South,9.84091,11.43224,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG016008,GO,15-08,Kwami,kwami,Mallam Sidi,Gombe North,10.49466,11.18437,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG016009,GO,15-09,Nafada,nafada,Nafada,Gombe North,11.05111,11.24653,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG016010,GO,15-10,Shongom,shongom,Chongwom,Gombe South,9.74969,11.24702,Shomgom,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG016011,GO,15-11,Yamaltu/Deba,yamaltu-deba,Deba Habe,Gombe Central,10.31465,11.37241,Yalmaltu/Deba,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017001,IM,16-01,Aboh Mbaise,aboh-mbaise,,Imo East,5.41889,7.25912,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017002,IM,16-02,Ahiazu Mbaise,ahiazu-mbaise,Oru,Imo East,5.5632,7.26363,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017003,IM,16-03,Ehime Mbano,ehime-mbano,Umueze,Imo North,5.68845,7.29639,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017004,IM,16-04,Ezinihitte Mbaise,ezinihitte-mbaise,Okpofe,Imo East,5.47337,7.32239,Ezinihitte,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017005,IM,16-05,Ideato North,ideato-north,Urualla,Imo West,5.86898,7.20631,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017006,IM,16-06,Ideato South,ideato-south,Dikenafai,Imo West,5.81624,7.12345,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017007,IM,16-07,Ihitte Uboma,ihitte-uboma,,Imo North,5.64695,7.38186,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017008,IM,16-08,Ikeduru,ikeduru,Ihuo,Imo East,5.56304,7.1505,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017009,IM,16-09,Isiala Mbano,isiala-mbano,Umu Elemai,Imo North,5.68077,7.19714,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017010,IM,16-10,Isu,isu,Isu-Njaba,Imo West,5.68804,7.05251,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017011,IM,16-11,Mbaitoli,mbaitoli,,Imo East,5.59819,7.01605,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017012,IM,16-12,Ngor Okpala,ngor-okpala,Umu Neke,Imo East,5.32742,7.1575,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017013,IM,16-13,Njaba,njaba,,Imo West,5.701,7.00107,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017014,IM,16-14,Nkwerre,nkwerre,Nkwerre,Imo West,5.74997,7.10038,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017015,IM,16-15,Nwangele,nwangele,,Imo West,5.70937,7.1199,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017016,IM,16-16,Obowo,obowo,,Imo North,5.56037,7.36113,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017017,IM,16-17,Oguta,oguta,Oguta,Imo West,5.65512,6.78052,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017018,IM,16-18,Ohaji Egbema,ohaji-egbema,Ose-Mmahu,Imo West,5.42551,6.84844,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017019,IM,16-19,Okigwe,okigwe,Okigwi,Imo North,5.82119,7.32072,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017027,IM,16-20,Onuimo,onuimo,Okwe,Imo North,5.79681,7.22481,Unuimo,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017020,IM,16-21,Orlu,orlu,Orlu,Imo West,5.8187,7.03355,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017021,IM,16-22,Orsu,orsu,Awo Idemiri,Imo West,5.84594,6.96697,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017022,IM,16-23,Oru East,oru-east,Omuma,Imo West,5.72936,6.94704,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017023,IM,16-24,Oru West,oru-west,Mgbidi,Imo West,5.75865,6.90632,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017026,IM,16-25,Owerri Municipal,owerri-municipal,,Imo East,5.4799,7.02198,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017024,IM,16-26,Owerri North,owerri-north,,Imo East,5.43176,7.10773,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG017025,IM,16-27,Owerri West,owerri-west,Umuoguma,Imo East,5.40683,6.98512,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018001,JI,17-01,Auyo,auyo,Auyo,Jigawa North-East,12.33805,9.91936,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018002,JI,17-02,Babura,babura,Babura,Jigawa North-West,12.61281,8.83831,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018004,JI,17-03,Birnin Kudu,birnin-kudu,Birnin Kudu,Jigawa South-West,11.49041,9.46174,Birni Kudu,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018003,JI,17-04,Birniwa,birniwa,Birinawa,Jigawa North-East,12.82497,10.09204,Biriniwa,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018005,JI,17-05,Buji,buji,Buji,Jigawa South-West,11.54765,9.71537,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018006,JI,17-06,Dutse,dutse,,Jigawa South-West,11.80509,9.25824,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018007,JI,17-08,Gagarawa,gagarawa,Gagarawa,Jigawa North-West,12.49288,9.52702,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018008,JI,17-07,Garki,garki,Garki,Jigawa North-West,12.40898,9.1081,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018009,JI,17-09,Gumel,gumel,Gumel,Jigawa North-West,12.63174,9.39936,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018010,JI,17-10,Guri,guri,Guri,Jigawa North-East,12.64529,10.48147,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018011,JI,17-11,Gwaram,gwaram,Gwaram,Jigawa South-West,11.20888,10.07111,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018012,JI,17-12,Gwiwa,gwiwa,Gwiwa,Jigawa North-West,12.74442,8.28235,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018013,JI,17-13,Hadejia,hadejia,Hadejia,Jigawa North-East,12.47445,10.04788,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018014,JI,17-14,Jahun,jahun,Jahun,Jigawa South-West,12.06543,9.56099,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018015,JI,17-15,Kafin Hausa,kafin-hausa,Kaffin-Hausa,Jigawa North-East,12.16895,9.97775,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018016,JI,17-16,Kaugama,kaugama,Kuagama,Jigawa North-East,12.55936,9.76735,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga
+NG018017,JI,17-17,Kazaure,kazaure,Kazaure,Jigawa North-West,12.66061,8.45064,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga
+NG018018,JI,17-18,Kirika Samma,kirika-samma,Kiri Kasamma,Jigawa North-East,12.59976,10.25752,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018019,JI,17-19,Kiyawa,kiyawa,Kiyawa,Jigawa South-West,11.81169,9.52472,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018020,JI,17-20,Maigatari,maigatari,Maigatari,Jigawa North-West,12.68645,9.61718,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018021,JI,17-21,Malam Madori,malam-madori,Malam-Maduri,Jigawa North-East,12.5332,9.95324,Malam Maduri,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018022,JI,17-22,Miga,miga,Miga,Jigawa South-West,12.22488,9.67757,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018023,JI,17-23,Ringim,ringim,Ringim,Jigawa North-West,12.1699,9.14846,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018024,JI,17-24,Roni,roni,Roni,Jigawa North-West,12.57227,8.38201,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018025,JI,17-25,Sule-Tankarkar,sule-tankarkar,Sule Tankarka,Jigawa North-West,12.63421,9.17485,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018026,JI,17-26,Taura,taura,Taura,Jigawa North-West,12.27916,9.35272,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG018027,JI,17-27,Yankwashi,yankwashi,,Jigawa North-West,12.74267,8.50295,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019001,KD,18-01,Birnin Gwari,birnin-gwari,Birnin-Gwari,Kaduna Central,10.88233,6.65432,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019002,KD,18-02,Chikun,chikun,Chikun,Kaduna Central,10.41125,7.30374,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019003,KD,18-03,Giwa,giwa,Giwa,Kaduna Central,11.1193,7.40977,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019004,KD,18-04,Igabi,igabi,Igabi,Kaduna Central,10.7426,7.48357,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019005,KD,18-05,Ikara,ikara,Ikara,Kaduna North,11.31368,8.14744,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019006,KD,18-06,Jaba,jaba,Kwoi,Kaduna South,9.47617,8.02436,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019007,KD,18-07,Jema'a,jemaa,Jemaa,Kaduna South,9.39903,8.2621,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019008,KD,18-08,Kachia,kachia,Kachia,Kaduna South,9.85956,7.67596,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019009,KD,18-09,Kaduna North,kaduna-north,,Kaduna Central,10.54452,7.45015,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019010,KD,18-10,Kaduna South,kaduna-south,Kaduna South,Kaduna Central,10.51088,7.39984,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019011,KD,18-11,Kagarko,kagarko,Kagarko,Kaduna South,9.49358,7.58513,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019012,KD,18-12,Kajuru,kajuru,Kajuru,Kaduna South,10.26253,7.86185,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019013,KD,18-13,Kaura,kaura,,Kaduna South,9.62023,8.44358,Kauru,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019014,KD,18-14,Kauru,kauru,Kauru,Kaduna Central,10.22014,8.31848,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019015,KD,18-15,Kubau,kubau,Kubau,Kaduna North,10.85699,8.37394,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019016,KD,18-16,Kudan,kudan,Kudan,Kaduna North,11.26793,7.71922,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019017,KD,18-17,Lere,lere,Lere,Kaduna North,10.33702,8.58055,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019018,KD,18-18,Makarfi,makarfi,Makarfi,Kaduna North,11.3274,7.95579,Markafi,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019019,KD,18-19,Sabon Gari,sabon-gari,Sabon Gari,Kaduna North,11.17879,7.67599,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019020,KD,18-20,Sanga,sanga,Sanga,Kaduna South,9.25129,8.43737,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019021,KD,18-21,Soba,soba,Soba,Kaduna North,10.95356,8.05349,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019022,KD,18-22,Zangon Kataf,zangon-kataf,Zangon Katab,Kaduna South,9.83907,8.2778,Zango-Kataf,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG019023,KD,18-23,Zaria,zaria,Zaria Native Area N,Kaduna North,11.01879,7.64598,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022001,KE,21-01,Aliero,aliero,Aliero,Kebbi Central,12.31988,4.45685,Aleiro,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022002,KE,21-02,Arewa Dandi,arewa-dandi,,Kebbi North,12.68518,4.01617,Arewa,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga
+NG022003,KE,21-03,Argungu,argungu,Argungu,Kebbi North,12.70736,4.4836,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022004,KE,21-04,Augie,augie,Augie,Kebbi North,12.9417,4.55357,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022005,KE,21-05,Bagudo,bagudo,Bagudo,Kebbi North,11.31468,3.85336,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022006,KE,21-06,Birnin Kebbi,birnin-kebbi,,Kebbi Central,12.49877,4.2906,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022007,KE,21-07,Bunza,bunza,Bunza,Kebbi Central,12.19341,3.9375,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022008,KE,21-08,Dandi,dandi,Kamba,Kebbi North,11.86128,3.80084,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022009,KE,21-09,Fakai,fakai,Fakai,Kebbi South,11.47485,4.92469,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022010,KE,21-10,Gwandu,gwandu,Gwandu,Kebbi Central,12.50052,4.65973,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022011,KE,21-11,Jega,jega,Jega,Kebbi North,12.09886,4.47507,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022012,KE,21-12,Kalgo,kalgo,Kalgo,Kebbi Central,12.38613,4.05769,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022013,KE,21-13,Koko/Besse,koko-besse,Koko,Kebbi Central,11.44467,4.47654,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022014,KE,21-14,Maiyama,maiyama,Maiyama,Kebbi Central,12.00755,4.2901,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022015,KE,21-15,Ngaski,ngaski,Ngaski,Kebbi South,10.58503,4.72145,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022016,KE,21-16,Sakaba,sakaba,Sakaba,Kebbi South,11.17491,5.59528,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022017,KE,21-17,Shanga,shanga,Shanga,Kebbi South,11.21109,4.59708,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022018,KE,21-18,Suru,suru,Suru,Kebbi North,11.78401,4.13322,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022019,KE,21-19,Wasagu/Danko,wasagu-danko,Wasagu,Kebbi South,11.42274,5.73074,Danko/Wasagu,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022020,KE,21-20,Yauri,yauri,Yelwa,Kebbi South,10.75476,4.72648,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG022021,KE,21-21,Zuru,zuru,Zuru,Kebbi South,11.41285,5.27942,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020001,KN,19-01,Ajingi,ajingi,Ajingi,Kano South,11.99155,9.07503,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020002,KN,19-02,Albasu,albasu,Albasu,Kano South,11.62669,9.0294,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020003,KN,19-03,Bagwai,bagwai,Bagwai,Kano North,12.09819,8.12494,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020004,KN,19-04,Bebeji,bebeji,Bebeji,Kano South,11.52551,8.32778,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020005,KN,19-05,Bichi,bichi,Bichi,Kano North,12.2882,8.301,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020006,KN,19-06,Bunkure,bunkure,Bunkure,Kano South,11.67249,8.55345,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020007,KN,19-07,Dala,dala,,Kano Central,12.02695,8.49352,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020008,KN,19-08,Danbata,danbata,Dambatta,Kano North,12.42522,8.64198,Dambatta,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020009,KN,19-09,Dawaki Kudu,dawaki-kudu,Dawakin Kudu,Kano Central,11.79473,8.70835,Dawakin Kudu,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020010,KN,19-10,Dawaki Tofa,dawaki-tofa,Dawakin Tofa,Kano North,12.14688,8.38219,Dawakin Tofa,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020011,KN,19-11,Doguwa,doguwa,Ririwai,Kano South,10.88956,8.66953,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020012,KN,19-12,Fagge,fagge,Fagge,Kano Central,12.02686,8.52358,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020013,KN,19-13,Gabasawa,gabasawa,Gabasawa,Kano North,12.13699,8.86643,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020014,KN,19-14,Garko,garko,Garko,Kano South,11.55077,8.84248,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020015,KN,19-15,Garun Malam,garun-malam,Garum Mallam,Kano Central,11.66026,8.393,Garum Malam|Garum Mallam,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020016,KN,19-16,Gaya,gaya,Gaya,Kano South,11.79273,9.01791,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020017,KN,19-17,Gezawa,gezawa,Gezawa,Kano Central,12.05692,8.74133,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020018,KN,19-18,Gwale,gwale,,Kano Central,11.97783,8.48361,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020019,KN,19-19,Gwarzo,gwarzo,Gwarzo,Kano North,11.90338,7.98441,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020020,KN,19-20,Kabo,kabo,Kabo,Kano North,11.89782,8.19665,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020021,KN,19-21,Kano Municipal,kano-municipal,,Kano Central,11.97961,8.5157,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020022,KN,19-22,Karaye,karaye,Karaye,Kano North,11.74956,7.98612,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020023,KN,19-23,Kibiya,kibiya,Kibiya,Kano South,11.49256,8.68283,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020024,KN,19-24,Kiru,kiru,Kiru,Kano South,11.55266,8.11425,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020025,KN,19-25,Kumbotso,kumbotso,Kumbotso,Kano Central,11.9209,8.51959,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020026,KN,19-26,Kunchi,kunchi,Kunchi,Kano North,12.4678,8.2673,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020027,KN,19-27,Kura,kura,Kura,Kano Central,11.77501,8.47804,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020028,KN,19-28,Madobi,madobi,Madobi,Kano Central,11.81336,8.37013,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020029,KN,19-29,Makoda,makoda,Makoda,Kano North,12.42177,8.44178,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020030,KN,19-30,Minjibir,minjibir,Minjibir,Kano Central,12.1926,8.62127,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020031,KN,19-31,Nasarawa,nasarawa,,Kano Central,12.00443,8.58503,Nassarawa,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020032,KN,19-32,Rano,rano,Rano,Kano South,11.48403,8.51005,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020033,KN,19-33,Rimin Gado,rimin-gado,Rimin Gado,Kano North,11.92691,8.3235,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020034,KN,19-34,Rogo,rogo,Rogo,Kano South,11.50882,7.86331,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020035,KN,19-35,Shanono,shanono,Shanono,Kano North,12.08694,7.92907,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020036,KN,19-36,Sumaila,sumaila,Sumaila,Kano South,11.32509,8.96054,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020037,KN,19-37,Takai,takai,Takai,Kano South,11.48745,9.13942,Takali,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020038,KN,19-38,Tarauni,tarauni,,Kano Central,11.96444,8.55611,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020039,KN,19-39,Tofa,tofa,Tofa,Kano North,12.01454,8.34059,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020040,KN,19-40,Tsanyawa,tsanyawa,Tsanyawa,Kano North,12.27793,8.00221,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020041,KN,19-41,Tudun Wada,tudun-wada,Tudun Wada,Kano South,11.20852,8.51211,Tundun Wada,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020042,KN,19-42,Ungogo,ungogo,Ungogo,Kano Central,12.04197,8.60562,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020043,KN,19-43,Warawa,warawa,,Kano Central,11.89853,8.76492,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG020044,KN,19-44,Wudil,wudil,Wudil,Kano South,11.75916,8.85111,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023001,KO,22-01,Adavi,adavi,,Kogi Central,7.68441,6.4667,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023002,KO,22-02,Ajaokuta,ajaokuta,Ajaokuta,Kogi Central,7.50297,6.56939,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023003,KO,22-03,Ankpa,ankpa,Ankpa,Kogi East,7.49644,7.62738,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023004,KO,22-04,Bassa,bassa,Oguma,Kogi East,7.7468,6.96107,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023005,KO,22-05,Dekina,dekina,Dekina,Kogi East,7.59632,7.1403,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023006,KO,22-06,Ibaji,ibaji,"Ofu, River",Kogi East,6.77873,6.75845,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023007,KO,22-07,Idah,idah,Idah,Kogi East,7.07174,6.73456,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023008,KO,22-08,Igalamela/Odolu,igalamela-odolu,Ajaka,Kogi East,7.03792,7.07208,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023009,KO,22-09,Ijumu,ijumu,,Kogi West,7.83755,5.89404,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023010,KO,22-10,Kabba/Bunu,kabba-bunu,Kabba,Kogi West,8.07188,6.14115,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023011,KO,22-11,Kogi,kogi,Koton Karifi,Kogi West,8.12703,6.85561,Kogi Koton-Karfe|Koton Karfe,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023012,KO,22-12,Lokoja,lokoja,,Kogi West,8.23918,6.55406,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023013,KO,22-13,Mopa-Muro,mopa-muro,Mopa,Kogi West,8.14045,5.90252,Mopa Moro,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023014,KO,22-14,Ofu,ofu,Gwalawo,Kogi East,7.32949,7.06897,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023015,KO,22-15,Ogori/Magongo,ogori-magongo,Ogori,Kogi Central,7.47867,6.15587,Ogori Mangogo|Ogori/Mangongo,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023016,KO,22-16,Okehi,okehi,Ogaminana,Kogi Central,7.72412,6.33559,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023017,KO,22-17,Okene,okene,Okene,Kogi Central,7.45519,6.39297,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023018,KO,22-18,Olamaboro,olamaboro,Okpo,Kogi East,7.17822,7.48205,Olamabolo,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023019,KO,22-19,Omala,omala,Abejukolo,Kogi East,7.77783,7.56589,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023020,KO,22-20,Yagba East,yagba-east,Isanlu Itedo,Kogi West,8.13594,5.71921,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG023021,KO,22-21,Yagba West,yagba-west,Odo Ere,Kogi West,8.27676,5.55165,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021001,KT,20-01,Bakori,bakori,Bakori,Katsina South,11.64567,7.4289,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021002,KT,20-02,Batagarawa,batagarawa,Batagarawa,Katsina Central,12.87906,7.53056,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021003,KT,20-03,Batsari,batsari,Batsari,Katsina Central,12.82686,7.25837,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021004,KT,20-04,Baure,baure,Baure,Katsina North,12.79356,8.78159,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021005,KT,20-05,Bindawa,bindawa,Bindawa,Katsina North,12.70928,7.87762,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021006,KT,20-06,Charanchi,charanchi,Charanchi,Katsina Central,12.55457,7.6774,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021007,KT,20-09,Dan Musa,dan-musa,Dan Musa,Katsina Central,12.21635,7.35166,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021008,KT,20-07,Dandume,dandume,Dan Dume,Katsina South,11.41432,7.20641,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021009,KT,20-08,Danja,danja,Danja,Katsina South,11.41049,7.59617,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021010,KT,20-10,Daura,daura,Daura,Katsina North,12.96031,8.26513,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021011,KT,20-11,Dutsi,dutsi,Dutsi,Katsina North,12.91625,8.15731,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021012,KT,20-12,Dutsin-Ma,dutsin-ma,Dutsin Ma,Katsina Central,12.41525,7.52493,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021013,KT,20-13,Faskari,faskari,Faskari,Katsina South,11.65549,7.09388,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021014,KT,20-14,Funtua,funtua,Funtua,Katsina South,11.43357,7.34446,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021015,KT,20-15,Ingawa,ingawa,Ingawa,Katsina North,12.60771,8.14466,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021016,KT,20-16,Jibia,jibia,Jibiya,Katsina Central,13.00457,7.40712,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021017,KT,20-17,Kafur,kafur,Kafur,Katsina South,11.63565,7.71857,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021018,KT,20-18,Kaita,kaita,Kaita,Katsina Central,13.17898,7.78231,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021019,KT,20-19,Kankara,kankara,Kankara,Katsina South,12.01976,7.34718,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021020,KT,20-20,Kankia,kankia,Kankiya,Katsina North,12.43764,7.79189,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021021,KT,20-21,Katsina,katsina,,Katsina Central,13.00892,7.61306,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021022,KT,20-22,Kurfi,kurfi,Kurfi,Katsina Central,12.68704,7.48652,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021023,KT,20-23,Kusada,kusada,Kusada,Katsina North,12.45746,7.97368,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021024,KT,20-24,Mai'adua,maiadua,Maiaduwa,Katsina North,13.1532,8.20893,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021025,KT,20-25,Malumfashi,malumfashi,Malumfashi,Katsina South,11.8455,7.67903,Malufashi,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021026,KT,20-26,Mani,mani,Mani,Katsina North,12.90916,7.93937,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021027,KT,20-27,Mashi,mashi,Mashi,Katsina North,13.11941,7.99683,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021028,KT,20-28,Matazu,matazu,Matazu,Katsina South,12.2403,7.65088,Matazuu,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021029,KT,20-29,Musawa,musawa,Musawa,Katsina South,12.10557,7.67838,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021030,KT,20-30,Rimi,rimi,Rimi,Katsina Central,12.89776,7.71935,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021031,KT,20-31,Sabuwa,sabuwa,,Katsina South,11.33592,7.09658,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021032,KT,20-32,Safana,safana,Safana,Katsina Central,12.50095,7.22804,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021033,KT,20-33,Sandamu,sandamu,Sandamu,Katsina North,12.91968,8.38246,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG021034,KT,20-34,Zango,zango,Zango,Katsina North,12.95057,8.5474,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024001,KW,23-01,Asa,asa,Afon,Kwara Central,8.46913,4.38153,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024002,KW,23-02,Baruten,baruten,Kosubosu,Kwara North,9.37994,3.48075,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024003,KW,23-03,Edu,edu,Lafiagi,Kwara North,8.84539,5.21208,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024004,KW,23-04,Ekiti,ekiti,Araromi-Opin,Kwara South,8.10703,5.32431,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024005,KW,23-05,Ifelodun,ifelodun,Share,Kwara South,8.6327,5.17888,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024006,KW,23-06,Ilorin East,ilorin-east,,Kwara Central,8.62855,4.8226,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024007,KW,23-07,Ilorin-South,ilorin-south,Fufu,Kwara Central,8.47944,4.65524,Ilorin West,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024008,KW,23-08,Ilorin-West,ilorin-west,"Moro, River",Kwara Central,8.48983,4.49802,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024009,KW,23-09,Irepodun,irepodun,Ilala,Kwara South,8.19354,4.85832,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024010,KW,23-10,Isin,isin,Isanlu Isin,Kwara South,8.25791,5.03885,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024011,KW,23-11,Kaiama,kaiama,Kaiama,Kwara North,9.53602,4.11481,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024012,KW,23-12,Moro,moro,,Kwara North,8.83834,4.51432,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024013,KW,23-13,Offa,offa,Offa,Kwara Central,8.16306,4.69026,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024014,KW,23-14,Oke-Ero,oke-ero,Ilofa,Kwara South,8.18032,5.29644,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024015,KW,23-15,Oyun,oyun,Ilemona,Kwara South,8.19985,4.63164,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG024016,KW,23-16,Patigi,patigi,Pategi,Kwara North,8.67046,5.81727,Pategi,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025001,LA,24-01,Agege,agege,Agege,Lagos West,6.62601,3.3151,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025002,LA,24-02,Ajeromi/Ifelodun,ajeromi-ifelodun,,Lagos West,6.45589,3.33683,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025003,LA,24-03,Alimosho,alimosho,Alimosho,Lagos West,6.58434,3.26019,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025004,LA,24-04,Amuwo-Odofin,amuwo-odofin,Amuwo,Lagos West,6.44606,3.27479,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025005,LA,24-05,Apapa,apapa,Apapa,Lagos Central,6.4484,3.36684,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025006,LA,24-06,Badagry,badagry,Badagri,Lagos West,6.44341,2.96957,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025007,LA,24-07,Epe,epe,Epe,Lagos East,6.52699,4.05814,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025008,LA,24-08,Eti-Osa,eti-osa,,Lagos Central,6.46311,3.58295,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025009,LA,24-09,Ibeju/Lekki,ibeju-lekki,Ibeju,Lagos East,6.49512,3.81598,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025010,LA,24-10,Ifako-Ijaye,ifako-ijaye,Ifako,Lagos West,6.66055,3.32182,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025011,LA,24-11,Ikeja,ikeja,,Lagos West,6.60457,3.34523,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025012,LA,24-12,Ikorodu,ikorodu,Ikorodu,Lagos East,6.60611,3.5758,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025013,LA,24-13,Kosofe,kosofe,,Lagos East,6.58413,3.41737,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025014,LA,24-14,Lagos Island,lagos-island,,Lagos Central,6.4504,3.39382,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025015,LA,24-15,Lagos Mainland,lagos-mainland,,Lagos Central,6.495,3.38572,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025016,LA,24-16,Mushin,mushin,,Lagos West,6.52911,3.35259,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025017,LA,24-17,Ojo,ojo,Ojo,Lagos West,6.4625,3.16612,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025018,LA,24-18,Oshodi/Isolo,oshodi-isolo,Oshodi,Lagos West,6.53293,3.31283,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025019,LA,24-19,Somolu,somolu,Shomolu,Lagos East,6.5418,3.38393,Shomolu,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG025020,LA,24-20,Surulere,surulere,,Lagos Central,6.48878,3.34502,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG026001,NA,25-01,Akwanga,akwanga,Akwanga,Nassarawa North,9.02821,8.34413,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG026002,NA,25-02,Awe,awe,Awe,Nassarawa South,8.21346,9.16528,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG026003,NA,25-03,Doma,doma,Doma,Nassarawa South,8.15641,8.31504,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG026004,NA,25-04,Karu,karu,,Nassarawa West,9.03685,7.76143,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG026005,NA,25-05,Keana,keana,Keana,Nassarawa South,8.20479,8.71742,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG026006,NA,25-06,Keffi,keffi,Keffi,Nassarawa West,8.85687,7.86803,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG026007,NA,25-07,Kokona,kokona,,Nassarawa West,8.75627,8.08685,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG026008,NA,25-08,Lafia,lafia,,Nassarawa South,8.71643,8.80041,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG026009,NA,25-09,Nasarawa,nasarawa,Nassarawa,Nassarawa West,8.32168,7.74713,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG026010,NA,25-10,Nasarawa Eggon,nasarawa-eggon,Nassarawan Eggon,Nassarawa North,8.74569,8.47419,Nassarawa Egon,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG026011,NA,25-11,Obi,obi,Obi,Nassarawa South,8.36983,8.73596,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG026012,NA,25-12,Toto,toto,Toto,Nassarawa West,8.26165,7.19716,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG026013,NA,25-13,Wamba,wamba,Wamba,Nassarawa North,9.01237,8.7349,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027001,NI,26-01,Agaie,agaie,Agaie,Niger South,8.93362,6.43043,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027002,NI,26-02,Agwara,agwara,Agwarra,Niger North,10.73333,4.53867,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027003,NI,26-03,Bida,bida,Bida,Niger South,9.09942,6.01566,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027004,NI,26-04,Borgu,borgu,New Bussa,Niger North,10.24136,4.08349,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027005,NI,26-05,Bosso,bosso,Bosso,Niger East,9.59785,6.34522,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027006,NI,26-06,Chanchaga,chanchaga,,Niger East,9.6198,6.54511,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027007,NI,26-07,Edatti,edatti,Enagi,Niger South,9.04689,5.63849,Edati,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027008,NI,26-08,Gbako,gbako,Lemu,Niger South,9.27904,5.99737,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027009,NI,26-09,Gurara,gurara,,Niger East,9.30603,7.03707,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027010,NI,26-10,Katcha,katcha,Katcha,Niger South,9.11881,6.24362,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027011,NI,26-11,Kontagora,kontagora,Kontagora,Niger North,10.43627,5.51427,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027012,NI,26-12,Lapai,lapai,Lapai,Niger South,8.78113,6.67443,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027013,NI,26-13,Lavun,lavun,Kutigi,Niger South,9.42834,5.65168,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027014,NI,26-14,Magama,magama,Nasko,Niger North,10.29522,5.01462,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027015,NI,26-15,Mariga,mariga,Mariga,Niger North,10.60982,5.8634,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027016,NI,26-16,Mashegu,mashegu,,Niger North,9.82019,5.24913,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027017,NI,26-17,Mokwa,mokwa,Mokwa,Niger South,9.12147,5.32382,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027018,NI,26-18,Munya,munya,,Niger East,9.79731,7.07878,Muya,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027019,NI,26-19,Paikoro,paikoro,,Niger East,9.49304,6.83768,Pailoro,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027020,NI,26-20,Rafi,rafi,Kagara,Niger East,10.2147,6.22106,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027021,NI,26-21,Rijau,rijau,Rijau,Niger North,11.04304,5.22651,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027022,NI,26-22,Shiroro,shiroro,Shiroro,Niger East,10.08432,6.69841,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027023,NI,26-23,Suleja,suleja,Suleja,Niger East,9.19668,7.17503,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027024,NI,26-24,Tafa,tafa,,Niger East,9.2477,7.26278,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG027025,NI,26-25,Wushishi,wushishi,Wushishi,Niger North,9.71019,5.91203,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028001,OG,27-01,Abeokuta North,abeokuta-north,,Ogun Central,7.24345,3.17281,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028002,OG,27-02,Abeokuta South,abeokuta-south,,Ogun Central,7.15641,3.36712,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028003,OG,27-03,Ado Odo-Ota,ado-odo-ota,Ado Odo,Ogun West,6.62968,3.0799,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028004,OG,27-04,Egbado North,egbado-north,Aiyetoro,Ogun West,7.11276,2.93371,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028005,OG,27-05,Egbado South,egbado-south,Ilaro,Ogun West,6.76731,2.95455,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028006,OG,27-06,Ewekoro,ewekoro,Ewekoro,Ogun Central,6.97407,3.18656,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028007,OG,27-07,Ifo,ifo,Ifo,Ogun Central,6.76027,3.3179,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028008,OG,27-08,Ijebu East,ijebu-east,Ogbere,Ogun East,6.81815,4.25123,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028009,OG,27-09,Ijebu North,ijebu-north,Ijebu-Igbo,Ogun East,7.03213,3.99146,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028010,OG,27-10,Ijebu North East,ijebu-north-east,,Ogun East,6.87089,4.02627,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028011,OG,27-11,Ijebu Ode,ijebu-ode,Ijebu-Ode,Ogun East,6.76696,3.95963,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028012,OG,27-12,Ikenne,ikenne,Ikenne,Ogun East,6.90101,3.69775,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028013,OG,27-13,Imeko/Afon,imeko-afon,Imeko,Ogun West,7.63288,2.85848,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028014,OG,27-14,Ipokia,ipokia,Ipokia,Ogun West,6.65298,2.79333,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028015,OG,27-15,Obafemi/Owode,obafemi-owode,Owode,Ogun Central,6.96067,3.46963,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028016,OG,27-16,Odeda,odeda,Odeda,Ogun Central,7.31663,3.52031,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028017,OG,27-17,Odogbolu,odogbolu,Odogbolu,Ogun East,6.8077,3.8141,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028018,OG,27-18,Ogun Water Side,ogun-water-side,Abigi,Ogun East,6.47392,4.36788,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028019,OG,27-19,Remo North,remo-north,Isara,Ogun East,6.9952,3.71773,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG028020,OG,27-20,Sagamu,sagamu,Shagamu,Ogun East,6.8077,3.58948,Shagamu,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029001,ON,28-01,Akoko North East,akoko-north-east,Ikare,Ondo North,7.56331,5.9316,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029002,ON,28-02,Akoko North West,akoko-north-west,Oke Agbe,Ondo North,7.63415,5.80536,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029003,ON,28-03,Akoko South East,akoko-south-east,Isua,Ondo North,7.42249,5.90506,Akoko South West,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029004,ON,28-04,Akoko South West,akoko-south-west,Oka,Ondo North,7.40265,5.7059,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029005,ON,28-05,Akure North,akure-north,Iju,Ondo Central,7.25627,5.32169,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029006,ON,28-06,Akure South,akure-south,,Ondo Central,7.21163,5.17931,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029007,ON,28-07,Ese-Odo,ese-odo,Igbekebo,Ondo South,6.18446,4.99072,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029008,ON,28-08,Idanre,idanre,,Ondo Central,6.97582,5.25565,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029009,ON,28-09,Ifedore,ifedore,Igbara-Oke,Ondo Central,7.35491,5.10466,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029010,ON,28-10,Ilaje,ilaje,Igbokoda,Ondo South,6.199,4.75285,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029011,ON,28-11,Ileoluji/Okeigbo,ileoluji-okeigbo,Ile Oluji,Ondo South,7.23383,4.88389,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029012,ON,28-12,Irele,irele,Irele,Ondo South,6.47853,4.98339,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029013,ON,28-13,Odigbo,odigbo,Ore,Ondo South,6.73155,4.88544,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029014,ON,28-14,Okitipupa,okitipupa,Okitipupa,Ondo South,6.56465,4.70834,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029015,ON,28-15,Ondo East,ondo-east,,Ondo Central,7.1585,4.88485,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029016,ON,28-16,Ondo West,ondo-west,Ondo,Ondo Central,6.99201,4.75851,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029017,ON,28-17,Ose,ose,Ifon,Ondo North,7.05357,5.75438,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG029018,ON,28-18,Owo,owo,Owo,Ondo North,7.10797,5.59187,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030003,OS,29-01,Atakumosa East,atakumosa-east,Iperindo,Osun East,7.41028,4.75237,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030004,OS,29-02,Atakumosa West,atakumosa-west,Osu,Osun East,7.57096,4.64245,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030001,OS,29-03,Ayedaade,ayedaade,Gbongan,Osun West,7.32927,4.33975,Aiyedade,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030002,OS,29-04,Ayedire,ayedire,Ile Igbo,Osun West,7.57069,4.23222,Aiyedire,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030005,OS,29-05,Boluwaduro,boluwaduro,Otan Aiyegbaju,Osun Central,7.94627,4.81058,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030006,OS,29-06,Boripe,boripe,Iragbiji,Osun Central,7.8622,4.6703,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030007,OS,29-07,Ede North,ede-north,Ede,Osun West,7.7317,4.46655,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030008,OS,29-08,Ede South,ede-south,,Osun West,7.65921,4.46369,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030009,OS,29-09,Egbedore,egbedore,,Osun West,7.7831,4.43573,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030010,OS,29-10,Ejigbo,ejigbo,Ejigbo,Osun West,7.81093,4.30989,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030011,OS,29-11,Ife Central,ife-central,,Osun East,7.54637,4.52803,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030012,OS,29-13,Ife East,ife-east,Ile-Ife,Osun East,7.40452,4.57031,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030013,OS,29-15,Ife North,ife-north,Ipetumodu,Osun East,7.29763,4.44975,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030014,OS,29-16,Ife South,ife-south,Ifetedo,Osun East,7.23899,4.61355,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030015,OS,29-12,Ifedayo,ifedayo,Oke Ila,Osun Central,7.96189,4.98481,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030016,OS,29-14,Ifelodun,ifelodun,Ikirun,Osun Central,7.90885,4.63823,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030017,OS,29-17,Ila,ila,Ila Orangun,Osun Central,7.96999,4.89513,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030018,OS,29-18,Ilesa East,ilesa-east,Ilesha,Osun East,7.60832,4.7609,Ilesha East,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030019,OS,29-19,Ilesa West,ilesa-west,,Osun East,7.63823,4.72574,Ilesha West,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030020,OS,29-20,Irepodun,irepodun,Ilobu,Osun Central,7.84508,4.49675,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030021,OS,29-21,Irewole,irewole,,Osun West,7.41619,4.21866,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030022,OS,29-22,Isokan,isokan,,Osun West,7.24858,4.19965,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030023,OS,29-23,Iwo,iwo,Iwo,Osun West,7.64534,4.14933,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030024,OS,29-24,Obokun,obokun,Ibokun,Osun East,7.77373,4.77081,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030025,OS,29-25,Odo-Otin,odo-otin,Okuku Railway Stati,Osun Central,8.00744,4.67905,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030026,OS,29-26,Ola-Oluwa,ola-oluwa,Ibode-Osi,Osun West,7.74574,4.19943,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030027,OS,29-27,Olorunda,olorunda,,Osun Central,7.87489,4.57233,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030028,OS,29-28,Oriade,oriade,Ijebu Ijesha,Osun East,7.55308,4.86741,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030029,OS,29-29,Orolu,orolu,Ifon,Osun Central,7.90202,4.49106,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG030030,OS,29-30,Osogbo,osogbo,,Osun Central,7.74865,4.56886,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031001,OY,30-01,Afijio,afijio,Jobele,Oyo Central,7.74917,3.85701,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031002,OY,30-02,Akinyele,akinyele,Moniya,Oyo Central,7.56853,3.89042,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031003,OY,30-03,Atiba,atiba,Ofe,Oyo Central,8.22743,3.86733,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031004,OY,30-04,Atisbo,atisbo,Tede,Oyo North,8.4059,3.24729,Atigbo,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031005,OY,30-05,Egbeda,egbeda,Egbeda,Oyo Central,7.41118,4.04377,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031006,OY,30-06,Ibadan North,ibadan-north,,Oyo South,7.41824,3.90615,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031007,OY,30-07,Ibadan North East,ibadan-north-east,,Oyo South,7.39689,3.93073,Ibadan North West,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031008,OY,30-08,Ibadan North West,ibadan-north-west,,Oyo South,7.40268,3.87263,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031010,OY,30-10,Ibadan South West,ibadan-south-west,,Oyo South,7.37356,3.85607,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031009,OY,30-09,Ibadan South-East,ibadan-south-east,,Oyo South,7.35706,3.90548,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031011,OY,30-11,Ibarapa Central,ibarapa-central,Igbo Ora,Oyo South,7.4549,3.23401,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031012,OY,30-12,Ibarapa East,ibarapa-east,Eruwa,Oyo South,7.58799,3.46055,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031013,OY,30-13,Ibarapa North,ibarapa-north,Aiyete,Oyo South,7.67452,3.15579,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031014,OY,30-14,Ido,ido,,Oyo South,7.51405,3.70551,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031015,OY,30-15,Irepo,irepo,Kishi,Oyo North,9.02461,3.88495,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031016,OY,30-16,Iseyin,iseyin,Iseyin,Oyo North,8.00415,3.59816,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031017,OY,30-17,Itesiwaju,itesiwaju,Otu,Oyo North,8.20841,3.48529,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031018,OY,30-18,Iwajowa,iwajowa,Iwere Ile,Oyo North,7.98612,2.98693,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031019,OY,30-19,Kajola,kajola,Kajola,Oyo North,8.02853,3.35859,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031020,OY,30-20,Lagelu,lagelu,,Oyo Central,7.51317,4.07412,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga
+NG031021,OY,30-21,Ogbomoso North,ogbomoso-north,Ogbomoso,Oyo North,8.15031,4.2492,Ogbomosho North|Lagelu Ogbomosho North,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031022,OY,30-22,Ogbomoso South,ogbomoso-south,,Oyo North,8.10824,4.19991,Ogbomosho South|Ogbmosho South,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031023,OY,30-23,Ogo-Oluwa,ogo-oluwa,,Oyo Central,7.97521,4.19383,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031024,OY,30-24,Olorunsogo,olorunsogo,Igbeti,Oyo North,8.79579,4.05649,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031025,OY,30-25,Oluyole,oluyole,Idi Ayunre,Oyo Central,7.21716,3.87967,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031026,OY,30-26,Ona-Ara,ona-ara,Akanran,Oyo Central,7.25287,4.05387,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031027,OY,30-27,Oorelope,oorelope,Igboho,Oyo North,8.79413,3.80192,Orelope,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031028,OY,30-28,Ori Ire,ori-ire,Ikoyi,Oyo North,8.31221,4.18855,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031029,OY,30-29,Oyo East,oyo-east,Oyo,Oyo Central,7.82794,4.03344,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031030,OY,30-30,Oyo West,oyo-west,,Oyo Central,7.87761,3.82478,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031031,OY,30-31,Saki East,saki-east,Ago-Amodu,Oyo North,8.70661,3.63673,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031032,OY,30-32,Saki West,saki-west,Saki,Oyo North,8.64507,3.21649,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG031033,OY,30-33,Surulere,surulere,Iresa,Oyo Central,8.08843,4.39842,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032001,PL,31-01,Barikin Ladi,barikin-ladi,Barikin Ladi,Plateau North,9.57406,8.971,Barkin Ladi,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032002,PL,31-02,Bassa,bassa,Bassa,Plateau North,10.06384,8.80861,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032003,PL,31-03,Bokkos,bokkos,Bokkos,Plateau Central,9.22994,8.88951,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032004,PL,31-04,Jos East,jos-east,,Plateau North,9.87551,9.1294,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032005,PL,31-05,Jos North,jos-north,,Plateau North,9.94377,8.89469,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032006,PL,31-06,Jos South,jos-south,Bukuru,Plateau North,9.76105,8.84563,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032007,PL,31-07,Kanam,kanam,Dengi,Plateau Central,9.49114,10.15453,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032008,PL,31-08,Kanke,kanke,,Plateau Central,9.36319,9.65549,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032009,PL,31-09,Langtang North,langtang-north,Langtang,Plateau South,9.04946,9.82693,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032010,PL,31-10,Langtang South,langtang-south,,Plateau South,8.6261,9.82365,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032011,PL,31-11,Mangu,mangu,Mongu,Plateau Central,9.36203,9.18466,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032012,PL,31-12,Mikang,mikang,,Plateau South,9.01227,9.5763,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032013,PL,31-13,Pankshin,pankshin,Pankshin,Plateau Central,9.32505,9.38807,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032014,PL,31-14,Qua'an Pan,quaan-pan,,Plateau South,8.77789,9.12905,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032015,PL,31-15,Riyom,riyom,Riyom,Plateau North,9.55646,8.70493,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032016,PL,31-16,Shendam,shendam,Shendam,Plateau South,8.74797,9.52302,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG032017,PL,31-17,Wase,wase,Wase,Plateau South,9.00435,10.24356,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033001,RI,32-01,Abua-Odual,abua-odual,Abua,Rivers West,4.84694,6.56003,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033002,RI,32-02,Ahoada East,ahoada-east,Ahoada,Rivers West,5.05207,6.64173,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033003,RI,32-03,Ahoada West,ahoada-west,Akinima,Rivers West,5.04686,6.51516,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033004,RI,32-04,Akuku Toru,akuku-toru,,Rivers West,4.53747,6.70522,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033005,RI,32-05,Andoni,andoni,Ngo,Rivers South East,4.51008,7.40716,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033006,RI,32-06,Asari-Toru,asari-toru,,Rivers West,4.75515,6.82812,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033007,RI,32-07,Bonny,bonny,,Rivers West,4.51007,7.19993,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033008,RI,32-08,Degema,degema,Degema,Rivers West,4.59592,6.94342,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033009,RI,32-09,Eleme,eleme,Ogali,Rivers South East,4.78499,7.14886,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033010,RI,32-10,Emohua,emohua,Emohua,Rivers East,5.0316,6.76357,Emuoha,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033011,RI,32-11,Etche,etche,Okehi,Rivers East,5.07653,7.09264,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033012,RI,32-12,Gokana,gokana,Kpor,Rivers South East,4.65965,7.29152,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033013,RI,32-13,Ikwerre,ikwerre,Isiokpo,Rivers East,5.07052,6.882,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033014,RI,32-14,Khana,khana,Bori,Rivers South East,4.67249,7.43229,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033015,RI,32-15,Obio/Akpor,obio-akpor,Obia,Rivers East,4.86169,7.02248,Obia/Akpor,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033016,RI,32-16,Ogba/Egbema/Ndoni,ogba-egbema-ndoni,Omoku,Rivers West,5.44395,6.63688,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033017,RI,32-17,Ogu/Bolo,ogu-bolo,Ogu,Rivers East,4.65075,7.19588,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033018,RI,32-18,Okrika,okrika,Okrika,Rivers East,4.68063,7.08123,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033019,RI,32-19,Omuma,omuma,Eberi,Rivers East,5.09842,7.23775,Omumma,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033020,RI,32-20,Opobo/Nkoro,opobo-nkoro,Nkoro,Rivers South East,4.51237,7.51927,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033021,RI,32-21,Oyigbo,oyigbo,Obigbo,Rivers South East,4.84663,7.30197,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033022,RI,32-22,Port Harcourt,port-harcourt,,Rivers East,4.76686,7.03716,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG033023,RI,32-23,Tai,tai,Okoloma-Tai,Rivers South East,4.76985,7.26197,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034001,SO,33-01,Binji,binji,Binji,Sokoto North,13.18353,4.79468,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034002,SO,33-02,Bodinga,bodinga,Bodinga,Sokoto South,12.79946,5.17945,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034003,SO,33-03,Dange/Shuni,dange-shuni,Dange,Sokoto South,12.83257,5.42438,Dange-Shnsi,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034004,SO,33-04,Gada,gada,Gada,Sokoto East,13.67876,5.73794,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034006,SO,33-05,Goronyo,goronyo,Goronyo,Sokoto East,13.34755,5.73657,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034007,SO,33-06,Gudu,gudu,Balle,Sokoto North,13.45893,4.44627,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034005,SO,33-07,Gwadabawa,gwadabawa,Gwadabawa,Sokoto East,13.40847,5.33754,Gawabawa,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034008,SO,33-08,Illela,illela,Illela,Sokoto East,13.68276,5.30549,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034009,SO,33-09,Isa,isa,Isa,Sokoto East,13.20464,6.35745,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034010,SO,33-11,Kebbe,kebbe,Kebbe,Sokoto South,11.91411,4.75351,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034011,SO,33-10,Kware,kware,Kware,Sokoto North,13.15624,5.28808,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034012,SO,33-12,Rabah,rabah,Rabah,Sokoto East,12.99761,5.76756,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034013,SO,33-13,Sabon Birni,sabon-birni,Sabon Birni,Sokoto East,13.49409,6.24955,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034014,SO,33-14,Shagari,shagari,Shagari,Sokoto South,12.53342,5.06738,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034015,SO,33-15,Silame,silame,Silame,Sokoto North,12.98639,4.79888,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034016,SO,33-16,Sokoto North,sokoto-north,,Sokoto North,13.07633,5.22861,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034017,SO,33-17,Sokoto South,sokoto-south,,Sokoto North,13.03838,5.25818,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034018,SO,33-18,Tambuwal,tambuwal,Tambuwal,Sokoto South,12.43855,4.92084,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034019,SO,33-19,Tangaza,tangaza,Tangaza,Sokoto North,13.47056,4.97198,Tqngaza,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034020,SO,33-20,Tureta,tureta,Tureta,Sokoto South,12.48311,5.51175,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034021,SO,33-21,Wamakko,wamakko,Wamako,Sokoto North,13.08037,5.07776,Wamako,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034022,SO,33-22,Wurno,wurno,Wurno,Sokoto East,13.23691,5.47059,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG034023,SO,33-23,Yabo,yabo,Yabo,Sokoto South,12.79643,4.94217,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035001,TA,34-01,Ardo-Kola,ardo-kola,,Taraba North,8.8471,11.13252,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035002,TA,34-02,Bali,bali,Bali,Taraba Central,8.09063,10.95226,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035003,TA,34-03,Donga,donga,Donga,Taraba South,7.66502,10.10074,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035004,TA,34-04,Gashaka,gashaka,Serti,Taraba Central,7.50946,11.33836,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035005,TA,34-05,Gassol,gassol,Mutum Biyu,Taraba Central,8.38282,10.4651,Cassol,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035006,TA,34-06,Ibi,ibi,Ibi,Taraba South,8.39512,9.93281,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035007,TA,34-07,Jalingo,jalingo,,Taraba North,8.90558,11.33613,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035008,TA,34-08,Karim-Lamido,karim-lamido,Dani,Taraba North,9.14731,10.85802,Karin-Lamido,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035009,TA,34-09,Kurmi,kurmi,Baissa,Taraba Central,7.26632,10.70153,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035010,TA,34-10,Lau,lau,Lau,Taraba North,9.1939,11.46302,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035011,TA,34-11,Sardauna,sardauna,Gembu,Taraba Central,6.92809,11.23064,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035012,TA,34-12,Takum,takum,Takum,Taraba South,7.05081,9.79639,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035013,TA,34-13,Ussa,ussa,Lissam,Taraba South,7.10408,10.05359,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035014,TA,34-14,Wukari,wukari,Wukari,Taraba South,7.98915,9.76844,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035015,TA,34-15,Yorro,yorro,Yorro,Taraba North,8.8803,11.50678,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG035016,TA,34-16,Zing,zing,Zing,Taraba North,8.85858,11.76508,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036001,YO,35-01,Bade,bade,Gashua,Yobe North,12.78435,10.67717,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036002,YO,35-02,Bursari,bursari,Dapchi,Yobe East,12.69552,11.44932,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036003,YO,35-03,Damaturu,damaturu,,Yobe South,11.82133,12.01903,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036004,YO,35-04,Fika,fika,Fika,Yobe South,11.35101,11.18298,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036005,YO,35-05,Fune,fune,Funi,Yobe South,11.88116,11.41166,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036006,YO,35-06,Geidam,geidam,Geidam,Yobe East,12.69485,12.14033,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036007,YO,35-07,Gujba,gujba,Gujba,Yobe East,11.36383,11.87769,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036008,YO,35-08,Gulani,gulani,Gulani,Yobe East,10.89249,11.61491,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036009,YO,35-09,Jakusko,jakusko,Jakusko,Yobe North,12.37117,11.00418,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036010,YO,35-10,Karasuwa,karasuwa,Karasua,Yobe North,12.99798,10.69159,Karasawa,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036011,YO,35-11,Machina,machina,Machina,Yobe North,13.04006,10.05924,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036012,YO,35-12,Nangere,nangere,Nangere,Yobe South,11.80785,11.04563,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036013,YO,35-13,Nguru,nguru,Nguru,Yobe North,12.97793,10.38276,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga
+NG036014,YO,35-14,Potiskum,potiskum,Potiskum,Yobe South,11.72969,11.16086,Nguru Potiskum,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036015,YO,35-15,Tarmuwa,tarmuwa,Babban Gida,Yobe East,12.22055,11.89564,Tarmua,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036016,YO,35-16,Yunusari,yunusari,,Yobe East,13.11157,11.72403,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG036017,YO,35-17,Yusufari,yusufari,Yusufari,Yobe North,13.15951,10.54321,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG037001,ZA,36-01,Anka,anka,Anka,Zamfara West,11.98526,5.98625,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG037002,ZA,36-02,Bakura,bakura,Bakura,Zamfara West,12.55535,5.86628,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG037003,ZA,36-03,Birnin Magaji,birnin-magaji,Birni Mogaji,Zamfara North,12.45427,6.86857,Birnin-Magaji/Kiyaw,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG037004,ZA,36-04,Bukkuyum,bukkuyum,Bukkuyum,Zamfara West,11.95119,5.57416,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG037005,ZA,36-05,Bungudu,bungudu,Bungudu,Zamfara Central,12.03378,6.47127,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG037006,ZA,36-06,Gummi,gummi,Gummi,Zamfara West,12.01338,5.15342,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG037007,ZA,36-07,Gusau,gusau,,Zamfara Central,12.20421,7.01815,,,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG037008,ZA,36-08,Kaura Namoda,kaura-namoda,Kaura Namoda,Zamfara North,12.48223,6.56733,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga
+NG037009,ZA,36-09,Maradun,maradun,Maradun,Zamfara West,12.71545,6.31724,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG037010,ZA,36-10,Maru,maru,Maru,Zamfara Central,11.64433,6.32646,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG037011,ZA,36-11,Shinkafi,shinkafi,Shinkafi,Zamfara North,13.02907,6.45859,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG037012,ZA,36-12,Talata Mafara,talata-mafara,Talata Mafara,Zamfara North,12.39615,6.07326,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG037013,ZA,36-13,Tsafe,tsafe,Chafe,Zamfara Central,11.82517,6.8956,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999
+NG037014,ZA,36-14,Zurmi,zurmi,Zurmi,Zamfara North,12.86328,6.71262,,headquarters,inec-cvr|inec-pu-directory-2015|ocha-cod-ab-nga|constitution-1999

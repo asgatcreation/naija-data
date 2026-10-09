@@ -1,21 +1,12 @@
 [
   {
-    "id": "ocha-cod-ab-nga",
-    "name": "Nigeria - Subnational Administrative Boundaries (COD-AB)",
-    "publisher": "OCHA, from the Office of the Surveyor General of the Federation (OSGOF), eHealth Africa and the UN Cartographic Section",
-    "url": "https://data.humdata.org/dataset/cod-ab-nga",
+    "id": "inec-cvr",
+    "name": "INEC Continuous Voter Registration portal: polling unit locator (state, LGA and registration area lists)",
+    "publisher": "Independent National Electoral Commission (INEC)",
+    "url": "https://cvr.inecnigeria.org/pu",
     "retrieved": "2026-10-09",
-    "licence": "CC-BY-IGO-3.0",
-    "notes": "Dataset last modified 2026-04-16. Admin levels 0-3; level 3 (wards) is for operational purposes only. Bakassi (NG009005) has no population record."
-  },
-  {
-    "id": "geoboundaries-nga",
-    "name": "geoBoundaries gbOpen NGA ADM1 and ADM2",
-    "publisher": "William & Mary geoLab, from GRID3 (2022)",
-    "url": "https://www.geoboundaries.org/api/current/gbOpen/NGA/ALL/",
-    "retrieved": "2026-10-09",
-    "licence": "CC-BY-4.0",
-    "notes": "ADM1 has 37 units and ADM2 has 774 units."
+    "licence": "facts-only",
+    "notes": "Current official codes and names for 37 states, 774 LGAs and registration areas. The live list holds 8,810 registration areas because one ward (Gwer East, Benue, code 09 Mbaikyaan) appears twice; without the duplicate the total is 8,809, matching INEC's published figure."
   },
   {
     "id": "inec-polling-units",
@@ -24,43 +15,134 @@
     "url": "https://www.inecnigeria.org/polling-units/",
     "retrieved": "2026-10-09",
     "licence": "facts-only",
-    "notes": "States 176,846 polling units, 8,809 registration areas and 774 LGAs across 36 states and the FCT."
+    "notes": "Publishes the totals 176,846 polling units, 8,809 registration areas and 774 LGAs."
   },
   {
     "id": "inec-pu-directory-2015",
-    "name": "INEC Polling Unit Directory, revised January 2015 (one PDF per state)",
+    "name": "INEC Directory of Polling Units, revised January 2015 (one PDF per state)",
     "publisher": "Independent National Electoral Commission (INEC)",
     "url": "https://www.inecnigeria.org/wp-content/uploads/2019/02/",
+    "archive_url": "https://web.archive.org/web/2021/https://www.inecnigeria.org/wp-content/uploads/2019/02/",
     "retrieved": "2026-10-09",
     "licence": "facts-only",
-    "notes": "Lists the LGAs, registration areas (wards) and polling units of each state."
+    "notes": "Removed from inecnigeria.org; the official files were retrieved from the Internet Archive (35 of 37 states; Abia and Delta were not archived). Used to cross-check ward codes and names and to repair typing errors in the live list."
   },
   {
-    "id": "ocha-inec-lga-wards",
-    "name": "Nigeria - INEC LGA and Wards",
-    "publisher": "OCHA Nigeria, from INEC",
-    "url": "https://data.humdata.org/dataset/nigeria-independent-national-electoral-commission-lga-and-wards",
+    "id": "constitution-1999",
+    "name": "Constitution of the Federal Republic of Nigeria 1999, First Schedule (Parts I and II)",
+    "publisher": "Federal Republic of Nigeria (copy hosted by the National Human Rights Commission)",
+    "url": "https://nigeriarights.gov.ng/files/constitution.pdf",
     "retrieved": "2026-10-09",
-    "licence": "CC0-1.0",
-    "notes": "From 2017; covers only some states. Used as a cross-check."
+    "licence": "public-law",
+    "notes": "State capitals, FCT area council headquarters, the legal total of 768 LGAs plus 6 area councils, and historical spellings. This copy is a retyped transcription with typing errors, so it is not used as the master list of LGA names."
+  },
+  {
+    "id": "ocha-cod-ab-nga",
+    "name": "Nigeria - Subnational Administrative Boundaries (COD-AB)",
+    "publisher": "OCHA, from the Office of the Surveyor General of the Federation (OSGOF), eHealth Africa and the UN Cartographic Section",
+    "url": "https://data.humdata.org/dataset/cod-ab-nga",
+    "retrieved": "2026-10-09",
+    "licence": "CC-BY-IGO-3.0",
+    "notes": "Dataset last modified 2026-04-16. P-codes, centroid coordinates, senatorial districts and LGA headquarters (admin capitals). Known errors found: Anambra capital spelled 'Akwa', 'Obia/Akpor' for Obio/Akpor, 'Markafi' for Makarfi; LGA headquarters are single-source and marked unverified."
+  },
+  {
+    "id": "geoboundaries-nga",
+    "name": "geoBoundaries gbOpen NGA ADM1 and ADM2",
+    "publisher": "William & Mary geoLab, from GRID3 (2022)",
+    "url": "https://www.geoboundaries.org/api/current/gbOpen/NGA/ALL/",
+    "retrieved": "2026-10-09",
+    "licence": "CC-BY-4.0",
+    "notes": "ADM1 has 37 units and ADM2 has 774. Reserved for the optional boundaries package."
+  },
+  {
+    "id": "unicode-cldr",
+    "name": "Unicode CLDR subdivision names (release 47)",
+    "publisher": "Unicode Consortium",
+    "url": "https://github.com/unicode-org/cldr/blob/release-47/common/subdivisions/en.xml",
+    "retrieved": "2026-10-09",
+    "licence": "Unicode-3.0",
+    "notes": "ISO 3166-2:NG subdivision codes (NG-AB ... NG-ZA)."
+  },
+  {
+    "id": "euaa-nigeria-2021",
+    "name": "Country Guidance: Nigeria (2021), General remarks",
+    "publisher": "European Union Agency for Asylum (EUAA)",
+    "url": "https://www.euaa.europa.eu/country-guidance-nigeria-2021/general-remarks",
+    "retrieved": "2026-10-09",
+    "licence": "facts-only",
+    "notes": "Lists the six geopolitical zones and their states, with the FCT in North-Central. No Nigerian government page listing the zones was found."
+  },
+  {
+    "id": "businessday-state-creation",
+    "name": "Full list: 36 Nigerian states, their dates of creation and how they were created",
+    "publisher": "BusinessDay Nigeria",
+    "url": "https://businessday.ng/news/article/full-list-36-nigerian-states-their-dates-of-creation-and-how-they-were-created/",
+    "retrieved": "2026-10-09",
+    "licence": "facts-only",
+    "notes": "Single secondary source, so creation dates are marked unverified. It dates Anambra to 1991 (when old Anambra was split) but Imo to 1976, so 'creation date' is ambiguous for states that were later split or renamed."
   },
   {
     "id": "cbn-financial-institutions",
-    "name": "CBN lists of financial institutions",
+    "name": "CBN lists of financial institutions (via the cbn.gov.ng/api endpoints behind the supervision pages)",
     "publisher": "Central Bank of Nigeria (CBN)",
     "url": "https://www.cbn.gov.ng/supervision/finstitutions.html",
     "retrieved": "2026-10-09",
     "licence": "facts-only",
-    "notes": "Regulator's lists by category, including commercial, merchant, non-interest and microfinance banks, payment service banks and mobile money operators."
+    "notes": "Commercial (28), merchant (5), non-interest (6), payment service banks (5), mobile money operators (16), microfinance (796), primary mortgage (33) and development finance institutions (8). Names, types and licensed status only."
   },
   {
     "id": "cbn-nuban-2020",
     "name": "Revised Standards on Nigeria Uniform Bank Account Number (NUBAN) for Banks and Other Financial Institutions",
     "publisher": "Central Bank of Nigeria (CBN), Payments System Management Department",
     "url": "https://www.cbn.gov.ng/Out/2020/PSMD/REVISED%20STANDARDS%20ON%20NIGERIA%20UNIFORM%20BANK%20ACCOUNT%20NUMBER%20(NUBAN)%20FOR%20BANKS%20AND%20OTHER%20FINANCIAL%20INSTITUTIONS%20.pdf",
+    "archive_url": "https://web.archive.org/web/20200715034126/https://www.cbn.gov.ng/Out/2020/PSMD/REVISED%20STANDARDS%20ON%20NIGERIA%20UNIFORM%20BANK%20ACCOUNT%20NUMBER%20(NUBAN)%20FOR%20BANKS%20AND%20OTHER%20FINANCIAL%20INSTITUTIONS%20.pdf",
     "retrieved": "2026-10-09",
     "licence": "facts-only",
-    "notes": "Check-digit algorithm with weights 3,7,3 repeated; OFI codes are prefixed with 9."
+    "notes": "The document is dated 2019 although published under /2020/. Check-digit weights 3,7,3,3,7,3,...; bank codes padded to 6 digits with zeros, OFI codes prefixed with 9. Worked examples: 0000014579 (bank 011) and 0000214579 (OFI 50547)."
+  },
+  {
+    "id": "paystack-banks",
+    "name": "Paystack public bank list (GET /bank?country=nigeria)",
+    "publisher": "Paystack",
+    "url": "https://api.paystack.co/bank?country=nigeria&perPage=1000",
+    "retrieved": "2026-10-09",
+    "licence": "facts-only",
+    "notes": "288 entries. Its 'code' field mixes CBN codes, NIP codes and provider-specific codes (e.g. 'MFB50094', '035A'); only codes whose shape fits the institution type are used."
+  },
+  {
+    "id": "monnify-banks",
+    "name": "Monnify public bank list",
+    "publisher": "Monnify (TeamApt)",
+    "url": "https://api.monnify.com/api/v1/sdk/transactions/banks",
+    "retrieved": "2026-10-09",
+    "licence": "facts-only",
+    "notes": "31 entries with CBN code, NIP code and USSD code. Still lists Diamond and Heritage banks, so it is never used for status."
+  },
+  {
+    "id": "cbn-heritage-revocation-2024",
+    "name": "CBN press release: revocation of the banking licence of Heritage Bank Plc",
+    "publisher": "Central Bank of Nigeria (CBN)",
+    "url": "https://www.cbn.gov.ng/Out/2024/CCD/CBN%20Press%20Release%20Heritage%20030624.pdf",
+    "retrieved": "2026-10-09",
+    "licence": "facts-only",
+    "notes": "Dated 3 June 2024."
+  },
+  {
+    "id": "nairametrics-access-diamond-2019",
+    "name": "Access Bank launches new brand following its merger with Diamond Bank",
+    "publisher": "Nairametrics",
+    "url": "https://nairametrics.com/2019/03/31/breaking-access-bank-launches-new-brand-following-its-merger-with-diamond-bank/",
+    "retrieved": "2026-10-09",
+    "licence": "facts-only",
+    "notes": "Merged bank launched on 1 April 2019."
+  },
+  {
+    "id": "thecable-access-diamond-2019",
+    "name": "Merger: Access, Diamond Banks get final approval from CBN",
+    "publisher": "TheCable",
+    "url": "https://www.thecable.ng/?p=339333",
+    "retrieved": "2026-10-09",
+    "licence": "facts-only"
   },
   {
     "id": "ncc-mobile-allocation",

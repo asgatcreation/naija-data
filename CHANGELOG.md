@@ -12,3 +12,9 @@ This project follows [Semantic Versioning](https://semver.org/):
 ### Added
 - Repository scaffold, licences (MIT code, CC BY 4.0 data), contribution guide, issue and PR templates.
 - Source registry `data/sources.json` with schema and validation in CI.
+- Data: 37 states + FCT, 774 LGAs, 8,809 wards (registration areas), 899 financial institutions,
+  51 mobile number blocks (45 prefixes), each row linked to its sources.
+- JSON Schemas for every data file and validation of cross-file rules (counts, codes, parents,
+  aliases, overlapping phone ranges, bank mergers).
+- Fetch, extract and import scripts that rebuild the dataset from upstream sources.
+- Coverage, cross-check and known-gaps report (`docs/data/coverage-and-gaps.md`).

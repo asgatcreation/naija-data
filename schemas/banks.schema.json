@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/asgatcreation/naija-data/schemas/banks.schema.json",
+  "title": "Bank or other licensed financial institution",
+  "description": "One row of the CSV file. Empty cells are empty strings; lists are separated by '|'.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "short_name",
+    "type",
+    "cbn_code",
+    "nip_code",
+    "ussd",
+    "status",
+    "status_date",
+    "merged_into",
+    "aliases",
+    "unverified_fields",
+    "sources"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^\\S(.*\\S)?$"
+    },
+    "short_name": {
+      "type": "string",
+      "pattern": "^$|^\\S(.*\\S)?$"
+    },
+    "type": {
+      "enum": [
+        "commercial",
+        "merchant",
+        "non_interest",
+        "payment_service_bank",
+        "mobile_money_operator",
+        "microfinance",
+        "mortgage",
+        "development_finance"
+      ]
+    },
+    "cbn_code": {
+      "type": "string",
+      "pattern": "^$|^\\d{3}$|^\\d{5}$"
+    },
+    "nip_code": {
+      "type": "string",
+      "pattern": "^$|^\\d{6}$"
+    },
+    "ussd": {
+      "type": "string",
+      "pattern": "^$|^\\*\\d+(\\*\\d+)*#$"
+    },
+    "status": {
+      "enum": [
+        "active",
+        "merged",
+        "licence_revoked",
+        "defunct"
+      ]
+    },
+    "status_date": {
+      "type": "string",
+      "pattern": "^$|^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "merged_into": {
+      "type": "string",
+      "pattern": "^$|^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "aliases": {
+      "type": "string",
+      "pattern": "^$|^[^|\\s][^|]*[^|\\s]?(\\|[^|\\s][^|]*[^|\\s]?)*$"
+    },
+    "unverified_fields": {
+      "type": "string",
+      "pattern": "^$|^(cbn_code|nip_code|ussd)(\\|(cbn_code|nip_code|ussd))*$"
+    },
+    "sources": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+(\\|[a-z0-9-]+)*$"
+    }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "id": {
+          "minLength": 1
+        },
+        "name": {
+          "minLength": 1
+        },
+        "type": {
+          "minLength": 1
+        },
+        "status": {
+          "minLength": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Only needed to rebuild data/ from upstream sources (scripts/fetch, scripts/extract, scripts/build).
+# Validation and tests need only requirements-dev.txt.
+-r requirements-dev.txt
+openpyxl==3.1.5
+pypdfium2==5.14.0

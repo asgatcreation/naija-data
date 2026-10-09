@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/asgatcreation/naija-data/schemas/lgas.schema.json",
+  "title": "Local Government Area (or FCT Area Council)",
+  "description": "One row of the CSV file. Empty cells are empty strings; lists are separated by '|'.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "code",
+    "state_code",
+    "inec_code",
+    "name",
+    "slug",
+    "headquarters",
+    "senatorial_district",
+    "lat",
+    "lon",
+    "aliases",
+    "unverified_fields",
+    "sources"
+  ],
+  "properties": {
+    "code": {
+      "type": "string",
+      "pattern": "^NG\\d{6}$"
+    },
+    "state_code": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "inec_code": {
+      "type": "string",
+      "pattern": "^\\d{2}-\\d{2}$"
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^\\S(.*\\S)?$"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "headquarters": {
+      "type": "string",
+      "pattern": "^$|^\\S(.*\\S)?$"
+    },
+    "senatorial_district": {
+      "type": "string",
+      "pattern": "^$|^\\S(.*\\S)?$"
+    },
+    "lat": {
+      "type": "string",
+      "pattern": "^-?\\d{1,3}\\.\\d{1,5}$"
+    },
+    "lon": {
+      "type": "string",
+      "pattern": "^-?\\d{1,3}\\.\\d{1,5}$"
+    },
+    "aliases": {
+      "type": "string",
+      "pattern": "^$|^[^|\\s][^|]*[^|\\s]?(\\|[^|\\s][^|]*[^|\\s]?)*$"
+    },
+    "unverified_fields": {
+      "type": "string",
+      "pattern": "^$|^(headquarters)$"
+    },
+    "sources": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+(\\|[a-z0-9-]+)*$"
+    }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "code": {
+          "minLength": 1
+        },
+        "name": {
+          "minLength": 1
+        },
+        "slug": {
+          "minLength": 1
+        }
+      }
+    }
+  ]
+}
