@@ -94,3 +94,23 @@ external monitor (e.g. UptimeRobot) linked from the docs.
 3. Names: `naija-data` on PyPI and npm (unscoped). Go module `github.com/asgatcreation/naija-data/go`.
 4. Hosting: API on Cloudflare Workers; docs on Cloudflare Pages (Astro Starlight).
 5. Bank codes: each row carries `verification` (`verified` needs 2+ independent sources).
+
+## 8. Plan update (2026-10-09): Milestone 4b, validators
+
+Added by the owner, to follow Milestone 4 (packages):
+
+- **Plate numbers**: validate and parse Nigerian vehicle plates (current "ABC-123-DE" format: LGA code +
+  serial + series letters), plus older and special formats (government, military, diplomatic, commercial,
+  motorcycle, dealer). Return the state/LGA from the plate code. FRSC/NVIS formats and LGA plate codes
+  researched with the same provenance rules; anything unverified is marked.
+- **Phone numbers**: strict validation, number type (mobile, landline, toll-free), network guess with the
+  porting caveat.
+- **NUBAN**: validation plus the list of banks a 10-digit number could belong to.
+- Same functions in Python, JS/TS and Go, covered by the shared parity tests.
+- **Django + DRF**: shipped as a separate package **`django-naija`** (PyPI name available 2026-10-09) in
+  `packages/django/`, depending on `naija-data`. Model and form fields (NigerianPhoneField, NUBANField,
+  PlateNumberField, StateField, LGAField with state-dependent choices), DRF serializer fields and
+  validators, an example project with tests. Chosen over a `naija-data[django]` extra for
+  discoverability ("django-" prefix) and to keep the core wheel free of framework code.
+- **Zod schemas** for phone, NUBAN and plate, exported from a `naija-data/zod` subpath with `zod` as an
+  optional peer dependency.

@@ -13,21 +13,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  detect:
-    name: Detect packages
-    runs-on: ubuntu-latest
-    outputs:
-      python: ${{ steps.check.outputs.python }}
-      js: ${{ steps.check.outputs.js }}
-      go: ${{ steps.check.outputs.go }}
-    steps:
-      - uses: actions/checkout@v4
-      - id: check
-        run: |
-          echo "python=$([ -f packages/python/pyproject.toml ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
-          echo "js=$([ -f packages/js/package.json ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
-          echo "go=$([ -f go/go.mod ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
-
   data:
     name: Validate data
     runs-on: ubuntu-latest
@@ -43,15 +28,19 @@ jobs:
         run: python scripts/validate.py
       - name: Data tests
         run: python -m pytest -q
+      - name: Packaged data matches data/
+        run: python scripts/build/generate.py --check
+      - name: Parity fixtures are up to date
+        run: python scripts/build/make_fixtures.py --check
 
   python:
-    name: Python package
-    needs: [data, detect]
-    if: needs.detect.outputs.python == 'true'
+    name: Python ${{ matrix.python-version }}
+    needs: data
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        python-version: ["3.9", "3.13"]
+        python-version: ["3.9", "3.11", "3.13"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -59,33 +48,63 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - run: pip install -e "packages/python[test]"
       - run: python -m pytest packages/python -q
+      - name: Build wheel and test it in a clean environment
+        run: |
+          pip install build==1.3.0
+          python -m build packages/python --outdir /tmp/dist
+          python -m venv /tmp/clean
+          /tmp/clean/bin/pip install /tmp/dist/*.whl
+          cd /tmp && /tmp/clean/bin/python -c "import naija_data as ng; assert ng.get_state('lagos').capital == 'Ikeja'"
+          /tmp/clean/bin/naija bank 058
 
   js:
-    name: JavaScript package
-    needs: [data, detect]
-    if: needs.detect.outputs.js == 'true'
+    name: Node ${{ matrix.node-version }}
+    needs: data
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [20, 22, 24]
+    defaults:
+      run:
+        working-directory: packages/js
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+          cache-dependency-path: packages/js/package-lock.json
       - run: npm ci
-        working-directory: packages/js
+      - run: npm run typecheck
       - run: npm test
-        working-directory: packages/js
+      - run: npm run size
+      - name: Pack and test in a clean project
+        run: |
+          npm pack --pack-destination /tmp
+          mkdir /tmp/clean && cd /tmp/clean && npm init -y > /dev/null
+          npm install /tmp/naija-data-*.tgz
+          node -e "const ng = require('naija-data'); if (ng.getState('lagos').capital !== 'Ikeja') process.exit(1)"
+          node --input-type=module -e "import { wards } from 'naija-data/wards'; if (wards('Ikeja', 'Lagos').length !== 10) process.exit(1)"
+          npx naija bank 058
 
   go:
-    name: Go module
-    needs: [data, detect]
-    if: needs.detect.outputs.go == 'true'
+    name: Go ${{ matrix.go-version }}
+    needs: data
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        go-version: ["1.21", "stable"]
+    defaults:
+      run:
+        working-directory: go
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
         with:
-          go-version: stable
+          go-version: ${{ matrix.go-version }}
+      - name: gofmt
+        run: test -z "$(gofmt -l .)"
       - run: go vet ./...
-        working-directory: go
       - run: go test ./...
-        working-directory: go

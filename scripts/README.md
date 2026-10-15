@@ -31,3 +31,13 @@ Some inputs are fetched by hand because the publisher blocks scripts or the file
 the Internet Archive: the INEC 2015 PDFs, the Constitution PDF, the CBN NUBAN standard, CLDR
 `subdivisions/en.xml`, and the Paystack and Monnify bank lists. Their URLs are in
 `data/sources.json`.
+
+## Generate the packages' data and the parity fixtures
+
+```bash
+python scripts/build/generate.py        # data/*.csv -> JSON inside the Python, JS and Go packages
+python scripts/build/make_fixtures.py   # fixtures/parity.json (shared cross-language test cases)
+python scripts/build/gen_go_fold.py     # go/fold_table.go (accent folding for Go)
+```
+
+CI runs `generate.py --check` and `make_fixtures.py --check` and fails if either is out of date.

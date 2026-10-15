@@ -18,3 +18,14 @@ This project follows [Semantic Versioning](https://semver.org/):
   aliases, overlapping phone ranges, bank mergers).
 - Fetch, extract and import scripts that rebuild the dataset from upstream sources.
 - Coverage, cross-check and known-gaps report (`docs/data/coverage-and-gaps.md`).
+- Python package `naija-data`, JavaScript/TypeScript package `naija-data` (ESM + CJS, wards in a
+  separate `naija-data/wards` entry point) and Go module `github.com/asgatcreation/naija-data/go`,
+  all generated from `data/` with the same API: states, LGAs, wards, fuzzy search, banks, NUBAN
+  validation and candidate banks, phone normalisation and network lookup.
+- `naija` command-line tool (Python and npm).
+- 5,907 shared parity test cases run against all three packages.
+
+### Fixed (data)
+- Removed 4 LGA headquarters taken from OCHA COD-AB that were garbled ("Jamao?Çoare") or were
+  rivers ("Moro, River" for Ilorin West, "Ofu, River" for Ibaji, "Etim Ekpo, River").
+- Validation now rejects text decoded with the wrong encoding.

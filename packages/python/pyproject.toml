@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "naija-data"
+version = "0.1.0.dev0"
+description = "Accurate, sourced Nigerian reference data: states, LGAs, wards, banks, NUBAN and phone helpers."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT AND CC-BY-4.0"
+license-files = ["LICENSE", "LICENSE-DATA"]
+authors = [{ name = "Akanji Oluwaseun Gabriel" }]
+keywords = ["nigeria", "states", "lga", "wards", "banks", "nuban", "phone", "open-data"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest==8.4.2"]
+
+[project.scripts]
+naija = "naija_data.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/asgatcreation/naija-data"
+Source = "https://github.com/asgatcreation/naija-data"
+Issues = "https://github.com/asgatcreation/naija-data/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/naija_data"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE", "LICENSE-DATA"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

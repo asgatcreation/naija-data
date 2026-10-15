@@ -7,7 +7,68 @@ Python, JavaScript/TypeScript and Go, plus a free REST API.**
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA)
 
-> 🚧 **Work in progress.** No package has been published yet. Follow the repo for the v1.0.0 release.
+> 🚧 **Pre-release.** The packages work and are tested, but are not on PyPI/npm yet. Follow the repo
+> for v1.0.0. Until then the Go module can be used directly from GitHub.
+
+## Install and use
+
+**Python** (3.9+, no dependencies)
+
+```bash
+pip install naija-data
+```
+
+```python
+import naija_data as ng
+
+ng.get_state("lagos").capital           # 'Ikeja'
+ng.search("lagso")[0].name              # 'Lagos'  (typos, aliases, accents: "Ọ̀yọ́")
+ng.is_valid_nuban("0000014579", "011")  # True
+```
+
+**JavaScript / TypeScript** (ESM + CommonJS, full types, no dependencies)
+
+```bash
+npm install naija-data
+```
+
+```ts
+import { getState, search, isValidNuban } from "naija-data";
+import { wards } from "naija-data/wards";
+
+getState("lagos")?.capital;             // "Ikeja"
+wards("Ikeja", "Lagos").length;         // 10
+```
+
+**Go** (no dependencies, data embedded)
+
+```bash
+go get github.com/asgatcreation/naija-data/go
+```
+
+```go
+naija.GetState("lagos").Capital                 // "Ikeja"
+ok, _ := naija.IsValidNUBAN("0000014579", "011") // true
+```
+
+**Command line**: `naija lga lagos`, `naija bank 058`, `naija nuban 0000014579`, `naija phone 08031234567`.
+
+### What's included
+
+| | Python | JavaScript | Go |
+|---|---|---|---|
+| States, LGAs, wards: list and look up by code, slug, name or alias | `get_state`, `lgas`, `get_lga`, `wards` | `getState`, `lgas`, `getLga`, `wards` | `GetState`, `LGAs`, `GetLGA`, `Wards` |
+| Fuzzy search (typos, aliases, accents) | `search` | `search`, `searchWards` | `Search`, `SearchWards` |
+| Banks by code, name or type; active only by default | `get_bank`, `banks`, `find_banks` | `getBank`, `banks`, `findBanks` | `GetBank`, `Banks`, `FindBanks` |
+| NUBAN check digit (CBN algorithm) and candidate banks | `is_valid_nuban`, `banks_for_nuban` | `isValidNuban`, `banksForNuban` | `IsValidNUBAN`, `BanksForNUBAN` |
+| Phone normalisation and network guess | `normalize_phone`, `lookup_phone` | `normalizePhone`, `lookupPhone` | `NormalizePhone`, `LookupPhone` |
+
+Record fields keep the dataset's names in every language (`state.iso_code`, `bank.cbn_code`).
+JavaScript bundle cost: phone helpers 0.8 KB, states 2.3 KB, states + LGAs + search 30 KB gzipped;
+wards (148 KB) only load if you import `naija-data/wards`.
+
+**Same answers in every language.** 5,907 shared test cases ([fixtures/](fixtures/)) run against the
+Python, JavaScript and Go packages in CI, down to the fuzzy-search scores.
 
 ## Why
 
