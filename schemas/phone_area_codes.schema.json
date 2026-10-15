@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/asgatcreation/naija-data/schemas/phone_area_codes.schema.json",
+  "title": "Geographic (landline) area code",
+  "description": "One row of the CSV file. Empty cells are empty strings; lists are separated by '|'.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "area_code",
+    "primary_centre",
+    "ncc_zone",
+    "unverified_fields",
+    "sources"
+  ],
+  "properties": {
+    "area_code": {
+      "type": "string",
+      "pattern": "^0(\\d|\\d{2})$"
+    },
+    "primary_centre": {
+      "type": "string",
+      "pattern": "^\\S(.*\\S)?$"
+    },
+    "ncc_zone": {
+      "enum": [
+        "Lagos",
+        "North West",
+        "Central",
+        "North East",
+        "South West",
+        "South East"
+      ]
+    },
+    "unverified_fields": {
+      "type": "string",
+      "pattern": "^$|^primary_centre$"
+    },
+    "sources": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+(\\|[a-z0-9-]+)*$"
+    }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "area_code": {
+          "minLength": 1
+        },
+        "primary_centre": {
+          "minLength": 1
+        }
+      }
+    }
+  ]
+}

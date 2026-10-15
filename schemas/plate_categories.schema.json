@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/asgatcreation/naija-data/schemas/plate_categories.schema.json",
+  "title": "Number plate colours by category (National Road Traffic Regulations 2012)",
+  "description": "One row of the CSV file. Empty cells are empty strings; lists are separated by '|'.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "category",
+    "vehicle",
+    "lettering_colour",
+    "background_colour",
+    "provision",
+    "sources"
+  ],
+  "properties": {
+    "category": {
+      "enum": [
+        "private",
+        "commercial",
+        "government",
+        "local_government",
+        "armed_forces",
+        "paramilitary",
+        "dealer",
+        "diplomatic"
+      ]
+    },
+    "vehicle": {
+      "enum": [
+        "vehicle",
+        "motorcycle"
+      ]
+    },
+    "lettering_colour": {
+      "enum": [
+        "blue",
+        "red",
+        "green",
+        "black",
+        "white",
+        "black or red"
+      ]
+    },
+    "background_colour": {
+      "enum": [
+        "blue",
+        "red",
+        "green",
+        "black",
+        "white",
+        "black or red"
+      ]
+    },
+    "provision": {
+      "type": "string",
+      "pattern": "^\\S(.*\\S)?$"
+    },
+    "sources": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+(\\|[a-z0-9-]+)*$"
+    }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "category": {
+          "minLength": 1
+        },
+        "provision": {
+          "minLength": 1
+        }
+      }
+    }
+  ]
+}

@@ -34,3 +34,6 @@ raw/
 *.log
 .DS_Store
 Thumbs.db
+
+# Local databases (Django example project)
+*.sqlite3

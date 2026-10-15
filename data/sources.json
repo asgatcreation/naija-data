@@ -161,5 +161,50 @@
     "retrieved": "2026-10-09",
     "licence": "not-redistributable",
     "notes": "Launched 2026-10-01. 11-character codes such as FC02A09DB09 (State, LGA, District, Area, Building). Lookups go through a gated API, so only the format is described here."
+  },
+  {
+    "id": "ncc-area-codes",
+    "name": "NCC Area Codes by Zone and Primary Centre",
+    "publisher": "Nigerian Communications Commission (NCC)",
+    "url": "https://ncc.gov.ng/operators/area-codes-zone-primary-centre",
+    "retrieved": "2026-10-15",
+    "licence": "facts-only",
+    "notes": "56 geographic area codes. Lists Benin as 053 and Warri as 052, the opposite of the NCC Numbering Plan; the centre names for these two codes are marked unverified."
+  },
+  {
+    "id": "ncc-numbering-plan-2022",
+    "name": "National Numbering Plan (October 2022)",
+    "publisher": "Nigerian Communications Commission (NCC)",
+    "url": "https://ncc.gov.ng/media/1061/view",
+    "retrieved": "2026-10-15",
+    "licence": "facts-only",
+    "notes": "308 number block allocations (fixed, mobile, 0700/0800). Two Vezeti Services rows (306, 308) give ranges that do not match their access codes and are excluded; row 255 states 3,000,000 lines for a 1,000,000-number range."
+  },
+  {
+    "id": "ncc-numbering-regulations-2008",
+    "name": "Numbering Regulations 2008",
+    "publisher": "Nigerian Communications Commission (NCC), Official Gazette No. 68, Vol. 95, 17 November 2008",
+    "url": "https://ncc.gov.ng/media/1202/view",
+    "retrieved": "2026-10-15",
+    "licence": "public-law",
+    "notes": "The trunk prefix 0 is not part of the national number; example Lagos number 12691531 (8 digits)."
+  },
+  {
+    "id": "ncc-sns-determination-2022",
+    "name": "Determination of Mobile (Voice) Termination Rate for Special Numbering Services Segment",
+    "publisher": "Nigerian Communications Commission (NCC)",
+    "url": "https://ncc.gov.ng/media/197/view",
+    "retrieved": "2026-10-15",
+    "licence": "facts-only",
+    "notes": "Dated 24 September 2022. Describes the 0800 range as the toll-free service and sets a separate Non Toll-Free tariff for the 0700 range."
+  },
+  {
+    "id": "nrtr-2012",
+    "name": "National Road Traffic Regulations, 2012 (S.I. No. 61)",
+    "publisher": "Federal Republic of Nigeria, Official Gazette No. 101, Vol. 99, 25 December 2012 (copy hosted by SabiLaw)",
+    "url": "https://sabilaw.org/wp-content/uploads/2021/12/National-Road-Traffic-Regulations-2012.pdf",
+    "retrieved": "2026-10-15",
+    "licence": "public-law",
+    "notes": "Regulations 36-39 and Schedule 5: plate structure, colours by category, LGA code first on private, commercial and local government plates (39(4)(f)), dealer plates 'D' + state code + digits (figure 10). FRSC determines the codes (39(5)) and does not publish an LGA code list. The sample plate images are missing from this copy."
   }
 ]

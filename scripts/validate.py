@@ -26,7 +26,9 @@ EXPECTED = {
     "lgas": 774,  # 768 LGAs + 6 FCT area councils (Constitution s.3(6), First Schedule)
     "wards": 8809,  # INEC registration areas (inecnigeria.org/polling-units)
 }
-CSV_FILES = ["states", "lgas", "wards", "banks", "phone_prefixes"]
+CSV_FILES = ["states", "lgas", "wards", "banks", "phone_prefixes", "phone_area_codes", "phone_number_blocks",
+             "plate_categories"]
+NAMELESS = {"phone_prefixes", "phone_area_codes", "phone_number_blocks", "plate_categories"}
 
 
 def load_json(path: Path):
@@ -226,6 +228,30 @@ def check_phone(prefixes) -> list[str]:
     return errors
 
 
+def check_numbering(area_codes, blocks) -> list[str]:
+    errors = unique("phone_area_codes", area_codes, "area_code")
+    codes = {a["area_code"] for a in area_codes}
+    for b in blocks:
+        where = f"phone_number_blocks.csv: {b['range_start']}-{b['range_end']}"
+        if len(b["range_start"]) != len(b["range_end"]) or b["range_start"] > b["range_end"]:
+            errors.append(f"{where}: start and end must have the same length and start <= end")
+        if b["number_type"] == "fixed":
+            if b["area_code"] not in codes:
+                errors.append(f"{where}: unknown area code {b['area_code']!r}")
+            elif len(b["range_start"]) != 8 or not b["range_start"].startswith(b["area_code"][1:]):
+                errors.append(f"{where}: a fixed-line number has 8 digits and starts with its area code")
+        else:
+            lead = {"toll_free": "800", "non_toll_free": "700"}.get(b["number_type"])
+            if b["area_code"] or len(b["range_start"]) != 10 or (lead and not b["range_start"].startswith(lead)):
+                errors.append(f"{where}: {b['number_type']} numbers have 10 digits and no area code")
+    ordered = sorted(blocks, key=lambda b: (len(b["range_start"]), b["range_start"]))
+    for a, b in zip(ordered, ordered[1:]):
+        if len(a["range_start"]) == len(b["range_start"]) and b["range_start"] <= a["range_end"]:
+            errors.append(f"phone_number_blocks.csv: blocks {a['range_start']}-{a['range_end']} ({a['allottee']}) and "
+                          f"{b['range_start']}-{b['range_end']} ({b['allottee']}) overlap")
+    return errors
+
+
 def validate() -> list[str]:
     sources = load_json(DATA / "sources.json")
     errors = check_schema("sources.json", sources, "sources.schema.json")
@@ -240,7 +266,7 @@ def validate() -> list[str]:
             errors.append(str(e))
             continue
         errors += check_rows(name, tables[name])
-        errors += check_common(name, tables[name], source_ids, None if name == "phone_prefixes" else "name")
+        errors += check_common(name, tables[name], source_ids, None if name in NAMELESS else "name")
     if errors:  # structural problems make the cross-file checks noisy
         return errors
 
@@ -248,6 +274,8 @@ def validate() -> list[str]:
     errors += check_dates("states", tables["states"], "created")
     errors += check_banks(tables["banks"])
     errors += check_phone(tables["phone_prefixes"])
+    errors += check_numbering(tables["phone_area_codes"], tables["phone_number_blocks"])
+    errors += unique("plate_categories", tables["plate_categories"], "category", "vehicle")
     return errors
 
 

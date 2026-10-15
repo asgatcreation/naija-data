@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/asgatcreation/naija-data/schemas/phone_number_blocks.schema.json",
+  "title": "Block of numbers allocated by the NCC",
+  "description": "One row of the CSV file. Empty cells are empty strings; lists are separated by '|'.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "number_type",
+    "area_code",
+    "range_start",
+    "range_end",
+    "allottee",
+    "area",
+    "sources"
+  ],
+  "properties": {
+    "number_type": {
+      "enum": [
+        "fixed",
+        "mobile",
+        "toll_free",
+        "non_toll_free"
+      ]
+    },
+    "area_code": {
+      "type": "string",
+      "pattern": "^$|^0(\\d|\\d{2})$"
+    },
+    "range_start": {
+      "type": "string",
+      "pattern": "^(\\d{8}|\\d{10})$"
+    },
+    "range_end": {
+      "type": "string",
+      "pattern": "^(\\d{8}|\\d{10})$"
+    },
+    "allottee": {
+      "type": "string",
+      "pattern": "^\\S(.*\\S)?$"
+    },
+    "area": {
+      "type": "string",
+      "pattern": "^\\S(.*\\S)?$"
+    },
+    "sources": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+(\\|[a-z0-9-]+)*$"
+    }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "number_type": {
+          "minLength": 1
+        },
+        "range_start": {
+          "minLength": 1
+        },
+        "range_end": {
+          "minLength": 1
+        },
+        "allottee": {
+          "minLength": 1
+        }
+      }
+    }
+  ]
+}

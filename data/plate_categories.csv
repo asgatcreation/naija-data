@@ -1,0 +1,14 @@
+category,vehicle,lettering_colour,background_colour,provision,sources
+private,vehicle,blue,white,"reg. 39(1), 39(2)(a)",nrtr-2012
+commercial,vehicle,red,white,"reg. 39(1), 39(2)(b)",nrtr-2012
+government,vehicle,green,white,"reg. 39(2)(c), Schedule 5 figure 7",nrtr-2012
+local_government,vehicle,green,white,reg. 39(2)(d),nrtr-2012
+armed_forces,vehicle,black,white,"reg. 39(2)(e), Schedule 5 figure 7",nrtr-2012
+paramilitary,vehicle,black,white,"reg. 39(2)(e), Schedule 5 figure 8",nrtr-2012
+dealer,vehicle,red,white,Schedule 5 figure 10,nrtr-2012
+diplomatic,vehicle,white,black or red,Schedule 5 figure 11,nrtr-2012
+private,motorcycle,blue,white,reg. 37(2)(c),nrtr-2012
+government,motorcycle,green,white,reg. 37(2)(c),nrtr-2012
+armed_forces,motorcycle,black,white,reg. 37(2)(c),nrtr-2012
+paramilitary,motorcycle,black,white,reg. 37(2)(c),nrtr-2012
+commercial,motorcycle,red,white,reg. 37(2)(c),nrtr-2012

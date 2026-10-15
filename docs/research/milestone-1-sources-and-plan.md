@@ -114,3 +114,12 @@ Added by the owner, to follow Milestone 4 (packages):
   discoverability ("django-" prefix) and to keep the core wheel free of framework code.
 - **Zod schemas** for phone, NUBAN and plate, exported from a `naija-data/zod` subpath with `zod` as an
   optional peer dependency.
+
+### Decision (2026-10-15): vehicle plates
+
+No official public list of LGA plate codes exists. The National Road Traffic Regulations 2012
+(Official Gazette No. 101, S.I. 61) define plate structure, colours and categories, and say FRSC
+determines the codes (reg. 39(5)), but FRSC does not publish them; the only complete lists are on
+commercial websites with no stated source. Owner's decision: ship plate **format** validation and
+parsing now (sourced from the Gazette), and add LGA code lookup only once an official list is
+obtained from FRSC. A request letter is drafted in docs/requests/frsc-plate-codes.md.

@@ -24,6 +24,7 @@ python scripts/extract/constitution.py   # needs .cache/raw/constitution/constit
 python scripts/build/import_admin.py     # -> data/states.csv, lgas.csv, wards.csv
 python scripts/build/import_banks.py     # -> data/banks.csv
 python scripts/build/import_phone.py     # -> data/phone_prefixes.csv
+python scripts/build/import_numbering.py # -> data/phone_area_codes.csv, data/phone_number_blocks.csv
 python scripts/validate.py
 ```
 
