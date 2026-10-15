@@ -23,7 +23,18 @@ This project follows [Semantic Versioning](https://semver.org/):
   all generated from `data/` with the same API: states, LGAs, wards, fuzzy search, banks, NUBAN
   validation and candidate banks, phone normalisation and network lookup.
 - `naija` command-line tool (Python and npm).
-- 5,907 shared parity test cases run against all three packages.
+- 6,431 shared parity test cases run against all three packages.
+- Strict phone validation in all three languages: number type (mobile, landline, 0800 toll-free,
+  0700 non-toll-free), landline area, network or allottee, and a reason code when invalid
+  (`parse_phone`, `phone_error`, `is_valid_phone`). Replaces `lookup_phone`.
+- Data: 56 NCC landline area codes and 305 allocated number blocks (NCC Numbering Plan 2022).
+- Vehicle plate format validation for standard (`ABC-123DE`) and dealer (`DKN 135 3`) plates, and plate
+  colours by category, from the National Road Traffic Regulations 2012. LGA plate codes are not
+  included: FRSC does not publish them (request drafted in `docs/requests/`).
+- `search_wards` in Python and Go (JS: `searchWards` from `naija-data/wards`).
+- Zod schemas at `naija-data/zod` (zod is an optional peer dependency).
+- `django-naija`: Django model and form fields, DRF serializer fields and validators, example
+  project and tests.
 
 ### Fixed (data)
 - Removed 4 LGA headquarters taken from OCHA COD-AB that were garbled ("Jamao?Çoare") or were

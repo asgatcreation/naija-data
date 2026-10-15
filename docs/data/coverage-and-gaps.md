@@ -12,6 +12,9 @@ Run `python scripts/validate.py` to re-check every rule below.
 | Wards / registration areas | 8,809 | 8,809 (INEC) | ✅ complete |
 | Licensed financial institutions | 897 active + 2 historical | CBN register | ✅ complete list; codes partial (see below) |
 | Mobile number blocks | 51 blocks, 45 prefixes | NCC table (Dec 2023) | ✅ complete as published |
+| Landline area codes | 56 | NCC area code page | ✅ complete as published |
+| Allocated number blocks (fixed, mobile, 0700, 0800) | 305 | NCC National Numbering Plan (Oct 2022) | ✅ 2 rows excluded (see below) |
+| Plate formats and colours | standard + dealer formats, 13 colour rules | National Road Traffic Regulations 2012 | ⚠️ LGA plate codes not published by FRSC |
 | Postcodes | format only | NIPOST NDAPS | ⚠️ records not redistributable |
 
 ### Field coverage
@@ -56,6 +59,18 @@ These are real errors in upstream data that naija-data detected and resolved.
 ### Constitution (government-hosted transcription)
 - Typing errors ("Tqngaza", "Ogbmosho", "Matazuu") and missing commas merge or split LGAs ("Kaura, Namoda"), so a naive parse finds 764 of 768 LGAs. Used for capitals and aliases, not as the master list.
 
+### NCC documents (phone numbering)
+- The area code page lists **Benin as 053 and Warri as 052**; the National Numbering Plan has
+  **Benin 052 and Warri 053**. Both codes are valid either way; the centre name for these two codes is
+  marked `unverified`.
+- Numbering Plan rows 306 and 308 (Vezeti Services, access codes 887 and 889) give the range
+  888 0000–888 9999, which belongs to access code 888; they are excluded.
+- The block 9301 0000–9301 4999 (Abuja) is listed twice, as "Nationwave Telecom Nig. Limited" and
+  "Nationwaves Telcom Nigeria Limited"; it is kept once.
+- Row 255 (MTN, 0704 7xx) says 3,000,000 lines for a range of 1,000,000 numbers; the range is kept.
+- The 2022 plan allocates 0702 6xx xxxx to MTN (former Visafone), but the 2023 mobile table does not list
+  it. A mobile number is accepted if either document allocates its block, so real numbers are not rejected.
+
 ### Payment providers' bank lists
 - **Paystack gives code 51253 to two different microfinance banks** (Stellas MFB and YCT MFB). With one source we cannot tell which is right, so the code is left empty for both.
 - Paystack's `code` mixes CBN codes, NIP codes and its own codes ("MFB50094", "035A" for ALAT by Wema, 3-digit codes for microfinance banks). Only codes whose format fits the institution's type are used; 114 Paystack entries were not used.
@@ -71,6 +86,14 @@ These are real errors in upstream data that naija-data detected and resolved.
 5. **State nicknames/slogans** ("Centre of Excellence"...) are not included yet: no authoritative list was found, and slogans change between administrations.
 6. **Bank websites and full merger history** (beyond Diamond and Heritage) are not included yet.
 7. **Postcodes**: NIPOST's 11-character digital postcodes are only available through a gated API with no open licence; no redistributable list of the old 6-digit codes was found. naija-data will validate the postcode *format* and link to the official lookup.
-8. **Phone prefixes** are as published by the NCC "as at December 2023". Prefixes such as 0910, 0914 and 0917–0919 do not appear in the NCC table and are not included.
+8. **Phone prefixes** are as published by the NCC "as at December 2023" (mobile table) and October 2022
+   (numbering plan). Prefixes such as 0910, 0914 and 0917–0919 appear in neither document, so numbers using
+   them are reported as `unknown_prefix` until the NCC publishes an allocation.
 9. **Abia and Delta wards** were not cross-checked against the 2015 directory (files not archived).
 10. **Ward boundaries** are not included: the only good dataset (GRID3) is CC BY-SA and covers 24 states.
+11. **Vehicle plate LGA codes** (e.g. KJA for Ikeja) are not included. The Road Traffic Regulations 2012 say
+    FRSC sets the codes (reg. 39(5)), and FRSC does not publish them; the only full lists online are on
+    commercial sites with no stated source. naija-data validates the plate **format** only. A request to
+    FRSC is drafted in [docs/requests/frsc-plate-codes.md](../requests/frsc-plate-codes.md).
+12. **Government, armed forces, paramilitary and diplomatic plate formats** are not validated: the sample
+    plate images in the available copy of the Regulations are missing.

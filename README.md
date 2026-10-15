@@ -24,6 +24,8 @@ import naija_data as ng
 ng.get_state("lagos").capital           # 'Ikeja'
 ng.search("lagso")[0].name              # 'Lagos'  (typos, aliases, accents: "Ọ̀yọ́")
 ng.is_valid_nuban("0000014579", "011")  # True
+ng.parse_phone("01 269 1531").area      # 'Lagos' (strict NCC rules: mobile, landline, toll-free)
+ng.phone_error("0900 123 4567")         # 'reserved'
 ```
 
 **JavaScript / TypeScript** (ESM + CommonJS, full types, no dependencies)
@@ -51,7 +53,12 @@ naija.GetState("lagos").Capital                 // "Ikeja"
 ok, _ := naija.IsValidNUBAN("0000014579", "011") // true
 ```
 
-**Command line**: `naija lga lagos`, `naija bank 058`, `naija nuban 0000014579`, `naija phone 08031234567`.
+**Command line**: `naija lga lagos`, `naija bank 058`, `naija nuban 0000014579`, `naija phone 08031234567`,
+`naija plate KJA 123 AB`.
+
+**Django / DRF**: [`django-naija`](packages/django/) adds model, form and serializer fields
+(`NigerianPhoneField`, `NUBANField`, `PlateNumberField`, `StateField`, `LGAField`) with clear error messages.
+**Zod**: `import { phoneSchema, nubanSchema, plateSchema } from "naija-data/zod"`.
 
 ### What's included
 
@@ -61,13 +68,14 @@ ok, _ := naija.IsValidNUBAN("0000014579", "011") // true
 | Fuzzy search (typos, aliases, accents) | `search` | `search`, `searchWards` | `Search`, `SearchWards` |
 | Banks by code, name or type; active only by default | `get_bank`, `banks`, `find_banks` | `getBank`, `banks`, `findBanks` | `GetBank`, `Banks`, `FindBanks` |
 | NUBAN check digit (CBN algorithm) and candidate banks | `is_valid_nuban`, `banks_for_nuban` | `isValidNuban`, `banksForNuban` | `IsValidNUBAN`, `BanksForNUBAN` |
-| Phone normalisation and network guess | `normalize_phone`, `lookup_phone` | `normalizePhone`, `lookupPhone` | `NormalizePhone`, `LookupPhone` |
+| Strict phone validation: type (mobile, landline, toll-free), area, network, reason when invalid | `parse_phone`, `phone_error`, `is_valid_phone` | `parsePhone`, `phoneError`, `isValidPhone` | `ParsePhone`, `PhoneError`, `IsValidPhone` |
+| Vehicle plate format validation (standard and dealer plates) | `parse_plate`, `plate_error` | `parsePlate`, `plateError` | `ParsePlate`, `PlateError` |
 
 Record fields keep the dataset's names in every language (`state.iso_code`, `bank.cbn_code`).
-JavaScript bundle cost: phone helpers 0.8 KB, states 2.3 KB, states + LGAs + search 30 KB gzipped;
-wards (148 KB) only load if you import `naija-data/wards`.
+JavaScript bundle cost (gzipped): states 2.3 KB, plates 2.4 KB, phone validation 4.9 KB, banks + NUBAN 15 KB,
+states + LGAs + search 30 KB; wards (148 KB) only load if you import `naija-data/wards`.
 
-**Same answers in every language.** 5,907 shared test cases ([fixtures/](fixtures/)) run against the
+**Same answers in every language.** 6,431 shared test cases ([fixtures/](fixtures/)) run against the
 Python, JavaScript and Go packages in CI, down to the fuzzy-search scores.
 
 ## Why
@@ -92,7 +100,9 @@ and give no source. naija-data aims to be the trusted alternative:
 | LGAs (incl. 6 FCT area councils) | 774 | INEC, Constitution, OCHA COD-AB | ✅ data ready |
 | Wards / registration areas | 8,809 | INEC (live list + 2015 directory) | ✅ data ready |
 | Banks and licensed financial institutions | 899 | CBN register; codes from Paystack + Monnify | ✅ data ready, codes partial |
-| Mobile number prefixes | 45 | NCC | ✅ data ready |
+| Mobile number prefixes | 45 | NCC Mobile Number Allocation Table | ✅ |
+| Landline area codes and allocated number blocks | 56 codes, 305 blocks | NCC Numbering Plan 2022 | ✅ |
+| Vehicle plate formats and colours | 13 categories | National Road Traffic Regulations 2012 | ✅ format only; LGA codes not published by FRSC |
 | Postcode format check | – | NIPOST (records are not redistributable) | planned |
 
 The cross-checks between sources, the upstream errors they caught, and the known gaps are documented in

@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "django-naija"
+version = "0.1.0.dev0"
+description = "Django and DRF fields for Nigerian phone numbers, NUBAN, plate numbers, states and LGAs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Akanji Oluwaseun Gabriel" }]
+keywords = ["django", "nigeria", "phone", "nuban", "lga", "states", "validators", "drf"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Framework :: Django",
+  "Framework :: Django :: 5.2",
+  "Framework :: Django :: 6.0",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+]
+dependencies = ["naija-data>=0.1.0.dev0,<2", "Django>=5.2"]
+
+[project.optional-dependencies]
+rest = ["djangorestframework>=3.15"]
+test = ["djangorestframework>=3.15", "pytest==8.4.2", "pytest-django==4.14.0"]
+
+[project.urls]
+Homepage = "https://github.com/asgatcreation/naija-data/tree/main/packages/django"
+Source = "https://github.com/asgatcreation/naija-data"
+Issues = "https://github.com/asgatcreation/naija-data/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/django_naija"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "example", "README.md", "LICENSE"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "example_site.settings"
+pythonpath = ["example"]
+testpaths = ["tests"]

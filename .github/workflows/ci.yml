@@ -57,6 +57,26 @@ jobs:
           cd /tmp && /tmp/clean/bin/python -c "import naija_data as ng; assert ng.get_state('lagos').capital == 'Ikeja'"
           /tmp/clean/bin/naija bank 058
 
+  django:
+    name: Django ${{ matrix.django }} (Python ${{ matrix.python-version }})
+    needs: data
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { python-version: "3.10", django: "5.2" }
+          - { python-version: "3.13", django: "5.2" }
+          - { python-version: "3.13", django: "6.1" }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -e packages/python -e "packages/django[test]" "Django~=${{ matrix.django }}.0"
+      - run: python -m pytest
+        working-directory: packages/django
+
   js:
     name: Node ${{ matrix.node-version }}
     needs: data
@@ -79,6 +99,7 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run size
+      - run: npm run bundle-check
       - name: Pack and test in a clean project
         run: |
           npm pack --pack-destination /tmp
@@ -86,6 +107,8 @@ jobs:
           npm install /tmp/naija-data-*.tgz
           node -e "const ng = require('naija-data'); if (ng.getState('lagos').capital !== 'Ikeja') process.exit(1)"
           node --input-type=module -e "import { wards } from 'naija-data/wards'; if (wards('Ikeja', 'Lagos').length !== 10) process.exit(1)"
+          npm install zod@4.6.5
+          node --input-type=module -e "import { phoneSchema } from 'naija-data/zod'; if (phoneSchema().parse('0803 123 4567') !== '+2348031234567') process.exit(1)"
           npx naija bank 058
 
   go:

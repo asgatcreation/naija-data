@@ -36,6 +36,10 @@ The machine-readable list, including the date each source was retrieved, is
 | Heritage Bank revocation press release | CBN | Public | Bank status history |
 | Access–Diamond merger reports | Nairametrics, TheCable | Factual data only | Bank status history |
 | Mobile Number Allocation Table | Nigerian Communications Commission (NCC) | Public regulatory information (factual data only) | Phone prefixes |
+| Area Codes by Zone and Primary Centre; National Numbering Plan (Oct 2022) | NCC | Public regulatory information (factual data only) | Landline area codes, number blocks |
+| Numbering Regulations 2008 (Official Gazette No. 68) | NCC | Public law | Number structure |
+| Special Numbering Services determination (2022) | NCC | Public regulatory information | 0800 toll-free, 0700 non-toll-free |
+| National Road Traffic Regulations 2012 (Official Gazette No. 101) | Federal Republic of Nigeria | Public law | Plate formats and colours |
 | National Digital Alphanumeric Postcode System | NIPOST | Not redistributable; only the published format is described | Postcode format check |
 
 Where a source publishes no open licence, naija-data only uses plain facts from it, such as names,

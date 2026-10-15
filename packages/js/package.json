@@ -47,6 +47,16 @@
         "default": "./dist/wards.cjs"
       }
     },
+    "./zod": {
+      "import": {
+        "types": "./dist/zod.d.ts",
+        "default": "./dist/zod.js"
+      },
+      "require": {
+        "types": "./dist/zod.d.cts",
+        "default": "./dist/zod.cjs"
+      }
+    },
     "./package.json": "./package.json"
   },
   "bin": {
@@ -64,12 +74,22 @@
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",
-    "test": "npm run build && node --test test/api.test.mjs test/parity.test.mjs",
-    "size": "node scripts/size.mjs"
+    "test": "npm run build && node --test test/api.test.mjs test/parity.test.mjs test/zod.test.mjs",
+    "size": "node scripts/size.mjs",
+    "bundle-check": "node scripts/bundle-check.mjs"
   },
   "devDependencies": {
     "@types/node": "24.13.6",
     "tsup": "8.5.1",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "zod": "4.6.5"
+  },
+  "peerDependencies": {
+    "zod": "^3.25.0 || ^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "zod": {
+      "optional": true
+    }
   }
 }
