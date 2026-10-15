@@ -6,9 +6,11 @@ Python, JavaScript and Go packages exactly.
 - Versioned under `/v1`; interactive docs at `/v1/docs`, OpenAPI spec at `/v1/openapi.json`.
 - JSON everywhere; errors are `{"error": {"code", "message"}}` with 400/404/409/422/429 statuses.
 - CORS open to all origins; read-only (`GET`, `HEAD`, `OPTIONS`).
-- Cached for an hour in browsers and a day at Cloudflare's edge; `ETag` supports `304 Not Modified`.
-- Rate limited to 120 requests per minute per IP (Cloudflare rate limiting binding). `/v1/health` is
-  never limited or cached.
+- Cached for an hour in browsers (and a day at Cloudflare's edge on a custom domain); `ETag` supports `304 Not Modified`.
+- Rate limited to about 120 requests per minute per IP with Cloudflare's rate limiting binding. It counts
+  per Cloudflare server, so it is best-effort rather than an exact cap. `/v1/health` is never limited or cached.
+- The free Workers plan allows 100,000 requests a day. Edge caching (Cache API) only works on a custom domain,
+  not on `*.workers.dev`; browsers still cache responses, and `ETag` / `304` work everywhere.
 
 ## Develop
 

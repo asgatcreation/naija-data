@@ -29,7 +29,7 @@ export function openapi(origin: string, dataVersion: string) {
       description:
         "Free, read-only API for accurate, sourced Nigerian reference data: states, LGAs, wards (INEC registration areas), " +
         "CBN-licensed banks with NUBAN validation, phone numbers (NCC) and vehicle plates. Every record lists its sources. " +
-        `Data version ${dataVersion}. Limit: 120 requests per minute per IP. Responses are cached for an hour; for heavy use, ` +
+        `Data version ${dataVersion}. Please keep to about 120 requests per minute per IP (enforced on a best-effort basis). Responses may be cached for an hour; for heavy use, ` +
         "install the Python, JavaScript or Go package instead.",
       license: { name: "Data: CC BY 4.0 (Akanji Oluwaseun Gabriel). Code: MIT.", url: "https://github.com/asgatcreation/naija-data/blob/main/ATTRIBUTION.md" },
       contact: { name: "Akanji Oluwaseun Gabriel", url: "https://github.com/asgatcreation/naija-data" },

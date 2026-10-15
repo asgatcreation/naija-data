@@ -218,7 +218,7 @@ export async function handle(request: Request, env: Env): Promise<Response> {
     const ip = request.headers.get("cf-connecting-ip") ?? "unknown";
     const { success } = await env.RATE_LIMITER.limit({ key: ip });
     if (!success) {
-      return json({ error: { code: "rate_limited", message: "Too many requests. The limit is 120 per minute per IP; please slow down or use the packages." } },
+      return json({ error: { code: "rate_limited", message: "Too many requests. Please slow down (about 120 requests per minute per IP), or install a naija-data package for heavy use." } },
         429, { ...CORS, "retry-after": "60" });
     }
   }
