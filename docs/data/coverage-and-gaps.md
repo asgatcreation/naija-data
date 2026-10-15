@@ -21,7 +21,7 @@ Run `python scripts/validate.py` to re-check every rule below.
 | State ISO 3166-2 code, INEC code, P-code, capital, zone, centroid | 37 / 37 | verified |
 | State creation date | 36 / 36 (+ FCT) | **unverified**: single secondary source |
 | LGA INEC code, P-code, senatorial district, centroid | 774 / 774 | verified |
-| LGA headquarters | 633 / 774 | 6 verified (FCT, Constitution); 627 **unverified** (UN COD-AB only) |
+| LGA headquarters | 629 / 774 | 6 verified (FCT, Constitution); 623 **unverified** (UN COD-AB only) |
 | LGA aliases (other spellings) | 89 aliases on 76 LGAs | from INEC 2015, COD-AB and Constitution |
 | Ward names cross-checked with INEC 2015 directory | 8,355 / 8,809 | Abia (184) and Delta (270) not cross-checked: their 2015 files were not archived |
 | Bank `cbn_code` (used for NUBAN validation) | 142 institutions | 22 verified by two sources |
@@ -51,7 +51,7 @@ These are real errors in upstream data that naija-data detected and resolved.
 - Anambra's capital spelled **"Akwa"** (should be Awka).
 - **Lagos appears twice** among state capitals (Ikeja and Lagos); FCT has none.
 - LGA name typos: "Obia/Akpor" (Obio/Akpor), "Markafi" (Makarfi), "Atigbo" (Atisbo).
-- 14 LGAs have two or more candidate headquarters; these are left empty rather than guessed.
+- 14 LGAs have two or more candidate headquarters, and 4 "headquarters" are garbled or are rivers ("Moro, River" for Ilorin West, "Jamao?Çoare" for Jama'are); all are left empty rather than guessed.
 
 ### Constitution (government-hosted transcription)
 - Typing errors ("Tqngaza", "Ogbmosho", "Matazuu") and missing commas merge or split LGAs ("Kaura, Namoda"), so a naive parse finds 764 of 768 LGAs. Used for capitals and aliases, not as the master list.
@@ -66,7 +66,7 @@ These are real errors in upstream data that naija-data detected and resolved.
 
 1. **Bank codes for most microfinance, mortgage and finance institutions.** Only 99 of 796 microfinance banks have a CBN code, and most are single-source. NIBSS does not publish its NIP institution list. Contributions with a NIBSS or CBN document are very welcome.
 2. **NIP codes** are confirmed by two sources for only one institution. They are flagged `unverified`.
-3. **LGA headquarters**: 141 LGAs have none, and 627 come only from the UN dataset, which has known errors. Official state government sources are needed.
+3. **LGA headquarters**: 145 LGAs have none, and 623 come only from the UN dataset, which has known errors. Official state government sources are needed.
 4. **State creation dates** come from one news source and are ambiguous for states that were split or renamed. A gazette or decree reference is needed for each.
 5. **State nicknames/slogans** ("Centre of Excellence"...) are not included yet: no authoritative list was found, and slogans change between administrations.
 6. **Bank websites and full merger history** (beyond Diamond and Heritage) are not included yet.

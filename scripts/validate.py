@@ -99,12 +99,19 @@ def name_key(value: str) -> str:
     return re.sub(r"[^a-z0-9]", "", value.lower())
 
 
+# Signs of text decoded with the wrong encoding ("mojibake"): the replacement character, C1 control
+# characters, sequences starting with U+00C3, U+00C2 or U+00E2 U+20AC, or "?" inside a word ("Jamao?Coare").
+GARBLED = re.compile(r"[\ufffd\u0080-\u009f]|\u00c3|\u00c2|\u00e2\u20ac|\w\?\w")
+
+
 def check_common(name: str, rows: list[dict], source_ids: set[str], name_field: str | None = "name") -> list[str]:
     errors = []
     for i, r in enumerate(rows, start=2):
         for f, v in r.items():
             if v != v.strip() or "  " in v:
                 errors.append(f"{name}.csv line {i}: {f} has stray whitespace: {v!r}")
+            if GARBLED.search(v):
+                errors.append(f"{name}.csv line {i}: {f} looks garbled (wrong text encoding): {v!r}")
         for sid in split(r.get("sources", "")):
             if sid not in source_ids:
                 errors.append(f"{name}.csv line {i}: unknown source id {sid!r}")

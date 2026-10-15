@@ -36,7 +36,7 @@ def main() -> None:
     pages = [pdf[i].get_textpage().get_text_range() for i in range(len(pdf))]
     start = next(i for i, t in enumerate(pages) if t.lstrip().startswith("State Local Government Areas Capital City"))
     text = "\n".join(pages[start:start + 4])
-    text = text.replace("￾", "-").replace("’", "'")
+    text = text.replace("\ufffe", "-").replace("\u2019", "'")
     part1, part2 = text.split("Part II", 1)
     lines = [l.strip() for l in part1.splitlines()[1:] if l.strip() and l.strip() != "Back to Page One"]
 

@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SRC = ROOT / ".cache" / "raw" / "wayback-inec"
 OUT = ROOT / ".cache" / "extract" / "inec2015.json"
 
-DASHES = dict.fromkeys(map(ord, "‐‑‒–—−"), "-")
+DASHES = dict.fromkeys(map(ord, "\u2010\u2011\u2012\u2013\u2014\u2212"), "-")
 ROW = re.compile(r"^(?P<name>.+?)\s+(?P<code>\d{2,3})\s+(?P<count>[\d,]+)(?:\s+(?P<count2>[\d,]+))?$")
 
 

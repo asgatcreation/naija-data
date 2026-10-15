@@ -17,7 +17,7 @@ def key(name: str) -> str:
 
 def tidy(name: str) -> str:
     """Normalise spacing, slashes and dashes without changing letters."""
-    name = name.replace("’", "'").replace("‐", "-").replace("–", "-")
+    name = name.replace("\u2019", "'").replace("\u2010", "-").replace("\u2013", "-")
     name = re.sub(r"\s*/\s*", "/", name)
     name = re.sub(r"\s*-\s*", "-", name)
     return re.sub(r"\s+", " ", name).strip(" ,")

@@ -36,7 +36,7 @@ def main() -> None:
         prefix = card.split("</div>")[0].strip()
         body = card.split("</div></span></div></div>")[0]
         for raw_label, raw_range in re.findall(r'<div class="company[^"]*">(.*?)</div>\s*<div class="label">(.*?)</div>', body, re.S):
-            label = re.sub(r"\s+", " ", html.unescape(raw_label)).replace("�", "-").strip()
+            label = re.sub(r"\s+", " ", html.unescape(raw_label)).replace("\ufffd", "-").strip()
             start, end = (re.sub(r"\s", "", x) for x in raw_range.split(" to "))
             if (prefix, start) in seen:  # the NCC page lists 0702 twice
                 continue

@@ -240,8 +240,10 @@ def main() -> None:
                     hq, hq_src = hit["headquarters"], "constitution-1999"
             else:
                 cands = [c for c in caps if c["adm_p_lvl"] == 2 and c["adm1_name"] == c1["adm1_name"] and c["adm2_name"] == cod["adm2_name"]]
-                if len(cands) == 1:
+                if len(cands) == 1 and re.fullmatch(r"[A-Za-z][A-Za-z '\-/.]*", cands[0]["name"]):
                     hq, hq_src = cands[0]["name"], "ocha-cod-ab-nga"
+                elif len(cands) == 1:
+                    report.append(f"LGA HQ garbled in COD-AB, left empty: {name}/{display}: {cands[0]['name']!r}")
                 elif len(cands) > 1:
                     report.append(f"LGA HQ ambiguous in COD-AB: {name}/{display}: {[c['name'] for c in cands]}")
 

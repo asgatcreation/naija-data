@@ -159,3 +159,11 @@ def test_operator_only_when_allocated(tables):
     rows = copy.deepcopy(tables["phone_prefixes"])
     next(r for r in rows if r["status"] == "withdrawn")["operator"] = "MTN"
     assert any("operator must be set" in e for e in validate.check_phone(rows))
+
+
+def test_garbled_text_is_rejected(tables, source_ids):
+    rows = copy.deepcopy(tables["lgas"][:1])
+    rows[0]["headquarters"] = "Jamao?" + chr(0xC7) + "oare"  # real example from OCHA COD-AB
+    assert any("garbled" in e for e in validate.check_common("lgas", rows, source_ids))
+    rows[0]["headquarters"] = "Jama'are"
+    assert not validate.check_common("lgas", rows, source_ids)
