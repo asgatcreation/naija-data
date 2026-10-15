@@ -36,12 +36,15 @@ function run(fn, args) {
       case "banks_for_nuban": return ids(ng.banksForNuban(args[0]));
       case "normalize_phone": return ng.normalizePhone(args[0]);
       case "to_local": return ng.toLocal(args[0]);
-      case "lookup_phone": {
-        const info = ng.lookupPhone(args[0]);
-        if (!info) return null;
-        const { note, ...rest } = info;
-        return rest;
-      }
+      case "parse_phone": return ng.parsePhone(args[0]);
+      case "phone_error": return ng.phoneError(args[0]);
+      case "is_valid_phone": return ng.isValidPhone(args[0], args[1]);
+      case "parse_plate": return ng.parsePlate(args[0]);
+      case "plate_error": return ng.plateError(args[0]);
+      case "is_valid_plate": return ng.isValidPlate(args[0], args[1]);
+      case "area_codes": return ng.areaCodes();
+      case "plate_categories": return ng.plateCategories();
+      case "search_wards": return wd.searchWards(args[0], { limit: args[1] }).map((r) => [r.kind, r.code, r.score, r.matched]);
       case "prefixes": return ng.prefixes(args[0]);
       default: throw new TypeError(`Unknown parity fn ${fn}`);
     }

@@ -181,3 +181,8 @@ def search(query: str, kinds: Sequence[str] = ("state", "lga"), limit: int = 10,
             results.append(SearchResult(kind, code, name, state_code, best, matched))
     results.sort(key=lambda r: (-r.score, KIND_ORDER[r.kind], r.name, r.code))
     return results[:limit]
+
+
+def search_wards(query: str, limit: int = 10, min_score: int = 600) -> List[SearchResult]:
+    """Fuzzy search across all 8,809 wards (same as search(query, kinds=("ward",)))."""
+    return search(query, kinds=("ward",), limit=limit, min_score=min_score)

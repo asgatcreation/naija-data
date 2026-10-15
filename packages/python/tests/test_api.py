@@ -102,24 +102,67 @@ def test_banks():
 
 
 @pytest.mark.parametrize("raw", ["08031234567", "0803 123 4567", "+2348031234567", "2348031234567",
-                                 "+234 (0) 803 123 4567", "8031234567", "+234-803-123-4567"])
-def test_normalize_phone(raw):
+                                 "+234 (0) 803 123 4567", "8031234567", "+234-803-123-4567", "00234 803 123 4567"])
+def test_normalize_mobile(raw):
     assert ng.normalize_phone(raw) == "+2348031234567"
     assert ng.to_local(raw) == "08031234567"
 
 
-@pytest.mark.parametrize("raw", ["", "0803123456", "+1 803 123 4567", "06031234567", "hello"])
-def test_invalid_phone(raw):
-    assert ng.normalize_phone(raw) is None
+@pytest.mark.parametrize("raw, error", [
+    ("", "empty"), ("0803123456", "bad_length"), ("+1 803 123 4567", "not_nigerian"),
+    ("hello", "invalid_characters"), ("0803 123 4567 ext 2", "invalid_characters"),
+    ("0900 123 4567", "reserved"),  # NCC: reserved for vanity numbers
+    ("0819 012 3456", "unallocated"),  # NCC: withdrawn block
+    ("0910 123 4567", "unknown_prefix"),  # not in either NCC document
+    ("044 123456", None), ("099 123456", None), ("040 123456", "unknown_area_code"), ("098 123456", None),
+])
+def test_phone_errors(raw, error):
+    assert ng.phone_error(raw) == error
+    assert ng.is_valid_phone(raw) is (error is None)
 
 
-def test_phone_network():
-    assert ng.lookup_phone("08031234567").network == "MTN"
-    assert ng.lookup_phone("08021234567").network == "Airtel"
-    assert ng.lookup_phone("08051234567").network == "Glo"
-    assert ng.lookup_phone("08091234567").network == "9mobile"
-    assert ng.lookup_phone("07021500000").status == "returned"
-    assert "ported" in ng.lookup_phone("08031234567").note
+def test_phone_types_and_networks():
+    m = ng.parse_phone("08031234567")
+    assert (m.type, m.network, m.prefix) == ("mobile", "MTN", "0803")
+    assert "ported" in m.note
+    assert ng.parse_phone("08021234567").network == "Airtel"
+    assert ng.parse_phone("08051234567").network == "Glo"
+    assert ng.parse_phone("08091234567").network == "9mobile"
+    lagos = ng.parse_phone("01 269 1531")  # example number from the NCC Numbering Regulations 2008
+    assert (lagos.type, lagos.area, lagos.e164) == ("fixed", "Lagos", "+23412691531")
+    kano = ng.parse_phone("064 310000")
+    assert (kano.area, kano.network, kano.allocated) == ("Kano", "Intercellular Nig. Limited", True)
+    assert ng.parse_phone("0800 123 4567").type == "toll_free"
+    assert ng.parse_phone("0700 123 4567").type == "non_toll_free"
+    assert ng.parse_phone("07026000000").network == "MTN"  # only the 2022 numbering plan lists this block
+    assert ng.is_valid_phone("01 269 1531", types=["mobile"]) is False
+    assert len(ng.area_codes()) == 56
+
+
+@pytest.mark.parametrize("raw, display, fmt, state", [
+    ("kja 123 ab", "KJA-123AB", "standard", None),
+    ("KJA-123AB", "KJA-123AB", "standard", None),
+    ("DKN 135 3", "DKN 135 3", "dealer", "KN"),  # sample from the Regulations, Schedule 5 figure 10
+    ("dla5481", "DLA 548 1", "dealer", "LA"),
+])
+def test_plates(raw, display, fmt, state):
+    p = ng.parse_plate(raw)
+    assert (p.display, p.format, p.state_code) == (display, fmt, state)
+    assert ng.is_valid_plate(raw)
+
+
+@pytest.mark.parametrize("raw, error", [("", "empty"), ("AB-123-CD", "unknown_format"), ("DZZ 135 3", "unknown_state"),
+                                        ("KJ@-123AB", "invalid_characters")])
+def test_plate_errors(raw, error):
+    assert ng.plate_error(raw) == error
+    assert ng.parse_plate(raw) is None
+
+
+def test_plate_categories_from_regulations():
+    cats = {(c.category, c.vehicle): c for c in ng.plate_categories()}
+    assert cats[("commercial", "vehicle")].lettering_colour == "red"
+    assert cats[("government", "vehicle")].lettering_colour == "green"
+    assert cats[("private", "motorcycle")].lettering_colour == "blue"
 
 
 def test_cli(capsys):
@@ -129,3 +172,6 @@ def test_cli(capsys):
     assert main(["nuban", "0000014579", "011"]) == 0
     assert main(["phone", "08031234567"]) == 0
     assert "MTN" in capsys.readouterr().out
+    assert main(["phone", "0900 123 4567"]) == 1
+    assert main(["plate", "DKN", "135", "3"]) == 0
+    assert "Kano" in capsys.readouterr().out

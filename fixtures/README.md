@@ -40,7 +40,15 @@ whenever the data or the behaviour changes, and review the diff.
 | `banks_for_nuban` | account | list of bank ids |
 | `normalize_phone` | text | E.164 string or null |
 | `to_local` | text | local string or null |
-| `lookup_phone` | text | `{e164, local, prefix, network, status}` or null |
+| `parse_phone` | text | full phone record or null |
+| `phone_error` | text | error code or null |
+| `is_valid_phone` | text, types or null | boolean |
+| `parse_plate` | text | full plate record or null |
+| `plate_error` | text | error code or null |
+| `is_valid_plate` | text, formats or null | boolean |
+| `area_codes` | – | list of area code records |
+| `plate_categories` | – | list of plate category records |
+| `search_wards` | query, limit | list of `[kind, code, score, matched]` |
 | `prefixes` | network or null | list of prefixes |
 
 ## Shared algorithms

@@ -1,6 +1,7 @@
 // Command line: `npx naija-data lga lagos`, `naija bank 058`, `naija nuban 0123456789`, ...
 import {
-  banks, banksForNuban, findBanks, getBank, getLga, getState, isValidNuban, lgas, lookupPhone, meta, search, states,
+  banks, banksForNuban, findBanks, getBank, getLga, getState, isValidNuban, lgas, meta, parsePhone, parsePlate,
+  phoneError, plateError, search, states,
   type BankType,
 } from "./index.js";
 import { wards } from "./wards.js";
@@ -17,7 +18,8 @@ Usage: naija <command> [args] [--json]
   bank <code|name>          look up a bank
   banks [--type T]          list institutions
   nuban <account> [bank]    validate an account number (omit bank to list candidates)
-  phone <number>            normalise a mobile number and guess its network`;
+  phone <number>            validate a phone number, show its type and network
+  plate <plate>             validate a vehicle plate number`;
 
 function main(argv: string[]): number {
   const json = argv.includes("--json");
@@ -80,8 +82,23 @@ function main(argv: string[]): number {
       return out(rows, [`${account} has a valid check digit for ${rows.length} banks:`, ...rows.map((b) => `  ${b.cbn_code!.padEnd(6)} ${b.name}`)]);
     }
     case "phone": {
-      const info = lookupPhone(q);
-      return out(info, info ? [`${info.e164}  (${info.local})`, `  network: ${info.network ?? "unknown"} (prefix ${info.prefix})`, `  note: ${info.note}`] : []);
+      const info = parsePhone(q);
+      if (!info) {
+        console.log(json ? JSON.stringify({ number: q, valid: false, error: phoneError(q) }) : `${q}: NOT valid (${phoneError(q)})`);
+        return 1;
+      }
+      return out(info, [`${info.e164}  (${info.local})`, `  type: ${info.type}`,
+        `  network: ${info.network ?? "unknown"}${info.type === "mobile" ? ` (prefix ${info.prefix})` : ""}`,
+        ...(info.area ? [`  area: ${info.area} (${info.prefix})`] : []), ...(info.note ? [`  note: ${info.note}`] : [])]);
+    }
+    case "plate": {
+      const plate = parsePlate(q);
+      if (!plate) {
+        console.log(json ? JSON.stringify({ plate: q, valid: false, error: plateError(q) }) : `${q}: NOT valid (${plateError(q)})`);
+        return 1;
+      }
+      return out(plate, [`${plate.display}  [${plate.format}]`,
+        ...(plate.state_code ? [`  state: ${getState(plate.state_code)!.name}`] : []), ...(plate.note ? [`  note: ${plate.note}`] : [])]);
     }
     default:
       console.log(HELP);

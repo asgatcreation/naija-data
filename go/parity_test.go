@@ -47,6 +47,25 @@ func codes[T any](xs []T, get func(T) string) []string {
 	return out
 }
 
+// nullable maps Go's "" (no error) to JSON null.
+func nullable(s string) any {
+	if s == "" {
+		return nil
+	}
+	return s
+}
+
+func strList(v any) []string {
+	if v == nil {
+		return nil
+	}
+	out := []string{}
+	for _, x := range v.([]any) {
+		out = append(out, x.(string))
+	}
+	return out
+}
+
 func lgaCode(l LGA) string   { return l.Code }
 func wardCode(w Ward) string { return w.Code }
 func bankID(b Bank) string   { return b.ID }
@@ -151,14 +170,29 @@ func runCase(c parityCase) any {
 			return s
 		}
 		return nil
-	case "lookup_phone":
-		info := LookupPhone(str(a[0]))
-		if info == nil {
-			return nil
+	case "parse_phone":
+		return ParsePhone(str(a[0]))
+	case "phone_error":
+		return nullable(PhoneError(str(a[0])))
+	case "is_valid_phone":
+		return IsValidPhone(str(a[0]), strList(a[1]))
+	case "parse_plate":
+		return ParsePlate(str(a[0]))
+	case "plate_error":
+		return nullable(PlateError(str(a[0])))
+	case "is_valid_plate":
+		return IsValidPlate(str(a[0]), strList(a[1]))
+	case "area_codes":
+		return AreaCodes()
+	case "plate_categories":
+		return PlateCategories()
+	case "search_wards":
+		rs := SearchWards(str(a[0]), SearchOptions{Limit: int(a[1].(float64))})
+		out := make([][]any, len(rs))
+		for i, r := range rs {
+			out[i] = []any{r.Kind, r.Code, r.Score, r.Matched}
 		}
-		m := asJSON(info).(map[string]any)
-		delete(m, "note")
-		return m
+		return out
 	case "prefixes":
 		return Prefixes(str(a[0]))
 	}

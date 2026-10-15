@@ -69,9 +69,15 @@ def project(fn: str, args: list):
             return ng.normalize_phone(*args)
         if fn == "to_local":
             return ng.to_local(*args)
-        if fn == "lookup_phone":
-            info = ng.lookup_phone(*args)
-            return None if info is None else {k: v for k, v in info.to_dict().items() if k != "note"}
+        if fn in ("parse_phone", "parse_plate"):
+            r = getattr(ng, fn)(*args)
+            return None if r is None else r.to_dict()
+        if fn in ("phone_error", "plate_error", "is_valid_phone", "is_valid_plate"):
+            return getattr(ng, fn)(*args)
+        if fn in ("area_codes", "plate_categories"):
+            return [x.to_dict() for x in getattr(ng, fn)()]
+        if fn == "search_wards":
+            return [[x.kind, x.code, x.score, x.matched] for x in ng.search_wards(args[0], limit=args[1])]
         if fn == "prefixes":
             return ng.prefixes(*args)
     except ValueError:
@@ -154,12 +160,29 @@ def cases() -> list[tuple[str, list]]:
         n = p[1:] + "1234567"
         for f in formats:
             q = f.format(n=n, a=n[:3], b=n[3:6], c=n[6:])
-            c += [("normalize_phone", [q]), ("lookup_phone", [q])]
+            c += [("normalize_phone", [q]), ("parse_phone", [q])]
         c.append(("to_local", ["+234" + n]))
     for p, sub in [("0702", "0000001"), ("0702", "1500000"), ("0702", "5999999"), ("0702", "8000000"), ("0819", "2500000")]:
-        c.append(("lookup_phone", [p + sub]))
+        c.append(("parse_phone", [p + sub]))
     c += [("normalize_phone", [q]) for q in ["", "0803123456", "080312345678", "+1 803 123 4567", "+2348031234567",
                                              "06031234567", "0703-123-4567", "234 803 123 4567", "0803 123 4567 ext 2"]]
+    # Strict validation: every area code, special ranges, every error reason.
+    for a in ng.area_codes():
+        sub = "1234567"[: 8 - len(a.area_code) + 1]
+        for q in [a.area_code + sub, "+234" + a.area_code[1:] + sub, a.area_code + sub[:-1]]:
+            c += [("parse_phone", [q]), ("phone_error", [q])]
+    for q in ["08001234567", "0800 000 0001", "07001234567", "0700 810 0001", "09001234567", "098 123456",
+              "0819 012 3456", "0819 250 0000", "0910 123 4567", "0702 400 0000", "0702 600 0000", "0704 700 0001",
+              "00234 803 123 4567", "00 1 202 555 0100", "+", "00", "+234", "234", "+234 1", "0803\u00a0123\u00a04567",
+              "\uff10\uff18\uff10\uff13", "\u0660\u0668\u0660\u0663"]:
+        c += [("parse_phone", [q]), ("phone_error", [q]), ("is_valid_phone", [q, None]),
+              ("is_valid_phone", [q, ["mobile"]]), ("is_valid_phone", [q, ["fixed", "toll_free"]])]
+    c += [("area_codes", []), ("plate_categories", [])]
+    for q in ["kja 123 ab", "KJA-123AB", "kja123ab", "EKY 456 DE", "DKN 135 3", "dla5481", "DOS-283-2", "DZZ 135 3",
+              "DKN 135 X", "AB-123-CD", "ABCD-123-EF", "KJA-12AB", "", "  ", "KJ@-123AB", "kja.123.ab", "\u00c0BC-123DE",
+              "kjß-123ab", "DFC 001 0"]:
+        c += [("parse_plate", [q]), ("plate_error", [q]), ("is_valid_plate", [q, None]), ("is_valid_plate", [q, ["dealer"]])]
+    c += [("search_wards", [q, 5]) for q in ["anifowoshe", "urban ii", "isale"]]
     c += [("prefixes", [None]), ("prefixes", ["MTN"]), ("prefixes", ["glo"]), ("prefixes", ["9mobile"]), ("prefixes", ["nope"])]
     return c
 

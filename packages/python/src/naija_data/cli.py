@@ -11,7 +11,8 @@ import sys
 from typing import List, Optional
 
 from . import (banks, banks_for_nuban, find_banks, get_bank, get_lga, get_state, is_valid_nuban, lgas,
-               lookup_phone, meta, search, states, wards, __version__)
+               meta, parse_phone, parse_plate, phone_error, plate_error, search, states,
+               wards, __version__)
 
 
 def _out(args, data, lines: List[str]) -> int:
@@ -40,7 +41,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     sp = sub.add_parser("banks", help="list institutions");  sp.add_argument("--type")
     sp = sub.add_parser("nuban", help="validate a 10-digit account number");  sp.add_argument("account")
     sp.add_argument("bank", nargs="?", help="bank code or name; omit to list possible banks")
-    sp = sub.add_parser("phone", help="normalise a mobile number and guess its network");  sp.add_argument("number")
+    sp = sub.add_parser("phone", help="validate a phone number, show its type and network");  sp.add_argument("number")
+    sp = sub.add_parser("plate", help="validate a vehicle plate number");  sp.add_argument("plate", nargs="+")
     args = p.parse_args(argv)
 
     if args.cmd == "states":
@@ -87,9 +89,32 @@ def main(argv: Optional[List[str]] = None) -> int:
         return _out(args, [b.to_dict() for b in rows], [f"{args.account} has a valid check digit for {len(rows)} banks:"]
                     + [f"  {b.cbn_code:6} {b.name}" for b in rows])
     if args.cmd == "phone":
-        info = lookup_phone(args.number)
-        return _out(args, info and info.to_dict(), [] if not info else [
-            f"{info.e164}  ({info.local})", f"  network: {info.network or 'unknown'} (prefix {info.prefix})", f"  note: {info.note}"])
+        info = parse_phone(args.number)
+        if info is None:
+            err = phone_error(args.number)
+            print(json.dumps({"number": args.number, "valid": False, "error": err}) if args.json
+                  else f"{args.number}: NOT valid ({err})")
+            return 1
+        lines = [f"{info.e164}  ({info.local})", f"  type: {info.type}",
+                 f"  network: {info.network or 'unknown'}" + (f" (prefix {info.prefix})" if info.type == "mobile" else "")]
+        if info.area:
+            lines.append(f"  area: {info.area} ({info.prefix})")
+        if info.note:
+            lines.append(f"  note: {info.note}")
+        return _out(args, info.to_dict(), lines)
+    if args.cmd == "plate":
+        text = " ".join(args.plate)
+        plate = parse_plate(text)
+        if plate is None:
+            err = plate_error(text)
+            print(json.dumps({"plate": text, "valid": False, "error": err}) if args.json else f"{text}: NOT valid ({err})")
+            return 1
+        lines = [f"{plate.display}  [{plate.format}]"]
+        if plate.state_code:
+            lines.append(f"  state: {get_state(plate.state_code).name}")
+        if plate.note:
+            lines.append(f"  note: {plate.note}")
+        return _out(args, plate.to_dict(), lines)
     return 2
 
 

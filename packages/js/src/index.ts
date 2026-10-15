@@ -12,7 +12,11 @@ import type { Meta } from "./types";
 export { findLgas, getLga, getState, lgas, search, states } from "./admin";
 export type { SearchOptions } from "./admin";
 export { BANK_TYPES, banks, banksForNuban, findBanks, getBank, isValidNuban, nubanCheckDigit } from "./banks";
-export { PORTING_NOTE, lookupPhone, networks, normalizePhone, prefixes, toLocal } from "./phone";
+export {
+  PHONE_ERRORS, PHONE_TYPES, PORTING_NOTE, areaCodes, isValidPhone, networks, normalizePhone, parsePhone, phoneError,
+  prefixes, toLocal,
+} from "./phone";
+export { LGA_CODE_NOTE, PLATE_ERRORS, PLATE_FORMATS, isValidPlate, parsePlate, plateCategories, plateError } from "./plates";
 export { norm } from "./text";
 export type * from "./types";
 

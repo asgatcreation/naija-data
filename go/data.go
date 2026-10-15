@@ -88,16 +88,6 @@ type SearchResult struct {
 	Matched   string `json:"matched"`
 }
 
-// PhoneInfo describes a normalised mobile number.
-type PhoneInfo struct {
-	E164    string  `json:"e164"`
-	Local   string  `json:"local"`
-	Prefix  string  `json:"prefix"`
-	Network *string `json:"network"`
-	Status  *string `json:"status"`
-	Note    string  `json:"note"`
-}
-
 // MetaInfo describes the dataset.
 type MetaInfo struct {
 	DataVersion string         `json:"data_version"`
@@ -111,14 +101,6 @@ type MetaInfo struct {
 		Retrieved string `json:"retrieved"`
 		Licence   string `json:"licence"`
 	} `json:"sources"`
-}
-
-type phoneBlock struct {
-	Prefix     string  `json:"prefix"`
-	RangeStart string  `json:"range_start"`
-	RangeEnd   string  `json:"range_end"`
-	Operator   *string `json:"operator"`
-	Status     string  `json:"status"`
 }
 
 func mustLoad(name string, v any) {
@@ -141,7 +123,6 @@ var (
 	loadBanksO sync.Once
 	allBanks   []Bank
 	loadPhoneO sync.Once
-	allBlocks  []phoneBlock
 	loadMetaO  sync.Once
 	meta       MetaInfo
 )
@@ -175,7 +156,6 @@ func loadWards() {
 }
 
 func loadBanks() { loadBanksO.Do(func() { mustLoad("banks", &allBanks) }) }
-func loadPhone() { loadPhoneO.Do(func() { mustLoad("phone", &allBlocks) }) }
 
 // Meta returns the dataset version, row counts, licence, attribution and sources.
 func Meta() MetaInfo {

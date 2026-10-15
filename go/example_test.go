@@ -41,10 +41,25 @@ func ExampleIsValidNUBAN() {
 	// Output: true
 }
 
-func ExampleLookupPhone() {
-	info := naija.LookupPhone("0803 123 4567")
-	fmt.Println(info.E164, *info.Network)
-	// Output: +2348031234567 MTN
+func ExampleParsePhone() {
+	mobile := naija.ParsePhone("0803 123 4567")
+	fmt.Println(mobile.E164, mobile.Type, *mobile.Network)
+	lagos := naija.ParsePhone("01 269 1531")
+	fmt.Println(lagos.Type, *lagos.Area)
+	fmt.Println(naija.PhoneError("0900 123 4567"))
+	// Output:
+	// +2348031234567 mobile MTN
+	// fixed Lagos
+	// reserved
+}
+
+func ExampleParsePlate() {
+	fmt.Println(naija.ParsePlate("kja 123 ab").Display)
+	dealer := naija.ParsePlate("DKN 135 3")
+	fmt.Println(dealer.Format, *dealer.StateCode)
+	// Output:
+	// KJA-123AB
+	// dealer KN
 }
 
 func ExampleWards() {

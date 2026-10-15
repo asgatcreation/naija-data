@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { createRequire } from "node:module";
 import { test } from "node:test";
-import { getBank, getLga, getState, isValidNuban, lgas, lookupPhone, normalizePhone, search } from "naija-data";
+import { getBank, getLga, getState, isValidNuban, lgas, normalizePhone, parsePhone, parsePlate, phoneError, search } from "naija-data";
 import { wards } from "naija-data/wards";
 
 test("ESM: states, LGAs and search", () => {
@@ -25,7 +25,10 @@ test("ESM: NUBAN examples from the CBN standard", () => {
 
 test("ESM: phone", () => {
   assert.equal(normalizePhone("0803 123 4567"), "+2348031234567");
-  assert.equal(lookupPhone("08031234567").network, "MTN");
+  assert.equal(parsePhone("08031234567").network, "MTN");
+  assert.equal(parsePhone("01 269 1531").area, "Lagos");
+  assert.equal(phoneError("0900 123 4567"), "reserved");
+  assert.equal(parsePlate("DKN 135 3").state_code, "KN");
 });
 
 test("CommonJS require works for both entry points", () => {

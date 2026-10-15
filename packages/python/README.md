@@ -20,8 +20,13 @@ ng.is_valid_nuban("0000014579", "011")  # True  (CBN check-digit algorithm)
 [b.name for b in ng.banks_for_nuban("0000014579")]  # banks this number could belong to
 
 ng.normalize_phone("0803 123 4567")     # '+2348031234567'
-ng.lookup_phone("08031234567").network  # 'MTN' (allocation; numbers can be ported)
+ng.parse_phone("08031234567").network   # 'MTN' (allocation; numbers can be ported)
+ng.parse_phone("01 269 1531").area      # 'Lagos' (landlines, 0800 toll-free and 0700 too)
+ng.phone_error("0900 123 4567")         # 'reserved' (why a number is invalid)
+ng.parse_plate("kja 123 ab").display    # 'KJA-123AB'
 ```
+
+For Django and DRF fields see [django-naija](https://github.com/asgatcreation/naija-data/tree/main/packages/django).
 
 Command line:
 
@@ -30,6 +35,7 @@ naija lga lagos
 naija bank 058
 naija nuban 0000014579
 naija phone 08031234567
+naija plate DKN 135 3
 ```
 
 Every record carries its `sources` and lists any `unverified_fields`. Full documentation, data

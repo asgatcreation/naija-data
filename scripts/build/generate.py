@@ -62,25 +62,36 @@ def build() -> dict[str, object]:
         "status": r["status"], "status_date": r["status_date"] or None, "merged_into": r["merged_into"] or None,
         "aliases": lst(r["aliases"]), "unverified_fields": lst(r["unverified_fields"]), "sources": lst(r["sources"]),
     } for r in rows("banks")]
-    phone = [{
-        "prefix": r["prefix"], "range_start": r["range_start"], "range_end": r["range_end"],
-        "operator": r["operator"] or None, "status": r["status"],
-    } for r in rows("phone_prefixes")]
+    phone = {
+        "mobile": [{"prefix": r["prefix"], "range_start": r["range_start"], "range_end": r["range_end"],
+                    "operator": r["operator"] or None, "status": r["status"]} for r in rows("phone_prefixes")],
+        "blocks": [{"number_type": r["number_type"], "range_start": r["range_start"], "range_end": r["range_end"],
+                    "allottee": r["allottee"]} for r in rows("phone_number_blocks")],
+        "area_codes": [{"area_code": r["area_code"], "primary_centre": r["primary_centre"], "ncc_zone": r["ncc_zone"],
+                        "unverified_fields": lst(r["unverified_fields"])} for r in rows("phone_area_codes")],
+    }
+    plates = {"categories": [{k: r[k] for k in ("category", "vehicle", "lettering_colour", "background_colour", "provision")}
+                             for r in rows("plate_categories")]}
     meta = {
         "data_version": max(s["retrieved"] for s in sources),
         "counts": {"states": len(states), "lgas": len(lgas), "wards": len(wards["rows"]), "banks": len(banks),
-                   "phone_blocks": len(phone)},
+                   "mobile_blocks": len(phone["mobile"]), "number_blocks": len(phone["blocks"]),
+                   "area_codes": len(phone["area_codes"]), "plate_categories": len(plates["categories"])},
         "licence": "CC-BY-4.0",
         "attribution": "naija-data by Akanji Oluwaseun Gabriel (https://github.com/asgatcreation/naija-data), CC BY 4.0",
         "sources": [{"id": s["id"], "name": s["name"], "url": s["url"], "retrieved": s["retrieved"], "licence": s["licence"]}
                     for s in sources],
     }
-    return {"meta": meta, "states": states, "lgas": lgas, "wards": wards, "banks": banks, "phone": phone}
+    return {"meta": meta, "states": states, "lgas": lgas, "wards": wards, "banks": banks, "phone": phone, "plates": plates}
 
 
 # Licence files every published package must carry.
-LICENCE_TARGETS = [ROOT / "packages" / "python", ROOT / "packages" / "js"]
-LICENCE_FILES = ["LICENSE", "LICENSE-DATA"]
+# Packages that ship data carry both licences; django-naija ships code only.
+LICENCE_COPIES = {
+    ROOT / "packages" / "python": ["LICENSE", "LICENSE-DATA"],
+    ROOT / "packages" / "js": ["LICENSE", "LICENSE-DATA"],
+    ROOT / "packages" / "django": ["LICENSE"],
+}
 
 
 def encode(obj) -> bytes:
@@ -92,7 +103,7 @@ def main() -> int:
     files = {f"{name}.json": encode(obj) for name, obj in build().items()}
     stale = []
     planned = [(t / f, c) for t in TARGETS for f, c in files.items()]
-    planned += [(t / f, (ROOT / f).read_bytes()) for t in LICENCE_TARGETS for f in LICENCE_FILES]
+    planned += [(t / f, (ROOT / f).read_bytes()) for t, names in LICENCE_COPIES.items() for f in names]
     for path, content in planned:
         if check:
             if not path.exists() or path.read_bytes() != content:

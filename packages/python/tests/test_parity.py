@@ -34,9 +34,13 @@ def run(fn, args):
         if fn == "search":
             q, kinds, limit = args
             return [[r.kind, r.code, r.score, r.matched] for r in ng.search(q, kinds=kinds, limit=limit)]
-        if fn == "lookup_phone":
-            info = ng.lookup_phone(*args)
-            return None if info is None else {k: v for k, v in info.to_dict().items() if k != "note"}
+        if fn in ("parse_phone", "parse_plate"):
+            r = getattr(ng, fn)(*args)
+            return None if r is None else r.to_dict()
+        if fn in ("area_codes", "plate_categories"):
+            return [x.to_dict() for x in getattr(ng, fn)()]
+        if fn == "search_wards":
+            return [[x.kind, x.code, x.score, x.matched] for x in ng.search_wards(args[0], limit=args[1])]
         return getattr(ng, fn)(*args)
     except ValueError:
         return {"error": True}

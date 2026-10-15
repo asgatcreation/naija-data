@@ -88,13 +88,42 @@ class SearchResult(_Record):
 
 
 @dataclass(frozen=True)
-class PhoneInfo(_Record):
+class PhoneNumber(_Record):
     e164: str  # +2348031234567
     local: str  # 08031234567
-    prefix: str  # 0803
-    network: Optional[str]  # network the number block was allocated to (see note)
-    status: Optional[str]  # NCC block status, None if the prefix is not in the NCC table
-    note: str = (
-        "Numbers can be ported between networks, so the prefix shows the network the number "
-        "was first allocated to, not necessarily its network today."
-    )
+    national: str  # 8031234567 (national significant number, without the trunk 0)
+    type: str  # "mobile", "fixed", "toll_free" or "non_toll_free"
+    prefix: str  # mobile/special prefix ("0803", "0800") or fixed-line area code ("01")
+    area: Optional[str]  # fixed lines: the NCC primary centre, e.g. "Lagos"
+    network: Optional[str]  # mobile: network the block was allocated to; others: the allottee
+    allocated: bool  # the number falls in a block the NCC has allocated
+    note: Optional[str]  # mobile: number portability caveat
+
+
+@dataclass(frozen=True)
+class AreaCode(_Record):
+    area_code: str
+    primary_centre: str
+    ncc_zone: str
+    unverified_fields: Tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class Plate(_Record):
+    compact: str  # KJA123AB
+    display: str  # KJA-123AB
+    format: str  # "standard" or "dealer"
+    prefix: str  # standard: the Local Government code; dealer: "D" + state code
+    number: str  # the three digits
+    suffix: str  # standard: series letters; dealer: final character
+    state_code: Optional[str]  # dealer plates only
+    note: Optional[str]
+
+
+@dataclass(frozen=True)
+class PlateCategory(_Record):
+    category: str
+    vehicle: str  # "vehicle" or "motorcycle"
+    lettering_colour: str
+    background_colour: str
+    provision: str  # where the National Road Traffic Regulations 2012 set it

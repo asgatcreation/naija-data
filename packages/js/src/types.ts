@@ -82,18 +82,70 @@ export interface SearchResult {
   matched: string;
 }
 
-export interface PhoneInfo {
+export type PhoneType = "mobile" | "fixed" | "toll_free" | "non_toll_free";
+
+export type PhoneError =
+  | "empty"
+  | "invalid_characters"
+  | "not_nigerian"
+  | "bad_length"
+  | "unknown_prefix"
+  | "unallocated"
+  | "reserved"
+  | "unknown_area_code";
+
+export interface PhoneNumber {
   /** +2348031234567 */
   e164: string;
   /** 08031234567 */
   local: string;
-  /** 0803 */
+  /** 8031234567 (national significant number, without the trunk 0) */
+  national: string;
+  type: PhoneType;
+  /** Mobile or special prefix ("0803", "0800") or fixed-line area code ("01"). */
   prefix: string;
-  /** Network the number block was allocated to (numbers can be ported, see `note`). */
+  /** Fixed lines: the NCC primary centre, e.g. "Lagos". */
+  area: string | null;
+  /** Mobile: network the block was allocated to (numbers can be ported). Others: the allottee. */
   network: string | null;
-  /** NCC block status, null if the prefix is not in the NCC table. */
-  status: string | null;
-  note: string;
+  /** The number falls in a block the NCC has allocated. */
+  allocated: boolean;
+  /** Mobile: number portability caveat. */
+  note: string | null;
+}
+
+export interface AreaCode {
+  area_code: string;
+  primary_centre: string;
+  ncc_zone: string;
+  unverified_fields: string[];
+}
+
+export type PlateFormat = "standard" | "dealer";
+export type PlateError = "empty" | "invalid_characters" | "unknown_format" | "unknown_state";
+
+export interface Plate {
+  /** KJA123AB */
+  compact: string;
+  /** KJA-123AB */
+  display: string;
+  format: PlateFormat;
+  /** Standard: the Local Government code. Dealer: "D" + state code. */
+  prefix: string;
+  number: string;
+  suffix: string;
+  /** Dealer plates only. */
+  state_code: string | null;
+  note: string | null;
+}
+
+export interface PlateCategory {
+  category: string;
+  vehicle: "vehicle" | "motorcycle";
+  lettering_colour: string;
+  background_colour: string;
+  /** Where the National Road Traffic Regulations 2012 set it. */
+  provision: string;
 }
 
 export interface Meta {
