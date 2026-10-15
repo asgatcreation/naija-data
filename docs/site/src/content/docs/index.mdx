@@ -1,0 +1,81 @@
+---
+title: naija-data
+description: Accurate, sourced Nigerian reference data for Python, JavaScript/TypeScript and Go, plus a free REST API.
+template: splash
+hero:
+  tagline: States, LGAs, wards, banks with NUBAN validation, phone numbers and plates. Every record traced to an official source, the same answers in Python, JavaScript and Go, and a free REST API.
+  actions:
+    - text: Try the playground
+      link: /playground/
+      icon: right-arrow
+    - text: Get started
+      link: /getting-started/python/
+      variant: minimal
+    - text: View on GitHub
+      link: https://github.com/asgatcreation/naija-data
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid, Tabs, TabItem } from "@astrojs/starlight/components";
+
+<Tabs>
+  <TabItem label="Python">
+  ```bash
+  pip install naija-data
+  ```
+  ```python
+  import naija_data as ng
+  ng.get_state("lagos").capital           # 'Ikeja'
+  ng.is_valid_nuban("0000014579", "011")  # True
+  ng.parse_phone("0803 123 4567").network # 'MTN'
+  ```
+  </TabItem>
+  <TabItem label="JavaScript">
+  ```bash
+  npm install naija-data
+  ```
+  ```ts
+  import { getState, isValidNuban, parsePhone } from "naija-data";
+  getState("lagos")?.capital;              // "Ikeja"
+  isValidNuban("0000014579", "011");       // true
+  parsePhone("0803 123 4567")?.network;    // "MTN"
+  ```
+  </TabItem>
+  <TabItem label="Go">
+  ```bash
+  go get github.com/asgatcreation/naija-data/go
+  ```
+  ```go
+  naija.GetState("lagos").Capital                  // "Ikeja"
+  ok, _ := naija.IsValidNUBAN("0000014579", "011") // true
+  ```
+  </TabItem>
+  <TabItem label="REST API">
+  ```bash
+  curl https://naija-data-api.asgatcreation.workers.dev/v1/states/lagos/lgas
+  ```
+  </TabItem>
+</Tabs>
+
+<CardGrid>
+  <Card title="Every record has a source" icon="document">
+    INEC, the Constitution, CBN, NCC, the Official Gazette and the UN's boundary data, each recorded with URL,
+    date and licence. Single-source values are flagged as unverified. [See the sources](/data/sources/).
+  </Card>
+  <Card title="Upstream errors caught" icon="warning">
+    Cross-checking found a duplicated INEC ward, typos in official lists, and banks sharing a code. Each one is
+    documented. [See coverage and gaps](/data/coverage/).
+  </Card>
+  <Card title="Same answers everywhere" icon="seti:json">
+    The Python, JavaScript and Go packages and the API are generated from one dataset, and 6,000+ shared test
+    cases check they agree, down to the fuzzy-search scores.
+  </Card>
+  <Card title="Built for real forms" icon="approve-check">
+    Fuzzy search with typos and aliases, strict phone validation with clear reasons, NUBAN checks, Django and DRF
+    fields, and Zod schemas.
+  </Card>
+</CardGrid>
+
+Created and maintained by **Akanji Oluwaseun Gabriel** ([@asgatcreation](https://github.com/asgatcreation)).
+Code: MIT. Data: CC BY 4.0.

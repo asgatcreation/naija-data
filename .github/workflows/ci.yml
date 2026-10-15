@@ -130,6 +130,24 @@ jobs:
           npm test
           npx wrangler deploy --dry-run --outdir /tmp/worker
 
+  docs:
+    name: Documentation website
+    needs: data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the naija-data package used by the playground
+        working-directory: packages/js
+        run: npm ci && npm run build
+      - working-directory: docs/site
+        run: |
+          npm ci
+          npm run build
+          test -f dist/playground/index.html
+
   go:
     name: Go ${{ matrix.go-version }}
     needs: data

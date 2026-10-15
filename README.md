@@ -10,6 +10,13 @@ Python, JavaScript/TypeScript and Go, plus a free REST API.**
 > 🚧 **Pre-release.** The packages work and are tested, but are not on PyPI/npm yet. Follow the repo
 > for v1.0.0. Until then the Go module can be used directly from GitHub.
 
+**Website and playground:** https://naija-data.asgatcreation.workers.dev ·
+**REST API:** https://naija-data-api.asgatcreation.workers.dev/v1 ([interactive docs](https://naija-data-api.asgatcreation.workers.dev/v1/docs))
+
+```bash
+curl https://naija-data-api.asgatcreation.workers.dev/v1/states/lagos/lgas
+```
+
 ## Install and use
 
 **Python** (3.9+, no dependencies)

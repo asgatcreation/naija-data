@@ -33,6 +33,9 @@ This project follows [Semantic Versioning](https://semver.org/):
   included: FRSC does not publish them (request drafted in `docs/requests/`).
 - `search_wards` in Python and Go (JS: `searchWards` from `naija-data/wards`).
 - Zod schemas at `naija-data/zod` (zod is an optional peer dependency).
+- Public REST API (Cloudflare Worker) at https://naija-data-api.asgatcreation.workers.dev/v1 with
+  OpenAPI docs, CORS, caching and rate limiting.
+- Documentation website with a live playground at https://naija-data.asgatcreation.workers.dev.
 - `django-naija`: Django model and form fields, DRF serializer fields and validators, example
   project and tests.
 

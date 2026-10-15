@@ -1,0 +1,208 @@
+---
+// Interactive playground. Runs the real naija-data package in the browser (wards load on demand),
+// and links each result to the same query on the live REST API.
+const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
+---
+
+<div class="pg" data-api={API}>
+  <section>
+    <h2 id="search">Search states and LGAs</h2>
+    <p>Try a typo (<code>lagso</code>), an old spelling (<code>yenegoa</code>) or accents (<code>Ọ̀yọ́</code>).</p>
+    <label for="pg-q">Search</label>
+    <input id="pg-q" type="search" placeholder="e.g. lagso" autocomplete="off" />
+    <ul id="pg-results" class="results not-content" aria-live="polite"></ul>
+    <a id="pg-q-api" class="api" href={`${API}/search?q=lagso`} target="_blank" rel="noopener">Same query on the API →</a>
+  </section>
+
+  <section>
+    <h2 id="pickers">State → LGA → ward</h2>
+    <div class="row">
+      <div><label for="pg-state">State</label><select id="pg-state"><option value="">Choose a state</option></select></div>
+      <div><label for="pg-lga">LGA</label><select id="pg-lga" disabled><option value="">Choose an LGA</option></select></div>
+      <div><label for="pg-ward">Ward</label><select id="pg-ward" disabled><option value="">Choose a ward</option></select></div>
+    </div>
+    <pre id="pg-place" class="out not-content" aria-live="polite"></pre>
+  </section>
+
+  <section>
+    <h2 id="nuban">Check an account number (NUBAN)</h2>
+    <p>Example from the CBN standard: <code>0000014579</code> at First Bank (code 011).</p>
+    <div class="row">
+      <div><label for="pg-acct">Account number</label><input id="pg-acct" inputmode="numeric" maxlength="13" placeholder="10 digits" /></div>
+      <div><label for="pg-bank">Bank (optional)</label><select id="pg-bank"><option value="">Any bank: list candidates</option></select></div>
+    </div>
+    <div id="pg-nuban" class="out not-content" aria-live="polite"></div>
+  </section>
+
+  <section>
+    <h2 id="phone">Validate a phone number</h2>
+    <p>Mobile, landline (<code>01 269 1531</code>), toll-free (<code>0800...</code>). Try <code>0900 123 4567</code> too.</p>
+    <label for="pg-phone">Phone number</label>
+    <input id="pg-phone" type="tel" placeholder="e.g. 0803 123 4567" />
+    <div id="pg-phone-out" class="out not-content" aria-live="polite"></div>
+  </section>
+
+  <section>
+    <h2 id="plate">Validate a plate number</h2>
+    <label for="pg-plate">Plate number</label>
+    <input id="pg-plate" placeholder="e.g. KJA 123 AB or DKN 135 3" />
+    <div id="pg-plate-out" class="out not-content" aria-live="polite"></div>
+  </section>
+</div>
+
+<script>
+  import {
+    banks, banksForNuban, getBank, getLga, getState, isValidNuban, lgas, parsePhone, parsePlate, phoneError, plateError,
+    search, states,
+  } from "naija-data";
+
+  const root = document.querySelector<HTMLElement>(".pg")!;
+  const API = root.dataset.api!;
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const esc = (s: unknown) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
+  const option = (value: string, label: string) => {
+    const o = document.createElement("option");
+    o.value = value;
+    o.textContent = label;
+    return o;
+  };
+  const apiLink = (path: string) => `<a class="api" href="${API}${path}" target="_blank" rel="noopener">Same request on the API →</a>`;
+
+  // ---- search
+  const q = $<HTMLInputElement>("pg-q");
+  const results = $("pg-results");
+  const showSearch = () => {
+    const text = q.value.trim();
+    $<HTMLAnchorElement>("pg-q-api").href = `${API}/search?q=${encodeURIComponent(text || "lagso")}`;
+    if (!text) return void (results.innerHTML = "");
+    const rows = search(text, { limit: 8 });
+    results.innerHTML = rows.length
+      ? rows.map((r) => {
+          const where = r.kind === "lga" ? `, ${esc(getState(r.state_code)?.name)}` : "";
+          const via = r.matched !== r.name ? ` <small>(matched “${esc(r.matched)}”)</small>` : "";
+          return `<li><strong>${esc(r.name)}</strong>${where} <span class="tag">${r.kind}</span> <span class="score">${r.score}</span>${via}</li>`;
+        }).join("")
+      : "<li>No matches.</li>";
+  };
+  q.addEventListener("input", showSearch);
+
+  // ---- state -> LGA -> ward
+  const stateSel = $<HTMLSelectElement>("pg-state");
+  const lgaSel = $<HTMLSelectElement>("pg-lga");
+  const wardSel = $<HTMLSelectElement>("pg-ward");
+  const place = $("pg-place");
+  for (const s of states()) stateSel.append(option(s.code, s.name));
+  stateSel.addEventListener("change", () => {
+    lgaSel.replaceChildren(option("", "Choose an LGA"));
+    wardSel.replaceChildren(option("", "Choose a ward"));
+    wardSel.disabled = true;
+    const s = getState(stateSel.value);
+    lgaSel.disabled = !s;
+    if (!s) return void (place.textContent = "");
+    for (const l of lgas(s)) lgaSel.append(option(l.code, l.name));
+    place.textContent = `${s.name} (${s.iso_code}) · capital ${s.capital} · ${s.zone} · ${lgas(s).length} LGAs`;
+  });
+  lgaSel.addEventListener("change", async () => {
+    wardSel.replaceChildren(option("", "Loading wards…"));
+    const l = getLga(lgaSel.value);
+    if (!l) return;
+    const { wards } = await import("naija-data/wards"); // fetched only when first needed
+    const list = wards(l);
+    wardSel.replaceChildren(option("", `Choose a ward (${list.length})`), ...list.map((w) => option(w.code, w.name)));
+    wardSel.disabled = false;
+    place.textContent = `${l.name} (${l.code}, INEC ${l.inec_code}) · ${l.senatorial_district ?? ""} · ${list.length} wards`;
+  });
+  wardSel.addEventListener("change", () => {
+    const l = getLga(lgaSel.value);
+    const w = wardSel.selectedOptions[0];
+    if (l && w?.value) place.textContent = `${w.textContent} · INEC code ${w.value} · ${l.name}, ${getState(l.state_code)?.name}`;
+  });
+
+  // ---- NUBAN
+  const acct = $<HTMLInputElement>("pg-acct");
+  const bankSel = $<HTMLSelectElement>("pg-bank");
+  const nubanOut = $("pg-nuban");
+  const withCodes = banks().filter((b) => b.cbn_code).sort((a, b) => (a.short_name ?? a.name).localeCompare(b.short_name ?? b.name));
+  for (const b of withCodes) bankSel.append(option(b.id, `${b.short_name ?? b.name} (${b.cbn_code})`));
+  const showNuban = () => {
+    const digits = acct.value.replace(/[\s-]/g, "");
+    if (!digits) return void (nubanOut.innerHTML = "");
+    if (!/^\d{10}$/.test(digits)) return void (nubanOut.innerHTML = `<p class="bad">Enter 10 digits (${digits.length} so far).</p>`);
+    const bank = bankSel.value ? getBank(bankSel.value) : null;
+    if (bank) {
+      const ok = isValidNuban(digits, bank.cbn_code!);
+      nubanOut.innerHTML = `<p class="${ok ? "good" : "bad"}">${ok ? "✔ Valid check digit for" : "✘ Not valid for"} ${esc(bank.name)}.</p>
+        <p><small>A valid check digit catches typos; it does not prove the account exists.</small></p>
+        ${apiLink(`/validate/nuban?account=${digits}&bank=${bank.id}`)}`;
+    } else {
+      const c = banksForNuban(digits);
+      nubanOut.innerHTML = `<p>The check digit fits <strong>${c.length}</strong> institutions:</p>
+        <p>${c.slice(0, 40).map((b) => esc(b.short_name ?? b.name)).join(" · ")}${c.length > 40 ? " …" : ""}</p>
+        ${apiLink(`/validate/nuban?account=${digits}`)}`;
+    }
+  };
+  acct.addEventListener("input", showNuban);
+  bankSel.addEventListener("change", showNuban);
+
+  // ---- phone
+  const phone = $<HTMLInputElement>("pg-phone");
+  const phoneOut = $("pg-phone-out");
+  const PHONE_REASONS: Record<string, string> = {
+    empty: "Enter a phone number.", invalid_characters: "Only digits, spaces, dashes, brackets and a leading + are allowed.",
+    not_nigerian: "Not a Nigerian number (+234).", bad_length: "Wrong number of digits.",
+    unknown_prefix: "Not a Nigerian mobile prefix.", unallocated: "This range is not allocated to any network.",
+    reserved: "This range is reserved and not in service.", unknown_area_code: "Not a Nigerian landline area code.",
+  };
+  phone.addEventListener("input", () => {
+    const text = phone.value.trim();
+    if (!text) return void (phoneOut.innerHTML = "");
+    const p = parsePhone(text);
+    if (!p) {
+      const code = phoneError(text)!;
+      return void (phoneOut.innerHTML = `<p class="bad">✘ ${PHONE_REASONS[code]} <code>${code}</code></p>`);
+    }
+    phoneOut.innerHTML = `<p class="good">✔ Valid ${p.type.replace(/_/g, " ")} number</p>
+      <dl><dt>International</dt><dd>${p.e164}</dd><dt>Local</dt><dd>${p.local}</dd>
+      ${p.area ? `<dt>Area</dt><dd>${esc(p.area)} (${p.prefix})</dd>` : `<dt>Prefix</dt><dd>${p.prefix}</dd>`}
+      <dt>${p.type === "mobile" ? "Network" : "Allocated to"}</dt><dd>${esc(p.network ?? "unknown")}</dd></dl>
+      ${p.note ? `<p><small>${esc(p.note)}</small></p>` : ""}${apiLink(`/phone/${encodeURIComponent(p.local)}`)}`;
+  });
+
+  // ---- plate
+  const plate = $<HTMLInputElement>("pg-plate");
+  const plateOut = $("pg-plate-out");
+  plate.addEventListener("input", () => {
+    const text = plate.value.trim();
+    if (!text) return void (plateOut.innerHTML = "");
+    const p = parsePlate(text);
+    if (!p) return void (plateOut.innerHTML = `<p class="bad">✘ Not a recognised plate format. <code>${plateError(text)}</code></p>`);
+    const state = p.state_code ? getState(p.state_code)?.name : null;
+    plateOut.innerHTML = `<p class="good">✔ ${p.format === "dealer" ? "Dealer plate" : "Standard plate"}: <strong>${esc(p.display)}</strong></p>
+      ${state ? `<p>State: ${esc(state)}</p>` : ""}${p.note ? `<p><small>${esc(p.note)}</small></p>` : ""}
+      ${apiLink(`/plates/${encodeURIComponent(p.compact)}`)}`;
+  });
+</script>
+
+<style is:global>
+  /* Global (not scoped) because results are inserted by the script; every rule is prefixed with .pg. */
+  .pg section { margin-block: 2rem; padding: 1rem 1.25rem; border: 1px solid var(--sl-color-gray-5); border-radius: 0.5rem; }
+  .pg h2 { margin-top: 0; font-size: var(--sl-text-h4); }
+  .pg label { display: block; font-weight: 600; font-size: var(--sl-text-sm); margin-block: 0.5rem 0.25rem; }
+  .pg input, .pg select { box-sizing: border-box; height: 2.6rem; width: 100%; padding: 0.4rem 0.6rem; border: 1px solid var(--sl-color-gray-4); border-radius: 0.375rem;
+    background: var(--sl-color-black); color: var(--sl-color-white); font: inherit; }
+  .pg .row > div label { margin-top: 0.5rem; }
+  .pg .row { align-items: end; display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 0.75rem; }
+  .pg .results { list-style: none; padding: 0; }
+  .pg .results li { padding: 0.35rem 0; border-bottom: 1px solid var(--sl-color-gray-6); }
+  .pg .tag { font-size: 0.75em; padding: 0.05rem 0.4rem; border-radius: 1rem; background: var(--sl-color-accent-low); color: var(--sl-color-accent-high); }
+  .pg .score { float: right; color: var(--sl-color-gray-3); font-variant-numeric: tabular-nums; }
+  .pg .out { margin-top: 0.75rem; }
+  .pg .out p { margin: 0.25rem 0; }
+  .pg pre.out { background: none; border: none; padding: 0; font-family: inherit; white-space: pre-wrap; }
+  .pg .good { color: var(--sl-color-green-high); font-weight: 600; }
+  .pg .bad { color: var(--sl-color-red-high); font-weight: 600; }
+  .pg dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.2rem 1rem; margin: 0.5rem 0; }
+  .pg dt { color: var(--sl-color-gray-3); }
+  .pg dd { margin: 0; }
+  .pg a.api { display: inline-block; margin-top: 0.5rem; font-size: var(--sl-text-sm); }
+</style>

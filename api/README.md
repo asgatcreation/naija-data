@@ -1,6 +1,6 @@
 # naija-data API (Cloudflare Worker)
 
-Free, read-only REST API built on the `naija-data` JavaScript package, so its answers match the
+Live at https://naija-data-api.asgatcreation.workers.dev/v1. Free, read-only REST API built on the `naija-data` JavaScript package, so its answers match the
 Python, JavaScript and Go packages exactly.
 
 - Versioned under `/v1`; interactive docs at `/v1/docs`, OpenAPI spec at `/v1/openapi.json`.
@@ -23,6 +23,6 @@ npm run dev     # local server at http://localhost:8787/v1
 
 ## Deploy
 
-Deploys run automatically from GitHub Actions (`.github/workflows/deploy-api.yml`) after CI passes
+Deploys run automatically from GitHub Actions (`.github/workflows/deploy.yml`) after CI passes
 on `main`, once the `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` secrets are set. A manual
 deploy is `npx wrangler login` once, then `npm run deploy`.
