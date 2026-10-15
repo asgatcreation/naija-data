@@ -22,7 +22,10 @@
   },
   "bugs": "https://github.com/asgatcreation/naija-data/issues",
   "type": "module",
-  "sideEffects": false,
+  "sideEffects": [
+    "./dist/chunk-*.js",
+    "./dist/chunk-*.cjs"
+  ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",

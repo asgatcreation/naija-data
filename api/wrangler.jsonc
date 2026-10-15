@@ -1,0 +1,12 @@
+{
+  // Cloudflare Worker for the naija-data public API.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "naija-data-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+  "observability": { "enabled": true },
+  // 120 requests per minute per IP (Workers rate limiting binding).
+  "ratelimits": [
+    { "name": "RATE_LIMITER", "namespace_id": "1001", "simple": { "limit": 120, "period": 60 } }
+  ]
+}

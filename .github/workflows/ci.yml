@@ -111,6 +111,25 @@ jobs:
           node --input-type=module -e "import { phoneSchema } from 'naija-data/zod'; if (phoneSchema().parse('0803 123 4567') !== '+2348031234567') process.exit(1)"
           npx naija bank 058
 
+  api:
+    name: REST API
+    needs: data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the naija-data package used by the API
+        working-directory: packages/js
+        run: npm ci && npm run build
+      - working-directory: api
+        run: |
+          npm ci
+          npm run typecheck
+          npm test
+          npx wrangler deploy --dry-run --outdir /tmp/worker
+
   go:
     name: Go ${{ matrix.go-version }}
     needs: data
