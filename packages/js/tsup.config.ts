@@ -16,6 +16,6 @@ export default defineConfig([
     banner: { js: "#!/usr/bin/env node" },
     // Use the package's own built entry points at runtime instead of bundling a second copy of the data.
     external: ["./index.js", "./wards.js"],
-    target: "node18",
+    target: "node20",
   },
 ]);

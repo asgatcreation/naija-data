@@ -2,11 +2,24 @@
   "name": "naija-data",
   "version": "0.1.0-dev.0",
   "description": "Accurate, sourced Nigerian reference data: states, LGAs, wards, banks, NUBAN and phone helpers.",
-  "keywords": ["nigeria", "states", "lga", "wards", "banks", "nuban", "phone", "open-data"],
+  "keywords": [
+    "nigeria",
+    "states",
+    "lga",
+    "wards",
+    "banks",
+    "nuban",
+    "phone",
+    "open-data"
+  ],
   "author": "Akanji Oluwaseun Gabriel",
   "license": "(MIT AND CC-BY-4.0)",
   "homepage": "https://github.com/asgatcreation/naija-data#readme",
-  "repository": { "type": "git", "url": "git+https://github.com/asgatcreation/naija-data.git", "directory": "packages/js" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asgatcreation/naija-data.git",
+    "directory": "packages/js"
+  },
   "bugs": "https://github.com/asgatcreation/naija-data/issues",
   "type": "module",
   "sideEffects": false,
@@ -15,22 +28,43 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
-      "require": { "types": "./dist/index.d.cts", "default": "./dist/index.cjs" }
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./wards": {
-      "import": { "types": "./dist/wards.d.ts", "default": "./dist/wards.js" },
-      "require": { "types": "./dist/wards.d.cts", "default": "./dist/wards.cjs" }
+      "import": {
+        "types": "./dist/wards.d.ts",
+        "default": "./dist/wards.js"
+      },
+      "require": {
+        "types": "./dist/wards.d.cts",
+        "default": "./dist/wards.cjs"
+      }
     },
     "./package.json": "./package.json"
   },
-  "bin": { "naija": "./dist/cli.js" },
-  "files": ["dist", "README.md", "LICENSE", "LICENSE-DATA"],
-  "engines": { "node": ">=18" },
+  "bin": {
+    "naija": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "LICENSE-DATA"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",
-    "test": "npm run build && node --test \"test/*.test.mjs\"",
+    "test": "npm run build && node --test test/api.test.mjs test/parity.test.mjs",
     "size": "node scripts/size.mjs"
   },
   "devDependencies": {
