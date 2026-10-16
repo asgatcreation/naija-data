@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "django-naija"
-version = "0.1.0.dev0"
+version = "0.1.0"
 description = "Django and DRF fields for Nigerian phone numbers, NUBAN, plate numbers, states and LGAs."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -20,7 +20,7 @@ classifiers = [
   "Intended Audience :: Developers",
   "Programming Language :: Python :: 3",
 ]
-dependencies = ["naija-data>=0.1.0.dev0,<2", "Django>=5.2"]
+dependencies = ["naija-data>=0.1.0,<2", "Django>=5.2"]
 
 [project.optional-dependencies]
 rest = ["djangorestframework>=3.15"]

@@ -76,6 +76,13 @@ def set_version(version: str) -> None:
         if path.name == "package-lock.json":
             data["packages"][""]["version"] = version
         path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8", newline="\n")
+    # The API and the docs site use the local package; their lock files record its version.
+    for lock in (ROOT / "api/package-lock.json", ROOT / "docs/site/package-lock.json"):
+        data = json.loads(lock.read_text(encoding="utf-8"))
+        for key, entry in data.get("packages", {}).items():
+            if key.endswith("packages/js") and entry.get("name") == "naija-data":
+                entry["version"] = version
+        lock.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8", newline="\n")
     cl = ROOT / "CHANGELOG.md"
     text = cl.read_text(encoding="utf-8")
     if f"## [{version}]" not in text:

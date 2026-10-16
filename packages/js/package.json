@@ -1,6 +1,6 @@
 {
   "name": "naija-data",
-  "version": "0.1.0-dev.0",
+  "version": "0.1.0",
   "description": "Accurate, sourced Nigerian reference data: states, LGAs, wards, banks, NUBAN and phone helpers.",
   "keywords": [
     "nigeria",

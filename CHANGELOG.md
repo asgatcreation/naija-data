@@ -9,6 +9,8 @@ This project follows [Semantic Versioning](https://semver.org/):
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-10-16
+
 ### Added
 - Repository scaffold, licences (MIT code, CC BY 4.0 data), contribution guide, issue and PR templates.
 - Source registry `data/sources.json` with schema and validation in CI.
