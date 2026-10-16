@@ -1,6 +1,6 @@
 {
   "name": "naija-data",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Accurate, sourced Nigerian reference data: states, LGAs, wards, banks, NUBAN and phone helpers.",
   "keywords": [
     "nigeria",
@@ -63,7 +63,7 @@
     "./package.json": "./package.json"
   },
   "bin": {
-    "naija": "./dist/cli.js"
+    "naija": "dist/cli.js"
   },
   "files": [
     "dist",
@@ -75,7 +75,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsup && node -e \"require('fs').chmodSync('dist/cli.js', 0o755)\"",
     "typecheck": "tsc --noEmit",
     "test": "npm run build && node --test test/api.test.mjs test/parity.test.mjs test/zod.test.mjs",
     "size": "node scripts/size.mjs",

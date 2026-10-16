@@ -101,6 +101,11 @@ jobs:
       - run: npm test
       - run: npm run size
       - run: npm run bundle-check
+      - name: npm 11 accepts package.json as is (nothing auto-corrected at publish)
+        run: |
+          npx -y npm@11.21.1 publish --dry-run --ignore-scripts 2>&1 | tee /tmp/publish.log
+          test -x dist/cli.js
+          if grep -qiE "auto-corrected|invalid and removed" /tmp/publish.log; then echo "::error::npm would change package.json at publish"; exit 1; fi
       - name: Pack and test in a clean project
         run: |
           npm pack --pack-destination /tmp

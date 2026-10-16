@@ -2,8 +2,8 @@ name: Release
 
 # Runs ONLY when a version tag such as v0.1.0 is pushed. It re-runs every test, then publishes:
 #   PyPI   naija-data and django-naija  (trusted publishing: no token)
-#   npm    naija-data                   (trusted publishing; a one-time NPM_TOKEN secret is used
-#                                         only until the npm trusted publisher is set up)
+#   npm    naija-data                   (trusted publishing: no token; 2FA-protected accounts cannot
+#                                         publish with tokens, so the first version was published by hand)
 #   Go     tag go/vX.Y.Z for github.com/asgatcreation/naija-data/go
 #   GitHub release with the CHANGELOG section (marked pre-release for 0.x and -rc versions)
 # and finally installs each package from the real registries to prove the release works.
@@ -122,22 +122,15 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: npm install -g npm@11.21.1
       - run: npm ci && npm run build
-      - name: Publish (skipped if this version is already on npm)
+      - name: Publish with npm trusted publishing (skipped if this version is already on npm)
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           VERSION: ${{ needs.check-version.outputs.version }}
-          PRERELEASE_TAG: ${{ contains(needs.check-version.outputs.version, '-') && 'next' || 'latest' }}
+          DIST_TAG: ${{ contains(needs.check-version.outputs.version, '-') && 'next' || 'latest' }}
         run: |
           if npm view "naija-data@$VERSION" version > /dev/null 2>&1; then
             echo "naija-data@$VERSION is already on npm; skipping."; exit 0
           fi
-          if [ -n "$NPM_TOKEN" ]; then
-            echo "Publishing with the one-time NPM_TOKEN (switch to trusted publishing afterwards)."
-            NODE_AUTH_TOKEN="$NPM_TOKEN" npm publish --provenance --access public --tag "$PRERELEASE_TAG"
-          else
-            echo "Publishing with npm trusted publishing (OIDC)."
-            npm publish --access public --tag "$PRERELEASE_TAG"
-          fi
+          npm publish --access public --tag "$DIST_TAG"
 
   tag-go:
     name: Tag the Go module

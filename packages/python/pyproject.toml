@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "naija-data"
-version = "0.1.0"
+version = "0.1.1"
 description = "Accurate, sourced Nigerian reference data: states, LGAs, wards, banks, NUBAN and phone helpers."
 readme = "README.md"
 requires-python = ">=3.9"

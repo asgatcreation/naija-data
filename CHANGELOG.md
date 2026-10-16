@@ -9,6 +9,16 @@ This project follows [Semantic Versioning](https://semver.org/):
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-16
+
+### Fixed
+- npm package: the `naija` command is now kept by npm 11 (the built `dist/cli.js` is marked executable),
+  and CI checks the package with npm 11 before every release.
+
+### Notes
+- 0.1.1 is the first version on npm. Version 0.1.0 was published to PyPI (`naija-data`, `django-naija`) and
+  tagged for Go, but its npm publish was stopped by two-factor authentication before anything was uploaded.
+
 ## [0.1.0] - 2026-10-16
 
 ### Added
