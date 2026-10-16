@@ -1,0 +1,190 @@
+name: Release
+
+# Runs ONLY when a version tag such as v0.1.0 is pushed. It re-runs every test, then publishes:
+#   PyPI   naija-data and django-naija  (trusted publishing: no token)
+#   npm    naija-data                   (trusted publishing; a one-time NPM_TOKEN secret is used
+#                                         only until the npm trusted publisher is set up)
+#   Go     tag go/vX.Y.Z for github.com/asgatcreation/naija-data/go
+#   GitHub release with the CHANGELOG section (marked pre-release for 0.x and -rc versions)
+# and finally installs each package from the real registries to prove the release works.
+
+on:
+  push:
+    tags: ["v[0-9]+.[0-9]+.[0-9]+", "v[0-9]+.[0-9]+.[0-9]+-*"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  check-version:
+    name: Versions match the tag
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.v.outputs.version }}
+      prerelease: ${{ steps.v.outputs.prerelease }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python scripts/release/set_version.py --check "$GITHUB_REF_NAME"
+      - id: v
+        run: |
+          v="${GITHUB_REF_NAME#v}"
+          echo "version=$v" >> "$GITHUB_OUTPUT"
+          if [[ "$v" == 0.* || "$v" == *-* ]]; then echo "prerelease=true" >> "$GITHUB_OUTPUT"; else echo "prerelease=false" >> "$GITHUB_OUTPUT"; fi
+
+  tests:
+    name: All tests
+    needs: check-version
+    uses: ./.github/workflows/ci.yml
+
+  build-python:
+    name: Build Python distributions
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: |
+          pip install build==1.3.0
+          python -m build packages/python --outdir dist
+          python -m build packages/django --outdir dist
+          ls -l dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: python-dist
+          path: dist/
+
+  publish-pypi:
+    name: Publish to PyPI
+    needs: [check-version, build-python]
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/project/naija-data/${{ needs.check-version.outputs.version }}/
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: python-dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist/
+          skip-existing: true
+
+  publish-npm:
+    name: Publish to npm
+    needs: [check-version, tests]
+    runs-on: ubuntu-latest
+    environment:
+      name: npm
+      url: https://www.npmjs.com/package/naija-data/v/${{ needs.check-version.outputs.version }}
+    permissions:
+      id-token: write
+    defaults:
+      run:
+        working-directory: packages/js
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - run: npm install -g npm@11.21.1
+      - run: npm ci && npm run build
+      - name: Publish (skipped if this version is already on npm)
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          VERSION: ${{ needs.check-version.outputs.version }}
+          PRERELEASE_TAG: ${{ contains(needs.check-version.outputs.version, '-') && 'next' || 'latest' }}
+        run: |
+          if npm view "naija-data@$VERSION" version > /dev/null 2>&1; then
+            echo "naija-data@$VERSION is already on npm; skipping."; exit 0
+          fi
+          if [ -n "$NPM_TOKEN" ]; then
+            echo "Publishing with the one-time NPM_TOKEN (switch to trusted publishing afterwards)."
+            NODE_AUTH_TOKEN="$NPM_TOKEN" npm publish --provenance --access public --tag "$PRERELEASE_TAG"
+          else
+            echo "Publishing with npm trusted publishing (OIDC)."
+            npm publish --access public --tag "$PRERELEASE_TAG"
+          fi
+
+  tag-go:
+    name: Tag the Go module
+    needs: [check-version, tests]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          tag="go/v${{ needs.check-version.outputs.version }}"
+          if git ls-remote --exit-code --tags origin "refs/tags/$tag" > /dev/null; then echo "$tag exists"; exit 0; fi
+          git tag "$tag" "$GITHUB_SHA"
+          git push origin "$tag"
+
+  github-release:
+    name: GitHub release
+    needs: [check-version, publish-pypi, publish-npm, tag-go]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Release notes from CHANGELOG.md
+        env:
+          VERSION: ${{ needs.check-version.outputs.version }}
+        run: |
+          awk -v v="## [$VERSION]" 'index($0, v) == 1 {on=1; next} /^## \[/ && on {exit} on' CHANGELOG.md > notes.md
+          printf '\n**Install:** `pip install naija-data==%s` · `npm install naija-data@%s` · `go get github.com/asgatcreation/naija-data/go@v%s`\n' "$VERSION" "$VERSION" "$VERSION" >> notes.md
+          cat notes.md
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          PRERELEASE: ${{ needs.check-version.outputs.prerelease }}
+        run: |
+          flag=""; [ "$PRERELEASE" = "true" ] && flag="--prerelease"
+          gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --notes-file notes.md $flag --verify-tag
+
+  verify-registries:
+    name: Install from the real registries
+    needs: [check-version, publish-pypi, publish-npm, tag-go]
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ needs.check-version.outputs.version }}
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+          cache: false
+      - name: PyPI
+        run: |
+          py="$(python -c "import re,os; v=os.environ['VERSION']; m=re.fullmatch(r'(\d+\.\d+\.\d+)(?:-(alpha|beta|rc)\.(\d+))?', v); print(m[1] + ({'alpha':'a','beta':'b','rc':'rc'}[m[2]] + m[3] if m[2] else ''))")"
+          for i in $(seq 1 20); do python -m pip install --no-cache-dir "naija-data==$py" "django-naija==$py" && break; sleep 15; done
+          python -c "import naija_data as ng; assert ng.get_state('lagos').capital == 'Ikeja'; print('naija-data', ng.__version__)"
+          naija phone 08031234567
+      - name: npm
+        run: |
+          mkdir npmcheck && cd npmcheck && npm init -y > /dev/null
+          for i in $(seq 1 20); do npm install "naija-data@$VERSION" && break; sleep 15; done
+          node -e "const ng = require('naija-data'); if (ng.getState('lagos').capital !== 'Ikeja') process.exit(1); console.log('npm ok')"
+      - name: Go
+        run: |
+          mkdir gocheck && cd gocheck && go mod init check
+          for i in $(seq 1 20); do GOFLAGS=-mod=mod go get "github.com/asgatcreation/naija-data/go@v$VERSION" && break; sleep 15; done
+          printf 'package main\nimport ("fmt"; naija "github.com/asgatcreation/naija-data/go")\nfunc main() { fmt.Println(naija.GetState("lagos").Capital) }\n' > main.go
+          test "$(go run .)" = "Ikeja"
