@@ -54,21 +54,23 @@ jobs:
           python-version: "3.13"
       - run: |
           pip install build==1.3.0
-          python -m build packages/python --outdir dist
-          python -m build packages/django --outdir dist
-          ls -l dist
+          python -m build packages/python --outdir dist/naija-data
+          python -m build packages/django --outdir dist/django-naija
+          ls -lR dist
       - uses: actions/upload-artifact@v4
         with:
           name: python-dist
           path: dist/
 
+  # PyPI needs a distinct trusted-publisher configuration per project, so each package has its
+  # own GitHub environment: "pypi" for naija-data and "pypi-django" for django-naija.
   publish-pypi:
-    name: Publish to PyPI
+    name: Publish naija-data to PyPI
     needs: [check-version, build-python]
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/project/naija-data/${{ needs.check-version.outputs.version }}/
+      url: https://pypi.org/project/naija-data/
     permissions:
       id-token: write
     steps:
@@ -78,7 +80,26 @@ jobs:
           path: dist/
       - uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          packages-dir: dist/
+          packages-dir: dist/naija-data/
+          skip-existing: true
+
+  publish-pypi-django:
+    name: Publish django-naija to PyPI
+    needs: [check-version, build-python, publish-pypi]
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi-django
+      url: https://pypi.org/project/django-naija/
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: python-dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist/django-naija/
           skip-existing: true
 
   publish-npm:
@@ -134,7 +155,7 @@ jobs:
 
   github-release:
     name: GitHub release
-    needs: [check-version, publish-pypi, publish-npm, tag-go]
+    needs: [check-version, publish-pypi, publish-pypi-django, publish-npm, tag-go]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -156,7 +177,7 @@ jobs:
 
   verify-registries:
     name: Install from the real registries
-    needs: [check-version, publish-pypi, publish-npm, tag-go]
+    needs: [check-version, publish-pypi, publish-pypi-django, publish-npm, tag-go]
     runs-on: ubuntu-latest
     env:
       VERSION: ${{ needs.check-version.outputs.version }}
