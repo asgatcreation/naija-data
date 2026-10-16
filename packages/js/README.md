@@ -4,6 +4,8 @@ Accurate, sourced Nigerian reference data: 36 states + FCT, 774 LGAs, 8,809 ward
 banks with NUBAN validation, and mobile phone helpers. Zero dependencies, ESM + CommonJS, full
 TypeScript types, tree-shakeable.
 
+Website and playground: https://naija-data.asgatcreation.workers.dev · REST API: https://naija-data-api.asgatcreation.workers.dev/v1
+
 ```bash
 npm install naija-data
 ```

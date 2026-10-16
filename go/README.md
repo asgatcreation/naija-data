@@ -1,5 +1,7 @@
 # naija-data (Go)
 
+Website and playground: https://naija-data.asgatcreation.workers.dev · REST API: https://naija-data-api.asgatcreation.workers.dev/v1
+
 ```bash
 go get github.com/asgatcreation/naija-data/go
 ```

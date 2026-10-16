@@ -4,6 +4,8 @@ Django and Django REST framework fields for Nigerian data, built on
 [naija-data](https://github.com/asgatcreation/naija-data): phone numbers (strict NCC validation),
 NUBAN account numbers (CBN check digit), vehicle plate numbers, states and LGAs.
 
+Website and playground: https://naija-data.asgatcreation.workers.dev · REST API: https://naija-data-api.asgatcreation.workers.dev/v1
+
 ```bash
 pip install django-naija            # Django fields, forms and validators
 pip install "django-naija[rest]"    # plus Django REST framework fields
