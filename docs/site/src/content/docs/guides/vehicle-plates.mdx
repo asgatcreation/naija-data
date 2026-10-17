@@ -1,0 +1,71 @@
+---
+title: Vehicle plate numbers
+description: Check and format Nigerian plate numbers (standard and dealer plates) from the National Road Traffic Regulations 2012.
+---
+
+import { Aside, Tabs, TabItem } from "@astrojs/starlight/components";
+
+The National Road Traffic Regulations 2012 (Official Gazette No. 101) set two plate formats that
+naija-data checks:
+
+| Format | Example | Parts |
+|---|---|---|
+| `standard` | `KJA-123AB` | 3 letters (Local Government code), 3 digits, 2 letters |
+| `dealer` | `DKN 135 3` | `D` + state code (`KN` = Kano), 3 digits, 1 character |
+
+<Tabs syncKey="lang">
+<TabItem label="JavaScript">
+
+```ts
+import { parsePlate, plateError, isValidPlate } from "naija-data";
+
+parsePlate("kja 123 ab")?.display;          // "KJA-123AB" (store or show this)
+parsePlate("DKN 135 3")?.state_code;        // "KN"
+plateError("AB-123-CD");                    // "unknown_format"
+isValidPlate("KJA-123AB", ["standard"]);    // true
+```
+
+</TabItem>
+<TabItem label="Python">
+
+```python
+import naija_data as ng
+
+ng.parse_plate("kja 123 ab").display     # 'KJA-123AB'
+ng.parse_plate("DKN 135 3").state_code   # 'KN'
+ng.plate_error("AB-123-CD")              # 'unknown_format'
+```
+
+</TabItem>
+<TabItem label="Zod">
+
+```ts
+import { plateSchema } from "naija-data/zod";
+
+plateSchema().parse("kja 123 ab");          // "KJA-123AB"
+```
+
+</TabItem>
+<TabItem label="REST API">
+
+```bash
+curl https://naija-data-api.asgatcreation.workers.dev/v1/plates/kja-123ab
+curl https://naija-data-api.asgatcreation.workers.dev/v1/plates   # plate colours by category
+```
+
+</TabItem>
+</Tabs>
+
+Error codes: `empty`, `invalid_characters`, `unknown_format`, `unknown_state` (a dealer plate whose state
+code does not exist).
+
+## Plate colours
+
+`plateCategories()` / `plate_categories()` lists the colours the Regulations set for each category, for
+example red lettering for commercial vehicles, blue for private, green for government.
+
+<Aside type="caution" title="Which LGA is KJA?">
+The first three letters are a Local Government code set by the FRSC (reg. 39(5)). The FRSC does not publish
+the list, and the lists online have no official source, so naija-data does **not** map plates to LGAs yet.
+It checks the format only. Government, armed forces and diplomatic plates are not checked.
+</Aside>

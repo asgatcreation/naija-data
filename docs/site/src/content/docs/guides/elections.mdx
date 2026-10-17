@@ -1,0 +1,146 @@
+---
+title: Senate, House of Reps and House of Assembly
+description: Senatorial districts, federal constituencies and state constituencies from INEC, with the LGAs and wards in each. For voter apps, campaign tools, civic tech and reporting.
+---
+
+import { Aside, Tabs, TabItem } from "@astrojs/starlight/components";
+
+Nigeria elects its legislators from three kinds of area, all delimited by INEC:
+
+| Seat | Area | How many | naija-data code |
+|---|---|---|---|
+| Senator | Senatorial district | 109 (3 per state, 1 for the FCT) | `SD001`–`SD109` |
+| Member, House of Representatives | Federal constituency | 360 | `FC001`–`FC360` |
+| Member, State House of Assembly | State constituency | 990 (none in the FCT) | `SC001`–`SC990` |
+
+Every one of the 8,809 wards knows its senatorial district, federal constituency and state constituency,
+so you can answer "who represents this place?" from a ward or an LGA.
+
+## Who represents an LGA or ward?
+
+<Tabs syncKey="lang">
+<TabItem label="JavaScript">
+
+```ts
+import { lgaConstituencies, getConstituency } from "naija-data/constituencies";
+import { getWard } from "naija-data/wards";
+
+lgaConstituencies("Ikeja", "Lagos").map((u) => `${u.kind}: ${u.name}`);
+// ["senatorial_district: Lagos West", "federal_constituency: Ikeja",
+//  "state_constituency: Ikeja I", "state_constituency: Ikeja II"]
+
+const ward = getWard("24-11-01")!;
+getConstituency(ward.state_constituency!)?.name; // the ward's exact state constituency
+```
+
+</TabItem>
+<TabItem label="Python">
+
+```python
+import naija_data as ng
+
+[(u.kind, u.name) for u in ng.lga_constituencies("Ikeja", "Lagos")]
+# [('senatorial_district', 'Lagos West'), ('federal_constituency', 'Ikeja'),
+#  ('state_constituency', 'Ikeja I'), ('state_constituency', 'Ikeja II')]
+
+ward = ng.get_ward("24-11-01")
+ng.get_constituency(ward.state_constituency).name
+```
+
+</TabItem>
+<TabItem label="Go">
+
+```go
+units, _ := naija.LGAConstituencies("Ikeja", "Lagos")
+for _, u := range units {
+	fmt.Println(u.Kind, u.Name)
+}
+```
+
+</TabItem>
+<TabItem label="REST API">
+
+```bash
+curl "https://naija-data-api.asgatcreation.workers.dev/v1/lgas/Ikeja/constituencies?state=Lagos"
+curl https://naija-data-api.asgatcreation.workers.dev/v1/wards/24-11-01
+```
+
+</TabItem>
+</Tabs>
+
+<Aside title="An LGA can be in more than one constituency">
+Ikeja LGA is split between two state constituencies (Ikeja I and Ikeja II), and a few LGAs such as Surulere
+(Lagos) are split between two federal constituencies. When you need the exact one, ask by **ward**: a ward is
+never split.
+</Aside>
+
+## Lists and dropdowns
+
+<Tabs syncKey="lang">
+<TabItem label="JavaScript">
+
+```ts
+import {
+  senatorialDistricts, federalConstituencies, stateConstituencies, constituencyLgas,
+} from "naija-data/constituencies";
+import { constituencyWards } from "naija-data/wards";
+
+senatorialDistricts("Kano").map((u) => u.name);    // ["Kano Central", "Kano North", "Kano South"]
+federalConstituencies("Lagos").length;             // 24
+stateConstituencies("FCT");                        // []: the FCT has no House of Assembly
+constituencyLgas("FC236").map((l) => l.name);      // ["Ikeja"]
+constituencyWards("FC236").length;                 // wards that make up Ikeja federal constituency
+```
+
+</TabItem>
+<TabItem label="Python">
+
+```python
+[u.name for u in ng.senatorial_districts("Kano")]  # ['Kano Central', 'Kano North', 'Kano South']
+len(ng.federal_constituencies("Lagos"))             # 24
+ng.state_constituencies("FCT")                      # []
+[l.name for l in ng.constituency_lgas("FC236")]     # ['Ikeja']
+len(ng.constituency_wards("FC236"))
+```
+
+</TabItem>
+<TabItem label="REST API">
+
+```bash
+curl "https://naija-data-api.asgatcreation.workers.dev/v1/senatorial-districts?state=kano"
+curl "https://naija-data-api.asgatcreation.workers.dev/v1/federal-constituencies?state=lagos"
+curl https://naija-data-api.asgatcreation.workers.dev/v1/constituencies/FC236/lgas
+curl https://naija-data-api.asgatcreation.workers.dev/v1/constituencies/FC236/wards
+```
+
+</TabItem>
+</Tabs>
+
+Each record looks like this (the same in every language):
+
+```json
+{
+  "kind": "federal_constituency",
+  "code": "FC236",
+  "state_code": "LA",
+  "inec_code": "FC/236/LA",
+  "name": "Ikeja",
+  "slug": "ikeja",
+  "aliases": [],
+  "lga_codes": ["NG025011"],
+  "sources": ["inec-irev"]
+}
+```
+
+`get_constituency` / `getConstituency` accepts our code (`FC236`) or INEC's (`FC/236/LA`).
+
+## Good to know
+
+- **Source.** INEC's Result Viewing portal (IReV): unit names from the 2023 general elections, and the ward
+  links of the 2023 presidential election.
+- **990, not 993.** INEC's own list has 990 state constituencies. The figure of 993 often quoted in the press
+  is not in INEC's data.
+- **A few links are flagged.** 14 wards look mislinked in INEC's data (a same-named ward in a neighbouring LGA).
+  INEC's value is kept, and the ward's `unverified_fields` contains `state_constituency`. Details in
+  [coverage and gaps](/data/coverage/).
+- **Boundaries can change.** INEC can review constituencies; naija-data will follow with a new release.

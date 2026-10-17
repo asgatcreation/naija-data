@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>State → LGA → ward form (package from a CDN) · naija-data example</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 32rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
+    label { display: block; margin-top: 1rem; font-weight: 600; }
+    select, button { width: 100%; padding: 0.5rem; font: inherit; margin-top: 0.25rem; }
+    button { margin-top: 1.5rem; }
+    pre { background: #f4f4f4; padding: 0.75rem; white-space: pre-wrap; }
+    small { color: #555; }
+  </style>
+</head>
+<body>
+  <h1>Register</h1>
+  <p><small>Example from the <a href="/guides/state-lga-form/">naija-data guide</a>. The naija-data package runs in the
+    browser, loaded from the jsDelivr CDN: no API calls, no build step.</small></p>
+
+  <form id="register">
+    <label for="state">State</label>
+    <select id="state" name="state" required>
+      <option value="">Choose a state</option>
+    </select>
+
+    <label for="lga">Local Government Area</label>
+    <select id="lga" name="lga" required disabled>
+      <option value="">Choose a state first</option>
+    </select>
+
+    <label for="ward">Ward (optional)</label>
+    <select id="ward" name="ward" disabled>
+      <option value="">Choose an LGA first</option>
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
+  <pre id="result" hidden></pre>
+
+  <script type="module">
+    // Pin the major version (@1) so a future v2 cannot break your form.
+    import { states, lgas } from "https://cdn.jsdelivr.net/npm/naija-data@1/dist/index.js";
+
+    const stateSelect = document.getElementById("state");
+    const lgaSelect = document.getElementById("lga");
+    const wardSelect = document.getElementById("ward");
+
+    function fill(select, records, placeholder) {
+      select.replaceChildren(new Option(placeholder, ""), ...records.map((r) => new Option(r.name, r.code)));
+      select.disabled = records.length === 0;
+    }
+
+    fill(stateSelect, states(), "Choose a state");
+
+    stateSelect.addEventListener("change", () => {
+      fill(wardSelect, [], "Choose an LGA first");
+      fill(lgaSelect, stateSelect.value ? lgas(stateSelect.value) : [], "Choose an LGA");
+    });
+
+    lgaSelect.addEventListener("change", async () => {
+      if (!lgaSelect.value) return fill(wardSelect, [], "Choose an LGA first");
+      // The 8,809 wards are a separate, larger file: load it only when someone picks an LGA.
+      const { wards } = await import("https://cdn.jsdelivr.net/npm/naija-data@1/dist/wards.js");
+      fill(wardSelect, wards(lgaSelect.value), "Choose a ward");
+    });
+
+    document.getElementById("register").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const out = document.getElementById("result");
+      out.hidden = false;
+      out.textContent = JSON.stringify(Object.fromEntries(new FormData(e.target)), null, 2);
+    });
+  </script>
+</body>
+</html>

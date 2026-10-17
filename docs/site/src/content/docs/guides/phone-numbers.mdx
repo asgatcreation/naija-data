@@ -1,0 +1,121 @@
+---
+title: Phone number fields
+description: Accept any way people type a Nigerian phone number, store one clean format, reject numbers that cannot exist, and tell people why.
+---
+
+import { Aside, Tabs, TabItem } from "@astrojs/starlight/components";
+
+People type the same number in many ways: `0803 123 4567`, `+234 803 123 4567`, `2348031234567`,
+`(0803) 123-4567`. naija-data accepts all of them, checks the number against the **NCC's official numbering
+plan**, and gives you one clean format to store.
+
+## Validate and normalise
+
+<Tabs syncKey="lang">
+<TabItem label="JavaScript">
+
+```ts
+import { parsePhone, phoneError, normalizePhone, isValidPhone } from "naija-data";
+
+normalizePhone("0803 123 4567");     // "+2348031234567"  (store this)
+parsePhone("+234 803 123 4567");     // { e164: "+2348031234567", local: "08031234567", type: "mobile", network: "MTN", ... }
+parsePhone("01 269 1531")?.area;     // "Lagos" (landline)
+isValidPhone("0803 123 4567", ["mobile"]); // true: only mobiles can receive SMS
+phoneError("0900 123 4567");         // "reserved": the reason, when invalid
+```
+
+</TabItem>
+<TabItem label="Python">
+
+```python
+import naija_data as ng
+
+ng.normalize_phone("0803 123 4567")     # '+2348031234567'  (store this)
+ng.parse_phone("+234 803 123 4567")     # PhoneNumber(e164='+2348031234567', local='08031234567', type='mobile', network='MTN', ...)
+ng.parse_phone("01 269 1531").area      # 'Lagos' (landline)
+ng.is_valid_phone("0803 123 4567", types=["mobile"])  # True
+ng.phone_error("0900 123 4567")         # 'reserved'
+```
+
+</TabItem>
+<TabItem label="Go">
+
+```go
+e164, ok := naija.NormalizePhone("0803 123 4567") // "+2348031234567", true
+p := naija.ParsePhone("01 269 1531")
+fmt.Println(p.Type, *p.Area)             // fixed Lagos
+naija.PhoneError("0900 123 4567")       // "reserved"
+```
+
+</TabItem>
+<TabItem label="REST API">
+
+```bash
+curl https://naija-data-api.asgatcreation.workers.dev/v1/phone/08031234567
+# 200 {"data": {"e164": "+2348031234567", "type": "mobile", "network": "MTN", ...}}
+curl https://naija-data-api.asgatcreation.workers.dev/v1/phone/09001234567
+# 422 {"error": {"code": "reserved", "message": "Not a valid Nigerian phone number (reserved)."}}
+```
+
+</TabItem>
+</Tabs>
+
+## Clear error messages
+
+Every invalid number has a reason code, so you can show a helpful message instead of "invalid input":
+
+| Code | Meaning | Suggested message |
+|---|---|---|
+| `empty` | Nothing typed | Enter a phone number. |
+| `invalid_characters` | Letters or symbols | A phone number can only contain digits, spaces, dashes, brackets and a leading +. |
+| `not_nigerian` | Another country code | Enter a Nigerian phone number (+234). |
+| `bad_length` | Too short or too long | This phone number has the wrong number of digits. |
+| `unknown_prefix` | Not a Nigerian mobile prefix | This is not a Nigerian mobile prefix. |
+| `unallocated` | Prefix exists but this range was never allocated | This number range is not allocated to any network. |
+| `reserved` | Range reserved by the NCC (e.g. 0900) | This number range is reserved and not in service. |
+| `unknown_area_code` | Not a landline area code | This is not a Nigerian landline area code. |
+
+## In a form library
+
+<Tabs syncKey="form">
+<TabItem label="Zod (React Hook Form, Next.js…)">
+
+```ts
+import { z } from "zod";
+import { phoneSchema } from "naija-data/zod";
+
+const Signup = z.object({
+  phone: phoneSchema({ types: ["mobile"] }), // gives "+2348031234567" or the messages above
+});
+
+Signup.parse({ phone: "0803 123 4567" });    // { phone: "+2348031234567" }
+```
+
+</TabItem>
+<TabItem label="Django">
+
+```python
+from django_naija.fields import NigerianPhoneField   # model field
+from django_naija import forms as ngforms           # form field
+
+class Customer(models.Model):
+    phone = NigerianPhoneField(types=["mobile"])     # always stored as "+2348031234567"
+```
+
+</TabItem>
+</Tabs>
+
+<Aside type="caution" title="The network is a hint, not a fact">
+`network` is the operator the number block was **allocated** to. Since 2013 people can keep their number
+when they change network (porting), so `0803…` may now be on Airtel. Don't block or route payments by it.
+</Aside>
+
+## Good to know
+
+- **Store E.164** (`+2348031234567`). It is unique, works with SMS providers and WhatsApp, and you can
+  show the local form with `toLocal()` / `to_local()`.
+- **Mobiles only?** Pass `types: ["mobile"]` when you need SMS or OTP. Landlines (`fixed`), `toll_free`
+  (0800) and `non_toll_free` (0700) are valid numbers too.
+- **Valid is not the same as "in use".** The check proves the number *can* exist. Send an OTP to prove
+  someone owns it.
+- Sources: NCC Mobile Number Allocation Table (December 2023) and National Numbering Plan (October 2022).

@@ -1,0 +1,95 @@
+---
+title: Search and autocomplete
+description: A typing box that finds states, LGAs and wards even with typos, old spellings, accents and "LGA" or "State" added.
+---
+
+import { Aside, Tabs, TabItem } from "@astrojs/starlight/components";
+
+Dropdowns are great for forms ([see the guide](/guides/state-lga-form/)), but sometimes people type a place.
+naija-data's search forgives the ways real people write Nigerian place names:
+
+| They type | They get |
+|---|---|
+| `lagso` (typo) | Lagos (state) |
+| `yenegoa` (old spelling) | Yenagoa (LGA, Bayelsa) |
+| `ikeja lga`, `kano state` | Ikeja, Kano |
+| `Ọ̀yọ́` (Yoruba tone marks) | Oyo |
+| `abuja`, `fct` | Federal Capital Territory |
+| `amac` | Abuja Municipal |
+
+## Use it
+
+<Tabs syncKey="lang">
+<TabItem label="JavaScript">
+
+```ts
+import { search } from "naija-data";
+import { searchWards } from "naija-data/wards";
+
+search("lagso", { limit: 5 });
+// [{ kind: "state", code: "LA", name: "Lagos", state_code: "LA", score: 640, matched: "Lagos" }]
+
+search("yenegoa")[0];   // { kind: "lga", name: "Yenagoa", matched: "Yenegoa", score: 1000, ... }
+searchWards("anifowoshe", { limit: 3 }); // wards: a separate entry point because the list is large
+```
+
+</TabItem>
+<TabItem label="Python">
+
+```python
+import naija_data as ng
+
+ng.search("lagso", limit=5)
+ng.search("anifowoshe", kinds=("state", "lga", "ward"))  # include wards
+ng.search_wards("anifowoshe")
+```
+
+</TabItem>
+<TabItem label="REST API">
+
+```bash
+curl "https://naija-data-api.asgatcreation.workers.dev/v1/search?q=lagso"
+curl "https://naija-data-api.asgatcreation.workers.dev/v1/search?q=anifowoshe&kinds=state,lga,ward&limit=5"
+```
+
+</TabItem>
+</Tabs>
+
+Each result has `kind` (`state`, `lga` or `ward`), `code`, `name`, `state_code`, a `score` from 0 to 1000
+(1000 = exact match on a name or alias) and `matched` (the name or alias that matched, so you can show
+"Yenagoa (also spelled Yenegoa)").
+
+## An autocomplete box in plain HTML
+
+```html
+<input id="place" list="places" placeholder="Type a state or LGA" autocomplete="off">
+<datalist id="places"></datalist>
+
+<script type="module">
+  import { search, getState } from "https://cdn.jsdelivr.net/npm/naija-data@1/dist/index.js";
+
+  const input = document.getElementById("place");
+  const list = document.getElementById("places");
+
+  input.addEventListener("input", () => {
+    const results = search(input.value, { limit: 8 });
+    list.replaceChildren(...results.map((r) => {
+      const label = r.kind === "lga" ? `${r.name}, ${getState(r.state_code).name}` : r.name;
+      return new Option(label, label);
+    }));
+  });
+</script>
+```
+
+<Aside type="tip">
+For an exact lookup (not a search), use `getState` / `getLga`: they accept codes, names and known aliases
+and return one record or nothing. `getLga("Surulere")` returns nothing because two states have one; pass
+the state: `getLga("Surulere", "Lagos")`.
+</Aside>
+
+## How the ranking works
+
+Scores are whole numbers, computed the same way in Python, JavaScript and Go (shared tests check this):
+exact matches score 1000, a match at the start of a name scores 900 and up, and close spellings score up to
+800 depending on how many letters differ. Results under 600 are dropped (change it with `minScore` /
+`min_score`). Ties go to states, then LGAs, then wards, then alphabetical order.

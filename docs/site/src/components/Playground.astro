@@ -1,32 +1,152 @@
 ---
-// Interactive playground. Runs the real naija-data package in the browser (wards load on demand),
-// and links each result to the same query on the live REST API.
+// Interactive playground. Runs the real naija-data package in the browser (wards and constituencies load
+// on demand). Each tool has example chips and a "use this in your code" panel, and links to the same
+// request on the live REST API.
+import { Code, TabItem, Tabs } from "@astrojs/starlight/components";
+
 const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
+
+const snippets = {
+  search: {
+    js: `import { search } from "naija-data";
+import { searchWards } from "naija-data/wards";
+
+search("lagso", { limit: 8 });       // states and LGAs
+searchWards("anifowoshe");           // wards`,
+    py: `import naija_data as ng
+
+ng.search("lagso", limit=8)
+ng.search_wards("anifowoshe")`,
+    api: `curl "${API}/search?q=lagso"
+curl "${API}/search?q=anifowoshe&kinds=state,lga,ward"`,
+  },
+  places: {
+    js: `import { states, lgas } from "naija-data";
+import { wards } from "naija-data/wards";
+
+states();             // 37 records: { code: "LA", name: "Lagos", ... }
+lgas("LA");           // Lagos LGAs: { code: "NG025011", name: "Ikeja", ... }
+wards("NG025011");    // Ikeja wards: { code: "24-11-01", name: "Anifowoshe/Ikeja", ... }`,
+    py: `import naija_data as ng
+
+ng.states()
+ng.lgas("LA")
+ng.wards("NG025011")`,
+    api: `curl ${API}/states
+curl ${API}/states/LA/lgas
+curl ${API}/lgas/NG025011/wards`,
+  },
+  units: {
+    js: `import { federalConstituencies, lgaConstituencies, constituencyLgas } from "naija-data/constituencies";
+
+federalConstituencies("Lagos");         // 24 records
+lgaConstituencies("Ikeja", "Lagos");    // district + constituencies of an LGA
+constituencyLgas("FC236");              // LGAs in a constituency`,
+    py: `import naija_data as ng
+
+ng.federal_constituencies("Lagos")
+ng.lga_constituencies("Ikeja", "Lagos")
+ng.constituency_lgas("FC236")`,
+    api: `curl "${API}/federal-constituencies?state=lagos"
+curl "${API}/lgas/Ikeja/constituencies?state=Lagos"
+curl ${API}/constituencies/FC236/lgas`,
+  },
+  nuban: {
+    js: `import { isValidNuban, banksForNuban } from "naija-data";
+
+isValidNuban("0000014579", "first-bank");   // true
+banksForNuban("0000014579");                // every bank it could belong to`,
+    py: `import naija_data as ng
+
+ng.is_valid_nuban("0000014579", "first-bank")  # True
+ng.banks_for_nuban("0000014579")`,
+    api: `curl "${API}/validate/nuban?account=0000014579&bank=first-bank"
+curl "${API}/validate/nuban?account=0000014579"`,
+  },
+  phone: {
+    js: `import { parsePhone, phoneError } from "naija-data";
+
+parsePhone("0803 123 4567");   // { e164: "+2348031234567", type: "mobile", network: "MTN", ... }
+phoneError("0900 123 4567");   // "reserved"`,
+    py: `import naija_data as ng
+
+ng.parse_phone("0803 123 4567")
+ng.phone_error("0900 123 4567")  # 'reserved'`,
+    api: `curl ${API}/phone/08031234567`,
+  },
+  plate: {
+    js: `import { parsePlate, plateError } from "naija-data";
+
+parsePlate("kja 123 ab")?.display;   // "KJA-123AB"
+plateError("AB-123-CD");             // "unknown_format"`,
+    py: `import naija_data as ng
+
+ng.parse_plate("kja 123 ab").display  # 'KJA-123AB'
+ng.plate_error("AB-123-CD")           # 'unknown_format'`,
+    api: `curl ${API}/plates/kja-123ab`,
+  },
+};
+
+const tools = [
+  { id: "search", label: "Search" },
+  { id: "places", label: "State → LGA → ward" },
+  { id: "constituencies", label: "Senate, Reps, Assembly" },
+  { id: "nuban", label: "Account numbers" },
+  { id: "phone", label: "Phone numbers" },
+  { id: "plate", label: "Plates" },
+];
 ---
+
+<nav class="pg-nav not-content" aria-label="Playground tools">
+  {tools.map((t) => <a href={`#${t.id}`}>{t.label}</a>)}
+</nav>
 
 <div class="pg" data-api={API}>
   <section>
-    <h2 id="search">Search states and LGAs</h2>
-    <p>Try a typo (<code>lagso</code>), an old spelling (<code>yenegoa</code>) or accents (<code>Ọ̀yọ́</code>).</p>
+    <h2 id="search">Search places</h2>
+    <p class="lead">Finds states, LGAs and wards with typos, old spellings and accents. <a href="/guides/search/">Guide</a></p>
+    <div class="chips not-content">Try:
+      <button type="button" class="chip" data-target="pg-q" data-value="lagso">lagso</button>
+      <button type="button" class="chip" data-target="pg-q" data-value="yenegoa">yenegoa</button>
+      <button type="button" class="chip" data-target="pg-q" data-value="Ọ̀yọ́">Ọ̀yọ́</button>
+      <button type="button" class="chip" data-target="pg-q" data-value="amac">amac</button>
+      <button type="button" class="chip" data-target="pg-q" data-value="ikeja lga">ikeja lga</button>
+    </div>
     <label for="pg-q">Search</label>
-    <input id="pg-q" type="search" placeholder="e.g. lagso" autocomplete="off" />
+    <input id="pg-q" type="search" placeholder="Type a state, LGA or ward" autocomplete="off" />
+    <label class="check"><input id="pg-q-wards" type="checkbox" /> Include wards (loads 8,809 more names)</label>
     <ul id="pg-results" class="results not-content" aria-live="polite"></ul>
     <a id="pg-q-api" class="api" href={`${API}/search?q=lagso`} target="_blank" rel="noopener">Same query on the API →</a>
+    <details class="code"><summary>Use this in your code</summary>
+      <Tabs syncKey="pg-lang">
+        <TabItem label="JavaScript"><Code code={snippets.search.js} lang="ts" /></TabItem>
+        <TabItem label="Python"><Code code={snippets.search.py} lang="python" /></TabItem>
+        <TabItem label="REST API"><Code code={snippets.search.api} lang="bash" /></TabItem>
+      </Tabs>
+    </details>
   </section>
 
   <section>
-    <h2 id="pickers">State → LGA → ward</h2>
+    <h2 id="places">State → LGA → ward</h2>
+    <p class="lead">The dependent dropdowns for registration and address forms. <a href="/guides/state-lga-form/">Build this form</a></p>
     <div class="row">
       <div><label for="pg-state">State</label><select id="pg-state"><option value="">Choose a state</option></select></div>
       <div><label for="pg-lga">LGA</label><select id="pg-lga" disabled><option value="">Choose an LGA</option></select></div>
       <div><label for="pg-ward">Ward</label><select id="pg-ward" disabled><option value="">Choose a ward</option></select></div>
     </div>
-    <pre id="pg-place" class="out not-content" aria-live="polite"></pre>
+    <dl id="pg-place" class="out facts not-content" aria-live="polite"></dl>
+    <details class="code"><summary>Use this in your code</summary>
+      <Tabs syncKey="pg-lang">
+        <TabItem label="JavaScript"><Code code={snippets.places.js} lang="ts" /></TabItem>
+        <TabItem label="Python"><Code code={snippets.places.py} lang="python" /></TabItem>
+        <TabItem label="REST API"><Code code={snippets.places.api} lang="bash" /></TabItem>
+      </Tabs>
+    </details>
   </section>
 
   <section>
     <h2 id="constituencies">Senate, House of Reps and House of Assembly</h2>
-    <p>INEC's 109 senatorial districts, 360 federal constituencies and 990 state constituencies, with the LGAs in each.</p>
+    <p class="lead">INEC's 109 senatorial districts, 360 federal constituencies and 990 state constituencies, with the LGAs in each. <a href="/guides/elections/">Guide</a></p>
     <div class="row">
       <div><label for="pg-c-state">State</label><select id="pg-c-state"><option value="">Choose a state</option></select></div>
       <div><label for="pg-c-kind">Seat</label><select id="pg-c-kind">
@@ -36,34 +156,80 @@ const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
       </select></div>
     </div>
     <ul id="pg-c-out" class="results not-content" aria-live="polite"></ul>
+    <details class="code"><summary>Use this in your code</summary>
+      <Tabs syncKey="pg-lang">
+        <TabItem label="JavaScript"><Code code={snippets.units.js} lang="ts" /></TabItem>
+        <TabItem label="Python"><Code code={snippets.units.py} lang="python" /></TabItem>
+        <TabItem label="REST API"><Code code={snippets.units.api} lang="bash" /></TabItem>
+      </Tabs>
+    </details>
   </section>
 
   <section>
     <h2 id="nuban">Check an account number (NUBAN)</h2>
-    <p>Example from the CBN standard: <code>0000014579</code> at First Bank (code 011).</p>
+    <p class="lead">The CBN check digit catches a mistyped account number before you pay. <a href="/guides/bank-accounts/">Guide</a></p>
+    <div class="chips not-content">Try:
+      <button type="button" class="chip" data-target="pg-acct" data-value="0000014579" data-bank="first-bank">0000014579 at First Bank</button>
+      <button type="button" class="chip" data-target="pg-acct" data-value="0000014578" data-bank="first-bank">a typo</button>
+      <button type="button" class="chip" data-target="pg-acct" data-value="0000014579" data-bank="">any bank</button>
+    </div>
     <div class="row">
       <div><label for="pg-acct">Account number</label><input id="pg-acct" inputmode="numeric" maxlength="13" placeholder="10 digits" /></div>
       <div><label for="pg-bank">Bank (optional)</label><select id="pg-bank"><option value="">Any bank: list candidates</option></select></div>
     </div>
     <div id="pg-nuban" class="out not-content" aria-live="polite"></div>
-    <p><small>OPay, PalmPay and similar wallets are not in the list: they have no CBN bank code, and their account
-      number is usually the phone number without its first 0, so the NUBAN check digit does not apply to them. When an
-      account number is also a valid mobile number, it is shown below.</small></p>
+    <p class="note">OPay, PalmPay and similar wallets are not in the list: they have no CBN bank code, and their account
+      number is usually the phone number without its first 0, so the check digit does not apply to them. When an
+      account number is also a valid mobile number, it is shown above.</p>
+    <details class="code"><summary>Use this in your code</summary>
+      <Tabs syncKey="pg-lang">
+        <TabItem label="JavaScript"><Code code={snippets.nuban.js} lang="ts" /></TabItem>
+        <TabItem label="Python"><Code code={snippets.nuban.py} lang="python" /></TabItem>
+        <TabItem label="REST API"><Code code={snippets.nuban.api} lang="bash" /></TabItem>
+      </Tabs>
+    </details>
   </section>
 
   <section>
     <h2 id="phone">Validate a phone number</h2>
-    <p>Mobile, landline (<code>01 269 1531</code>), toll-free (<code>0800...</code>). Try <code>0900 123 4567</code> too.</p>
+    <p class="lead">Checked against the NCC's numbering plan, with the reason when a number cannot exist. <a href="/guides/phone-numbers/">Guide</a></p>
+    <div class="chips not-content">Try:
+      <button type="button" class="chip" data-target="pg-phone" data-value="0803 123 4567">mobile</button>
+      <button type="button" class="chip" data-target="pg-phone" data-value="+234 1 269 1531">landline</button>
+      <button type="button" class="chip" data-target="pg-phone" data-value="0800 000 0001">toll-free</button>
+      <button type="button" class="chip" data-target="pg-phone" data-value="0900 123 4567">reserved</button>
+      <button type="button" class="chip" data-target="pg-phone" data-value="0803 123 456">too short</button>
+    </div>
     <label for="pg-phone">Phone number</label>
     <input id="pg-phone" type="tel" placeholder="e.g. 0803 123 4567" />
     <div id="pg-phone-out" class="out not-content" aria-live="polite"></div>
+    <details class="code"><summary>Use this in your code</summary>
+      <Tabs syncKey="pg-lang">
+        <TabItem label="JavaScript"><Code code={snippets.phone.js} lang="ts" /></TabItem>
+        <TabItem label="Python"><Code code={snippets.phone.py} lang="python" /></TabItem>
+        <TabItem label="REST API"><Code code={snippets.phone.api} lang="bash" /></TabItem>
+      </Tabs>
+    </details>
   </section>
 
   <section>
     <h2 id="plate">Validate a plate number</h2>
+    <p class="lead">Standard and dealer formats from the National Road Traffic Regulations 2012. <a href="/guides/vehicle-plates/">Guide</a></p>
+    <div class="chips not-content">Try:
+      <button type="button" class="chip" data-target="pg-plate" data-value="kja 123 ab">kja 123 ab</button>
+      <button type="button" class="chip" data-target="pg-plate" data-value="DKN 135 3">DKN 135 3</button>
+      <button type="button" class="chip" data-target="pg-plate" data-value="AB-123-CD">AB-123-CD</button>
+    </div>
     <label for="pg-plate">Plate number</label>
     <input id="pg-plate" placeholder="e.g. KJA 123 AB or DKN 135 3" />
     <div id="pg-plate-out" class="out not-content" aria-live="polite"></div>
+    <details class="code"><summary>Use this in your code</summary>
+      <Tabs syncKey="pg-lang">
+        <TabItem label="JavaScript"><Code code={snippets.plate.js} lang="ts" /></TabItem>
+        <TabItem label="Python"><Code code={snippets.plate.py} lang="python" /></TabItem>
+        <TabItem label="REST API"><Code code={snippets.plate.api} lang="bash" /></TabItem>
+      </Tabs>
+    </details>
   </section>
 </div>
 
@@ -86,25 +252,49 @@ const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
     o.textContent = label;
     return o;
   };
+  // A definition list from [label, value] pairs (values are escaped).
+  const facts = (rows: [string, unknown][]) => rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
   const apiLink = (path: string) => `<a class="api" href="${API}${path}" target="_blank" rel="noopener">Same request on the API →</a>`;
 
   // ---- search
   const q = $<HTMLInputElement>("pg-q");
   const results = $("pg-results");
-  const showSearch = () => {
+  const withWards = $<HTMLInputElement>("pg-q-wards");
+  const order = { state: 0, lga: 1, ward: 2 } as const;
+  const showSearch = async () => {
     const text = q.value.trim();
-    $<HTMLAnchorElement>("pg-q-api").href = `${API}/search?q=${encodeURIComponent(text || "lagso")}`;
+    const kinds = withWards.checked ? "&kinds=state,lga,ward" : "";
+    $<HTMLAnchorElement>("pg-q-api").href = `${API}/search?q=${encodeURIComponent(text || "lagso")}${kinds}`;
     if (!text) return void (results.innerHTML = "");
-    const rows = search(text, { limit: 8 });
+    let rows = search(text, { limit: 8 });
+    if (withWards.checked) {
+      const { searchWards } = await import("naija-data/wards");
+      // Same order as the packages and the API: score, then state < lga < ward, then name.
+      rows = [...rows, ...searchWards(text, { limit: 8 })]
+        .sort((a, b) => b.score - a.score || order[a.kind] - order[b.kind] || (a.name < b.name ? -1 : a.name > b.name ? 1 : 0))
+        .slice(0, 8);
+    }
     results.innerHTML = rows.length
       ? rows.map((r) => {
-          const where = r.kind === "lga" ? `, ${esc(getState(r.state_code)?.name)}` : "";
+          const where = r.kind !== "state" ? `, ${esc(getState(r.state_code)?.name)}` : "";
           const via = r.matched !== r.name ? ` <small>(matched “${esc(r.matched)}”)</small>` : "";
           return `<li><strong>${esc(r.name)}</strong>${where} <span class="tag">${r.kind}</span> <span class="score">${r.score}</span>${via}</li>`;
         }).join("")
       : "<li>No matches.</li>";
   };
   q.addEventListener("input", showSearch);
+  withWards.addEventListener("change", showSearch);
+
+  // ---- example chips
+  for (const chip of document.querySelectorAll<HTMLButtonElement>(".pg .chip")) {
+    chip.addEventListener("click", () => {
+      const input = $<HTMLInputElement>(chip.dataset.target!);
+      input.value = chip.dataset.value!;
+      if (chip.dataset.bank !== undefined) $<HTMLSelectElement>("pg-bank").value = chip.dataset.bank;
+      input.dispatchEvent(new Event("input"));
+      input.focus();
+    });
+  }
 
   // ---- state -> LGA -> ward
   const stateSel = $<HTMLSelectElement>("pg-state");
@@ -118,9 +308,10 @@ const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
     wardSel.disabled = true;
     const s = getState(stateSel.value);
     lgaSel.disabled = !s;
-    if (!s) return void (place.textContent = "");
+    if (!s) return void (place.innerHTML = "");
     for (const l of lgas(s)) lgaSel.append(option(l.code, l.name));
-    place.textContent = `${s.name} (${s.iso_code}) · capital ${s.capital} · ${s.zone} · ${lgas(s).length} LGAs`;
+    place.innerHTML = facts([["State", `${s.name} (code ${s.code})`], ["Capital", s.capital], ["Zone", s.zone],
+      ["LGAs", lgas(s).length]]);
   });
   lgaSel.addEventListener("change", async () => {
     wardSel.replaceChildren(option("", "Loading wards…"));
@@ -131,11 +322,8 @@ const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
     wardSel.replaceChildren(option("", `Choose a ward (${list.length})`), ...list.map((w) => option(w.code, w.name)));
     wardSel.disabled = false;
     const fcs = units.lgaConstituencies(l).filter((u) => u.kind === "federal_constituency").map((u) => u.name);
-    place.textContent = [
-      `${l.name} (${l.code}, INEC ${l.inec_code}) · ${list.length} wards`,
-      `Senatorial district: ${l.senatorial_district ?? ""}`,
-      `Federal constituency: ${fcs.join(" or ")}`,
-    ].join("\n");
+    place.innerHTML = facts([["LGA", `${l.name} (code ${l.code})`], ["Headquarters", l.headquarters ?? "not known"],
+      ["Wards", list.length], ["Senatorial district", l.senatorial_district], ["Federal constituency", fcs.join(" or ")]]);
   });
   wardSel.addEventListener("change", async () => {
     const l = getLga(lgaSel.value);
@@ -144,12 +332,9 @@ const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
     const w = getWard(wardSel.value)!;
     const name = (code: string | null) => (code ? getConstituency(code)?.name ?? code : "none (the FCT has no House of Assembly)");
     const flag = w.unverified_fields.includes("state_constituency") ? " (unverified: INEC's link looks wrong)" : "";
-    place.textContent = [
-      `${w.name} · INEC code ${w.code} · ${l.name}, ${getState(l.state_code)?.name}`,
-      `Senatorial district: ${name(w.senatorial_district)}`,
-      `Federal constituency: ${name(w.federal_constituency)}`,
-      `State constituency: ${name(w.state_constituency)}${flag}`,
-    ].join("\n");
+    place.innerHTML = facts([["Ward", `${w.name} (code ${w.code})`], ["LGA", `${l.name}, ${getState(l.state_code)?.name}`],
+      ["Senatorial district", name(w.senatorial_district)], ["Federal constituency", name(w.federal_constituency)],
+      ["State constituency", name(w.state_constituency) + flag]]) + apiLink(`/wards/${w.code}`);
   });
 
   // ---- constituencies
@@ -222,7 +407,7 @@ const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
     phoneOut.innerHTML = `<p class="good">✔ Valid ${p.type.replace(/_/g, " ")} number</p>
       <dl><dt>International</dt><dd>${p.e164}</dd><dt>Local</dt><dd>${p.local}</dd>
       ${p.area ? `<dt>Area</dt><dd>${esc(p.area)} (${p.prefix})</dd>` : `<dt>Prefix</dt><dd>${p.prefix}</dd>`}
-      <dt>${p.type === "mobile" ? "Network" : "Allocated to"}</dt><dd>${esc(p.network ?? "unknown")}</dd></dl>
+      ${p.network ? `<dt>${p.type === "mobile" ? "Network" : "Allocated to"}</dt><dd>${esc(p.network)}</dd>` : ""}</dl>
       ${p.note ? `<p><small>${esc(p.note)}</small></p>` : ""}${apiLink(`/phone/${encodeURIComponent(p.local)}`)}`;
   });
 
@@ -243,24 +428,46 @@ const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
 
 <style is:global>
   /* Global (not scoped) because results are inserted by the script; every rule is prefixed with .pg. */
-  .pg section { margin-block: 2rem; padding: 1rem 1.25rem; border: 1px solid var(--sl-color-gray-5); border-radius: 0.5rem; }
-  .pg h2 { margin-top: 0; font-size: var(--sl-text-h4); }
-  .pg label { display: block; font-weight: 600; font-size: var(--sl-text-sm); margin-block: 0.5rem 0.25rem; }
-  .pg input, .pg select { box-sizing: border-box; height: 2.6rem; width: 100%; padding: 0.4rem 0.6rem; border: 1px solid var(--sl-color-gray-4); border-radius: 0.375rem;
-    background: var(--sl-color-black); color: var(--sl-color-white); font: inherit; }
-  .pg .row > div label { margin-top: 0.5rem; }
-  .pg .row { align-items: end; display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 0.75rem; }
-  .pg .results { list-style: none; padding: 0; }
-  .pg .results li { padding: 0.35rem 0; border-bottom: 1px solid var(--sl-color-gray-6); }
-  .pg .tag { font-size: 0.75em; padding: 0.05rem 0.4rem; border-radius: 1rem; background: var(--sl-color-accent-low); color: var(--sl-color-accent-high); }
+  .pg-nav { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1.5rem; }
+  .pg-nav a { padding: 0.3rem 0.8rem; border: 1px solid var(--sl-color-gray-5); border-radius: 2rem; font-size: var(--sl-text-sm);
+    text-decoration: none; color: var(--sl-color-white); background: var(--nd-card-bg); }
+  .pg-nav a:hover { border-color: var(--sl-color-accent); color: var(--sl-color-text-accent); }
+
+  .pg section { margin-block: 0 1.75rem; padding: 1.25rem 1.5rem; border: 1px solid var(--sl-color-gray-5); border-radius: 0.75rem;
+    background: var(--nd-card-bg); scroll-margin-top: 5rem; }
+  .pg h2 { margin-top: 0; font-size: var(--sl-text-h3); }
+  .pg .lead { margin-top: 0.25rem; color: var(--sl-color-gray-2); }
+  .pg label { display: block; font-weight: 600; font-size: var(--sl-text-sm); margin-block: 0.75rem 0.3rem; }
+  .pg label.check { display: flex; align-items: center; gap: 0.5rem; font-weight: 400; color: var(--sl-color-gray-2); }
+  .pg label.check input { width: auto; height: auto; }
+  .pg input, .pg select { box-sizing: border-box; height: 2.75rem; width: 100%; padding: 0.4rem 0.75rem; border: 1px solid var(--sl-color-gray-4);
+    border-radius: 0.5rem; background: var(--sl-color-bg); color: var(--sl-color-white); font: inherit; }
+  .pg input:focus, .pg select:focus { outline: 2px solid var(--sl-color-accent); outline-offset: 1px; border-color: transparent; }
+  .pg .row { align-items: end; display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 0 0.75rem; }
+
+  .pg .chips { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-top: 0.75rem; font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-3); }
+  .pg .chip { padding: 0.2rem 0.65rem; border: 1px solid var(--sl-color-gray-5); border-radius: 2rem; background: var(--sl-color-bg);
+    color: var(--sl-color-white); font: inherit; font-size: var(--sl-text-sm); cursor: pointer; }
+  .pg .chip:hover { border-color: var(--sl-color-accent); color: var(--sl-color-text-accent); }
+
+  .pg .results { list-style: none; padding: 0; margin: 0.75rem 0 0; }
+  .pg .results li { padding: 0.5rem 0; border-bottom: 1px solid var(--sl-color-hairline-light); }
+  .pg .results li:last-child { border-bottom: 0; }
+  .pg .tag { font-size: 0.75em; padding: 0.05rem 0.5rem; border-radius: 1rem; background: var(--sl-color-accent-low); color: var(--sl-color-accent-high); }
   .pg .score { float: right; color: var(--sl-color-gray-3); font-variant-numeric: tabular-nums; }
   .pg .out { margin-top: 0.75rem; }
+  .pg .out:empty { display: none; }
   .pg .out p { margin: 0.25rem 0; }
-  .pg pre.out { background: none; border: none; padding: 0; font-family: inherit; white-space: pre-wrap; }
   .pg .good { color: var(--sl-color-green-high); font-weight: 600; }
   .pg .bad { color: var(--sl-color-red-high); font-weight: 600; }
-  .pg dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.2rem 1rem; margin: 0.5rem 0; }
+  .pg dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.3rem 1.25rem; margin: 0.75rem 0 0; }
   .pg dt { color: var(--sl-color-gray-3); }
-  .pg dd { margin: 0; }
+  .pg dd { margin: 0; color: var(--sl-color-white); }
   .pg a.api { display: inline-block; margin-top: 0.5rem; font-size: var(--sl-text-sm); }
+  .pg .note { margin-top: 0.75rem; font-size: var(--sl-text-sm); color: var(--sl-color-gray-3); }
+
+  .pg details.code { margin-top: 1rem; border-top: 1px solid var(--sl-color-hairline-light); padding-top: 0.75rem; }
+  .pg details.code summary { cursor: pointer; font-weight: 600; font-size: var(--sl-text-sm); color: var(--sl-color-text-accent); }
+  .pg details.code[open] summary { margin-bottom: 0.5rem; }
 </style>

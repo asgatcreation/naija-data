@@ -9,6 +9,14 @@ This project follows [Semantic Versioning](https://semver.org/):
 
 ## [Unreleased]
 
+### Documentation
+- New guides with tested examples: state → LGA → ward dropdowns (plain HTML, CDN, React, Django, server-side
+  checks, with two live demo pages), phone number fields, bank account forms, account names, Senate / Reps /
+  Assembly, search and autocomplete, vehicle plates, and using the CSV files from any language.
+- Redesigned website: Nigerian-green theme, logo, home page with live dataset totals, and a playground with
+  example chips and "use this in your code" panels in JavaScript, Python and the REST API.
+- README badges for PyPI, npm, Go and django-naija; social preview image.
+
 ## [1.0.0] - 2026-10-17
 
 First stable release: function names, record fields and REST API paths are now covered by semantic

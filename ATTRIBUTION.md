@@ -13,7 +13,7 @@ Copyright (c) 2026 Akanji Oluwaseun Gabriel.
 
 > Nigerian reference data from naija-data by Akanji Oluwaseun Gabriel
 > (https://github.com/asgatcreation/naija-data), licensed CC BY 4.0,
-> compiled from INEC, OCHA/OSGOF, geoBoundaries/GRID3, CBN and NCC sources.
+> compiled from INEC, OCHA/OSGOF, CBN, NCC and other official sources.
 
 ## Upstream sources
 
@@ -25,8 +25,9 @@ The machine-readable list, including the date each source was retrieved, is
 | CVR polling unit locator (live lists) | Independent National Electoral Commission (INEC) | Public government information (factual data only) | State/LGA/ward codes and names |
 | Directory of Polling Units, Jan 2015 (Internet Archive copies) | INEC | Public government publication (factual data only) | Ward cross-check, aliases |
 | Constitution of the Federal Republic of Nigeria 1999, First Schedule | Federal Republic of Nigeria | Public law | Capitals, FCT council HQs, legal totals, aliases |
-| Nigeria Subnational Administrative Boundaries (COD-AB) | OCHA, from OSGOF, eHealth Africa, UN Cartographic Section | CC BY-IGO 3.0 | P-codes, centroids, senatorial districts, LGA HQs |
-| geoBoundaries gbOpen NGA ADM1/ADM2 | William & Mary geoLab, from GRID3 (2022) | CC BY 4.0 | Optional boundaries package |
+| Result Viewing portal (IReV) | INEC | Public government information (factual data only) | Senatorial districts, federal and state constituencies, ward links |
+| Nigeria Subnational Administrative Boundaries (COD-AB) | OCHA, from OSGOF, eHealth Africa, UN Cartographic Section | CC BY-IGO 3.0 | P-codes, centroids, LGA HQs |
+| geoBoundaries gbOpen NGA ADM1/ADM2 | William & Mary geoLab, from GRID3 (2022) | CC BY 4.0 | Count cross-check (37 states, 774 LGAs); boundaries are not shipped |
 | CLDR subdivisions | Unicode Consortium | Unicode License v3 | ISO 3166-2 state codes |
 | Country Guidance: Nigeria (2021) | European Union Agency for Asylum | Reuse authorised with acknowledgement (factual data only) | Geopolitical zones |
 | State creation dates article | BusinessDay Nigeria | Factual data only | State creation dates (unverified) |

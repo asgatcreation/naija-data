@@ -5,11 +5,20 @@ constituencies, banks, phone numbers, plates) for
 Python, JavaScript/TypeScript and Go, plus a free REST API.**
 
 [![CI](https://github.com/asgatcreation/naija-data/actions/workflows/ci.yml/badge.svg)](https://github.com/asgatcreation/naija-data/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/naija-data?label=PyPI)](https://pypi.org/project/naija-data/)
+[![npm](https://img.shields.io/npm/v/naija-data?label=npm)](https://www.npmjs.com/package/naija-data)
+[![Go Reference](https://pkg.go.dev/badge/github.com/asgatcreation/naija-data/go.svg)](https://pkg.go.dev/github.com/asgatcreation/naija-data/go)
+[![django-naija](https://img.shields.io/pypi/v/django-naija?label=django-naija)](https://pypi.org/project/django-naija/)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA)
 
 > **Stable (v1).** The function names, record fields and API paths follow semantic versioning: they will
 > not change in a breaking way before v2. Data corrections ship as patch releases.
+
+**Building a registration form?** Here is how to make a state → LGA → ward dropdown in plain HTML, React or
+Django: [step-by-step guide](https://naija-data.asgatcreation.workers.dev/guides/state-lga-form/) ·
+[live demo](https://naija-data.asgatcreation.workers.dev/examples/address-form-api.html). More guides: phone fields,
+bank account forms, constituencies, search, plates and using the CSV files from any language.
 
 **Website and playground:** https://naija-data.asgatcreation.workers.dev ·
 **REST API:** https://naija-data-api.asgatcreation.workers.dev/v1 ([interactive docs](https://naija-data-api.asgatcreation.workers.dev/v1/docs))

@@ -1,0 +1,32 @@
+/* naija-data theme: Nigerian flag green (#008751) as the accent, in both colour schemes. */
+:root {
+  --sl-color-accent-low: hsl(153, 55%, 13%);
+  --sl-color-accent: hsl(153, 75%, 40%);
+  --sl-color-accent-high: hsl(153, 70%, 80%);
+  --nd-green: #008751;
+  --nd-card-bg: hsl(224, 14%, 13%);
+  --sl-content-width: 50rem;
+}
+:root[data-theme="light"] {
+  --sl-color-accent-low: hsl(153, 60%, 90%);
+  --sl-color-accent: hsl(153, 100%, 26%);
+  --sl-color-accent-high: hsl(153, 100%, 17%);
+  --nd-card-bg: hsl(150, 20%, 97%);
+}
+
+/* Headings a little tighter and bolder. */
+.sl-markdown-content :is(h1, h2, h3) { letter-spacing: -0.01em; }
+.sl-markdown-content h2 { margin-top: 2.25rem; }
+
+/* Home page hero */
+.hero { padding-block: 3rem 1.5rem; }
+.hero h1 { letter-spacing: -0.03em; }
+.hero .tagline { max-width: 40rem; }
+
+/* Tables: zebra rows for long reference tables. */
+.sl-markdown-content table { display: table; width: 100%; }
+.sl-markdown-content tbody tr:nth-child(even) { background: color-mix(in srgb, var(--sl-color-gray-6) 50%, transparent); }
+
+/* Cards get a subtle accent on hover. */
+.card, .sl-link-card { transition: border-color 0.15s ease; }
+.card:hover { border-color: var(--sl-color-accent); }

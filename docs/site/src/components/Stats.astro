@@ -1,0 +1,62 @@
+---
+// Dataset totals, read from the naija-data package at build time so they always match the data.
+import { meta } from "naija-data";
+
+const c = meta().counts;
+const n = (x: number) => x.toLocaleString("en-GB");
+const stats = [
+  { value: n(c.states), label: "states + FCT", href: "/reference/functions/#places" },
+  { value: n(c.lgas), label: "LGAs", href: "/guides/state-lga-form/" },
+  { value: n(c.wards), label: "wards", href: "/guides/state-lga-form/" },
+  { value: n(c.senatorial_districts), label: "senatorial districts", href: "/guides/elections/" },
+  { value: n(c.federal_constituencies), label: "federal constituencies", href: "/guides/elections/" },
+  { value: n(c.state_constituencies), label: "state constituencies", href: "/guides/elections/" },
+  { value: n(c.banks), label: "licensed institutions", href: "/guides/bank-accounts/" },
+  { value: n(c.number_blocks), label: "phone number blocks", href: "/guides/phone-numbers/" },
+];
+---
+
+<ul class="nd-stats not-content" aria-label="What is in the dataset">
+  {stats.map((s) => (
+    <li>
+      <a href={s.href}>
+        <strong>{s.value}</strong>
+        <span>{s.label}</span>
+      </a>
+    </li>
+  ))}
+</ul>
+<p class="nd-stats-note not-content">Data version {meta().data_version} · every row linked to its official source</p>
+
+<style>
+  .nd-stats {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .nd-stats a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    height: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.6rem;
+    background: var(--nd-card-bg);
+    text-decoration: none;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  @media (min-width: 50rem) { .nd-stats { grid-template-columns: repeat(4, 1fr); } }
+  .nd-stats a:hover { border-color: var(--sl-color-accent); transform: translateY(-1px); }
+  .nd-stats strong {
+    font-size: var(--sl-text-2xl);
+    line-height: 1.1;
+    color: var(--sl-color-white);
+    font-variant-numeric: tabular-nums;
+  }
+  .nd-stats span { font-size: var(--sl-text-sm); color: var(--sl-color-gray-3); }
+  .nd-stats-note { font-size: var(--sl-text-xs); color: var(--sl-color-gray-3); margin: 0 0 2rem; }
+</style>

@@ -1,0 +1,120 @@
+---
+title: Bank account forms (NUBAN)
+description: A bank dropdown, an account-number check that catches typos before you pay, and what to do about OPay, PalmPay and account names.
+---
+
+import { Aside, Steps, Tabs, TabItem } from "@astrojs/starlight/components";
+
+Every Nigerian bank account number (NUBAN) has 10 digits, and the last digit is a **check digit** worked
+out from the bank's CBN code and the first 9 digits. naija-data does that calculation, so you can catch a
+mistyped account number **before** you send money or call a paid API.
+
+## A payout form
+
+<Steps>
+
+1. Show a **bank dropdown** of active banks that have a CBN code (so every choice can be checked).
+2. Check the **account number** against the chosen bank.
+3. Optionally, confirm the **account name** with your payment provider ([how](/guides/account-names/)).
+
+</Steps>
+
+<Tabs syncKey="lang">
+<TabItem label="JavaScript">
+
+```ts
+import { banks, getBank, isValidNuban, banksForNuban } from "naija-data";
+
+// 1. Dropdown options: value = id, text = short name
+const options = banks()
+  .filter((b) => b.cbn_code)
+  .map((b) => ({ value: b.id, label: b.short_name ?? b.name }));
+
+// 2. Check the account number for the chosen bank (id, CBN code or name all work)
+isValidNuban("0000014579", "first-bank");  // true
+isValidNuban("0000014578", "first-bank");  // false: probably a typo
+
+// Don't know the bank? List the banks the number could belong to.
+banksForNuban("0000014579").map((b) => b.name);
+
+getBank("GTB")?.cbn_code;                 // "058"
+```
+
+</TabItem>
+<TabItem label="Python">
+
+```python
+import naija_data as ng
+
+options = [(b.id, b.short_name or b.name) for b in ng.banks() if b.cbn_code]
+
+ng.is_valid_nuban("0000014579", "first-bank")  # True
+ng.is_valid_nuban("0000014578", "first-bank")  # False
+[b.name for b in ng.banks_for_nuban("0000014579")]
+ng.get_bank("GTB").cbn_code                   # '058'
+```
+
+</TabItem>
+<TabItem label="Zod">
+
+```ts
+import { z } from "zod";
+import { nubanWithBankSchema } from "naija-data/zod";
+
+const Payout = nubanWithBankSchema(); // { account, bank }
+Payout.parse({ account: "0000014579", bank: "first-bank" }); // ok
+Payout.safeParse({ account: "0000014578", bank: "first-bank" }).success; // false: "This account number is not valid for the selected bank."
+```
+
+</TabItem>
+<TabItem label="Django">
+
+```python
+from django import forms
+from django_naija import forms as ngforms
+
+class PayoutForm(ngforms.NUBANFormMixin, forms.Form):
+    bank = ngforms.BankField()             # banks with a CBN code
+    account_number = ngforms.NUBANField()  # checked against the chosen bank
+```
+
+</TabItem>
+<TabItem label="REST API">
+
+```bash
+curl "https://naija-data-api.asgatcreation.workers.dev/v1/validate/nuban?account=0000014579&bank=first-bank"
+# {"data": {"account": "0000014579", "bank": {...}, "valid": true}}
+curl "https://naija-data-api.asgatcreation.workers.dev/v1/validate/nuban?account=0000014579"
+# {"data": {"account": "0000014579", "candidates": [...]}}
+```
+
+</TabItem>
+</Tabs>
+
+<Aside type="caution" title="A valid check digit is not proof the account exists">
+Exactly 1 in 10 random numbers passes for any given bank. The check catches typos; only a name enquiry
+through your payment provider confirms the account. See [account names](/guides/account-names/).
+</Aside>
+
+## OPay, PalmPay and other wallets
+
+OPay, PalmPay and similar wallets are **not** in the NUBAN check: they have no CBN bank code, and their
+account number is usually the customer's phone number without its first 0. To accept them:
+
+```ts
+import { parsePhone } from "naija-data";
+
+const looksLikeWallet = parsePhone("0" + "8031234567")?.type === "mobile"; // true
+```
+
+Then confirm the account with your payment provider, using the provider's code for that wallet.
+
+## Good to know
+
+- **Bank status.** `banks()` returns active institutions only. Pass `activeOnly = false` / `active_only=False`
+  to include banks that merged or lost their licence (each has `status` and `status_date`).
+- **Types.** `type` is one of `commercial`, `merchant`, `non_interest`, `payment_service_bank`,
+  `mobile_money_operator`, `microfinance`, `mortgage`, `development_finance`.
+- **Codes.** `cbn_code` (3 digits for banks, 5 for others) is used for NUBAN; `nip_code` (6 digits) is the
+  NIBSS instant-payment code where known. Codes confirmed by only one source are listed in `unverified_fields`.
+- Source: the CBN's register of licensed financial institutions; codes cross-checked between providers.

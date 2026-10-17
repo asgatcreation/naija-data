@@ -40,3 +40,6 @@ Thumbs.db
 
 # Local editor/agent settings
 .claude/
+
+# Personal drafts (launch posts, notes): not part of the project
+/drafts/

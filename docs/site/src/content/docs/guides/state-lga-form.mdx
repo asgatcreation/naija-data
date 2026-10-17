@@ -1,0 +1,286 @@
+---
+title: State → LGA → ward dropdowns
+description: Build a registration or address form where choosing a state fills the LGA dropdown, and choosing an LGA fills the wards. Plain HTML, React, Django and server-side checks.
+---
+
+import { Aside, LinkCard, CardGrid, Steps, Tabs, TabItem } from "@astrojs/starlight/components";
+
+The most common use of naija-data: a form where people pick their **state**, then an **LGA in that state**,
+then (optionally) their **ward**. Every list is official (INEC's current names and codes), so you never
+have to copy an old list from the internet again.
+
+<CardGrid>
+  <LinkCard title="Live demo: REST API version" href="/examples/address-form-api.html" description="Plain HTML, no install. View the page source to copy it." />
+  <LinkCard title="Live demo: package from a CDN" href="/examples/address-form-cdn.html" description="Plain HTML, the data runs in the browser. View the page source to copy it." />
+</CardGrid>
+
+## How it works
+
+<Steps>
+
+1. Fill the **State** dropdown with the 37 states (36 states + FCT).
+2. When someone picks a state, fill the **LGA** dropdown with that state's LGAs only.
+3. When someone picks an LGA, fill the **Ward** dropdown with its wards.
+4. The form submits **codes**, not names: state `LA`, LGA `NG025011`, ward `24-11-01`.
+5. Your server checks the codes again before saving (the browser can be bypassed).
+
+</Steps>
+
+<Aside type="tip" title="Store codes, show names">
+Save the codes in your database (`state = "LA"`, `lga = "NG025011"`). Codes never change when a spelling is
+corrected, and you can always get the name back with `getState("LA").name` or `getLga("NG025011").name`.
+</Aside>
+
+## Pick your setup
+
+<Tabs syncKey="setup">
+<TabItem label="HTML + REST API">
+
+No install and no build step: the browser asks the free [REST API](/getting-started/api/) for each list.
+Best for simple sites, WordPress, Webflow, or any page where you can add a `<script>`.
+
+```html
+<label for="state">State</label>
+<select id="state" name="state" required></select>
+
+<label for="lga">LGA</label>
+<select id="lga" name="lga" required disabled></select>
+
+<label for="ward">Ward</label>
+<select id="ward" name="ward" disabled></select>
+
+<script>
+  const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
+  const stateSelect = document.getElementById("state");
+  const lgaSelect = document.getElementById("lga");
+  const wardSelect = document.getElementById("ward");
+
+  // value = code, text = name
+  function fill(select, records, placeholder) {
+    select.replaceChildren(new Option(placeholder, ""), ...records.map((r) => new Option(r.name, r.code)));
+    select.disabled = records.length === 0;
+  }
+  async function getList(path) {
+    const res = await fetch(API + path);
+    return (await res.json()).data; // { count, data: [...] }
+  }
+
+  getList("/states").then((states) => fill(stateSelect, states, "Choose a state"));
+
+  stateSelect.addEventListener("change", async () => {
+    fill(wardSelect, [], "Choose an LGA first");
+    fill(lgaSelect, stateSelect.value ? await getList(`/states/${stateSelect.value}/lgas`) : [], "Choose an LGA");
+  });
+
+  lgaSelect.addEventListener("change", async () => {
+    fill(wardSelect, lgaSelect.value ? await getList(`/lgas/${lgaSelect.value}/wards`) : [], "Choose a ward");
+  });
+</script>
+```
+
+The API allows about 120 requests a minute per visitor and responses are cached by the browser, so normal
+forms never hit the limit. For very busy sites, use the CDN or npm version instead.
+
+</TabItem>
+<TabItem label="HTML + CDN">
+
+The naija-data package itself runs in the browser, loaded from the jsDelivr CDN. No API calls, and it keeps
+working even if the API is down. States and LGAs are about 30 KB (gzipped); wards (about 150 KB) load only
+when someone picks an LGA.
+
+```html
+<select id="state" name="state" required></select>
+<select id="lga" name="lga" required disabled></select>
+<select id="ward" name="ward" disabled></select>
+
+<script type="module">
+  // @1 = any 1.x version: you get data corrections, never breaking changes.
+  import { states, lgas } from "https://cdn.jsdelivr.net/npm/naija-data@1/dist/index.js";
+
+  const stateSelect = document.getElementById("state");
+  const lgaSelect = document.getElementById("lga");
+  const wardSelect = document.getElementById("ward");
+
+  function fill(select, records, placeholder) {
+    select.replaceChildren(new Option(placeholder, ""), ...records.map((r) => new Option(r.name, r.code)));
+    select.disabled = records.length === 0;
+  }
+
+  fill(stateSelect, states(), "Choose a state");
+
+  stateSelect.addEventListener("change", () => {
+    fill(wardSelect, [], "Choose an LGA first");
+    fill(lgaSelect, stateSelect.value ? lgas(stateSelect.value) : [], "Choose an LGA");
+  });
+
+  lgaSelect.addEventListener("change", async () => {
+    const { wards } = await import("https://cdn.jsdelivr.net/npm/naija-data@1/dist/wards.js");
+    fill(wardSelect, lgaSelect.value ? wards(lgaSelect.value) : [], "Choose a ward");
+  });
+</script>
+```
+
+</TabItem>
+<TabItem label="React">
+
+```bash
+npm install naija-data
+```
+
+```tsx
+import { useMemo, useState } from "react";
+import { states, lgas } from "naija-data";
+import type { Ward } from "naija-data";
+
+export function AddressFields() {
+  const [state, setState] = useState("");
+  const [lga, setLga] = useState("");
+  const [wardList, setWardList] = useState<Ward[]>([]);
+  const lgaList = useMemo(() => (state ? lgas(state) : []), [state]);
+
+  async function chooseLga(code: string) {
+    setLga(code);
+    const { wards } = await import("naija-data/wards"); // loaded on demand
+    setWardList(code ? wards(code) : []);
+  }
+
+  return (
+    <>
+      <select name="state" value={state} required
+        onChange={(e) => { setState(e.target.value); setLga(""); setWardList([]); }}>
+        <option value="">Choose a state</option>
+        {states().map((s) => <option key={s.code} value={s.code}>{s.name}</option>)}
+      </select>
+
+      <select name="lga" value={lga} required disabled={!state} onChange={(e) => chooseLga(e.target.value)}>
+        <option value="">Choose an LGA</option>
+        {lgaList.map((l) => <option key={l.code} value={l.code}>{l.name}</option>)}
+      </select>
+
+      <select name="ward" disabled={!wardList.length}>
+        <option value="">Choose a ward</option>
+        {wardList.map((w) => <option key={w.code} value={w.code}>{w.name}</option>)}
+      </select>
+    </>
+  );
+}
+```
+
+The same idea works in Vue, Svelte, Angular and React Native: `states()`, `lgas(stateCode)` and
+`wards(lgaCode)` return plain arrays of `{ code, name, ... }`.
+
+</TabItem>
+<TabItem label="Django">
+
+```bash
+pip install django-naija
+```
+
+```python
+# forms.py
+from django import forms
+from django_naija import forms as ngforms
+
+class RegisterForm(ngforms.StateLGAFormMixin, forms.Form):
+    name = forms.CharField()
+    state = ngforms.StateField()   # value: "LA"
+    lga = ngforms.LGAField()       # value: "NG025011"; must belong to the chosen state
+```
+
+`StateLGAFormMixin` limits the LGA choices to the submitted state and rejects an LGA from another state.
+For the dependent dropdown in the browser, add a small JSON view and fetch it when the state changes
+(or use the REST API from the first tab):
+
+```python
+# views.py
+import naija_data as ng
+from django.http import JsonResponse
+from django_naija.choices import lga_choices
+
+def lgas_for_state(request):
+    """GET /lgas/?state=LA -> {"state": "LA", "lgas": [["NG025001", "Agege"], ...]}"""
+    state = ng.get_state(request.GET.get("state", ""))
+    if state is None:
+        return JsonResponse({"error": "Unknown state"}, status=404)
+    return JsonResponse({"state": state.code, "lgas": lga_choices(state.code)})
+```
+
+For models, use `StateField()` and `LGAField()` from `django_naija.fields`. See [Django and DRF](/getting-started/django/).
+
+</TabItem>
+</Tabs>
+
+## Check the answer on your server
+
+Anyone can send your server any value, so check that the LGA really is in the chosen state before saving.
+
+<Tabs syncKey="server">
+<TabItem label="Node.js">
+
+```ts
+import { getState, getLga } from "naija-data";
+
+function checkAddress(stateCode: string, lgaCode: string): string | null {
+  const state = getState(stateCode);
+  if (!state) return "Choose a valid state.";
+  const lga = getLga(lgaCode);
+  if (!lga || lga.state_code !== state.code) return "Choose an LGA in the selected state.";
+  return null; // valid
+}
+
+checkAddress("LA", "NG025011"); // null (Ikeja is in Lagos)
+checkAddress("KN", "NG025011"); // "Choose an LGA in the selected state."
+```
+
+</TabItem>
+<TabItem label="Python">
+
+```python
+import naija_data as ng
+
+def check_address(state_code, lga_code):
+    state = ng.get_state(state_code)
+    if state is None:
+        return "Choose a valid state."
+    lga = ng.get_lga(lga_code)
+    if lga is None or lga.state_code != state.code:
+        return "Choose an LGA in the selected state."
+    return None  # valid
+
+check_address("LA", "NG025011")  # None (Ikeja is in Lagos)
+check_address("KN", "NG025011")  # 'Choose an LGA in the selected state.'
+```
+
+</TabItem>
+<TabItem label="Go">
+
+```go
+func checkAddress(stateCode, lgaCode string) string {
+	state := naija.GetState(stateCode)
+	if state == nil {
+		return "Choose a valid state."
+	}
+	lga, _ := naija.GetLGA(lgaCode, "")
+	if lga == nil || lga.StateCode != state.Code {
+		return "Choose an LGA in the selected state."
+	}
+	return "" // valid
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Good to know
+
+- **FCT.** The Federal Capital Territory has 6 *Area Councils* instead of LGAs; they come back from the same
+  functions, so your form needs no special case. People may type "Abuja" or "FCT": `getState("Abuja")` finds it.
+- **Same LGA name in two states.** "Surulere" exists in Lagos and Oyo, "Obi" in Benue and Nasarawa. Because the
+  LGA list depends on the chosen state, and you store the LGA *code*, there is never any confusion.
+- **Wards** are INEC registration areas. Most forms only need state and LGA; add wards for voter, census,
+  health or field-work data.
+- **Show more in the dropdown.** Every LGA record also has `headquarters` (where known), `senatorial_district`
+  and `aliases` (older spellings people may search for). For a typing box instead of a dropdown, see
+  [search and autocomplete](/guides/search/).
+- **Credit.** The data is free under CC BY 4.0: add "Data: naija-data by Akanji Oluwaseun Gabriel" to your
+  site's credits or about page. See [using the data](/guides/raw-data/).

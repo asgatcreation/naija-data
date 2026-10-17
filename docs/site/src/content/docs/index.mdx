@@ -3,79 +3,107 @@ title: naija-data
 description: Accurate, sourced Nigerian reference data for Python, JavaScript/TypeScript and Go, plus a free REST API.
 template: splash
 hero:
-  tagline: States, LGAs, wards, banks with NUBAN validation, phone numbers and plates. Every record traced to an official source, the same answers in Python, JavaScript and Go, and a free REST API.
+  title: Nigerian data you can trust
+  tagline: States, LGAs and wards, senatorial districts and constituencies, banks with account-number checks, phone numbers and plates. Every record traced to an official source. The same answers in Python, JavaScript, Go and a free REST API.
+  image:
+    file: ../../assets/hero.svg
   actions:
     - text: Try the playground
       link: /playground/
       icon: right-arrow
-    - text: Get started
-      link: /getting-started/python/
-      variant: minimal
-    - text: View on GitHub
+    - text: Build a state → LGA form
+      link: /guides/state-lga-form/
+      variant: secondary
+    - text: GitHub
       link: https://github.com/asgatcreation/naija-data
       icon: external
       variant: minimal
 ---
 
-import { Card, CardGrid, Tabs, TabItem } from "@astrojs/starlight/components";
+import { Card, CardGrid, LinkCard, Tabs, TabItem } from "@astrojs/starlight/components";
+import Stats from "../../components/Stats.astro";
 
-<Tabs>
-  <TabItem label="Python">
+<Stats />
+
+## Install in a minute
+
+<Tabs syncKey="lang">
+  <TabItem label="JavaScript" icon="seti:javascript">
+  ```bash
+  npm install naija-data
+  ```
+  ```ts
+  import { states, lgas, isValidNuban, parsePhone } from "naija-data";
+
+  lgas("Lagos").map((l) => l.name);        // ["Agege", "Ajeromi/Ifelodun", ...]
+  isValidNuban("0000014579", "011");       // true
+  parsePhone("0803 123 4567")?.e164;       // "+2348031234567"
+  ```
+  </TabItem>
+  <TabItem label="Python" icon="seti:python">
   ```bash
   pip install naija-data
   ```
   ```python
   import naija_data as ng
-  ng.get_state("lagos").capital           # 'Ikeja'
-  ng.is_valid_nuban("0000014579", "011")  # True
-  ng.parse_phone("0803 123 4567").network # 'MTN'
+
+  [l.name for l in ng.lgas("Lagos")]        # ['Agege', 'Ajeromi/Ifelodun', ...]
+  ng.is_valid_nuban("0000014579", "011")    # True
+  ng.parse_phone("0803 123 4567").e164      # '+2348031234567'
   ```
   </TabItem>
-  <TabItem label="JavaScript">
-  ```bash
-  npm install naija-data
-  ```
-  ```ts
-  import { getState, isValidNuban, parsePhone } from "naija-data";
-  getState("lagos")?.capital;              // "Ikeja"
-  isValidNuban("0000014579", "011");       // true
-  parsePhone("0803 123 4567")?.network;    // "MTN"
-  ```
-  </TabItem>
-  <TabItem label="Go">
+  <TabItem label="Go" icon="seti:go">
   ```bash
   go get github.com/asgatcreation/naija-data/go
   ```
   ```go
-  naija.GetState("lagos").Capital                  // "Ikeja"
+  lgas, _ := naija.LGAs("Lagos")
   ok, _ := naija.IsValidNUBAN("0000014579", "011") // true
+  naija.ParsePhone("0803 123 4567").E164           // "+2348031234567"
   ```
   </TabItem>
-  <TabItem label="REST API">
+  <TabItem label="REST API" icon="seti:json">
   ```bash
   curl https://naija-data-api.asgatcreation.workers.dev/v1/states/lagos/lgas
   ```
+  Free, no key, CORS open: call it straight from a web page. [All endpoints](/reference/api/).
+  </TabItem>
+  <TabItem label="No code" icon="document">
+  Download the CSV files for Excel, Google Sheets, a database, PHP, Java, Flutter or any other tool.
+  [Use the data files](/guides/raw-data/).
   </TabItem>
 </Tabs>
 
+## What you can build
+
+<CardGrid>
+  <LinkCard title="State → LGA → ward dropdowns" href="/guides/state-lga-form/" description="Registration and address forms where each dropdown depends on the one before. Plain HTML, React or Django." />
+  <LinkCard title="Phone number fields" href="/guides/phone-numbers/" description="Accept every way people type a number, store +234…, and explain why a number is invalid." />
+  <LinkCard title="Bank account forms" href="/guides/bank-accounts/" description="Bank dropdowns and the CBN check digit, to catch a mistyped account number before you pay." />
+  <LinkCard title="Senate, Reps and Assembly" href="/guides/elections/" description="Who represents an LGA or ward: INEC's 109 districts, 360 federal and 990 state constituencies." />
+  <LinkCard title="Search and autocomplete" href="/guides/search/" description="Find places even with typos, old spellings and accents: lagso, Yenegoa, Ọ̀yọ́, AMAC." />
+  <LinkCard title="Vehicle plates" href="/guides/vehicle-plates/" description="Check and format standard and dealer plate numbers from the Road Traffic Regulations." />
+</CardGrid>
+
+## Why naija-data
+
 <CardGrid>
   <Card title="Every record has a source" icon="document">
-    INEC, the Constitution, CBN, NCC, the Official Gazette and the UN's boundary data, each recorded with URL,
-    date and licence. Single-source values are flagged as unverified. [See the sources](/data/sources/).
+    INEC, the Constitution, the CBN, the NCC and the Official Gazette, each recorded with URL, date and licence.
+    Values from a single source are flagged. [See the sources](/data/sources/).
   </Card>
-  <Card title="Upstream errors caught" icon="warning">
-    Cross-checking found a duplicated INEC ward, typos in official lists, and banks sharing a code. Each one is
-    documented. [See coverage and gaps](/data/coverage/).
+  <Card title="Errors in official lists, caught" icon="warning">
+    Cross-checking found a duplicated INEC ward, typos in official names, duplicated constituency codes and banks
+    sharing a code. Each is documented. [Coverage and gaps](/data/coverage/).
   </Card>
   <Card title="Same answers everywhere" icon="seti:json">
-    The Python, JavaScript and Go packages and the API are generated from one dataset, and 6,000+ shared test
-    cases check they agree, down to the fuzzy-search scores.
+    Python, JavaScript, Go and the API come from one dataset, and over 13,000 shared tests check that they
+    agree, down to the search scores.
   </Card>
-  <Card title="Built for real forms" icon="approve-check">
-    Fuzzy search with typos and aliases, strict phone validation with clear reasons, NUBAN checks, Django and DRF
-    fields, and Zod schemas.
+  <Card title="Free and open" icon="heart">
+    Code under MIT, data under CC BY 4.0: use it in commercial apps, just give credit. No API key, no sign-up.
   </Card>
 </CardGrid>
 
 Created and maintained by **Akanji Oluwaseun Gabriel** ([@asgatcreation](https://github.com/asgatcreation)).
-Code: MIT. Data: CC BY 4.0.
+Found a mistake? [Report it](/data/contributing/); corrections ship as patch releases.

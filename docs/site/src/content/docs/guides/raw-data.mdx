@@ -1,0 +1,100 @@
+---
+title: Use the data files (any language)
+description: Download the CSV files for PHP, Java, Kotlin, Dart/Flutter, Swift, C#, Excel or a database, what each column means, and how to credit naija-data.
+---
+
+import { Aside, FileTree } from "@astrojs/starlight/components";
+
+Not using Python, JavaScript or Go? Every dataset is a plain **CSV file** (UTF-8, comma-separated, one header
+row), so you can load it into any language, a spreadsheet or a database. Or call the
+[REST API](/getting-started/api/) from any language that can make an HTTP request.
+
+## Download
+
+Pin a release tag (here `v1.0.0`) so your copy never changes under you:
+
+```bash
+curl -O https://raw.githubusercontent.com/asgatcreation/naija-data/v1.0.0/data/states.csv
+curl -O https://raw.githubusercontent.com/asgatcreation/naija-data/v1.0.0/data/lgas.csv
+```
+
+The same files over a CDN: `https://cdn.jsdelivr.net/gh/asgatcreation/naija-data@v1.0.0/data/lgas.csv`.
+You can also browse them on [GitHub](https://github.com/asgatcreation/naija-data/tree/main/data).
+
+<FileTree>
+- data/
+  - states.csv 37 rows: 36 states + FCT
+  - lgas.csv 774 rows: LGAs and FCT area councils
+  - wards.csv 8,809 rows: INEC registration areas
+  - senatorial_districts.csv 109 rows
+  - federal_constituencies.csv 360 rows
+  - state_constituencies.csv 990 rows
+  - banks.csv 899 rows: CBN-licensed institutions
+  - phone_prefixes.csv mobile prefixes and their networks
+  - phone_area_codes.csv 56 landline area codes
+  - phone_number_blocks.csv 305 allocated number blocks
+  - plate_categories.csv plate colours by category
+  - sources.json where every value came from
+</FileTree>
+
+## How the files fit together
+
+- `lgas.state_code` → `states.code` (e.g. `LA`)
+- `wards.lga_code` → `lgas.code` (e.g. `NG025011`)
+- `wards.senatorial_district`, `federal_constituency`, `state_constituency` → the `code` of the matching file
+- `sources` (in every file) → the `id` in `sources.json`
+
+## Column guide
+
+| Column | Meaning |
+|---|---|
+| `code` | The stable identifier to store. States: ISO 3166-2 without `NG-` (`LA`). LGAs: UN P-code (`NG025011`). Wards: INEC code (`24-11-01`). Electoral units: `SD`/`FC`/`SC` + INEC's number. |
+| `inec_code` | INEC's own code (states `24`, LGAs `24-11`, constituencies `FC/236/LA`) |
+| `pcode` | UN OCHA P-code, used by humanitarian datasets |
+| `name` | Official display name |
+| `slug` | URL-friendly name (`akwa-ibom`) |
+| `aliases` | Other spellings and names, separated by `\|` (`Yenegoa`, `AMAC`, `Abuja`) |
+| `lat`, `lon` | Approximate centre point (decimal degrees) |
+| `unverified_fields` | Columns confirmed by only one source, separated by `\|` |
+| `sources` | Source ids, separated by `\|` |
+
+Empty cells mean "not known". Lists inside a cell are separated by `|`.
+
+## Example: MySQL / PostgreSQL
+
+```sql
+CREATE TABLE states (code CHAR(2) PRIMARY KEY, name VARCHAR(40) NOT NULL);
+CREATE TABLE lgas (code CHAR(8) PRIMARY KEY, state_code CHAR(2) NOT NULL REFERENCES states(code),
+                   name VARCHAR(60) NOT NULL);
+-- then import the matching columns from states.csv and lgas.csv
+SELECT name FROM lgas WHERE state_code = 'LA' ORDER BY name;
+```
+
+## Example: PHP
+
+```php
+$rows = array_map('str_getcsv', file('lgas.csv'));
+$header = array_shift($rows);
+$lgas = array_map(fn($r) => array_combine($header, $r), $rows);
+$lagos = array_filter($lgas, fn($l) => $l['state_code'] === 'LA');
+```
+
+## Example: Flutter / Dart (with the API)
+
+```dart
+final res = await http.get(Uri.parse('https://naija-data-api.asgatcreation.workers.dev/v1/states/LA/lgas'));
+final lgas = (jsonDecode(res.body)['data'] as List).map((l) => l['name']).toList();
+```
+
+## Credit (required)
+
+The data is free to use, including commercially, under **CC BY 4.0**. You only need to give credit, for
+example on your about or credits page:
+
+> Nigerian reference data from naija-data by Akanji Oluwaseun Gabriel
+> (https://github.com/asgatcreation/naija-data), licensed CC BY 4.0.
+
+<Aside type="tip" title="Stay up to date">
+Watch the GitHub repository's releases, or check the [changelog](/changelog/). Data corrections come as
+patch releases (1.0.1, 1.0.2…), and codes never change within version 1.
+</Aside>
