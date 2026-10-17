@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "naija-data"
-version = "0.1.1"
+version = "1.0.0"
 description = "Accurate, sourced Nigerian reference data: states, LGAs, wards, banks, NUBAN and phone helpers."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -13,7 +13,7 @@ license-files = ["LICENSE", "LICENSE-DATA"]
 authors = [{ name = "Akanji Oluwaseun Gabriel" }]
 keywords = ["nigeria", "states", "lga", "wards", "banks", "nuban", "phone", "open-data"]
 classifiers = [
-  "Development Status :: 3 - Alpha",
+  "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",

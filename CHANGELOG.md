@@ -9,6 +9,11 @@ This project follows [Semantic Versioning](https://semver.org/):
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-10-17
+
+First stable release: function names, record fields and REST API paths are now covered by semantic
+versioning. It adds INEC's electoral units to everything in 0.1.
+
 ### Added
 - Electoral units from INEC's Result Viewing portal: 109 senatorial districts, 360 federal constituencies
   and 990 state constituencies (`data/senatorial_districts.csv`, `federal_constituencies.csv`,

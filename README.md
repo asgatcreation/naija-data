@@ -8,8 +8,8 @@ Python, JavaScript/TypeScript and Go, plus a free REST API.**
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA)
 
-> 🚧 **Pre-release (0.x).** The packages are on PyPI, npm and the Go proxy and are fully tested; the API
-> may still change before v1.0.0.
+> **Stable (v1).** The function names, record fields and API paths follow semantic versioning: they will
+> not change in a breaking way before v2. Data corrections ship as patch releases.
 
 **Website and playground:** https://naija-data.asgatcreation.workers.dev ·
 **REST API:** https://naija-data-api.asgatcreation.workers.dev/v1 ([interactive docs](https://naija-data-api.asgatcreation.workers.dev/v1/docs))

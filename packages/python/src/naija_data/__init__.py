@@ -26,7 +26,7 @@ from .phone import (PHONE_ERRORS, PHONE_TYPES, area_codes, is_valid_phone, netwo
                     phone_error, prefixes, to_local)
 from .plates import PLATE_ERRORS, PLATE_FORMATS, is_valid_plate, parse_plate, plate_categories, plate_error
 
-__version__ = "0.1.1"
+__version__ = "1.0.0"
 
 __all__ = [
     "BANK_TYPES", "CONSTITUENCY_KINDS", "PHONE_ERRORS", "PHONE_TYPES", "PLATE_ERRORS", "PLATE_FORMATS",

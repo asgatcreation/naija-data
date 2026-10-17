@@ -7,4 +7,4 @@
 - django_naija.choices         state, LGA, ward and bank choice lists
 """
 
-__version__ = "0.1.1"
+__version__ = "1.0.0"
