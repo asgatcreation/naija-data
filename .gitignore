@@ -43,3 +43,7 @@ Thumbs.db
 
 # Personal drafts (launch posts, notes): not part of the project
 /drafts/
+
+/docs/requests/
+/docs/research/
+
