@@ -3,6 +3,7 @@
  *
  *   import { getState, lgas, search, isValidNuban, normalizePhone } from "naija-data";
  *   import { wards } from "naija-data/wards";
+ *   import { federalConstituencies, lgaConstituencies } from "naija-data/constituencies";
  *
  * Data: CC BY 4.0, Akanji Oluwaseun Gabriel (see meta().sources). Code: MIT.
  */

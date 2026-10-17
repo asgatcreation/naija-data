@@ -18,6 +18,15 @@
     "notes": "Publishes the totals 176,846 polling units, 8,809 registration areas and 774 LGAs."
   },
   {
+    "id": "inec-irev",
+    "name": "INEC Result Viewing portal (IReV): senatorial districts, federal and state constituencies, and the wards in each",
+    "publisher": "Independent National Electoral Commission (INEC)",
+    "url": "https://www.inecelectionresults.ng",
+    "retrieved": "2026-10-16",
+    "licence": "facts-only",
+    "notes": "Election lists for the Senate, House of Representatives and House of Assembly elections give each unit's INEC code and name (2023 general elections). The ward lists of the 2023 presidential election link every one of the 8,809 wards to its senatorial district, federal constituency and state constituency. IReV holds 990 state constituencies for the 36 states (the FCT has no House of Assembly); the often-quoted figure of 993 is not in INEC's own list. Three duplicated state constituency codes, a few misspelled names and 14 suspected ward mislinks are listed in docs/data/coverage-and-gaps.md."
+  },
+  {
     "id": "inec-pu-directory-2015",
     "name": "INEC Directory of Polling Units, revised January 2015 (one PDF per state)",
     "publisher": "Independent National Electoral Commission (INEC)",

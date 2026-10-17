@@ -23,6 +23,9 @@ def test_expected_totals(tables):
     assert len(tables["states"]) == 37
     assert len(tables["lgas"]) == 774
     assert len(tables["wards"]) == 8809
+    assert len(tables["senatorial_districts"]) == 109
+    assert len(tables["federal_constituencies"]) == 360
+    assert len(tables["state_constituencies"]) == 990
 
 
 # --- sources.json
@@ -167,3 +170,43 @@ def test_garbled_text_is_rejected(tables, source_ids):
     assert any("garbled" in e for e in validate.check_common("lgas", rows, source_ids))
     rows[0]["headquarters"] = "Jama'are"
     assert not validate.check_common("lgas", rows, source_ids)
+
+
+# --- electoral units
+
+def electoral(tables, wards=None, lgas=None, **units):
+    return validate.check_electoral(tables["states"], lgas or tables["lgas"], wards or tables["wards"],
+                                    {n: units.get(n, tables[n]) for n in validate.ELECTORAL})
+
+
+def test_ward_linked_to_another_states_constituency_is_rejected(tables):
+    wards = copy.deepcopy(tables["wards"])
+    other = next(u["code"] for u in tables["federal_constituencies"] if u["state_code"] != wards[0]["state_code"])
+    wards[0]["federal_constituency"] = other
+    assert any("is in another state" in e for e in electoral(tables, wards=wards))
+
+
+def test_fct_ward_with_state_constituency_is_rejected(tables):
+    wards = copy.deepcopy(tables["wards"])
+    w = next(w for w in wards if w["state_code"] == "FC")
+    w["state_constituency"] = "SC001"
+    assert any("no House of Assembly" in e for e in electoral(tables, wards=wards))
+
+
+def test_missing_constituency_link_is_rejected(tables):
+    wards = copy.deepcopy(tables["wards"])
+    wards[0]["state_constituency"] = ""
+    assert any("state_constituency is empty" in e for e in electoral(tables, wards=wards))
+
+
+def test_lga_senatorial_district_must_match_its_wards(tables):
+    lgas = copy.deepcopy(tables["lgas"])
+    lgas[0]["senatorial_district"] = "Somewhere Else"
+    assert any("differs from its wards" in e for e in electoral(tables, lgas=lgas))
+
+
+def test_unit_code_must_match_inec_number(tables):
+    units = copy.deepcopy(tables["federal_constituencies"])
+    units[0]["inec_code"] = "FC/002/AB"
+    errors = electoral(tables, federal_constituencies=units)
+    assert any("differs from INEC code" in e for e in errors)

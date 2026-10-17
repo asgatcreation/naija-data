@@ -1,0 +1,991 @@
+code,state_code,inec_code,name,slug,aliases,sources
+SC001,AB,SC/01/AB,Aba North,aba-north,,inec-irev
+SC002,AB,SC/02/AB,Aba South,aba-south,,inec-irev
+SC003,AB,SC/03/AB,Aba Central,aba-central,,inec-irev
+SC004,AB,SC/04/AB,Arochukwu,arochukwu,,inec-irev
+SC005,AB,SC/05/AB,Bende North,bende-north,,inec-irev
+SC006,AB,SC/06/AB,Bende South,bende-south,,inec-irev
+SC007,AB,SC/07/AB,Ikwuano,ikwuano,,inec-irev
+SC008,AB,SC/08/AB,Isiala Ngwa North,isiala-ngwa-north,,inec-irev
+SC009,AB,SC/09/AB,Isiala Ngwa South,isiala-ngwa-south,,inec-irev
+SC010,AB,SC/10/AB,Isuikwuato,isuikwuato,,inec-irev
+SC011,AB,SC/11/AB,Obingwa East,obingwa-east,,inec-irev
+SC012,AB,SC/12/AB,Obingwa West,obingwa-west,,inec-irev
+SC013,AB,SC/13/AB,Ohafia North,ohafia-north,,inec-irev
+SC014,AB,SC/14/AB,Ohafia South,ohafia-south,,inec-irev
+SC015,AB,SC/15/AB,Osisioma North,osisioma-north,,inec-irev
+SC016,AB,SC/16/AB,Osisioma South,osisioma-south,,inec-irev
+SC017,AB,SC/17/AB,Umunneochi,umunneochi,,inec-irev
+SC018,AB,SC/18/AB,Ugwunagbo,ugwunagbo,Ugwuna Agbo L.G.A,inec-irev
+SC019,AB,SC/19/AB,Ukwa East,ukwa-east,,inec-irev
+SC020,AB,SC/20/AB,Ukwa West,ukwa-west,,inec-irev
+SC021,AB,SC/21/AB,Umuahia East,umuahia-east,,inec-irev
+SC022,AB,SC/22/AB,Umuahia West,umuahia-west,,inec-irev
+SC023,AB,SC/23/AB,Umuahia Central,umuahia-central,,inec-irev
+SC024,AB,SC/24/AB,Umuahia South,umuahia-south,,inec-irev
+SC025,AD,SC/25/AD,Yola South,yola-south,,inec-irev
+SC026,AD,SC/26/AD,Yola North,yola-north,,inec-irev
+SC027,AD,SC/27/AD,Mubi North,mubi-north,,inec-irev
+SC028,AD,SC/28/AD,Mubi South,mubi-south,,inec-irev
+SC029,AD,SC/29/AD,Demsa,demsa,,inec-irev
+SC030,AD,SC/30/AD,Numan,numan,,inec-irev
+SC031,AD,SC/31/AD,Lamurde,lamurde,,inec-irev
+SC032,AD,SC/32/AD,Song,song,,inec-irev
+SC033,AD,SC/33/AD,Girei,girei,,inec-irev
+SC034,AD,SC/34/AD,Ganye,ganye,,inec-irev
+SC035,AD,SC/35/AD,Toungo,toungo,,inec-irev
+SC036,AD,SC/36/AD,Koma/Leko,koma-leko,,inec-irev
+SC037,AD,SC/37/AD,Jada/Mbulo,jada-mbulo,,inec-irev
+SC038,AD,SC/38/AD,Fufore/Gurin,fufore-gurin,,inec-irev
+SC039,AD,SC/39/AD,Verre,verre,,inec-irev
+SC040,AD,SC/40/AD,Uba/Gaya,uba-gaya,,inec-irev
+SC041,AD,SC/41/AD,Hong,hong,,inec-irev
+SC042,AD,SC/42/AD,Nasarawa/Binyeri,nasarawa-binyeri,,inec-irev
+SC043,AD,SC/43/AD,Mayo-Belwa,mayo-belwa,,inec-irev
+SC044,AD,SC/44/AD,Gombi,gombi,,inec-irev
+SC045,AD,SC/45/AD,Shelleng,shelleng,,inec-irev
+SC046,AD,SC/46/AD,Madagali,madagali,,inec-irev
+SC047,AD,SC/47/AD,Maiha,maiha,,inec-irev
+SC048,AD,SC/48/AD,Michika,michika,,inec-irev
+SC049,AD,SC/49/AD,Guyuk,guyuk,,inec-irev
+SC050,AK,SC/50/AK,Abak,abak,,inec-irev
+SC051,AK,SC/51/AK,Eket,eket,,inec-irev
+SC052,AK,SC/52/AK,Essien Udim,essien-udim,,inec-irev
+SC053,AK,SC/53/AK,Esit Eket/Ibeno,esit-eket-ibeno,,inec-irev
+SC054,AK,SC/54/AK,Etim Ekpo/Ika,etim-ekpo-ika,,inec-irev
+SC055,AK,SC/55/AK,Etinan,etinan,,inec-irev
+SC056,AK,SC/56/AK,Ibesikpo Asutan,ibesikpo-asutan,,inec-irev
+SC057,AK,SC/57/AK,Ibiono Ibom,ibiono-ibom,,inec-irev
+SC058,AK,SC/58/AK,Ikono,ikono,,inec-irev
+SC059,AK,SC/59/AK,Ikot Abasi/Eastern Obolo,ikot-abasi-eastern-obolo,,inec-irev
+SC060,AK,SC/60/AK,Ikot Ekpene/Obot Akara,ikot-ekpene-obot-akara,,inec-irev
+SC061,AK,SC/61/AK,Ini,ini,,inec-irev
+SC062,AK,SC/62/AK,Itu,itu,,inec-irev
+SC063,AK,SC/63/AK,Mbo,mbo,,inec-irev
+SC064,AK,SC/64/AK,Mkpat Enin,mkpat-enin,,inec-irev
+SC065,AK,SC/65/AK,Nsit Atai,nsit-atai,,inec-irev
+SC066,AK,SC/66/AK,Nsit Ibom,nsit-ibom,,inec-irev
+SC067,AK,SC/67/AK,Nsit Ubium,nsit-ubium,,inec-irev
+SC068,AK,SC/68/AK,Okobo,okobo,,inec-irev
+SC069,AK,SC/69/AK,Onna,onna,,inec-irev
+SC070,AK,SC/70/AK,Oron/Udung Uko,oron-udung-uko,,inec-irev
+SC071,AK,SC/71/AK,Oruk Anam,oruk-anam,,inec-irev
+SC072,AK,SC/72/AK,Ukanafun,ukanafun,,inec-irev
+SC073,AK,SC/73/AK,Uruan,uruan,,inec-irev
+SC074,AK,SC/74/AK,Urue Offong/Oruko,urue-offong-oruko,,inec-irev
+SC075,AK,SC/75/AK,Uyo,uyo,,inec-irev
+SC076,AN,SC/76/AN,Aguata I,aguata-i,,inec-irev
+SC077,AN,SC/77/AN,Aguata II,aguata-ii,,inec-irev
+SC078,AN,SC/78/AN,Anambra East,anambra-east,,inec-irev
+SC079,AN,SC/79/AN,Anambra West,anambra-west,,inec-irev
+SC080,AN,SC/80/AN,Anaocha I,anaocha-i,,inec-irev
+SC081,AN,SC/81/AN,Anaocha II,anaocha-ii,,inec-irev
+SC082,AN,SC/82/AN,Awka North,awka-north,,inec-irev
+SC083,AN,SC/83/AN,Awka South I,awka-south-i,,inec-irev
+SC084,AN,SC/84/AN,Awka South II,awka-south-ii,,inec-irev
+SC085,AN,SC/85/AN,Idemili South,idemili-south,,inec-irev
+SC086,AN,SC/86/AN,Idemili North,idemili-north,,inec-irev
+SC087,AN,SC/87/AN,Ihiala I,ihiala-i,,inec-irev
+SC088,AN,SC/88/AN,Ihiala II,ihiala-ii,,inec-irev
+SC089,AN,SC/89/AN,Njikoka I,njikoka-i,,inec-irev
+SC090,AN,SC/90/AN,Njikoka II,njikoka-ii,,inec-irev
+SC091,AN,SC/91/AN,Nnewi North,nnewi-north,,inec-irev
+SC092,AN,SC/92/AN,Nnewi South I,nnewi-south-i,,inec-irev
+SC093,AN,SC/93/AN,Nnewi South II,nnewi-south-ii,,inec-irev
+SC094,AN,SC/94/AN,Ekwusigo,ekwusigo,,inec-irev
+SC095,AN,SC/95/AN,Ogbaru I,ogbaru-i,,inec-irev
+SC096,AN,SC/96/AN,Ogbaru II,ogbaru-ii,,inec-irev
+SC097,AN,SC/97/AN,Ayamelum,ayamelum,,inec-irev
+SC098,AN,SC/98/AN,Dunukofia,dunukofia,,inec-irev
+SC099,AN,SC/99/AN,Onitsha North I,onitsha-north-i,,inec-irev
+SC100,AN,SC/100/AN,Onitsha North II,onitsha-north-ii,,inec-irev
+SC101,AN,SC/101/AN,Onitsha South I,onitsha-south-i,,inec-irev
+SC102,AN,SC/102/AN,Onitsha South II,onitsha-south-ii,,inec-irev
+SC103,AN,SC/103/AN,Orumba North,orumba-north,,inec-irev
+SC104,AN,SC/104/AN,Orumba South,orumba-south,,inec-irev
+SC105,AN,SC/105/AN,Oyi,oyi,,inec-irev
+SC106,BA,SC/106/BA,Pali,pali,,inec-irev
+SC107,BA,SC/107/BA,Duguri/Gwana,duguri-gwana,,inec-irev
+SC108,BA,SC/108/BA,Kirfi,kirfi,,inec-irev
+SC109,BA,SC/109/BA,Bauchi,bauchi,,inec-irev
+SC110,BA,SC/110/BA,Zungur/Galambi,zungur-galambi,,inec-irev
+SC111,BA,SC/111/BA,Dass,dass,,inec-irev
+SC112,BA,SC/112/BA,Lere/Bula,lere-bula,,inec-irev
+SC113,BA,SC/113/BA,Bogoro,bogoro,,inec-irev
+SC114,BA,SC/114/BA,Jama'a/Toro,jamaa-toro,,inec-irev
+SC115,BA,SC/115/BA,Warji,warji,,inec-irev
+SC116,BA,SC/116/BA,Lame,lame,,inec-irev
+SC117,BA,SC/117/BA,Ningi,ningi,,inec-irev
+SC118,BA,SC/118/BA,Burra,burra,,inec-irev
+SC119,BA,SC/119/BA,Chiroma,chiroma,,inec-irev
+SC120,BA,SC/120/BA,Hardawa,hardawa,,inec-irev
+SC121,BA,SC/121/BA,Dambam/Dagauda/Jalam,dambam-dagauda-jalam,,inec-irev
+SC122,BA,SC/122/BA,Darazo,darazo,,inec-irev
+SC123,BA,SC/123/BA,Sade,sade,,inec-irev
+SC124,BA,SC/124/BA,Ganjuwa East,ganjuwa-east,,inec-irev
+SC125,BA,SC/125/BA,Ganjuwa West,ganjuwa-west,,inec-irev
+SC126,BA,SC/126/BA,Katagum,katagum,,inec-irev
+SC127,BA,SC/127/BA,Sakwa,sakwa,,inec-irev
+SC128,BA,SC/128/BA,Jama'are,jamaare,,inec-irev
+SC129,BA,SC/129/BA,Itas/Gadau,itas-gadau,,inec-irev
+SC130,BA,SC/130/BA,Disina,disina,,inec-irev
+SC131,BA,SC/131/BA,Shira,shira,,inec-irev
+SC132,BA,SC/132/BA,Giade,giade,,inec-irev
+SC133,BA,SC/133/BA,Azare,azare,,inec-irev
+SC134,BA,SC/134/BA,Madara/Chinade,madara-chinade,,inec-irev
+SC135,BA,SC/135/BA,Udubo,udubo,,inec-irev
+SC136,BA,SC/136/BA,Gamawa,gamawa,,inec-irev
+SC137,BY,SC/137/BY,Brass I,brass-i,,inec-irev
+SC138,BY,SC/138/BY,Brass II,brass-ii,,inec-irev
+SC139,BY,SC/139/BY,Brass III,brass-iii,,inec-irev
+SC140,BY,SC/140/BY,Nembe I,nembe-i,,inec-irev
+SC141,BY,SC/141/BY,Nembe II,nembe-ii,,inec-irev
+SC142,BY,SC/142/BY,Nembe III,nembe-iii,,inec-irev
+SC143,BY,SC/143/BY,Ogbia I,ogbia-i,,inec-irev
+SC144,BY,SC/144/BY,Ogbia II,ogbia-ii,,inec-irev
+SC145,BY,SC/145/BY,Ogbia III,ogbia-iii,,inec-irev
+SC146,BY,SC/146/BY,Kolokuma/Opokuma I,kolokuma-opokuma-i,,inec-irev
+SC147,BY,SC/147/BY,Kolokuma/Opokuma II,kolokuma-opokuma-ii,,inec-irev
+SC148,BY,SC/148/BY,Yenagoa I,yenagoa-i,,inec-irev
+SC149,BY,SC/149/BY,Yenagoa II,yenagoa-ii,,inec-irev
+SC150,BY,SC/150/BY,Yenagoa III,yenagoa-iii,,inec-irev
+SC151,BY,SC/151/BY,Ekeremor I,ekeremor-i,,inec-irev
+SC152,BY,SC/152/BY,Ekeremor II,ekeremor-ii,,inec-irev
+SC153,BY,SC/153/BY,Ekeremor III,ekeremor-iii,,inec-irev
+SC154,BY,SC/154/BY,Sagbama I,sagbama-i,,inec-irev
+SC155,BY,SC/155/BY,Sagbama II,sagbama-ii,,inec-irev
+SC156,BY,SC/156/BY,Sagbama III,sagbama-iii,,inec-irev
+SC157,BY,SC/157/BY,Southern Ijaw I,southern-ijaw-i,,inec-irev
+SC158,BY,SC/158/BY,Southern Ijaw II,southern-ijaw-ii,,inec-irev
+SC159,BY,SC/159/BY,Southern Ijaw III,southern-ijaw-iii,,inec-irev
+SC160,BY,SC/160/BY,Southern Ijaw IV,southern-ijaw-iv,,inec-irev
+SC161,BE,SC/161/BN,Ado,ado,,inec-irev
+SC162,BE,SC/162/BN,Agbatu,agbatu,,inec-irev
+SC163,BE,SC/163/BN,Apa,apa,,inec-irev
+SC164,BE,SC/164/BN,Buruku,buruku,,inec-irev
+SC165,BE,SC/165/BN,Gboko I (East),gboko-i-east,,inec-irev
+SC166,BE,SC/166/BN,Gboko West,gboko-west,,inec-irev
+SC167,BE,SC/167/BN,Guma,guma,,inec-irev
+SC168,BE,SC/168/BN,Gwer East,gwer-east,,inec-irev
+SC169,BE,SC/169/BN,Gwer West,gwer-west,,inec-irev
+SC170,BE,SC/170/BN,Katsina Ala East,katsina-ala-east,,inec-irev
+SC171,BE,SC/171/BN,Katsina-Ala West,katsina-ala-west,,inec-irev
+SC172,BE,SC/172/BN,Konshisha I (Gaav),konshisha-i-gaav,,inec-irev
+SC173,BE,SC/173/BN,Kwande East,kwande-east,,inec-irev
+SC174,BE,SC/174/BN,Kwande West,kwande-west,,inec-irev
+SC175,BE,SC/175/BN,Logo,logo,,inec-irev
+SC176,BE,SC/176/BN,Makurdi I (North),makurdi-i-north,,inec-irev
+SC177,BE,SC/177/BN,Makurdi South,makurdi-south,,inec-irev
+SC178,BE,SC/178/BN,Obi,obi,,inec-irev
+SC179,BE,SC/179/BN,Ogbadibo,ogbadibo,,inec-irev
+SC180,BE,SC/180/BN,Ohimini,ohimini,,inec-irev
+SC181,BE,SC/181/BN,Oju,oju,,inec-irev
+SC182,BE,SC/182/BN,Okpokwu,okpokwu,,inec-irev
+SC183,BE,SC/183/BN,Otukpo,otukpo,,inec-irev
+SC184,BE,SC/184/BN,Otukpo North East,otukpo-north-east,,inec-irev
+SC185,BE,SC/185/BN,Tarka,tarka,,inec-irev
+SC186,BE,SC/186/BN,Ukum I (Ngenev),ukum-i-ngenev,,inec-irev
+SC187,BE,SC/187/BN,Ushongo,ushongo,,inec-irev
+SC188,BE,SC/188/BN,Vandeikya I,vandeikya-i,,inec-irev
+SC189,BE,SC/189/BN,Vandeikya II,vandeikya-ii,,inec-irev
+SC190,BO,SC/190/BO,Abadam,abadam,,inec-irev
+SC191,BO,SC/191/BO,Askira,askira,,inec-irev
+SC192,BO,SC/192/BO,Bama,bama,,inec-irev
+SC193,BO,SC/193/BO,Bayo,bayo,,inec-irev
+SC194,BO,SC/194/BO,Biu,biu,,inec-irev
+SC195,BO,SC/195/BO,Chibok,chibok,,inec-irev
+SC196,BO,SC/196/BO,Damaboa,damaboa,,inec-irev
+SC197,BO,SC/197/BO,Dikwa,dikwa,,inec-irev
+SC198,BO,SC/198/BO,Gubio,gubio,,inec-irev
+SC199,BO,SC/199/BO,Gulumba,gulumba,,inec-irev
+SC200,BO,SC/200/BO,Guzamala,guzamala,,inec-irev
+SC201,BO,SC/201/BO,Gwoza,gwoza,,inec-irev
+SC202,BO,SC/202/BO,Hawul,hawul,,inec-irev
+SC203,BO,SC/203/BO,Jere,jere,,inec-irev
+SC204,BO,SC/204/BO,Kaga,kaga,,inec-irev
+SC205,BO,SC/205/BO,Kala Balge,kala-balge,,inec-irev
+SC206,BO,SC/206/BO,Konduga,konduga,,inec-irev
+SC207,BO,SC/207/BO,Kukawa,kukawa,,inec-irev
+SC208,BO,SC/208/BO,Kwaya Kusar,kwaya-kusar,,inec-irev
+SC209,BO,SC/209/BO,Mafa,mafa,,inec-irev
+SC210,BO,SC/210/BO,Magumeri,magumeri,,inec-irev
+SC211,BO,SC/211/BO,Maiduguri M.C,maiduguri-m-c,,inec-irev
+SC212,BO,SC/212/BO,Marte,marte,,inec-irev
+SC213,BO,SC/213/BO,Mobbar,mobbar,,inec-irev
+SC214,BO,SC/214/BO,Monguno,monguno,,inec-irev
+SC215,BO,SC/215/BO,Ngala,ngala,,inec-irev
+SC216,BO,SC/216/BO,Nganzai,nganzai,,inec-irev
+SC217,BO,SC/217/BO,Shani,shani,,inec-irev
+SC218,CR,SC/218/CR,Abi,abi,,inec-irev
+SC219,CR,SC/219/CR,Akamkpa I,akamkpa-i,,inec-irev
+SC220,CR,SC/220/CR,Akamkpa II,akamkpa-ii,,inec-irev
+SC221,CR,SC/221/CR,Akpabuyo,akpabuyo,,inec-irev
+SC222,CR,SC/222/CR,Bakassi,bakassi,,inec-irev
+SC223,CR,SC/223/CR,Biase,biase,,inec-irev
+SC224,CR,SC/224/CR,Boki I,boki-i,,inec-irev
+SC225,CR,SC/225/CR,Boki II,boki-ii,,inec-irev
+SC226,CR,SC/226/CR,Bekwarra,bekwarra,,inec-irev
+SC227,CR,SC/227/CR,Calabar Municipal,calabar-municipal,,inec-irev
+SC228,CR,SC/228/CR,Calabar South I,calabar-south-i,,inec-irev
+SC229,CR,SC/229/CR,Calabar South II,calabar-south-ii,,inec-irev
+SC230,CR,SC/230/CR,Etung,etung,,inec-irev
+SC231,CR,SC/231/CR,Ikom I,ikom-i,,inec-irev
+SC232,CR,SC/232/CR,Ikom II,ikom-ii,,inec-irev
+SC233,CR,SC/233/CR,Obanleku,obanleku,,inec-irev
+SC234,CR,SC/234/CR,Obubra I,obubra-i,,inec-irev
+SC235,CR,SC/235/CR,Obubra II,obubra-ii,,inec-irev
+SC236,CR,SC/236/CR,Obudu,obudu,,inec-irev
+SC237,CR,SC/237/CR,Odukpani,odukpani,,inec-irev
+SC238,CR,SC/238/CR,Ogoja,ogoja,,inec-irev
+SC239,CR,SC/239/CR,Yakurr I,yakurr-i,,inec-irev
+SC240,CR,SC/240/CR,Yakurr II,yakurr-ii,,inec-irev
+SC241,CR,SC/241/CR,Yala I,yala-i,,inec-irev
+SC242,CR,SC/242/CR,Yala II,yala-ii,,inec-irev
+SC243,DE,SC/243/DT,Aniocha North,aniocha-north,,inec-irev
+SC244,DE,SC/244/DT,Aniocha South,aniocha-south,,inec-irev
+SC245,DE,SC/245/DT,Bomadi,bomadi,,inec-irev
+SC246,DE,SC/246/DT,Burutu,burutu,,inec-irev
+SC247,DE,SC/247/DT,Burutu North,burutu-north,,inec-irev
+SC248,DE,SC/248/DT,Ethiope East,ethiope-east,,inec-irev
+SC249,DE,SC/249/DT,Ethiope West,ethiope-west,,inec-irev
+SC250,DE,SC/250/DT,Ika North East,ika-north-east,,inec-irev
+SC251,DE,SC/251/DT,Ika South,ika-south,,inec-irev
+SC252,DE,SC/252/DT,Isoko North,isoko-north,,inec-irev
+SC253,DE,SC/253/DT,Isoko South I,isoko-south-i,,inec-irev
+SC254,DE,SC/254/DT,Isoko South II,isoko-south-ii,,inec-irev
+SC255,DE,SC/255/DT,Ndokwa East,ndokwa-east,,inec-irev
+SC256,DE,SC/256/DT,Ndokwa West,ndokwa-west,,inec-irev
+SC257,DE,SC/257/DT,Okpe,okpe,,inec-irev
+SC258,DE,SC/258/DT,Oshimili North,oshimili-north,,inec-irev
+SC259,DE,SC/259/DT,Oshimili South,oshimili-south,,inec-irev
+SC260,DE,SC/260/DT,Patani,patani,,inec-irev
+SC261,DE,SC/261/DT,Sapele,sapele,,inec-irev
+SC262,DE,SC/262/DT,Udu,udu,,inec-irev
+SC263,DE,SC/263/DT,Ughelli North I,ughelli-north-i,,inec-irev
+SC264,DE,SC/264/DT,Ughelli North II,ughelli-north-ii,,inec-irev
+SC265,DE,SC/265/DT,Ughelli South,ughelli-south,,inec-irev
+SC266,DE,SC/266/DT,Ukwuani,ukwuani,,inec-irev
+SC267,DE,SC/267/DT,Uvwie,uvwie,,inec-irev
+SC268,DE,SC/268/DT,Warri North,warri-north,,inec-irev
+SC269,DE,SC/269/DT,Warri South I,warri-south-i,,inec-irev
+SC270,DE,SC/270/DT,Warri South II,warri-south-ii,,inec-irev
+SC271,DE,SC/271/DT,Warri South-West,warri-south-west,,inec-irev
+SC272,EB,SC/272/EB,Abakaliki North,abakaliki-north,,inec-irev
+SC273,EB,SC/273/EB,Abakaliki South,abakaliki-south,,inec-irev
+SC274,EB,SC/274/EB,Afikpo North East,afikpo-north-east,,inec-irev
+SC275,EB,SC/275/EB,Afikpo North West,afikpo-north-west,,inec-irev
+SC276,EB,SC/276/EB,Afikpo South East,afikpo-south-east,,inec-irev
+SC277,EB,SC/277/EB,Afikpo South West,afikpo-south-west,,inec-irev
+SC278,EB,SC/278/EB,Ebonyi North East,ebonyi-north-east,,inec-irev
+SC279,EB,SC/279/EB,Ebonyi North West,ebonyi-north-west,,inec-irev
+SC280,EB,SC/280/EB,Ezza North East,ezza-north-east,,inec-irev
+SC281,EB,SC/281/EB,Ezza North West,ezza-north-west,,inec-irev
+SC282,EB,SC/282/EB,Ezza South,ezza-south,,inec-irev
+SC283,EB,SC/283/EB,Ikwo North,ikwo-north,,inec-irev
+SC284,EB,SC/284/EB,Ikwo South,ikwo-south,,inec-irev
+SC285,EB,SC/285/EB,Ishielu North,ishielu-north,,inec-irev
+SC286,EB,SC/286/EB,Ishielu South,ishielu-south,,inec-irev
+SC287,EB,SC/287/EB,Ivo,ivo,,inec-irev
+SC288,EB,SC/288/EB,Izzi East,izzi-east,,inec-irev
+SC289,EB,SC/289/EB,Izzi West,izzi-west,,inec-irev
+SC290,EB,SC/290/EB,Ohaozara East,ohaozara-east,,inec-irev
+SC291,EB,SC/291/EB,Ohaozara West,ohaozara-west,,inec-irev
+SC292,EB,SC/292/EB,Onicha East,onicha-east,,inec-irev
+SC293,EB,SC/293/EB,Onicha West,onicha-west,,inec-irev
+SC294,EB,SC/294/EB,Ohaukwu North,ohaukwu-north,,inec-irev
+SC295,EB,SC/295/EB,Ohaukwu South,ohaukwu-south,,inec-irev
+SC296,ED,SC/296/ED,Akoko Edo I,akoko-edo-i,,inec-irev
+SC297,ED,SC/297/ED,Akoko Edo II,akoko-edo-ii,,inec-irev
+SC298,ED,SC/298/ED,Esan Central,esan-central,,inec-irev
+SC299,ED,SC/299/ED,Esan West,esan-west,,inec-irev
+SC300,ED,SC/300/ED,Esan North East I,esan-north-east-i,,inec-irev
+SC301,ED,SC/301/ED,Esan North East II,esan-north-east-ii,,inec-irev
+SC302,ED,SC/302/ED,Essan South East,essan-south-east,,inec-irev
+SC303,ED,SC/303/ED,Etsako Central,etsako-central,,inec-irev
+SC304,ED,SC/304/ED,Etsako East,etsako-east,,inec-irev
+SC305,ED,SC/305/ED,Etsako West I,etsako-west-i,,inec-irev
+SC306,ED,SC/306/ED,Etsako West II,etsako-west-ii,,inec-irev
+SC307,ED,SC/307/ED,Egor,egor,,inec-irev
+SC308,ED,SC/308/ED,Ikpoba-Okha,ikpoba-okha,,inec-irev
+SC309,ED,SC/309/ED,Igueben,igueben,,inec-irev
+SC310,ED,SC/310/ED,Oredo East,oredo-east,,inec-irev
+SC311,ED,SC/311/ED,Oredo West,oredo-west,,inec-irev
+SC312,ED,SC/312/ED,Orhionmwon I,orhionmwon-i,,inec-irev
+SC313,ED,SC/313/ED,Orhionmwon II,orhionmwon-ii,,inec-irev
+SC314,ED,SC/314/ED,Ovia North East I,ovia-north-east-i,,inec-irev
+SC315,ED,SC/315/ED,Ovia North East II,ovia-north-east-ii,,inec-irev
+SC316,ED,SC/316/ED,Ovia South West,ovia-south-west,,inec-irev
+SC317,ED,SC/317/ED,Owan East,owan-east,,inec-irev
+SC318,ED,SC/318/ED,Owan West,owan-west,,inec-irev
+SC319,ED,SC/319/ED,Uhunmwode,uhunmwode,,inec-irev
+SC320,EK,SC/320/EK,Ado I,ado-i,,inec-irev
+SC321,EK,SC/321/EK,Ado II,ado-ii,,inec-irev
+SC322,EK,SC/322/EK,Gbonyin,gbonyin,,inec-irev
+SC323,EK,SC/323/EK,Efon,efon,,inec-irev
+SC324,EK,SC/324/EK,Ekiti East I,ekiti-east-i,,inec-irev
+SC325,EK,SC/325/EK,Ekiti East II,ekiti-east-ii,,inec-irev
+SC326,EK,SC/326/EK,Ekiti West I,ekiti-west-i,,inec-irev
+SC327,EK,SC/327/EK,Ekiti West II,ekiti-west-ii,,inec-irev
+SC328,EK,SC/328/EK,Ekiti South West I,ekiti-south-west-i,,inec-irev
+SC329,EK,SC/329/EK,Ekiti South West II,ekiti-south-west-ii,,inec-irev
+SC330,EK,SC/330/EK,Emure,emure,,inec-irev
+SC331,EK,SC/331/EK,Ido/Osi I,ido-osi-i,,inec-irev
+SC332,EK,SC/332/EK,Ido/Osi II,ido-osi-ii,,inec-irev
+SC333,EK,SC/333/EK,Ijero,ijero,,inec-irev
+SC334,EK,SC/334/EK,Ikere I,ikere-i,,inec-irev
+SC335,EK,SC/335/EK,Ikere II,ikere-ii,,inec-irev
+SC336,EK,SC/336/EK,Ikole I,ikole-i,,inec-irev
+SC337,EK,SC/337/EK,Ikole II,ikole-ii,,inec-irev
+SC338,EK,SC/338/EK,Ilejemeje,ilejemeje,,inec-irev
+SC339,EK,SC/339/EK,Irepodun/Ifelodun I,irepodun-ifelodun-i,,inec-irev
+SC340,EK,SC/340/EK,Irepodun/Ifelodun II,irepodun-ifelodun-ii,,inec-irev
+SC341,EK,SC/341/EK,Ise/Orun,ise-orun,,inec-irev
+SC342,EK,SC/342/EK,Moba I,moba-i,,inec-irev
+SC343,EK,SC/343/EK,Moba II,moba-ii,,inec-irev
+SC344,EK,SC/344/EK,Oye I,oye-i,,inec-irev
+SC345,EK,SC/345/EK,Oye II,oye-ii,,inec-irev
+SC346,EN,SC/346/EN,Aniniri,aniniri,,inec-irev
+SC347,EN,SC/347/EN,Awgu North,awgu-north,,inec-irev
+SC348,EN,SC/348/EN,Awgu South,awgu-south,,inec-irev
+SC349,EN,SC/349/EN,Enugu East I,enugu-east-i,,inec-irev
+SC350,EN,SC/350/EN,Enugu East II,enugu-east-ii,,inec-irev
+SC351,EN,SC/351/EN,Enugu North,enugu-north,,inec-irev
+SC352,EN,SC/352/EN,Enugu South I,enugu-south-i,,inec-irev
+SC353,EN,SC/353/EN,Enugu South II,enugu-south-ii,,inec-irev
+SC354,EN,SC/354/EN,Ezeagu,ezeagu,,inec-irev
+SC355,EN,SC/355/EN,Igbo-Etiti East,igbo-etiti-east,,inec-irev
+SC356,EN,SC/356/EN,Igbo-Etiti West,igbo-etiti-west,,inec-irev
+SC357,EN,SC/357/EN,Igbo-Eze North I,igbo-eze-north-i,,inec-irev
+SC358,EN,SC/358/EN,Igbo-Eze North II,igbo-eze-north-ii,,inec-irev
+SC359,EN,SC/359/EN,Igbo-Eze South,igbo-eze-south,,inec-irev
+SC360,EN,SC/360/EN,Isi-Uzo,isi-uzo,,inec-irev
+SC361,EN,SC/361/EN,Nkanu East,nkanu-east,,inec-irev
+SC362,EN,SC/362/EN,Nkanu West,nkanu-west,,inec-irev
+SC363,EN,SC/363/EN,Nsukka East,nsukka-east,,inec-irev
+SC364,EN,SC/364/EN,Nsukka West,nsukka-west,,inec-irev
+SC365,EN,SC/365/EN,Oji River,oji-river,,inec-irev
+SC366,EN,SC/366/EN,Udenu,udenu,,inec-irev
+SC367,EN,SC/367/EN,Udi North,udi-north,,inec-irev
+SC368,EN,SC/368/EN,Udi South,udi-south,,inec-irev
+SC369,EN,SC/369/EN,Uzo Uwani,uzo-uwani,,inec-irev
+SC370,GO,SC/370/GM,Akko West,akko-west,,inec-irev
+SC371,GO,SC/371/GM,Akko Central,akko-central,,inec-irev
+SC372,GO,SC/372/GM,Akko North,akko-north,,inec-irev
+SC373,GO,SC/373/GM,Balanga North,balanga-north,,inec-irev
+SC374,GO,SC/374/GM,Balanga South,balanga-south,,inec-irev
+SC375,GO,SC/375/GM,Billiri East,billiri-east,,inec-irev
+SC376,GO,SC/376/GM,Billiri West,billiri-west,,inec-irev
+SC377,GO,SC/377/GM,Dukku North,dukku-north,,inec-irev
+SC378,GO,SC/378/GM,Dukku South,dukku-south,,inec-irev
+SC379,GO,SC/379/GM,Funakaye North,funakaye-north,,inec-irev
+SC380,GO,SC/380/GM,Funakaye South,funakaye-south,,inec-irev
+SC381,GO,SC/381/GM,Gombe North,gombe-north,,inec-irev
+SC382,GO,SC/382/GM,Gombe South,gombe-south,,inec-irev
+SC383,GO,SC/383/GM,Kaltungo West,kaltungo-west,,inec-irev
+SC384,GO,SC/384/GM,Kaltungo East,kaltungo-east,,inec-irev
+SC385,GO,SC/385/GM,Nafada North,nafada-north,,inec-irev
+SC386,GO,SC/386/GM,Nafada South,nafada-south,,inec-irev
+SC387,GO,SC/387/GM,Shongom,shongom,,inec-irev
+SC388,GO,SC/388/GM,Pero Chonge,pero-chonge,,inec-irev
+SC389,GO,SC/389/GM,Deba,deba,,inec-irev
+SC390,GO,SC/390/GM,Yamaltu East,yamaltu-east,,inec-irev
+SC391,GO,SC/391/GM,Yamaltu West,yamaltu-west,,inec-irev
+SC392,GO,SC/392/GM,Kwami East,kwami-east,,inec-irev
+SC393,GO,SC/393/GM,Kwami West,kwami-west,,inec-irev
+SC394,IM,SC/394/IM,Aboh Mbaise,aboh-mbaise,,inec-irev
+SC395,IM,SC/395/IM,Ahiazu Mbaise,ahiazu-mbaise,,inec-irev
+SC396,IM,SC/396/IM,Ehime Mbano,ehime-mbano,,inec-irev
+SC397,IM,SC/397/IM,Ezinihitte,ezinihitte,,inec-irev
+SC398,IM,SC/398/IM,Ideato North,ideato-north,,inec-irev
+SC399,IM,SC/399/IM,Ideato South,ideato-south,,inec-irev
+SC400,IM,SC/400/IM,Ihite/Uboma,ihite-uboma,,inec-irev
+SC401,IM,SC/401/IM,Ikeduru,ikeduru,,inec-irev
+SC402,IM,SC/402/IM,Isiala Mbano,isiala-mbano,,inec-irev
+SC403,IM,SC/403/IM,Isu,isu,,inec-irev
+SC404,IM,SC/404/IM,Mbaitoli,mbaitoli,,inec-irev
+SC405,IM,SC/405/IM,Ngor Okpala,ngor-okpala,,inec-irev
+SC406,IM,SC/406/IM,Njaba,njaba,,inec-irev
+SC407,IM,SC/407/IM,Nwangele,nwangele,,inec-irev
+SC408,IM,SC/408/IM,Nkwerre,nkwerre,,inec-irev
+SC409,IM,SC/409/IM,Obowo,obowo,,inec-irev
+SC410,IM,SC/410/IM,Oguta,oguta,,inec-irev
+SC411,IM,SC/411/IM,Ohaji/Egbema,ohaji-egbema,,inec-irev
+SC412,IM,SC/412/IM,Okigwe,okigwe,,inec-irev
+SC413,IM,SC/413/IM,Onuimo,onuimo,,inec-irev
+SC414,IM,SC/414/IM,Orlu,orlu,,inec-irev
+SC415,IM,SC/415/IM,Orsu,orsu,,inec-irev
+SC416,IM,SC/416/IM,Oru East,oru-east,,inec-irev
+SC417,IM,SC/417/IM,Oru West,oru-west,,inec-irev
+SC418,IM,SC/418/IM,Owerri Municipal,owerri-municipal,,inec-irev
+SC419,IM,SC/419/IM,Owerri North,owerri-north,,inec-irev
+SC420,IM,SC/420/IM,Owerri West,owerri-west,,inec-irev
+SC421,JI,SC/421/JG,Auyo,auyo,,inec-irev
+SC422,JI,SC/422/JG,Babura,babura,,inec-irev
+SC423,JI,SC/423/JG,Kanya,kanya,,inec-irev
+SC424,JI,SC/424/JG,Birnin Kudu,birnin-kudu,,inec-irev
+SC425,JI,SC/425/JG,Birniwa,birniwa,,inec-irev
+SC426,JI,SC/426/JG,Buji,buji,,inec-irev
+SC427,JI,SC/427/JG,Dutse,dutse,,inec-irev
+SC428,JI,SC/428/JG,Gagarawa,gagarawa,,inec-irev
+SC429,JI,SC/429/JG,Garki,garki,,inec-irev
+SC430,JI,SC/430/JG,Gumel,gumel,,inec-irev
+SC431,JI,SC/431/JG,Guri,guri,,inec-irev
+SC432,JI,SC/432/JG,Gwaram,gwaram,,inec-irev
+SC433,JI,SC/433/JG,Fagam,fagam,,inec-irev
+SC434,JI,SC/434/JG,Gwiwa,gwiwa,,inec-irev
+SC435,JI,SC/435/JG,Hadejia,hadejia,,inec-irev
+SC436,JI,SC/436/JG,Jahun,jahun,,inec-irev
+SC437,JI,SC/437/JG,K/Hausa,k-hausa,,inec-irev
+SC438,JI,SC/438/JG,Bulangu,bulangu,,inec-irev
+SC439,JI,SC/439/JG,K/Kasamma,k-kasamma,,inec-irev
+SC440,JI,SC/440/JG,Kaugama,kaugama,,inec-irev
+SC441,JI,SC/441/JG,Kazaure,kazaure,,inec-irev
+SC442,JI,SC/442/JG,Kiyawa,kiyawa,,inec-irev
+SC443,JI,SC/443/JG,Maigatar,maigatar,,inec-irev
+SC444,JI,SC/444/JG,M/Madori,m-madori,,inec-irev
+SC445,JI,SC/445/JG,Miga,miga,,inec-irev
+SC446,JI,SC/446/JG,Ringin,ringin,,inec-irev
+SC447,JI,SC/447/JG,Roni,roni,,inec-irev
+SC448,JI,SC/448/JG,S/Tankara,s-tankara,,inec-irev
+SC449,JI,SC/449/JG,Taura,taura,,inec-irev
+SC450,JI,SC/450/JG,Yankwashi,yankwashi,,inec-irev
+SC451,KD,SC/451/KD,Magajin Gari,magajin-gari,,inec-irev
+SC452,KD,SC/452/KD,Kakangi,kakangi,,inec-irev
+SC453,KD,SC/453/KD,Kajuru,kajuru,,inec-irev
+SC454,KD,SC/454/KD,Chikun I,chikun-i,,inec-irev
+SC455,KD,SC/455/KD,Giwa East,giwa-east,,inec-irev
+SC456,KD,SC/456/KD,Giwa West,giwa-west,,inec-irev
+SC457,KD,SC/457/KD,Igabi East,igabi-east,,inec-irev
+SC458,KD,SC/458/KD,Igabi West,igabi-west,,inec-irev
+SC459,KD,SC/459/KD,Ikara,ikara,,inec-irev
+SC460,KD,SC/460/KD,Kubau,kubau,,inec-irev
+SC461,KD,SC/461/KD,Jema'a,jemaa,,inec-irev
+SC462,KD,SC/462/KD,Sanga,sanga,,inec-irev
+SC463,KD,SC/463/KD,Kachia,kachia,,inec-irev
+SC464,KD,SC/464/KD,Kagarko,kagarko,,inec-irev
+SC465,KD,SC/465/KD,Kawo/Gabasawa,kawo-gabasawa,,inec-irev
+SC466,KD,SC/466/KD,Doka,doka,,inec-irev
+SC467,KD,SC/467/KD,Tudun Wada,tudun-wada,,inec-irev
+SC468,KD,SC/468/KD,Makera,makera,,inec-irev
+SC469,KD,SC/469/KD,Unguwar Sanusi,unguwar-sanusi,,inec-irev
+SC470,KD,SC/470/KD,Chawai/Kauru,chawai-kauru,,inec-irev
+SC471,KD,SC/471/KD,Lere,lere,,inec-irev
+SC472,KD,SC/472/KD,Lere East,lere-east,,inec-irev
+SC473,KD,SC/473/KD,Kudan,kudan,,inec-irev
+SC474,KD,SC/474/KD,Makarfi,makarfi,,inec-irev
+SC475,KD,SC/475/KD,Sabon Gari,sabon-gari,,inec-irev
+SC476,KD,SC/476/KD,Basawa,basawa,,inec-irev
+SC477,KD,SC/477/KD,Maigana,maigana,,inec-irev
+SC478,KD,SC/478/KD,Soba,soba,,inec-irev
+SC479,KD,SC/479/KD,Zangon Kataf,zangon-kataf,,inec-irev
+SC480,KD,SC/480/KD,Zonkwa,zonkwa,,inec-irev
+SC481,KD,SC/481/KD,Kewaye,kewaye,,inec-irev
+SC482,KD,SC/482/KD,City,city,,inec-irev
+SC483,KD,SC/483/KD,Jaba,jaba,,inec-irev
+SC484,KD,SC/484/KD,Kaura,kaura,,inec-irev
+SC485,KN,SC/485/KN,Albasu,albasu,,inec-irev
+SC486,KN,SC/486/KN,Shanono/Bagwai,shanono-bagwai,,inec-irev
+SC487,KN,SC/487/KN,Bebeji,bebeji,,inec-irev
+SC488,KN,SC/488/KN,Bichi,bichi,,inec-irev
+SC489,KN,SC/489/KN,Bunkure,bunkure,,inec-irev
+SC490,KN,SC/490/KN,Dala,dala,,inec-irev
+SC491,KN,SC/491/KN,Gwale,gwale,,inec-irev
+SC492,KN,SC/492/KN,Dambatta,dambatta,,inec-irev
+SC493,KN,SC/493/KN,Makoda,makoda,,inec-irev
+SC494,KN,SC/494/KN,Dawakin Kudu,dawakin-kudu,,inec-irev
+SC495,KN,SC/495/KN,Dawakin Tofa,dawakin-tofa,,inec-irev
+SC496,KN,SC/496/KN,Doguwa,doguwa,,inec-irev
+SC497,KN,SC/497/KN,Gabasawa,gabasawa,,inec-irev
+SC498,KN,SC/498/KN,Gaya,gaya,,inec-irev
+SC499,KN,SC/499/KN,Ajingi,ajingi,,inec-irev
+SC500,KN,SC/500/KN,Gezawa,gezawa,,inec-irev
+SC501,KN,SC/501/KN,Gwarzo,gwarzo,,inec-irev
+SC502,KN,SC/502/KN,Kabo,kabo,,inec-irev
+SC503,KN,SC/503/KN,Municipal,municipal,,inec-irev
+SC504,KN,SC/504/KN,Tarauni,tarauni,,inec-irev
+SC505,KN,SC/505/KN,Karaye,karaye,,inec-irev
+SC506,KN,SC/506/KN,Rogo,rogo,,inec-irev
+SC507,KN,SC/507/KN,Kiru,kiru,,inec-irev
+SC508,KN,SC/508/KN,Kumbotso,kumbotso,,inec-irev
+SC509,KN,SC/509/KN,Kura/Gurun Mallam,kura-gurun-mallam,,inec-irev
+SC510,KN,SC/510/KN,Madobi,madobi,,inec-irev
+SC511,KN,SC/511/KN,Minjibir,minjibir,,inec-irev
+SC512,KN,SC/512/KN,Nasarawa,nasarawa,,inec-irev
+SC513,KN,SC/513/KN,Fagge,fagge,,inec-irev
+SC514,KN,SC/514/KN,Rano,rano,,inec-irev
+SC515,KN,SC/515/KN,Kibiya,kibiya,,inec-irev
+SC516,KN,SC/516/KN,Rimi Gado/Tofa,rimi-gado-tofa,,inec-irev
+SC517,KN,SC/517/KN,Sumaila,sumaila,,inec-irev
+SC518,KN,SC/518/KN,Takai,takai,,inec-irev
+SC519,KN,SC/519/KN,Tsanyawa/Kunchi,tsanyawa-kunchi,,inec-irev
+SC520,KN,SC/520/KN,Tudunwada,tudunwada,,inec-irev
+SC521,KN,SC/521/KN,Ungogo,ungogo,,inec-irev
+SC522,KN,SC/522/KN,Warawa,warawa,,inec-irev
+SC523,KN,SC/523/KN,Wudil,wudil,,inec-irev
+SC524,KN,SC/524/KN,Garko,garko,,inec-irev
+SC525,KT,SC/525/KT,Bakori,bakori,,inec-irev
+SC526,KT,SC/526/KT,Batagarawa,batagarawa,,inec-irev
+SC527,KT,SC/527/KT,Batsari,batsari,,inec-irev
+SC528,KT,SC/528/KT,Baure,baure,,inec-irev
+SC529,KT,SC/529/KT,Bindawa,bindawa,,inec-irev
+SC530,KT,SC/530/KT,Charanchi,charanchi,,inec-irev
+SC531,KT,SC/531/KT,Dandume,dandume,,inec-irev
+SC532,KT,SC/532/KT,Danja,danja,,inec-irev
+SC533,KT,SC/533/KT,Danmusa,danmusa,,inec-irev
+SC534,KT,SC/534/KT,Daura,daura,,inec-irev
+SC535,KT,SC/535/KT,Dutsi,dutsi,,inec-irev
+SC536,KT,SC/536/KT,Dutsin-Ma,dutsin-ma,,inec-irev
+SC537,KT,SC/537/KT,Faskari,faskari,,inec-irev
+SC538,KT,SC/538/KT,Funtua,funtua,,inec-irev
+SC539,KT,SC/539/KT,Ingawa,ingawa,,inec-irev
+SC540,KT,SC/540/KT,Jibia,jibia,,inec-irev
+SC541,KT,SC/541/KT,Kafur,kafur,,inec-irev
+SC542,KT,SC/542/KT,Kaita,kaita,,inec-irev
+SC543,KT,SC/543/KT,Kankara,kankara,,inec-irev
+SC544,KT,SC/544/KT,Kankia,kankia,,inec-irev
+SC545,KT,SC/545/KT,Kusada,kusada,,inec-irev
+SC546,KT,SC/546/KT,Katsina,katsina,,inec-irev
+SC547,KT,SC/547/KT,Kurfi,kurfi,,inec-irev
+SC548,KT,SC/548/KT,Mai'adua,maiadua,,inec-irev
+SC549,KT,SC/549/KT,Malumfashi East,malumfashi-east,,inec-irev
+SC550,KT,SC/550/KT,Mani,mani,,inec-irev
+SC551,KT,SC/551/KT,Matazu,matazu,,inec-irev
+SC552,KT,SC/552/KT,Mashi,mashi,,inec-irev
+SC553,KT,SC/553/KT,Musawa,musawa,,inec-irev
+SC554,KT,SC/554/KT,Rimi,rimi,,inec-irev
+SC555,KT,SC/555/KT,Sabuwa,sabuwa,,inec-irev
+SC556,KT,SC/556/KT,Safana,safana,,inec-irev
+SC557,KT,SC/557/KT,Sandamu,sandamu,,inec-irev
+SC558,KT,SC/558/KT,Zango,zango,,inec-irev
+SC559,KE,SC/559/KB,Aleiro,aleiro,,inec-irev
+SC560,KE,SC/560/KB,Arewa,arewa,,inec-irev
+SC561,KE,SC/561/KB,Argungu,argungu,,inec-irev
+SC562,KE,SC/562/KB,Augie,augie,,inec-irev
+SC563,KE,SC/563/KB,Bagudo East,bagudo-east,,inec-irev
+SC564,KE,SC/564/KB,Bagudo West,bagudo-west,,inec-irev
+SC565,KE,SC/565/KB,Birnin Kebbi North,birnin-kebbi-north,,inec-irev
+SC566,KE,SC/566/KB,Birnin Kebbi South,birnin-kebbi-south,,inec-irev
+SC567,KE,SC/567/KB,Bunza,bunza,,inec-irev
+SC568,KE,SC/568/KB,Dandi,dandi,,inec-irev
+SC569,KE,SC/569/KB,Fakai,fakai,,inec-irev
+SC570,KE,SC/570/KB,Gwandu,gwandu,,inec-irev
+SC571,KE,SC/571/KB,Jega,jega,,inec-irev
+SC572,KE,SC/572/KB,Kalgo,kalgo,,inec-irev
+SC573,KE,SC/573/KB,Koko/Besse,koko-besse,,inec-irev
+SC574,KE,SC/574/KB,Maiyama,maiyama,,inec-irev
+SC575,KE,SC/575/KB,Ngaski,ngaski,,inec-irev
+SC576,KE,SC/576/KB,Sakaba,sakaba,,inec-irev
+SC577,KE,SC/577/KB,Shanga,shanga,,inec-irev
+SC578,KE,SC/578/KB,Suru,suru,,inec-irev
+SC579,KE,SC/579/KB,Wasagu/Danko East,wasagu-danko-east,,inec-irev
+SC580,KE,SC/580/KB,Wasagu/Danko West,wasagu-danko-west,,inec-irev
+SC581,KE,SC/581/KB,Yauri,yauri,,inec-irev
+SC582,KE,SC/582/KB,Zuru,zuru,,inec-irev
+SC583,KO,SC/583/KG,Adavi,adavi,,inec-irev
+SC584,KO,SC/584/KG,Ajaokuta,ajaokuta,,inec-irev
+SC585,KO,SC/585/KG,Ankpa I,ankpa-i,,inec-irev
+SC586,KO,SC/586/KG,Ankpa II,ankpa-ii,,inec-irev
+SC587,KO,SC/587/KG,Bassa,bassa,,inec-irev
+SC588,KO,SC/588/KG,Dekina/Biraidu,dekina-biraidu,,inec-irev
+SC589,KO,SC/589/KG,Okura,okura,,inec-irev
+SC590,KO,SC/590/KG,Ibaji,ibaji,,inec-irev
+SC591,KO,SC/591/KG,Idah,idah,,inec-irev
+SC592,KO,SC/592/KG,Igalamela-Odolu,igalamela-odolu,,inec-irev
+SC593,KO,SC/593/KG,Ijumu,ijumu,,inec-irev
+SC594,KO,SC/594/KG,Kabba/Bunu,kabba-bunu,,inec-irev
+SC595,KO,SC/595/KG,Kogi (K.K),kogi-k-k,,inec-irev
+SC596,KO,SC/596/KG,Lokoja I,lokoja-i,,inec-irev
+SC597,KO,SC/597/KG,Lokoja II,lokoja-ii,,inec-irev
+SC598,KO,SC/598/KG,Mopamuro,mopamuro,,inec-irev
+SC599,KO,SC/599/KG,Ofu,ofu,,inec-irev
+SC600,KO,SC/600/KG,Ogori/Magongo,ogori-magongo,,inec-irev
+SC601,KO,SC/601/KG,Okehi,okehi,,inec-irev
+SC602,KO,SC/602/KG,Okene Town,okene-town,,inec-irev
+SC603,KO,SC/603/KG,Okene II (South),okene-ii-south,,inec-irev
+SC604,KO,SC/604/KG,Olamaboro I,olamaboro-i,,inec-irev
+SC605,KO,SC/605/KG,Omala,omala,,inec-irev
+SC606,KO,SC/606/KG,Yagba East,yagba-east,,inec-irev
+SC607,KO,SC/607/KG,Yagba West,yagba-west,,inec-irev
+SC608,KW,SC/608/KW,Afon,afon,,inec-irev
+SC609,KW,SC/609/KW,Onire/Owode,onire-owode,,inec-irev
+SC610,KW,SC/610/KW,Ilesha/Gwanara,ilesha-gwanara,,inec-irev
+SC611,KW,SC/611/KW,Okuta/Ayashkira,okuta-ayashkira,,inec-irev
+SC612,KW,SC/612/KW,Lafiagi,lafiagi,,inec-irev
+SC613,KW,SC/613/KW,Patigi,patigi,,inec-irev
+SC614,KW,SC/614/KW,Ekiti,ekiti,,inec-irev
+SC615,KW,SC/615/KW,Oke-Ero,oke-ero,,inec-irev
+SC616,KW,SC/616/KW,Omupo,omupo,,inec-irev
+SC617,KW,SC/617/KW,Share/Oke-Ode,share-oke-ode,,inec-irev
+SC618,KW,SC/618/KW,Ilorin East,ilorin-east,,inec-irev
+SC619,KW,SC/619/KW,Ilorin South,ilorin-south,,inec-irev
+SC620,KW,SC/620/KW,Ilorin Central,ilorin-central,,inec-irev
+SC621,KW,SC/621/KW,Ilorin North West,ilorin-north-west,,inec-irev
+SC622,KW,SC/622/KW,Irepodun,irepodun,,inec-irev
+SC623,KW,SC/623/KW,Isin,isin,,inec-irev
+SC624,KW,SC/624/KW,Gwanabe/Adena/Banni,gwanabe-adena-banni,,inec-irev
+SC625,KW,SC/625/KW,Kaiama/Wajibe/Kemanji,kaiama-wajibe-kemanji,,inec-irev
+SC626,KW,SC/626/KW,Lanwa/Ejidongari,lanwa-ejidongari,,inec-irev
+SC627,KW,SC/627/KW,Oloru/Malete/Ipaiye,oloru-malete-ipaiye,,inec-irev
+SC628,KW,SC/628/KW,Balogun/Ojumu,balogun-ojumu,,inec-irev
+SC629,KW,SC/629/KW,Shawo/Essa,shawo-essa,,inec-irev
+SC630,KW,SC/630/KW,Odo-Ogun,odo-ogun,,inec-irev
+SC631,KW,SC/631/KW,Oke-Ogun,oke-ogun,,inec-irev
+SC632,LA,SC/632/LA,Agege I,agege-i,,inec-irev
+SC633,LA,SC/633/LA,Agege II,agege-ii,,inec-irev
+SC634,LA,SC/634/LA,Ajeromi/Ifelodun I,ajeromi-ifelodun-i,,inec-irev
+SC635,LA,SC/635/LA,Ajeromi/Ifelodun II,ajeromi-ifelodun-ii,,inec-irev
+SC636,LA,SC/636/LA,Alimosho I,alimosho-i,,inec-irev
+SC637,LA,SC/637/LA,Alimosho II,alimosho-ii,,inec-irev
+SC638,LA,SC/638/LA,Amuwo Odofin I,amuwo-odofin-i,,inec-irev
+SC639,LA,SC/639/LA,Amuwo Odofin II,amuwo-odofin-ii,,inec-irev
+SC640,LA,SC/640/LA,Apapa I,apapa-i,,inec-irev
+SC641,LA,SC/641/LA,Apapa II,apapa-ii,,inec-irev
+SC642,LA,SC/642/LA,Badagry I,badagry-i,,inec-irev
+SC643,LA,SC/643/LA,Badagry II,badagry-ii,,inec-irev
+SC644,LA,SC/644/LA,Epe I,epe-i,,inec-irev
+SC645,LA,SC/645/LA,Epe II,epe-ii,,inec-irev
+SC646,LA,SC/646/LA,Eti-Osa I,eti-osa-i,,inec-irev
+SC647,LA,SC/647/LA,Eti-Osa II,eti-osa-ii,,inec-irev
+SC648,LA,SC/648/LA,Ibeju-Lekki I,ibeju-lekki-i,,inec-irev
+SC649,LA,SC/649/LA,Ibeju-Lekki II,ibeju-lekki-ii,,inec-irev
+SC650,LA,SC/650/LA,Ifako/Ijaiye I,ifako-ijaiye-i,,inec-irev
+SC651,LA,SC/651/LA,Ifako/Ijaiye II,ifako-ijaiye-ii,,inec-irev
+SC652,LA,SC/652/LA,Ikeja I,ikeja-i,,inec-irev
+SC653,LA,SC/653/LA,Ikeja II,ikeja-ii,,inec-irev
+SC654,LA,SC/654/LA,Ikorodu I,ikorodu-i,,inec-irev
+SC655,LA,SC/655/LA,Ikorodu II,ikorodu-ii,,inec-irev
+SC656,LA,SC/656/LA,Kosofe I,kosofe-i,,inec-irev
+SC657,LA,SC/657/LA,Kosofe II,kosofe-ii,,inec-irev
+SC658,LA,SC/658/LA,Lagos Island I,lagos-island-i,,inec-irev
+SC659,LA,SC/659/LA,Lagos Island II,lagos-island-ii,,inec-irev
+SC660,LA,SC/660/LA,Lagos Mainland I,lagos-mainland-i,,inec-irev
+SC661,LA,SC/661/LA,Lagos Mainland II,lagos-mainland-ii,,inec-irev
+SC662,LA,SC/662/LA,Mushin I,mushin-i,,inec-irev
+SC663,LA,SC/663/LA,Mushin II,mushin-ii,,inec-irev
+SC664,LA,SC/664/LA,Ojo I,ojo-i,,inec-irev
+SC665,LA,SC/665/LA,Ojo II,ojo-ii,,inec-irev
+SC666,LA,SC/666/LA,Oshodi/Isolo I,oshodi-isolo-i,,inec-irev
+SC667,LA,SC/667/LA,Oshodi/Isolo II,oshodi-isolo-ii,,inec-irev
+SC668,LA,SC/668/LA,Shomolu I,shomolu-i,,inec-irev
+SC669,LA,SC/669/LA,Shomolu II,shomolu-ii,,inec-irev
+SC670,LA,SC/670/LA,Surulere I,surulere-i,,inec-irev
+SC671,LA,SC/671/LA,Surulere II,surulere-ii,,inec-irev
+SC672,NA,SC/672/NW,Akwanga North,akwanga-north,,inec-irev
+SC673,NA,SC/673/NW,Akwanga South,akwanga-south,,inec-irev
+SC674,NA,SC/674/NW,Awe North,awe-north,,inec-irev
+SC675,NA,SC/675/NW,Awe South,awe-south,,inec-irev
+SC676,NA,SC/676/NW,Doma North,doma-north,,inec-irev
+SC677,NA,SC/677/NW,Doma South,doma-south,,inec-irev
+SC678,NA,SC/678/NW,Karu/Gitata,karu-gitata,,inec-irev
+SC679,NA,SC/679/NW,Karshi/Uke,karshi-uke,,inec-irev
+SC680,NA,SC/680/NW,Keana,keana,,inec-irev
+SC681,NA,SC/681/NW,Keffi West,keffi-west,,inec-irev
+SC682,NA,SC/682/NW,Keffi East,keffi-east,,inec-irev
+SC683,NA,SC/683/NW,Kokona East,kokona-east,,inec-irev
+SC684,NA,SC/684/NW,Kokona West,kokona-west,,inec-irev
+SC685,NA,SC/685/NW,Lafia Central,lafia-central,,inec-irev
+SC686,NA,SC/686/NW,Lafia North,lafia-north,,inec-irev
+SC687,NA,SC/687/NW,Nasarawa,nasarawa,,inec-irev
+SC688,NA,SC/688/NW,Loki/Udege,loki-udege,,inec-irev
+SC689,NA,SC/689/NW,Nass-Eggon West,nass-eggon-west,,inec-irev
+SC690,NA,SC/690/NW,Nass-Eggon East,nass-eggon-east,,inec-irev
+SC691,NA,SC/691/NW,Obi I,obi-i,,inec-irev
+SC692,NA,SC/692/NW,Obi II,obi-ii,,inec-irev
+SC693,NA,SC/693/NW,Gadabuke/Toto,gadabuke-toto,,inec-irev
+SC694,NA,SC/694/NW,Umaisha,umaisha,,inec-irev
+SC695,NA,SC/695/NW,Wamba,wamba,,inec-irev
+SC696,NI,SC/696/NG,Agaie,agaie,,inec-irev
+SC697,NI,SC/697/NG,Agwara,agwara,,inec-irev
+SC698,NI,SC/698/NG,Bida I,bida-i,,inec-irev
+SC699,NI,SC/699/NG,Bida II,bida-ii,,inec-irev
+SC700,NI,SC/700/NG,Borgu,borgu,,inec-irev
+SC701,NI,SC/701/NG,Bosso,bosso,,inec-irev
+SC702,NI,SC/702/NG,Chanchanga,chanchanga,,inec-irev
+SC703,NI,SC/703/NG,Edatti,edatti,,inec-irev
+SC704,NI,SC/704/NG,Gbako,gbako,,inec-irev
+SC705,NI,SC/705/NG,Gurara,gurara,,inec-irev
+SC706,NI,SC/706/NG,Katcha,katcha,,inec-irev
+SC707,NI,SC/707/NG,Kontagora I,kontagora-i,,inec-irev
+SC708,NI,SC/708/NG,Kotangora II,kotangora-ii,,inec-irev
+SC709,NI,SC/709/NG,Lapai,lapai,,inec-irev
+SC710,NI,SC/710/NG,Lavun,lavun,,inec-irev
+SC711,NI,SC/711/NG,Magama,magama,,inec-irev
+SC712,NI,SC/712/NG,Mariga,mariga,,inec-irev
+SC713,NI,SC/713/NG,Mashegu,mashegu,,inec-irev
+SC714,NI,SC/714/NG,Mokwa,mokwa,,inec-irev
+SC715,NI,SC/715/NG,Munya,munya,,inec-irev
+SC716,NI,SC/716/NG,Paikoro,paikoro,,inec-irev
+SC717,NI,SC/717/NG,Rafi,rafi,,inec-irev
+SC718,NI,SC/718/NG,Rijau,rijau,,inec-irev
+SC719,NI,SC/719/NG,Shiroro,shiroro,,inec-irev
+SC720,NI,SC/720/NG,Suleja,suleja,,inec-irev
+SC721,NI,SC/721/NG,Tapa,tapa,,inec-irev
+SC722,NI,SC/722/NG,Wushishi,wushishi,,inec-irev
+SC723,OG,SC/723/OG,Abeokuta South I,abeokuta-south-i,,inec-irev
+SC724,OG,SC/724/OG,Abeokuta South II,abeokuta-south-ii,,inec-irev
+SC725,OG,SC/725/OG,Odeda Area,odeda-area,,inec-irev
+SC726,OG,SC/726/OG,Abeokuta North,abeokuta-north,,inec-irev
+SC727,OG,SC/727/OG,Obafemi/Owode,obafemi-owode,,inec-irev
+SC728,OG,SC/728/OG,Ifo I,ifo-i,,inec-irev
+SC729,OG,SC/729/OG,Ifo II,ifo-ii,,inec-irev
+SC730,OG,SC/730/OG,Ewekoro/Itori/Elere-Adubi,ewekoro-itori-elere-adubi,,inec-irev
+SC731,OG,SC/731/OG,Ijebu North I (Ijebu-Igbo),ijebu-north-i-ijebu-igbo,,inec-irev
+SC732,OG,SC/732/OG,Ijebu North II (Ago-Iwoye/Oru/Awa),ijebu-north-ii-ago-iwoye-oru-awa,,inec-irev
+SC733,OG,SC/733/OG,Ijebu East Area,ijebu-east-area,,inec-irev
+SC734,OG,SC/734/OG,Ogun Waterside (Abigi/Ibiade/Iwopin/Oni),ogun-waterside-abigi-ibiade-iwopin-oni,,inec-irev
+SC735,OG,SC/735/OG,Ijebu-Ode,ijebu-ode,,inec-irev
+SC736,OG,SC/736/OG,Odogbolu (Alekkun-Ifesowapo/Laporu),odogbolu-alekkun-ifesowapo-laporu,,inec-irev
+SC737,OG,SC/737/OG,Ijebu North East Ilugun-Alaro,ijebu-north-east-ilugun-alaro,,inec-irev
+SC738,OG,SC/738/OG,Sagamu I Offin,sagamu-i-offin,,inec-irev
+SC739,OG,SC/739/OG,Sagamu II Makun,sagamu-ii-makun,,inec-irev
+SC740,OG,SC/740/OG,Ikenne (Irepodun),ikenne-irepodun,,inec-irev
+SC741,OG,SC/741/OG,Remo North (Idarapo),remo-north-idarapo,,inec-irev
+SC742,OG,SC/742/OG,Imeko-Afon,imeko-afon,,inec-irev
+SC743,OG,SC/743/OG,Egbado North I,egbado-north-i,,inec-irev
+SC744,OG,SC/744/OG,Egbado North II,egbado-north-ii,,inec-irev
+SC745,OG,SC/745/OG,Idiroko Ipokia,idiroko-ipokia,,inec-irev
+SC746,OG,SC/746/OG,Egbado South (Ilaro/Owode),egbado-south-ilaro-owode,,inec-irev
+SC747,OG,SC/747/OG,Ado/Odo/Ota I,ado-odo-ota-i,,inec-irev
+SC748,OG,SC/748/OG,Ado-Odo/Ota II,ado-odo-ota-ii,,inec-irev
+SC749,ON,SC/749/OD,Akoko North East,akoko-north-east,,inec-irev
+SC750,ON,SC/750/OD,Akoko North West I,akoko-north-west-i,,inec-irev
+SC751,ON,SC/751/OD,Akoko North West II,akoko-north-west-ii,,inec-irev
+SC752,ON,SC/752/OD,Akoko South East,akoko-south-east,,inec-irev
+SC753,ON,SC/753/OD,Akoko South West I,akoko-south-west-i,,inec-irev
+SC754,ON,SC/754/OD,Akoko South West II,akoko-south-west-ii,,inec-irev
+SC755,ON,SC/755/OD,Akure North,akure-north,,inec-irev
+SC756,ON,SC/756/OD,Akure South I,akure-south-i,,inec-irev
+SC757,ON,SC/757/OD,Akure South II,akure-south-ii,,inec-irev
+SC758,ON,SC/758/OD,Ese Odo,ese-odo,,inec-irev
+SC759,ON,SC/759/OD,Idanre,idanre,,inec-irev
+SC760,ON,SC/760/OD,Ifedore,ifedore,,inec-irev
+SC761,ON,SC/761/OD,Ilaje I,ilaje-i,,inec-irev
+SC762,ON,SC/762/OD,Ilaje II,ilaje-ii,,inec-irev
+SC763,ON,SC/763/OD,Ileoluji/Okeigbo,ileoluji-okeigbo,,inec-irev
+SC764,ON,SC/764/OD,Irele,irele,,inec-irev
+SC765,ON,SC/765/OD,Odigbo I,odigbo-i,,inec-irev
+SC766,ON,SC/766/OD,Odigbo II,odigbo-ii,,inec-irev
+SC767,ON,SC/767/OD,Okitipupa I,okitipupa-i,,inec-irev
+SC768,ON,SC/768/OD,Okitipupa II,okitipupa-ii,,inec-irev
+SC769,ON,SC/769/OD,Ondo East,ondo-east,,inec-irev
+SC770,ON,SC/770/OD,Ondo West I,ondo-west-i,,inec-irev
+SC771,ON,SC/771/OD,Ondo West II,ondo-west-ii,,inec-irev
+SC772,ON,SC/772/OD,Ese,ese,,inec-irev
+SC773,ON,SC/773/OD,Owo I,owo-i,,inec-irev
+SC774,ON,SC/774/OD,Owo II,owo-ii,,inec-irev
+SC775,OS,SC/775/OS,Boripe/Boluwa-Duro,boripe-boluwa-duro,,inec-irev
+SC776,OS,SC/776/OS,Ifelodun,ifelodun,,inec-irev
+SC777,OS,SC/777/OS,Ila,ila,,inec-irev
+SC778,OS,SC/778/OS,Ifedayo,ifedayo,,inec-irev
+SC779,OS,SC/779/OS,Irepodun/Orulu,irepodun-orulu,,inec-irev
+SC780,OS,SC/780/OS,Odo-Otin,odo-otin,,inec-irev
+SC781,OS,SC/781/OS,Olorunda,olorunda,,inec-irev
+SC782,OS,SC/782/OS,Osogbo,osogbo,,inec-irev
+SC783,OS,SC/783/OS,Atakunmosa East And West,atakunmosa-east-and-west,,inec-irev
+SC784,OS,SC/784/OS,Ife Central,ife-central,,inec-irev
+SC785,OS,SC/785/OS,Ife East,ife-east,,inec-irev
+SC786,OS,SC/786/OS,Ife North,ife-north,,inec-irev
+SC787,OS,SC/787/OS,Ife South,ife-south,,inec-irev
+SC788,OS,SC/788/OS,Ilesa East,ilesa-east,,inec-irev
+SC789,OS,SC/789/OS,Ilesa West,ilesa-west,,inec-irev
+SC790,OS,SC/790/OS,Obokun,obokun,,inec-irev
+SC791,OS,SC/791/OS,Oriade,oriade,,inec-irev
+SC792,OS,SC/792/OS,Ayedade,ayedade,,inec-irev
+SC793,OS,SC/793/OS,Ayedire,ayedire,,inec-irev
+SC794,OS,SC/794/OS,Ede North,ede-north,,inec-irev
+SC795,OS,SC/795/OS,Ede South,ede-south,,inec-irev
+SC796,OS,SC/796/OS,Egbedore,egbedore,,inec-irev
+SC797,OS,SC/797/OS,Irewole/Isokan,irewole-isokan,,inec-irev
+SC798,OS,SC/798/OS,Iwo,iwo,,inec-irev
+SC799,OS,SC/799/OS,Ola-Oluwa,ola-oluwa,,inec-irev
+SC800,OS,SC/800/OS,Ejigbo,ejigbo,,inec-irev
+SC801,OY,SC/801/OY,Afijio,afijio,,inec-irev
+SC802,OY,SC/802/OY,Akinyele I,akinyele-i,,inec-irev
+SC803,OY,SC/803/OY,Akinyele II,akinyele-ii,,inec-irev
+SC804,OY,SC/804/OY,Saki West,saki-west,,inec-irev
+SC805,OY,SC/805/OY,Ibadan North West,ibadan-north-west,,inec-irev
+SC806,OY,SC/806/OY,Egbeda,egbeda,,inec-irev
+SC807,OY,SC/807/OY,Ibadan North I,ibadan-north-i,,inec-irev
+SC808,OY,SC/808/OY,Ibadan North II,ibadan-north-ii,,inec-irev
+SC809,OY,SC/809/OY,Ibadan North East I,ibadan-north-east-i,,inec-irev
+SC810,OY,SC/810/OY,Ibadan North-East II,ibadan-north-east-ii,,inec-irev
+SC811,OY,SC/811/OY,Ibadan South-East I,ibadan-south-east-i,,inec-irev
+SC812,OY,SC/812/OY,Ibadan South-East II,ibadan-south-east-ii,,inec-irev
+SC813,OY,SC/813/OY,Ibadan South-West I,ibadan-south-west-i,,inec-irev
+SC814,OY,SC/814/OY,Ibadan South West II,ibadan-south-west-ii,,inec-irev
+SC815,OY,SC/815/OY,Ibarapa North & Ibarapa Central,ibarapa-north-ibarapa-central,,inec-irev
+SC816,OY,SC/816/OY,Ibarapa East,ibarapa-east,,inec-irev
+SC817,OY,SC/817/OY,Ido,ido,,inec-irev
+SC818,OY,SC/818/OY,Saki East And Atisbo,saki-east-and-atisbo,,inec-irev
+SC819,OY,SC/819/OY,Irepo & Olorunsogo,irepo-olorunsogo,,inec-irev
+SC820,OY,SC/820/OY,Iseyin And Itesiwaju,iseyin-and-itesiwaju,,inec-irev
+SC821,OY,SC/821/OY,Kajola,kajola,,inec-irev
+SC822,OY,SC/822/OY,Iwajowa,iwajowa,,inec-irev
+SC823,OY,SC/823/OY,Lagelu,lagelu,,inec-irev
+SC824,OY,SC/824/OY,Ogbomoso North,ogbomoso-north,,inec-irev
+SC825,OY,SC/825/OY,Ogbomoso South,ogbomoso-south,,inec-irev
+SC826,OY,SC/826/OY,Oluyole,oluyole,,inec-irev
+SC827,OY,SC/827/OY,Ona-Ara,ona-ara,,inec-irev
+SC828,OY,SC/828/OY,Oorelope,oorelope,,inec-irev
+SC829,OY,SC/829/OY,Oriire,oriire,,inec-irev
+SC830,OY,SC/830/OY,Atiba,atiba,,inec-irev
+SC831,OY,SC/831/OY,Oyo West & Oyo East,oyo-west-oyo-east,,inec-irev
+SC832,OY,SC/832/OY,Ogo-Oluwa And Surulere,ogo-oluwa-and-surulere,,inec-irev
+SC833,PL,SC/833/PL,Barkin Ladi,barkin-ladi,,inec-irev
+SC834,PL,SC/834/PL,Pengana,pengana,,inec-irev
+SC835,PL,SC/835/PL,Rukuba/Irigwe,rukuba-irigwe,,inec-irev
+SC836,PL,SC/836/PL,Bokkos,bokkos,,inec-irev
+SC837,PL,SC/837/PL,Jos East,jos-east,,inec-irev
+SC838,PL,SC/838/PL,Jos North,jos-north,,inec-irev
+SC839,PL,SC/839/PL,Jos West,jos-west,,inec-irev
+SC840,PL,SC/840/PL,Jos South,jos-south,,inec-irev
+SC841,PL,SC/841/PL,Kanke,kanke,,inec-irev
+SC842,PL,SC/842/PL,Pankshin North,pankshin-north,,inec-irev
+SC843,PL,SC/843/PL,Pankshin South,pankshin-south,,inec-irev
+SC844,PL,SC/844/PL,Kanam,kanam,,inec-irev
+SC845,PL,SC/845/PL,Kantana,kantana,,inec-irev
+SC846,PL,SC/846/PL,Langtang North,langtang-north,,inec-irev
+SC847,PL,SC/847/PL,Langtang Central,langtang-central,,inec-irev
+SC848,PL,SC/848/PL,Langtang South (Mabudi),langtang-south-mabudi,,inec-irev
+SC849,PL,SC/849/PL,Mangu South,mangu-south,,inec-irev
+SC850,PL,SC/850/PL,Mangu North,mangu-north,,inec-irev
+SC851,PL,SC/851/PL,Mikang,mikang,,inec-irev
+SC852,PL,SC/852/PL,Qua'an Pan North,quaan-pan-north,,inec-irev
+SC853,PL,SC/853/PL,Qua'an Pan South,quaan-pan-south,,inec-irev
+SC854,PL,SC/854/PL,Riyom,riyom,,inec-irev
+SC855,PL,SC/855/PL,Shendam,shendam,,inec-irev
+SC856,PL,SC/856/PL,Wase,wase,,inec-irev
+SC857,RI,SC/857/RV,Abua/Odual,abua-odual,,inec-irev
+SC858,RI,SC/858/RV,Ahoada East I,ahoada-east-i,,inec-irev
+SC859,RI,SC/859/RV,Ahoada East II,ahoada-east-ii,,inec-irev
+SC860,RI,SC/860/RV,Ahoada West,ahoada-west,,inec-irev
+SC861,RI,SC/861/RV,Akuku-Toru I,akuku-toru-i,,inec-irev
+SC862,RI,SC/862/RV,Akuku-Toru II,akuku-toru-ii,,inec-irev
+SC863,RI,SC/863/RV,Andoni I,andoni-i,,inec-irev
+SC864,RI,SC/864/RV,Asari-Toru I,asari-toru-i,,inec-irev
+SC865,RI,SC/865/RV,Asari-Toru II,asari-toru-ii,,inec-irev
+SC866,RI,SC/866/RV,Bonny,bonny,,inec-irev
+SC867,RI,SC/867/RV,Degema,degema,,inec-irev
+SC868,RI,SC/868/RV,Emohua,emohua,,inec-irev
+SC869,RI,SC/869/RV,Eleme,eleme,,inec-irev
+SC870,RI,SC/870/RV,Etche I,etche-i,,inec-irev
+SC871,RI,SC/871/RV,Etche II,etche-ii,,inec-irev
+SC872,RI,SC/872/RV,Gokana,gokana,,inec-irev
+SC873,RI,SC/873/RV,Ikwere I,ikwere-i,,inec-irev
+SC874,RI,SC/874/RV,Khana I,khana-i,,inec-irev
+SC875,RI,SC/875/RV,Khana II,khana-ii,,inec-irev
+SC876,RI,SC/876/RV,Obio/Akpor I,obio-akpor-i,,inec-irev
+SC877,RI,SC/877/RV,Obio/Akpor II,obio-akpor-ii,,inec-irev
+SC878,RI,SC/878/RV,Ogba/Egbema/Ndoni) Onelga I,ogba-egbema-ndoni-onelga-i,,inec-irev
+SC879,RI,SC/879/RV,Onelga II,onelga-ii,,inec-irev
+SC880,RI,SC/880/RV,Ogu/Bolo,ogu-bolo,,inec-irev
+SC881,RI,SC/881/RV,Okrika,okrika,,inec-irev
+SC882,RI,SC/882/RV,Omuma,omuma,,inec-irev
+SC883,RI,SC/883/RV,Opobo/Nkoro,opobo-nkoro,,inec-irev
+SC884,RI,SC/884/RV,Oyigbo,oyigbo,,inec-irev
+SC885,RI,SC/885/RV,Port-Harcourt I,port-harcourt-i,,inec-irev
+SC886,RI,SC/886/RV,Port-Harcourt II,port-harcourt-ii,,inec-irev
+SC887,RI,SC/887/RV,Port-Harcourt III,port-harcourt-iii,,inec-irev
+SC888,RI,SC/888/RV,Tai,tai,,inec-irev
+SC889,SO,SC/889/SO,Binji,binji,,inec-irev
+SC890,SO,SC/890/SO,Bodinga North,bodinga-north,,inec-irev
+SC891,SO,SC/891/SO,Bodinga South,bodinga-south,,inec-irev
+SC892,SO,SC/892/SO,Dange Shuni,dange-shuni,,inec-irev
+SC893,SO,SC/893/SO,Gada East,gada-east,,inec-irev
+SC894,SO,SC/894/SO,Gada West,gada-west,,inec-irev
+SC895,SO,SC/895/SO,Goronyo,goronyo,,inec-irev
+SC896,SO,SC/896/SO,Gudu,gudu,,inec-irev
+SC897,SO,SC/897/SO,Gwadabawa North,gwadabawa-north,,inec-irev
+SC898,SO,SC/898/SO,Gwadabawa South,gwadabawa-south,,inec-irev
+SC899,SO,SC/899/SO,Illela,illela,,inec-irev
+SC900,SO,SC/900/SO,Isa,isa,,inec-irev
+SC901,SO,SC/901/SO,Kware,kware,,inec-irev
+SC902,SO,SC/902/SO,Kebbe,kebbe,,inec-irev
+SC903,SO,SC/903/SO,Rabah,rabah,,inec-irev
+SC904,SO,SC/904/SO,Sabon Birin North,sabon-birin-north,,inec-irev
+SC905,SO,SC/905/SO,Sabon Birin South,sabon-birin-south,,inec-irev
+SC906,SO,SC/906/SO,Shagari,shagari,,inec-irev
+SC907,SO,SC/907/SO,Silame,silame,,inec-irev
+SC908,SO,SC/908/SO,Sokoto North,sokoto-north,,inec-irev
+SC909,SO,SC/909/SO,Sokoto North II,sokoto-north-ii,,inec-irev
+SC910,SO,SC/910/SO,Sokoto South I,sokoto-south-i,,inec-irev
+SC911,SO,SC/911/SO,Sokoto South II,sokoto-south-ii,,inec-irev
+SC912,SO,SC/912/SO,Tambuwal West,tambuwal-west,,inec-irev
+SC913,SO,SC/913/SO,Tambuwal East,tambuwal-east,,inec-irev
+SC914,SO,SC/914/SO,Tangaza,tangaza,,inec-irev
+SC915,SO,SC/915/SO,Tureta,tureta,,inec-irev
+SC916,SO,SC/916/SO,Wamakko,wamakko,,inec-irev
+SC917,SO,SC/917/SO,Wurno,wurno,,inec-irev
+SC918,SO,SC/918/SO,Yabo,yabo,,inec-irev
+SC919,TA,SC/919/TR,Bali I,bali-i,,inec-irev
+SC920,TA,SC/920/TR,Bali II,bali-ii,,inec-irev
+SC921,TA,SC/921/TR,Gassol I,gassol-i,,inec-irev
+SC922,TA,SC/922/TR,Gassol II,gassol-ii,,inec-irev
+SC923,TA,SC/923/TR,Jalingo I,jalingo-i,,inec-irev
+SC924,TA,SC/924/TR,Jalingo II,jalingo-ii,,inec-irev
+SC925,TA,SC/925/TR,Ardo-Kola,ardo-kola,,inec-irev
+SC926,TA,SC/926/TR,Takum I,takum-i,,inec-irev
+SC927,TA,SC/927/TR,Kashimbila,kashimbila,,inec-irev
+SC928,TA,SC/928/TR,Ussa/Likam,ussa-likam,,inec-irev
+SC929,TA,SC/929/TR,Gembu,gembu,,inec-irev
+SC930,TA,SC/930/TR,Nguroje,nguroje,,inec-irev
+SC931,TA,SC/931/TR,Mbamnga,mbamnga,,inec-irev
+SC932,TA,SC/932/TR,Baissa,baissa,,inec-irev
+SC933,TA,SC/933/TR,Zing,zing,,inec-irev
+SC934,TA,SC/934/TR,Karim Lamido I,karim-lamido-i,,inec-irev
+SC935,TA,SC/935/TR,Karim Lamido II,karim-lamido-ii,,inec-irev
+SC936,TA,SC/936/TR,Wukari I,wukari-i,,inec-irev
+SC937,TA,SC/937/TR,Wukari II,wukari-ii,,inec-irev
+SC938,TA,SC/938/TR,Ibi,ibi,,inec-irev
+SC939,TA,SC/939/TR,Donda,donda,,inec-irev
+SC940,TA,SC/940/TR,Gashaka,gashaka,,inec-irev
+SC941,TA,SC/941/TR,Lau,lau,,inec-irev
+SC942,TA,SC/942/TR,Yorro,yorro,,inec-irev
+SC943,YO,SC/943/YB,Bade East,bade-east,,inec-irev
+SC944,YO,SC/944/YB,Bade West,bade-west,,inec-irev
+SC945,YO,SC/945/YB,Bursari,bursari,,inec-irev
+SC946,YO,SC/946/YB,Damaturu I,damaturu-i,,inec-irev
+SC947,YO,SC/947/YB,Damaturu II,damaturu-ii,,inec-irev
+SC948,YO,SC/948/YB,Fika/Ngalda,fika-ngalda,,inec-irev
+SC949,YO,SC/949/YB,Goya/Ngeji,goya-ngeji,,inec-irev
+SC950,YO,SC/950/YB,Damagum,damagum,,inec-irev
+SC951,YO,SC/951/YB,Jajere,jajere,,inec-irev
+SC952,YO,SC/952/YB,Geidam South,geidam-south,,inec-irev
+SC953,YO,SC/953/YB,Geidam North,geidam-north,,inec-irev
+SC954,YO,SC/954/YB,Gujba,gujba,,inec-irev
+SC955,YO,SC/955/YB,Gulani,gulani,,inec-irev
+SC956,YO,SC/956/YB,Jakusko,jakusko,,inec-irev
+SC957,YO,SC/957/YB,Karasuwa,karasuwa,,inec-irev
+SC958,YO,SC/958/YB,Machina,machina,,inec-irev
+SC959,YO,SC/959/YB,Nangere,nangere,,inec-irev
+SC960,YO,SC/960/YB,Nguru I,nguru-i,,inec-irev
+SC961,YO,SC/961/YB,Nguru II,nguru-ii,,inec-irev
+SC962,YO,SC/962/YB,Potiskum Town,potiskum-town,,inec-irev
+SC963,YO,SC/963/YB,Mamudo,mamudo,,inec-irev
+SC964,YO,SC/964/YB,Tarmuwa,tarmuwa,,inec-irev
+SC965,YO,SC/965/YB,Yunusari,yunusari,,inec-irev
+SC966,YO,SC/966/YB,Yunufari,yunufari,,inec-irev
+SC967,ZA,SC/967/ZF,K/Namoda North,k-namoda-north,,inec-irev
+SC968,ZA,SC/968/ZF,K/Namoda South,k-namoda-south,,inec-irev
+SC969,ZA,SC/969/ZF,Birnin Magaji,birnin-magaji,,inec-irev
+SC970,ZA,SC/970/ZF,Zurmi East,zurmi-east,,inec-irev
+SC971,ZA,SC/971/ZF,Zurmi West,zurmi-west,,inec-irev
+SC972,ZA,SC/972/ZF,Shinkafi,shinkafi,,inec-irev
+SC973,ZA,SC/973/ZF,Tsafe East,tsafe-east,,inec-irev
+SC974,ZA,SC/974/ZF,Tsafe West,tsafe-west,,inec-irev
+SC975,ZA,SC/975/ZF,Gusau I,gusau-i,,inec-irev
+SC976,ZA,SC/976/ZF,Gusau II,gusau-ii,,inec-irev
+SC977,ZA,SC/977/ZF,Bungudu East,bungudu-east,,inec-irev
+SC978,ZA,SC/978/ZF,Bungudu West,bungudu-west,,inec-irev
+SC979,ZA,SC/979/ZF,Maru North,maru-north,,inec-irev
+SC980,ZA,SC/980/ZF,Maru South,maru-south,,inec-irev
+SC981,ZA,SC/981/ZF,Anka,anka,,inec-irev
+SC982,ZA,SC/982/ZF,T/Mafara North,t-mafara-north,,inec-irev
+SC983,ZA,SC/983/ZF,T/Mafara South,t-mafara-south,,inec-irev
+SC984,ZA,SC/984/ZF,Bakura,bakura,,inec-irev
+SC985,ZA,SC/985/ZF,Maradun I,maradun-i,,inec-irev
+SC986,ZA,SC/986/ZF,Maradun II,maradun-ii,,inec-irev
+SC987,ZA,SC/987/ZF,Gummi I,gummi-i,,inec-irev
+SC988,ZA,SC/988/ZF,Gummi II,gummi-ii,,inec-irev
+SC989,ZA,SC/989/ZF,Bukkuyum North,bukkuyum-north,,inec-irev
+SC990,ZA,SC/990/ZF,Bukkuyum South,bukkuyum-south,,inec-irev

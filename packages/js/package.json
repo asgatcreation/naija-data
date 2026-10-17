@@ -50,6 +50,16 @@
         "default": "./dist/wards.cjs"
       }
     },
+    "./constituencies": {
+      "import": {
+        "types": "./dist/constituencies.d.ts",
+        "default": "./dist/constituencies.js"
+      },
+      "require": {
+        "types": "./dist/constituencies.d.cts",
+        "default": "./dist/constituencies.cjs"
+      }
+    },
     "./zod": {
       "import": {
         "types": "./dist/zod.d.ts",

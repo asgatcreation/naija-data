@@ -40,7 +40,35 @@ export interface Ward {
   state_code: string;
   name: string;
   slug: string;
+  /** Code, e.g. "SD001". */
+  senatorial_district: string;
+  /** Code, e.g. "FC001". */
+  federal_constituency: string;
+  /** Code, e.g. "SC001"; null in the FCT (no House of Assembly). */
+  state_constituency: string | null;
   aliases: string[];
+  unverified_fields: string[];
+}
+
+export type ConstituencyKind = "senatorial_district" | "federal_constituency" | "state_constituency";
+
+/**
+ * A senatorial district (Senate), federal constituency (House of Representatives) or state
+ * constituency (State House of Assembly), as delimited by INEC.
+ */
+export interface Constituency {
+  kind: ConstituencyKind;
+  /** "SD001", "FC001", "SC001". */
+  code: string;
+  state_code: string;
+  /** INEC's code, e.g. "FC/001/AB". */
+  inec_code: string;
+  name: string;
+  slug: string;
+  aliases: string[];
+  /** LGAs it covers in full or in part. */
+  lga_codes: string[];
+  sources: string[];
 }
 
 export type BankType =

@@ -50,12 +50,30 @@ type LGA struct {
 
 // Ward is an INEC registration area.
 type Ward struct {
-	Code      string   `json:"code"`
-	LGACode   string   `json:"lga_code"`
+	Code                string   `json:"code"`
+	LGACode             string   `json:"lga_code"`
+	StateCode           string   `json:"state_code"`
+	Name                string   `json:"name"`
+	Slug                string   `json:"slug"`
+	SenatorialDistrict  string   `json:"senatorial_district"`  // code, e.g. "SD001"
+	FederalConstituency string   `json:"federal_constituency"` // code, e.g. "FC001"
+	StateConstituency   *string  `json:"state_constituency"`   // code, e.g. "SC001"; nil in the FCT (no House of Assembly)
+	Aliases             []string `json:"aliases"`
+	UnverifiedFields    []string `json:"unverified_fields"`
+}
+
+// Constituency is a senatorial district (Senate), federal constituency (House of Representatives)
+// or state constituency (State House of Assembly), as delimited by INEC.
+type Constituency struct {
+	Kind      string   `json:"kind"` // "senatorial_district", "federal_constituency" or "state_constituency"
+	Code      string   `json:"code"` // "SD001", "FC001", "SC001"
 	StateCode string   `json:"state_code"`
+	INECCode  string   `json:"inec_code"` // INEC's code, e.g. "FC/001/AB"
 	Name      string   `json:"name"`
 	Slug      string   `json:"slug"`
 	Aliases   []string `json:"aliases"`
+	LGACodes  []string `json:"lga_codes"` // LGAs it covers in full or in part
+	Sources   []string `json:"sources"`
 }
 
 // Bank is a CBN-licensed institution (or a historical one: merged or licence revoked).
@@ -120,6 +138,8 @@ var (
 	loadWardsO sync.Once
 	allWards   []Ward
 	wardsByLGA map[string][]Ward
+	loadUnitsO sync.Once
+	allUnits   []Constituency
 	loadBanksO sync.Once
 	allBanks   []Bank
 	loadPhoneO sync.Once
@@ -144,7 +164,8 @@ func loadWards() {
 		wardsByLGA = map[string][]Ward{}
 		for _, r := range raw.Rows {
 			var w Ward
-			for i, dst := range []any{&w.Code, &w.LGACode, &w.StateCode, &w.Name, &w.Slug, &w.Aliases} {
+			for i, dst := range []any{&w.Code, &w.LGACode, &w.StateCode, &w.Name, &w.Slug, &w.SenatorialDistrict,
+				&w.FederalConstituency, &w.StateConstituency, &w.Aliases, &w.UnverifiedFields} {
 				if err := json.Unmarshal(r[i], dst); err != nil {
 					panic(fmt.Sprintf("naija: ward row invalid: %v", err))
 				}
@@ -154,6 +175,8 @@ func loadWards() {
 		}
 	})
 }
+
+func loadUnits() { loadUnitsO.Do(func() { mustLoad("constituencies", &allUnits) }) }
 
 func loadBanks() { loadBanksO.Do(func() { mustLoad("banks", &allBanks) }) }
 

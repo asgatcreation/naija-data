@@ -99,3 +99,23 @@ test("OpenAPI spec and docs page", async () => {
   const docs = await call("/v1/docs");
   assert.match(docs.body, /swagger-ui/);
 });
+
+test("constituencies", async () => {
+  assert.equal((await call("/v1/senatorial-districts")).body.count, 109);
+  assert.equal((await call("/v1/federal-constituencies")).body.count, 360);
+  assert.equal((await call("/v1/state-constituencies")).body.count, 990);
+  assert.equal((await call("/v1/state-constituencies?state=fct")).body.count, 0);
+  assert.equal((await call("/v1/constituencies?kind=federal_constituency&state=Lagos")).body.count, 24);
+  assert.equal((await call("/v1/constituencies?kind=ward")).res.status, 400);
+  assert.equal((await call("/v1/constituencies?q=Ikeja")).body.data[0].code, "FC236");
+  const fc = (await call("/v1/constituencies/FC/001/AB")).body.data;
+  assert.equal(fc.name, "Aba North/Aba South");
+  assert.equal((await call("/v1/constituencies/FC%2F001%2FAB")).body.data.code, "FC001");
+  assert.equal((await call("/v1/constituencies/fc001/lgas")).body.count, 2);
+  assert.equal((await call("/v1/constituencies/SC001/wards")).body.count, 9);
+  assert.equal((await call("/v1/constituencies/XX001")).res.status, 404);
+  const units = (await call("/v1/lgas/Surulere/constituencies?state=Lagos")).body.data;
+  assert.deepEqual(units.map((u) => u.name), ["Lagos Central", "Surulere I", "Surulere II", "Surulere I", "Surulere II"]);
+  assert.equal((await call("/v1/lgas/Surulere/constituencies")).res.status, 409);
+  assert.equal((await call("/v1/wards/24-11-01")).body.data.federal_constituency.slice(0, 2), "FC");
+});

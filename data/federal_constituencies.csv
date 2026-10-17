@@ -1,0 +1,361 @@
+code,state_code,inec_code,name,slug,aliases,sources
+FC001,AB,FC/001/AB,Aba North/Aba South,aba-north-aba-south,,inec-irev
+FC002,AB,FC/002/AB,Arochukwu/Ohafia,arochukwu-ohafia,,inec-irev
+FC003,AB,FC/003/AB,Bende,bende,,inec-irev
+FC004,AB,FC/004/AB,Isiala Ngwa North/Isiala Ngwa South,isiala-ngwa-north-isiala-ngwa-south,,inec-irev
+FC005,AB,FC/005/AB,Isuikwuato/Umu-Nneochi,isuikwuato-umu-nneochi,,inec-irev
+FC006,AB,FC/006/AB,Obingwa/Ugwunagbo/Osisioma,obingwa-ugwunagbo-osisioma,,inec-irev
+FC007,AB,FC/007/AB,Umuahia North/Umuahia South/Ikwuano,umuahia-north-umuahia-south-ikwuano,,inec-irev
+FC008,AB,FC/008/AB,Ukwa East/Ukwa West,ukwa-east-ukwa-west,,inec-irev
+FC009,AD,FC/009/AD,Demsa/Numan/Lamurde,demsa-numan-lamurde,,inec-irev
+FC010,AD,FC/010/AD,Furore/Song,furore-song,,inec-irev
+FC011,AD,FC/011/AD,Mayo Belwa/Ganye/Jada/Toungo,mayo-belwa-ganye-jada-toungo,,inec-irev
+FC012,AD,FC/012/AD,Gombi/Hong,gombi-hong,,inec-irev
+FC013,AD,FC/013/AD,Guyuk/Shelleng,guyuk-shelleng,,inec-irev
+FC014,AD,FC/014/AD,Madagali/Michika,madagali-michika,,inec-irev
+FC015,AD,FC/015/AD,Maiha/Mubi North/Mubi South,maiha-mubi-north-mubi-south,,inec-irev
+FC016,AD,FC/016/AD,Yola North/Yola South/Girei,yola-north-yola-south-girei,,inec-irev
+FC017,AK,FC/017/AK,Abak/Etim Ekpo/Ika,abak-etim-ekpo-ika,,inec-irev
+FC018,AK,FC/018/AK,Eket/Onna/Esit Eket/Ibeno,eket-onna-esit-eket-ibeno,,inec-irev
+FC019,AK,FC/019/AK,Etinan/Nsit Ibom/Nsit Ubium,etinan-nsit-ibom-nsit-ubium,,inec-irev
+FC020,AK,FC/020/AK,Ikono/Ini,ikono-ini,,inec-irev
+FC021,AK,FC/021/AK,Ikot Abasi/Mkpat Enin/Eastern Obolo,ikot-abasi-mkpat-enin-eastern-obolo,,inec-irev
+FC022,AK,FC/022/AK,Ikot Ekpene/Essien Udim/Obot Akara F,ikot-ekpene-essien-udim-obot-akara-f,,inec-irev
+FC023,AK,FC/023/AK,Itu/Ibiono Ibom,itu-ibiono-ibom,,inec-irev
+FC024,AK,FC/024/AK,Oron/Mbo/Okobo/Udung Uko/Urue Offong/Oruko,oron-mbo-okobo-udung-uko-urue-offong-oruko,,inec-irev
+FC025,AK,FC/025/AK,Ukanafun/Oruk Anam,ukanafun-oruk-anam,,inec-irev
+FC026,AK,FC/026/AK,Uyo/Uruan/Nsit Atai/Ibesikpo Asutan,uyo-uruan-nsit-atai-ibesikpo-asutan,,inec-irev
+FC027,AN,FC/027/AN,Anambra East/Anambra West,anambra-east-anambra-west,,inec-irev
+FC028,AN,FC/028/AN,Onitsha North/Onitsha South,onitsha-north-onitsha-south,,inec-irev
+FC029,AN,FC/029/AN,Ogbaru,ogbaru,,inec-irev
+FC030,AN,FC/030/AN,Aguata,aguata,,inec-irev
+FC031,AN,FC/031/AN,Oyi/Ayamelum,oyi-ayamelum,,inec-irev
+FC032,AN,FC/032/AN,Awka North/Awka South,awka-north-awka-south,,inec-irev
+FC033,AN,FC/033/AN,Njikoka/Dunukofia/Anaocha,njikoka-dunukofia-anaocha,,inec-irev
+FC034,AN,FC/034/AN,Idemili North/Idemili South,idemili-north-idemili-south,,inec-irev
+FC035,AN,FC/035/AN,Ihiala,ihiala,,inec-irev
+FC036,AN,FC/036/AN,Nnewi North/Nnewi South/Ekwusigo,nnewi-north-nnewi-south-ekwusigo,,inec-irev
+FC037,AN,FC/037/AN,Orumba North/Orumba South,orumba-north-orumba-south,,inec-irev
+FC038,BA,FC/038/BA,Alkaleri/Kirfi,alkaleri-kirfi,,inec-irev
+FC039,BA,FC/039/BA,Bauchi,bauchi,,inec-irev
+FC040,BA,FC/040/BA,Bogoro/Dass/Tafawa Balewa,bogoro-dass-tafawa-balewa,,inec-irev
+FC041,BA,FC/041/BA,Toro,toro,,inec-irev
+FC042,BA,FC/042/BA,Ningi/Warji,ningi-warji,,inec-irev
+FC043,BA,FC/043/BA,Darazo/Gunjuwa,darazo-gunjuwa,,inec-irev
+FC044,BA,FC/044/BA,Misau/Dambam,misau-dambam,,inec-irev
+FC045,BA,FC/045/BA,Zaki,zaki,,inec-irev
+FC046,BA,FC/046/BA,Gamawa,gamawa,,inec-irev
+FC047,BA,FC/047/BA,Jama'are/Itas-Gadau,jamaare-itas-gadau,,inec-irev
+FC048,BA,FC/048/BA,Shira/Giade,shira-giade,,inec-irev
+FC049,BA,FC/049/BA,Katagum,katagum,,inec-irev
+FC050,BY,FC/050/BY,Brass/Nembe,brass-nembe,,inec-irev
+FC051,BY,FC/051/BY,Ogbia,ogbia,,inec-irev
+FC052,BY,FC/052/BY,Sagbama/Ekeremor,sagbama-ekeremor,,inec-irev
+FC053,BY,FC/053/BY,Southern Ijaw,southern-ijaw,,inec-irev
+FC054,BY,FC/054/BY,Yenagoa/Kolokuna/Opokuma,yenagoa-kolokuna-opokuma,,inec-irev
+FC055,BE,FC/055/BN,Ado/Obadigbo/Okpokwu,ado-obadigbo-okpokwu,,inec-irev
+FC056,BE,FC/056/BN,Apa/Agatu,apa-agatu,,inec-irev
+FC057,BE,FC/057/BN,Buruku,buruku,,inec-irev
+FC058,BE,FC/058/BN,Gboko/Tarka,gboko-tarka,,inec-irev
+FC059,BE,FC/059/BN,Guma/Makurdi,guma-makurdi,,inec-irev
+FC060,BE,FC/060/BN,Gwer East/Gwer West,gwer-east-gwer-west,,inec-irev
+FC061,BE,FC/061/BN,Katsina-Ala/Ukum/Logo,katsina-ala-ukum-logo,,inec-irev
+FC062,BE,FC/062/BN,Konshisha/Vandeikya,konshisha-vandeikya,,inec-irev
+FC063,BE,FC/063/BN,Kwande/Ushongo,kwande-ushongo,,inec-irev
+FC064,BE,FC/064/BN,Oju/Obi,oju-obi,,inec-irev
+FC065,BE,FC/065/BN,Otukpo/Ohimini,otukpo-ohimini,,inec-irev
+FC066,BO,FC/066/BO,Askira-Uba/Hawul,askira-uba-hawul,,inec-irev
+FC067,BO,FC/067/BO,Bama/Ngala/Kala-Balge,bama-ngala-kala-balge,,inec-irev
+FC068,BO,FC/068/BO,Biu/Kwaya-Kusar/Shani/Bayo,biu-kwaya-kusar-shani-bayo,,inec-irev
+FC069,BO,FC/069/BO,Dikwa/Mafa/Konduga,dikwa-mafa-konduga,,inec-irev
+FC070,BO,FC/070/BO,Damboa/Gwoza/Chibok,damboa-gwoza-chibok,,inec-irev
+FC071,BO,FC/071/BO,Kaga/Gubio/Magumeri,kaga-gubio-magumeri,,inec-irev
+FC072,BO,FC/072/BO,Monguno/Nganzai/Marte,monguno-nganzai-marte,,inec-irev
+FC073,BO,FC/073/BO,Kukawa/Mobbar/Abadam/Guzamali,kukawa-mobbar-abadam-guzamali,,inec-irev
+FC074,BO,FC/074/BO,Maiduguri (Metropolitan),maiduguri-metropolitan,,inec-irev
+FC075,BO,FC/075/BO,Jere,jere,,inec-irev
+FC076,CR,FC/076/CR,Yakurr/Abi,yakurr-abi,,inec-irev
+FC077,CR,FC/077/CR,Akamkpa/Biase,akamkpa-biase,,inec-irev
+FC078,CR,FC/078/CR,Boki/Ikom,boki-ikom,,inec-irev
+FC079,CR,FC/079/CR,Calabar South/Akpabuyo/Bakassi,calabar-south-akpabuyo-bakassi,,inec-irev
+FC080,CR,FC/080/CR,Calabar Municipality/Odukpani,calabar-municipality-odukpani,,inec-irev
+FC081,CR,FC/081/CR,Obanliku/Obudu/Bekwarra,obanliku-obudu-bekwarra,,inec-irev
+FC082,CR,FC/082/CR,Obubra/Etung,obubra-etung,,inec-irev
+FC083,CR,FC/083/CR,Ogoja/Yala,ogoja-yala,,inec-irev
+FC084,DE,FC/084/DT,Aniocha North/Aniocha South/Oshimili North & South,aniocha-north-aniocha-south-oshimili-north-south,,inec-irev
+FC085,DE,FC/085/DT,Bomadi/Patani,bomadi-patani,,inec-irev
+FC086,DE,FC/086/DT,Ethiope East/Ethiope West,ethiope-east-ethiope-west,,inec-irev
+FC087,DE,FC/087/DT,Ika North East/Ika South,ika-north-east-ika-south,,inec-irev
+FC088,DE,FC/088/DT,Isoko North/Isoko South,isoko-north-isoko-south,,inec-irev
+FC089,DE,FC/089/DT,Nkokwa East/Ndokwa West/Ukwuani,nkokwa-east-ndokwa-west-ukwuani,,inec-irev
+FC090,DE,FC/090/DT,Okpe/Sapele/Uvwie,okpe-sapele-uvwie,,inec-irev
+FC091,DE,FC/091/DT,Burutu,burutu,,inec-irev
+FC092,DE,FC/092/DT,"Ughelli North, Ughelli South/Udu",ughelli-north-ughelli-south-udu,,inec-irev
+FC093,DE,FC/093/DT,Warri North/Warri South/Warri South West,warri-north-warri-south-warri-south-west,,inec-irev
+FC094,EB,FC/094/EB,Ebonyi/Ohaukwu,ebonyi-ohaukwu,,inec-irev
+FC095,EB,FC/095/EB,Abakaliki/Izzi,abakaliki-izzi,,inec-irev
+FC096,EB,FC/096/EB,Ezza North/Ishielu,ezza-north-ishielu,,inec-irev
+FC097,EB,FC/097/EB,Ezza South/Ikwo,ezza-south-ikwo,,inec-irev
+FC098,EB,FC/098/EB,Ivo-Ohaozara/Onicha,ivo-ohaozara-onicha,,inec-irev
+FC099,EB,FC/099/EB,Fikpo North/Afikpo South,fikpo-north-afikpo-south,,inec-irev
+FC100,ED,FC/100/ED,Akoko-Edo,akoko-edo,,inec-irev
+FC101,ED,FC/101/ED,Esan Central/Esan South/Igueben,esan-central-esan-south-igueben,,inec-irev
+FC102,ED,FC/102/ED,Esan North East/Esan South East,esan-north-east-esan-south-east,,inec-irev
+FC103,ED,FC/103/ED,Etsako East/Etsako West/Etsako Central,etsako-east-etsako-west-etsako-central,,inec-irev
+FC104,ED,FC/104/ED,Egor/Ikpoba-Okha,egor-ikpoba-okha,,inec-irev
+FC105,ED,FC/105/ED,Oredo,oredo,,inec-irev
+FC106,ED,FC/106/ED,Orhionmwon/Uhunmwonde,orhionmwon-uhunmwonde,,inec-irev
+FC107,ED,FC/107/ED,Ovia North East/Ovia South West,ovia-north-east-ovia-south-west,,inec-irev
+FC108,ED,FC/108/ED,Owan East/Owan West,owan-east-owan-west,,inec-irev
+FC109,EK,FC/109/EK,Ado Ekiti/Irepodun/Ifelodun,ado-ekiti-irepodun-ifelodun,,inec-irev
+FC110,EK,FC/110/EK,Ekiti South West/Ikere/Orun/Ise,ekiti-south-west-ikere-orun-ise,,inec-irev
+FC111,EK,FC/111/EK,Emure/Gbonyin/Ekiti East,emure-gbonyin-ekiti-east,,inec-irev
+FC112,EK,FC/112/EK,"Ido/Osi, Moba/Ilejeme",ido-osi-moba-ilejeme,,inec-irev
+FC113,EK,FC/113/EK,Ijero/Ekiti West/Efon,ijero-ekiti-west-efon,,inec-irev
+FC114,EK,FC/114/EK,Ikole/Oye,ikole-oye,,inec-irev
+FC115,EN,FC/115/EN,Aninri/Awgu/Oji River,aninri-awgu-oji-river,,inec-irev
+FC116,EN,FC/116/EN,Enugu East/Isi Uzo,enugu-east-isi-uzo,,inec-irev
+FC117,EN,FC/117/EN,Enugu North/Enugu South,enugu-north-enugu-south,,inec-irev
+FC118,EN,FC/118/EN,Ezeagu/Udi,ezeagu-udi,,inec-irev
+FC119,EN,FC/119/EN,Igbo-Etiti/Uzo-Uwani,igbo-etiti-uzo-uwani,,inec-irev
+FC120,EN,FC/120/EN,Igbo-Eze North/Udenu,igbo-eze-north-udenu,,inec-irev
+FC121,EN,FC/121/EN,Nkanu East/Nkanu West,nkanu-east-nkanu-west,,inec-irev
+FC122,EN,FC/122/EN,Nsukka/Igbo-Eze South,nsukka-igbo-eze-south,,inec-irev
+FC123,GO,FC/123/GM,Akko,akko,,inec-irev
+FC124,GO,FC/124/GM,Yamaltu/Deba,yamaltu-deba,,inec-irev
+FC125,GO,FC/125/GM,Balanga/Billiri,balanga-billiri,,inec-irev
+FC126,GO,FC/126/GM,Kaltungo/Shongom,kaltungo-shongom,,inec-irev
+FC127,GO,FC/127/GM,Gombe/Kwami/Funakaye,gombe-kwami-funakaye,,inec-irev
+FC128,GO,FC/128/GM,Dukku/Nafada,dukku-nafada,,inec-irev
+FC129,IM,FC/129/IM,Ehime Mbano/Ihite-Uboma/Obowo,ehime-mbano-ihite-uboma-obowo,,inec-irev
+FC130,IM,FC/130/IM,Isiala Mbano/Okigwe/Onuimo,isiala-mbano-okigwe-onuimo,,inec-irev
+FC131,IM,FC/131/IM,Ideato North/Ideato South,ideato-north-ideato-south,,inec-irev
+FC132,IM,FC/132/IM,Isu/Njaba/Nkwerre/Nwangele,isu-njaba-nkwerre-nwangele,,inec-irev
+FC133,IM,FC/133/IM,Oguta/Ohaji-Egbema/Oru West,oguta-ohaji-egbema-oru-west,,inec-irev
+FC134,IM,FC/134/IM,Oru East/Orsu/Orlu,oru-east-orsu-orlu,,inec-irev
+FC135,IM,FC/135/IM,Aboh Mbaise/Ngor Okpala,aboh-mbaise-ngor-okpala,,inec-irev
+FC136,IM,FC/136/IM,Ahiazu Mbaise/Ezinhitte,ahiazu-mbaise-ezinhitte,,inec-irev
+FC137,IM,FC/137/IM,Ikeduru/Mbaitoli,ikeduru-mbaitoli,,inec-irev
+FC138,IM,FC/138/IM,Owerri Municipal/Owerri North/Owerri West,owerri-municipal-owerri-north-owerri-west,,inec-irev
+FC139,JI,FC/139/JG,Babura/Garki,babura-garki,,inec-irev
+FC140,JI,FC/140/JG,Birnin Kudu/Buji,birnin-kudu-buji,,inec-irev
+FC141,JI,FC/141/JG,Birniwa Guri/Kirikasamma,birniwa-guri-kirikasamma,,inec-irev
+FC142,JI,FC/142/JG,Dutse/Kiyawa,dutse-kiyawa,,inec-irev
+FC143,JI,FC/143/JG,Gwaram,gwaram,,inec-irev
+FC144,JI,FC/144/JG,Gumel/Maigatari/Sule Tankarkar/Gagarawa,gumel-maigatari-sule-tankarkar-gagarawa,,inec-irev
+FC145,JI,FC/145/JG,Hadejia/Kafin Hausa/Auyo,hadejia-kafin-hausa-auyo,,inec-irev
+FC146,JI,FC/146/JG,Jahun/Miga,jahun-miga,,inec-irev
+FC147,JI,FC/147/JG,Mallam Madori/Kaugama,mallam-madori-kaugama,,inec-irev
+FC148,JI,FC/148/JG,Kazaure/Roni/Gwiwa/Yankwashi,kazaure-roni-gwiwa-yankwashi,,inec-irev
+FC149,JI,FC/149/JG,Ringim/Taura,ringim-taura,,inec-irev
+FC150,KD,FC/150/KD,Kaduna North,kaduna-north,,inec-irev
+FC151,KD,FC/151/KD,Zaria,zaria,,inec-irev
+FC152,KD,FC/152/KD,Soba,soba,,inec-irev
+FC153,KD,FC/153/KD,Igabi,igabi,,inec-irev
+FC154,KD,FC/154/KD,Ikara/Kubau,ikara-kubau,,inec-irev
+FC155,KD,FC/155/KD,Makarfi/Kudan,makarfi-kudan,,inec-irev
+FC156,KD,FC/156/KD,Lere,lere,,inec-irev
+FC157,KD,FC/157/KD,Kachia/Kagarko,kachia-kagarko,,inec-irev
+FC158,KD,FC/158/KD,Chikun/Kajuru,chikun-kajuru,,inec-irev
+FC159,KD,FC/159/KD,Jema'a/Sanga,jemaa-sanga,,inec-irev
+FC160,KD,FC/160/KD,Birnin Gwari/Giwa,birnin-gwari-giwa,,inec-irev
+FC161,KD,FC/161/KD,Sabon Gari,sabon-gari,,inec-irev
+FC162,KD,FC/162/KD,Kaduna South,kaduna-south,,inec-irev
+FC163,KD,FC/163/KD,Kaura,kaura,,inec-irev
+FC164,KD,FC/164/KD,Kauru,kauru,,inec-irev
+FC165,KD,FC/165/KD,Zangon Kataf/Jaba,zangon-kataf-jaba,,inec-irev
+FC166,KN,FC/166/KN,Alabasu/Gaya/Ajingi,alabasu-gaya-ajingi,,inec-irev
+FC167,KN,FC/167/KN,Shanono/Bagwai,shanono-bagwai,,inec-irev
+FC168,KN,FC/168/KN,Bebeji/Kiru,bebeji-kiru,,inec-irev
+FC169,KN,FC/169/KN,Bichi,bichi,,inec-irev
+FC170,KN,FC/170/KN,Rano/Bunkure/Kibiya,rano-bunkure-kibiya,,inec-irev
+FC171,KN,FC/171/KN,Dala,dala,,inec-irev
+FC172,KN,FC/172/KN,Gwale,gwale,,inec-irev
+FC173,KN,FC/173/KN,Dambatta/Makoda,dambatta-makoda,,inec-irev
+FC174,KN,FC/174/KN,Dawakin Kudu/Warawa,dawakin-kudu-warawa,,inec-irev
+FC175,KN,FC/175/KN,Dawakin Tofa/Tofa/Rimin Gado,dawakin-tofa-tofa-rimin-gado,,inec-irev
+FC176,KN,FC/176/KN,Doguwa/Tudun Wada,doguwa-tudun-wada,,inec-irev
+FC177,KN,FC/177/KN,Gezawa/Gabasawa,gezawa-gabasawa,,inec-irev
+FC178,KN,FC/178/KN,Gwarzo/Ikabo,gwarzo-ikabo,,inec-irev
+FC179,KN,FC/179/KN,Municipal,municipal,,inec-irev
+FC180,KN,FC/180/KN,Tarauni,tarauni,,inec-irev
+FC181,KN,FC/181/KN,Karaye/Rogo,karaye-rogo,,inec-irev
+FC182,KN,FC/182/KN,Kumbotso,kumbotso,,inec-irev
+FC183,KN,FC/183/KN,Kura/Madobi/Garun Mallam,kura-madobi-garun-mallam,,inec-irev
+FC184,KN,FC/184/KN,Nasarawa,nasarawa,,inec-irev
+FC185,KN,FC/185/KN,Fagge,fagge,,inec-irev
+FC186,KN,FC/186/KN,Sumaila/Takai,sumaila-takai,,inec-irev
+FC187,KN,FC/187/KN,Minjibir/Ungogo,minjibir-ungogo,,inec-irev
+FC188,KN,FC/188/KN,Tsanyawa/Kunchi,tsanyawa-kunchi,,inec-irev
+FC189,KN,FC/189/KN,Wudil/Garko,wudil-garko,,inec-irev
+FC190,KT,FC/190/KT,Bakori/Danja,bakori-danja,,inec-irev
+FC191,KT,FC/191/KT,Batagarawa/Charanchi/Rimi,batagarawa-charanchi-rimi,,inec-irev
+FC192,KT,FC/192/KT,Batsari/Safana/Danmusa,batsari-safana-danmusa,,inec-irev
+FC193,KT,FC/193/KT,Bindawa/Mani,bindawa-mani,,inec-irev
+FC194,KT,FC/194/KT,Daura/Sandamu/Mai'adua,daura-sandamu-maiadua,,inec-irev
+FC195,KT,FC/195/KT,Dutsin-Ma/Kurfi,dutsin-ma-kurfi,,inec-irev
+FC196,KT,FC/196/KT,Faskari/Kankara/Sabuwa,faskari-kankara-sabuwa,,inec-irev
+FC197,KT,FC/197/KT,Funtua/Dandume,funtua-dandume,,inec-irev
+FC198,KT,FC/198/KT,Ingawa/Kankia/Kusada,ingawa-kankia-kusada,,inec-irev
+FC199,KT,FC/199/KT,Jibia/Kaita,jibia-kaita,,inec-irev
+FC200,KT,FC/200/KT,Malumfashi/Kafur,malumfashi-kafur,,inec-irev
+FC201,KT,FC/201/KT,Katsina,katsina,,inec-irev
+FC202,KT,FC/202/KT,Mashi/Dutsi,mashi-dutsi,,inec-irev
+FC203,KT,FC/203/KT,Matazu/Musawa,matazu-musawa,,inec-irev
+FC204,KT,FC/204/KT,Zango/Baure,zango-baure,,inec-irev
+FC205,KE,FC/205/KB,Arewa/Dandi,arewa-dandi,,inec-irev
+FC206,KE,FC/206/KB,Argungu/Augie,argungu-augie,,inec-irev
+FC207,KE,FC/207/KB,Bagudo/Suru,bagudo-suru,,inec-irev
+FC208,KE,FC/208/KB,Bunza/Birnin Kebbi/Kalgo,bunza-birnin-kebbi-kalgo,,inec-irev
+FC209,KE,FC/209/KB,Aleiro/Gwandu/Jega,aleiro-gwandu-jega,,inec-irev
+FC210,KE,FC/210/KB,Koko-Besse/Maiyama,koko-besse-maiyama,,inec-irev
+FC211,KE,FC/211/KB,Fakai/Sakaba/Wasagu/Danko/Zuru,fakai-sakaba-wasagu-danko-zuru,,inec-irev
+FC212,KE,FC/212/KB,Ngaski/Shanga/Yauri,ngaski-shanga-yauri,,inec-irev
+FC213,KO,FC/213/KG,Adavi/Okehi,adavi-okehi,,inec-irev
+FC214,KO,FC/214/KG,Ankpa/Omala/Olamaboro,ankpa-omala-olamaboro,,inec-irev
+FC215,KO,FC/215/KG,Bassa/Dekina,bassa-dekina,,inec-irev
+FC216,KO,FC/216/KG,Idah/Igalamela Odolu/Ibaji/Ofu,idah-igalamela-odolu-ibaji-ofu,,inec-irev
+FC217,KO,FC/217/KG,Ijumu/Kabba-Bunu,ijumu-kabba-bunu,,inec-irev
+FC218,KO,FC/218/KG,Ajaokuta,ajaokuta,,inec-irev
+FC219,KO,FC/219/KG,Kogi (Lokoja)/Kogi (K.K.),kogi-lokoja-kogi-k-k,,inec-irev
+FC220,KO,FC/220/KG,Okene/Ogori-Magogo,okene-ogori-magogo,,inec-irev
+FC221,KO,FC/221/KG,Yagba East/Yagba West/Mopamuro,yagba-east-yagba-west-mopamuro,,inec-irev
+FC222,KW,FC/222/KW,Baruten/Kaiama,baruten-kaiama,,inec-irev
+FC223,KW,FC/223/KW,Edu/Moro/Pategi,edu-moro-pategi,,inec-irev
+FC224,KW,FC/224/KW,Ekiti/Isin/Irepodun/Oke-Ero,ekiti-isin-irepodun-oke-ero,,inec-irev
+FC225,KW,FC/225/KW,Ilorin East/Ilorin South,ilorin-east-ilorin-south,,inec-irev
+FC226,KW,FC/226/KW,Ilorin West/Asa,ilorin-west-asa,,inec-irev
+FC227,KW,FC/227/KW,Ifelodun/Offa/Oyun,ifelodun-offa-oyun,,inec-irev
+FC228,LA,FC/228/LA,Agege,agege,,inec-irev
+FC229,LA,FC/229/LA,Ifako/Ijaiye,ifako-ijaiye,,inec-irev
+FC230,LA,FC/230/LA,Alimosho,alimosho,,inec-irev
+FC231,LA,FC/231/LA,Badagry,badagry,,inec-irev
+FC232,LA,FC/232/LA,Epe,epe,,inec-irev
+FC233,LA,FC/233/LA,Ibeju Lekki,ibeju-lekki,,inec-irev
+FC234,LA,FC/234/LA,Eti-Osa,eti-osa,,inec-irev
+FC235,LA,FC/235/LA,Apapa,apapa,,inec-irev
+FC236,LA,FC/236/LA,Ikeja,ikeja,,inec-irev
+FC237,LA,FC/237/LA,Ikorodu,ikorodu,,inec-irev
+FC238,LA,FC/238/LA,Lagos Island I,lagos-island-i,,inec-irev
+FC239,LA,FC/239/LA,Lagos Island II,lagos-island-ii,,inec-irev
+FC240,LA,FC/240/LA,Lagos Mainland,lagos-mainland,,inec-irev
+FC241,LA,FC/241/LA,Mushin I,mushin-i,,inec-irev
+FC242,LA,FC/242/LA,Mushin II,mushin-ii,,inec-irev
+FC243,LA,FC/243/LA,Ojo,ojo,,inec-irev
+FC244,LA,FC/244/LA,Amuwo-Odofin,amuwo-odofin,,inec-irev
+FC245,LA,FC/245/LA,Ajeromi/Ifelodun,ajeromi-ifelodun,,inec-irev
+FC246,LA,FC/246/LA,Oshodi/Isolo I,oshodi-isolo-i,,inec-irev
+FC247,LA,FC/247/LA,Oshodi/Isolo II,oshodi-isolo-ii,,inec-irev
+FC248,LA,FC/248/LA,Shomolu,shomolu,,inec-irev
+FC249,LA,FC/249/LA,Kosofe,kosofe,,inec-irev
+FC250,LA,FC/250/LA,Surulere I,surulere-i,,inec-irev
+FC251,LA,FC/251/LA,Surulere II,surulere-ii,,inec-irev
+FC252,NA,FC/252/NW,Akwanga/Nasarawa-Eggon/Wamba,akwanga-nasarawa-eggon-wamba,,inec-irev
+FC253,NA,FC/253/NW,Awe/Doma/Keana,awe-doma-keana,,inec-irev
+FC254,NA,FC/254/NW,Keffi/Karu/Kokona,keffi-karu-kokona,,inec-irev
+FC255,NA,FC/255/NW,Lafia/Obi,lafia-obi,,inec-irev
+FC256,NA,FC/256/NW,Nasarawa/Toto,nasarawa-toto,,inec-irev
+FC257,NI,FC/257/NG,Agaie/Lapai,agaie-lapai,,inec-irev
+FC258,NI,FC/258/NG,Agwara/Borgu,agwara-borgu,,inec-irev
+FC259,NI,FC/259/NG,Bida/Gbako/Katcha,bida-gbako-katcha,,inec-irev
+FC260,NI,FC/260/NG,Booso/Paikoro,booso-paikoro,,inec-irev
+FC261,NI,FC/261/NG,Chanchaga,chanchaga,,inec-irev
+FC262,NI,FC/262/NG,Gurara/Suleja/Tapa,gurara-suleja-tapa,,inec-irev
+FC263,NI,FC/263/NG,Lavun/Mokwa/Edati,lavun-mokwa-edati,,inec-irev
+FC264,NI,FC/264/NG,Magama/Rijau,magama-rijau,,inec-irev
+FC265,NI,FC/265/NG,Kontagora/Wushishi/Mariga/Mashegu,kontagora-wushishi-mariga-mashegu,,inec-irev
+FC266,NI,FC/266/NG,Shiroro/Rafi/Munya,shiroro-rafi-munya,,inec-irev
+FC267,OG,FC/267/OG,Abeokuta North/Obafemi-Owode/Odeda,abeokuta-north-obafemi-owode-odeda,,inec-irev
+FC268,OG,FC/268/OG,Abeokuta South,abeokuta-south,,inec-irev
+FC269,OG,FC/269/OG,Ado-Odo/Ota,ado-odo-ota,,inec-irev
+FC270,OG,FC/270/OG,Egbado North/Imeko-Afon,egbado-north-imeko-afon,,inec-irev
+FC271,OG,FC/271/OG,Egbado South/Ipokia,egbado-south-ipokia,,inec-irev
+FC272,OG,FC/272/OG,Ifo/Ewekoro,ifo-ewekoro,,inec-irev
+FC273,OG,FC/273/OG,Ijebu North/Ijebu East/Ogun Waterside,ijebu-north-ijebu-east-ogun-waterside,,inec-irev
+FC274,OG,FC/274/OG,Ijebu Ode/Odogbolu/Ijebu North East,ijebu-ode-odogbolu-ijebu-north-east,,inec-irev
+FC275,OG,FC/275/OG,Ikenne/Shagamu/Remo North,ikenne-shagamu-remo-north,,inec-irev
+FC276,ON,FC/276/OD,Akoko North East/Akoko North West,akoko-north-east-akoko-north-west,,inec-irev
+FC277,ON,FC/277/OD,Akoko South East/Akoko South West,akoko-south-east-akoko-south-west,,inec-irev
+FC278,ON,FC/278/OD,Akure North/Akure South,akure-north-akure-south,,inec-irev
+FC279,ON,FC/279/OD,Idanre/Ifedore,idanre-ifedore,,inec-irev
+FC280,ON,FC/280/OD,Ileoluji/Okeigbo/Odigbo,ileoluji-okeigbo-odigbo,,inec-irev
+FC281,ON,FC/281/OD,Okitipupa/Irele,okitipupa-irele,,inec-irev
+FC282,ON,FC/282/OD,Eseodo/Ilaje,eseodo-ilaje,,inec-irev
+FC283,ON,FC/283/OD,Ondo East/Ondo West,ondo-east-ondo-west,,inec-irev
+FC284,ON,FC/284/OD,Owo/Ose,owo-ose,,inec-irev
+FC285,OS,FC/285/OS,Irepodun/Olorunda/Osogbo/Orolu,irepodun-olorunda-osogbo-orolu,,inec-irev
+FC286,OS,FC/286/OS,Odo-Otin/Ifelodun/Boripe,odo-otin-ifelodun-boripe,,inec-irev
+FC287,OS,FC/287/OS,Boluwaduro/Ifedayo/Ila,boluwaduro-ifedayo-ila,,inec-irev
+FC288,OS,FC/288/OS,Atakunmosa East/Atakunmosa West/Ilesha East/Ilesha West,atakunmosa-east-atakunmosa-west-ilesha-east-ilesha-west,,inec-irev
+FC289,OS,FC/289/OS,Obokun/Oriade,obokun-oriade,,inec-irev
+FC290,OS,FC/290/OS,Ife Central/Ife North/Ife South/Ife East,ife-central-ife-north-ife-south-ife-east,,inec-irev
+FC291,OS,FC/291/OS,Ayedire/Iwo/Ola-Oluwa,ayedire-iwo-ola-oluwa,,inec-irev
+FC292,OS,FC/292/OS,Ayedaade/Irewole/Isokan,ayedaade-irewole-isokan,,inec-irev
+FC293,OS,FC/293/OS,Ede North/Ede South/Egbedore/Ejigbo,ede-north-ede-south-egbedore-ejigbo,,inec-irev
+FC294,OY,FC/294/OY,Afijio/Oyo East/Oyo West/Atiba,afijio-oyo-east-oyo-west-atiba,,inec-irev
+FC295,OY,FC/295/OY,Akinyele/Lagelu,akinyele-lagelu,,inec-irev
+FC296,OY,FC/296/OY,Egbeda/Ona-Ara,egbeda-ona-ara,,inec-irev
+FC297,OY,FC/297/OY,Ibarapa Central/Ibarapa North,ibarapa-central-ibarapa-north,,inec-irev
+FC298,OY,FC/298/OY,Ibarapa East/Ido,ibarapa-east-ido,,inec-irev
+FC299,OY,FC/299/OY,Saki East/Saki West/Atisbo,saki-east-saki-west-atisbo,,inec-irev
+FC300,OY,FC/300/OY,Irepo/Orelope/Olorunsogo,irepo-orelope-olorunsogo,,inec-irev
+FC301,OY,FC/301/OY,Iseyin/Itesiwaju/Kajola/Iwajowa,iseyin-itesiwaju-kajola-iwajowa,,inec-irev
+FC302,OY,FC/302/OY,Ogbomoso North/Ogbomoso South/Orire,ogbomoso-north-ogbomoso-south-orire,,inec-irev
+FC303,OY,FC/303/OY,Ogo-Oluwa/Surulere,ogo-oluwa-surulere,,inec-irev
+FC304,OY,FC/304/OY,Oluyole,oluyole,,inec-irev
+FC305,OY,FC/305/OY,Ibadan North East/Ibadan South East,ibadan-north-east-ibadan-south-east,,inec-irev
+FC306,OY,FC/306/OY,Ibadan South West/Ibadan North West,ibadan-south-west-ibadan-north-west,,inec-irev
+FC307,OY,FC/307/OY,Ibadan North,ibadan-north,,inec-irev
+FC308,PL,FC/308/PL,Jos North/Bassa,jos-north-bassa,,inec-irev
+FC309,PL,FC/309/PL,Jos South/Jos East,jos-south-jos-east,,inec-irev
+FC310,PL,FC/310/PL,Barkin Ladi/Riyom,barkin-ladi-riyom,,inec-irev
+FC311,PL,FC/311/PL,Bokkos/Mangu,bokkos-mangu,,inec-irev
+FC312,PL,FC/312/PL,Kanke/Pankshin/Kanam,kanke-pankshin-kanam,,inec-irev
+FC313,PL,FC/313/PL,Wase,wase,,inec-irev
+FC314,PL,FC/314/PL,Langtang North/Langtang South,langtang-north-langtang-south,,inec-irev
+FC315,PL,FC/315/PL,Mikang/Qua Anpan/Shedam,mikang-qua-anpan-shedam,,inec-irev
+FC316,RI,FC/316/RV,Abua-Odual/Ahaoda East,abua-odual-ahaoda-east,,inec-irev
+FC317,RI,FC/317/RV,Ahoada West/Ogba Egbema,ahoada-west-ogba-egbema,,inec-irev
+FC318,RI,FC/318/RV,Degema/Bonny,degema-bonny,,inec-irev
+FC319,RI,FC/319/RV,Akuku-Toru/Asari-Toru,akuku-toru-asari-toru,,inec-irev
+FC320,RI,FC/320/RV,Okrika/Ogu-Bolo,okrika-ogu-bolo,,inec-irev
+FC321,RI,FC/321/RV,Opobo/Nkoro/Andoni,opobo-nkoro-andoni,,inec-irev
+FC322,RI,FC/322/RV,Eleme/Tai/Oyigbo,eleme-tai-oyigbo,,inec-irev
+FC323,RI,FC/323/RV,Khana/Gokana,khana-gokana,,inec-irev
+FC324,RI,FC/324/RV,Ikwerre/Umohua,ikwerre-umohua,,inec-irev
+FC325,RI,FC/325/RV,Etche/Omuma,etche-omuma,,inec-irev
+FC326,RI,FC/326/RV,Obio Akpor,obio-akpor,,inec-irev
+FC327,RI,FC/327/RV,Port Harcourt I,port-harcourt-i,,inec-irev
+FC328,RI,FC/328/RV,Port Harcourt II,port-harcourt-ii,,inec-irev
+FC329,SO,FC/329/SO,Isa/Sabon Birni,isa-sabon-birni,,inec-irev
+FC330,SO,FC/330/SO,Goronyo/Gada,goronyo-gada,,inec-irev
+FC331,SO,FC/331/SO,Wurno/Rabah,wurno-rabah,,inec-irev
+FC332,SO,FC/332/SO,Illela/Gwadabawa,illela-gwadabawa,,inec-irev
+FC333,SO,FC/333/SO,Tangaza/Gudu,tangaza-gudu,,inec-irev
+FC334,SO,FC/334/SO,Binji/Silame,binji-silame,,inec-irev
+FC335,SO,FC/335/SO,Kware/Wamakko,kware-wamakko,,inec-irev
+FC336,SO,FC/336/SO,Sokoto North/Sokoto South,sokoto-north-sokoto-south,,inec-irev
+FC337,SO,FC/337/SO,Dange-Shuni/Bodinga/Tureta,dange-shuni-bodinga-tureta,,inec-irev
+FC338,SO,FC/338/SO,Yabo/Shagari,yabo-shagari,,inec-irev
+FC339,SO,FC/339/SO,Kebbe/Tambuwal,kebbe-tambuwal,,inec-irev
+FC340,TA,FC/340/TR,Bali/Gassol,bali-gassol,,inec-irev
+FC341,TA,FC/341/TR,Takum/Donga/Ussa,takum-donga-ussa,,inec-irev
+FC342,TA,FC/342/TR,Sardauna/Kurmi/Gashaka,sardauna-kurmi-gashaka,,inec-irev
+FC343,TA,FC/343/TR,Ibi/Wukari,ibi-wukari,,inec-irev
+FC344,TA,FC/344/TR,Jalingo/Yorro/Zing,jalingo-yorro-zing,,inec-irev
+FC345,TA,FC/345/TR,Karim Lamido/Lau/Ardo-Kola,karim-lamido-lau-ardo-kola,,inec-irev
+FC346,YO,FC/346/YB,Bade/Jakusko,bade-jakusko,,inec-irev
+FC347,YO,FC/347/YB,Bursari/Geidam/Yunusari,bursari-geidam-yunusari,,inec-irev
+FC348,YO,FC/348/YB,Damaturu/Gujba/Gulani/Tarmuwa,damaturu-gujba-gulani-tarmuwa,,inec-irev
+FC349,YO,FC/349/YB,Fika/Fune,fika-fune,,inec-irev
+FC350,YO,FC/350/YB,Machina/Nguru/Yusufari/Karasuwa,machina-nguru-yusufari-karasuwa,,inec-irev
+FC351,YO,FC/351/YB,Nangere/Potiskm,nangere-potiskm,,inec-irev
+FC352,ZA,FC/352/ZF,Kaura-Namoda/Birnin Magaji,kaura-namoda-birnin-magaji,,inec-irev
+FC353,ZA,FC/353/ZF,Shinkafi/Zurmi,shinkafi-zurmi,,inec-irev
+FC354,ZA,FC/354/ZF,Gusau/Tsafe,gusau-tsafe,,inec-irev
+FC355,ZA,FC/355/ZF,Bungudu/Maru,bungudu-maru,,inec-irev
+FC356,ZA,FC/356/ZF,Anka/Talata Mafara,anka-talata-mafara,,inec-irev
+FC357,ZA,FC/357/ZF,Bakura/Maradun,bakura-maradun,,inec-irev
+FC358,ZA,FC/358/ZF,Gummi/Bukkuyum,gummi-bukkuyum,,inec-irev
+FC359,FC,FC/359/FCT,Abaji/Gwagwalada/Kwali/Kuje,abaji-gwagwalada-kwali-kuje,,inec-irev
+FC360,FC,FC/360/FCT,Municipal/Bwari,municipal-bwari,,inec-irev

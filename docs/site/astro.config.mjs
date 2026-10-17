@@ -21,6 +21,7 @@ export default defineConfig({
             { label: "Go", link: "/getting-started/go/" },
             { label: "Django and DRF", link: "/getting-started/django/" },
             { label: "REST API", link: "/getting-started/api/" },
+            { label: "Account names (name enquiry)", link: "/getting-started/account-names/" },
           ],
         },
         {

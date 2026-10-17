@@ -5,6 +5,11 @@ import {
   type BankType,
 } from "./index.js";
 import { wards } from "./wards.js";
+import { lgaConstituencies } from "./constituencies.js";
+
+const KIND_LABELS = {
+  senatorial_district: "senatorial district", federal_constituency: "federal constituency", state_constituency: "state constituency",
+};
 
 const HELP = `naija — Nigerian reference data (naija-data ${meta().data_version})
 
@@ -14,6 +19,8 @@ Usage: naija <command> [args] [--json]
   state <query>             show one state
   lga <state|lga> [--state] list a state's LGAs, or show one LGA
   wards <lga> [--state S]   list an LGA's wards
+  constituencies <lga> [--state S]
+                            an LGA's senatorial district and federal and state constituencies
   search <query>            fuzzy search states and LGAs
   bank <code|name>          look up a bank
   banks [--type T]          list institutions
@@ -57,6 +64,10 @@ function main(argv: string[]): number {
     case "wards": {
       const rows = wards(q, opt("--state"));
       return out(rows, rows.map((w) => `  ${w.code}  ${w.name}`));
+    }
+    case "constituencies": {
+      const rows = lgaConstituencies(q, opt("--state"));
+      return out(rows, rows.map((u) => `  ${KIND_LABELS[u.kind].padEnd(21)} ${u.code}  ${u.name}`));
     }
     case "search": {
       const rows = search(q);

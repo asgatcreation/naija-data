@@ -80,6 +80,15 @@ def project(fn: str, args: list):
             return [[x.kind, x.code, x.score, x.matched] for x in ng.search_wards(args[0], limit=args[1])]
         if fn == "prefixes":
             return ng.prefixes(*args)
+        if fn in ("constituencies", "find_constituencies", "lga_constituencies"):
+            return [u.code for u in getattr(ng, fn)(*args)]
+        if fn == "get_constituency":
+            u = ng.get_constituency(*args)
+            return u.code if u else None
+        if fn == "constituency_record":
+            return ng.get_constituency(*args).to_dict()
+        if fn in ("constituency_lgas", "constituency_wards"):
+            return [x.code for x in getattr(ng, fn)(*args)]
     except ValueError:
         return {"error": True}
     raise SystemExit(f"Unknown fn {fn}")
@@ -183,6 +192,25 @@ def cases() -> list[tuple[str, list]]:
               "kjß-123ab", "DFC 001 0"]:
         c += [("parse_plate", [q]), ("plate_error", [q]), ("is_valid_plate", [q, None]), ("is_valid_plate", [q, ["dealer"]])]
     c += [("search_wards", [q, 5]) for q in ["anifowoshe", "urban ii", "isale"]]
+    # Electoral units
+    for kind in [None, *ng.CONSTITUENCY_KINDS]:
+        c.append(("constituencies", [kind, None]))
+        c += [("constituencies", [kind, st.code]) for st in ng.states()]
+    c += [("constituencies", ["ward", None]), ("constituencies", [None, "Atlantis"])]
+    for i, u in enumerate(ng.constituencies()):
+        c += [("get_constituency", [u.code]), ("get_constituency", [u.inec_code.lower()]),
+              ("constituency_lgas", [u.code]), ("find_constituencies", [u.name, None, None])]
+        if i % 20 == 0:
+            c.append(("constituency_record", [u.code]))
+        if i % 10 == 0:
+            c.append(("constituency_wards", [u.code]))
+    c += [("get_constituency", [q]) for q in ["sd001", " FC 001 ", "SC/990/ZF", "FC/001/AB", "SC000", "XX001", ""]]
+    c += [("find_constituencies", q) for q in [["Ikeja", None, None], ["ikeja", "state_constituency", None],
+                                                ["Lagos West", "senatorial_district", "LA"], ["Surulere I", None, "OY"],
+                                                ["nowhere", None, None], ["Ikeja", "nope", None]]]
+    c += [("lga_constituencies", [l.code, None]) for l in ng.lgas()]
+    c += [("lga_constituencies", q) for q in [["Surulere", "LA"], ["Surulere", None], ["nowhere", None]]]
+    c += [("constituency_lgas", ["nope"]), ("constituency_wards", ["nope"]), ("constituency_wards", ["SC001"])]
     c += [("prefixes", [None]), ("prefixes", ["MTN"]), ("prefixes", ["glo"]), ("prefixes", ["9mobile"]), ("prefixes", ["nope"])]
     return c
 

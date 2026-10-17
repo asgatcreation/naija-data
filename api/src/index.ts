@@ -5,7 +5,11 @@ import {
   parsePhone, parsePlate, phoneError, plateCategories, plateError, search, states,
   type Bank, type BankType, type SearchResult,
 } from "naija-data";
-import { getWard, searchWards, wards } from "naija-data/wards";
+import { constituencyWards, getWard, searchWards, wards } from "naija-data/wards";
+import {
+  CONSTITUENCY_KINDS, constituencies, constituencyLgas, findConstituencies, getConstituency, lgaConstituencies,
+  type ConstituencyKind,
+} from "naija-data/constituencies";
 import { openapi } from "./openapi";
 
 export interface Env {
@@ -70,6 +74,29 @@ function requireLga(value: string, state?: string | null) {
   throw notFound("LGA", value);
 }
 
+function requireConstituency(value: string) {
+  const u = getConstituency(value);
+  if (!u) throw notFound("senatorial district or constituency", value);
+  return u;
+}
+
+// /v1/senatorial-districts etc. are shortcuts for /v1/constituencies?kind=...
+const KIND_PATHS: Record<string, ConstituencyKind> = {
+  "senatorial-districts": "senatorial_district",
+  "federal-constituencies": "federal_constituency",
+  "state-constituencies": "state_constituency",
+};
+
+function listConstituencies(url: URL, kind: ConstituencyKind | null) {
+  if (kind && !CONSTITUENCY_KINDS.includes(kind)) {
+    throw new HttpError(400, "invalid_parameter", `Unknown kind "${kind}". Use one of: ${CONSTITUENCY_KINDS.join(", ")}.`);
+  }
+  const state = url.searchParams.get("state");
+  const st = state ? requireState(state) : null;
+  const q = url.searchParams.get("q");
+  return list(q ? findConstituencies(q, kind, st) : constituencies(kind, st));
+}
+
 function requireBank(value: string): Bank {
   const b = getBank(value);
   if (!b) throw notFound("bank", value);
@@ -91,7 +118,8 @@ function route(url: URL): unknown {
         data_version: DATA_VERSION,
         docs: "/v1/docs",
         openapi: "/v1/openapi.json",
-        endpoints: ["/v1/states", "/v1/lgas", "/v1/wards/{code}", "/v1/search?q=", "/v1/banks",
+        endpoints: ["/v1/states", "/v1/lgas", "/v1/wards/{code}", "/v1/constituencies", "/v1/senatorial-districts",
+          "/v1/federal-constituencies", "/v1/state-constituencies", "/v1/search?q=", "/v1/banks",
           "/v1/validate/nuban?account=&bank=", "/v1/phone/{number}", "/v1/plates/{plate}", "/v1/area-codes", "/v1/health"],
         source: "https://github.com/asgatcreation/naija-data",
         licence: "Data CC BY 4.0, Akanji Oluwaseun Gabriel. Code MIT.",
@@ -109,8 +137,29 @@ function route(url: URL): unknown {
       const lga = requireLga(id, state);
       if (!sub) return { data: lga };
       if (sub === "wards") return list(wards(lga));
+      if (sub === "constituencies") return list(lgaConstituencies(lga));
       break;
     }
+    case "constituencies":
+      if (!id) return listConstituencies(url, url.searchParams.get("kind") as ConstituencyKind | null);
+      // INEC codes contain slashes ("FC/001/AB"): accept them unencoded too.
+      if (/^(SD|FC|SC)$/i.test(id) && sub && parts.length >= 5) {
+        const unit = requireConstituency(`${id}/${sub}/${parts[4]}`);
+        if (parts.length === 5) return { data: unit };
+        break;
+      }
+      {
+        const unit = requireConstituency(id);
+        if (!sub) return { data: unit };
+        if (sub === "lgas") return list(constituencyLgas(unit));
+        if (sub === "wards") return list(constituencyWards(unit));
+      }
+      break;
+    case "senatorial-districts":
+    case "federal-constituencies":
+    case "state-constituencies":
+      if (!id) return listConstituencies(url, KIND_PATHS[resource]);
+      break;
     case "wards":
       if (id && !sub) {
         const w = getWard(id);

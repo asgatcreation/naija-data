@@ -10,6 +10,8 @@ const cases = {
   search: [`import { search } from "naija-data"; export default search("lagso")[0].name;`, "Lagos"],
   nuban: [`import { isValidNuban } from "naija-data"; export default String(isValidNuban("0000014579", "First Bank"));`, "true"],
   wards: [`import { wards } from "naija-data/wards"; export default String(wards("Ikeja", "Lagos").length);`, "10"],
+  constituencies: [`import { lgaConstituencies } from "naija-data/constituencies"; export default lgaConstituencies("Ikeja", "Lagos")[1].name;`, "Ikeja"],
+  constituencyWards: [`import { constituencyWards } from "naija-data/wards"; export default String(constituencyWards("SC001").length);`, "9"],
   zod: [`import { phoneSchema } from "naija-data/zod"; export default phoneSchema().parse("0803 123 4567");`, "+2348031234567"],
 };
 

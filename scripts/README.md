@@ -19,9 +19,12 @@ python -m pytest -q
 pip install -r requirements-import.txt
 python scripts/fetch/sources.py          # COD-AB, geoBoundaries, NCC, CBN (+ manifest with SHA-256)
 python scripts/fetch/inec_cvr.py         # INEC live state/LGA/ward lists (~811 requests, ~15 min)
+python scripts/fetch/inec_irev.py        # INEC IReV: senatorial districts, constituencies, ward links (~150 requests)
 python scripts/extract/inec_2015_pdf.py  # needs the archived PDFs in .cache/raw/wayback-inec/
 python scripts/extract/constitution.py   # needs .cache/raw/constitution/constitution.pdf
 python scripts/build/import_admin.py     # -> data/states.csv, lgas.csv, wards.csv
+python scripts/build/import_electoral.py # -> data/senatorial_districts.csv, federal_ and state_constituencies.csv;
+                                         #    adds the electoral links to wards.csv and lgas.csv (run after import_admin)
 python scripts/build/import_banks.py     # -> data/banks.csv
 python scripts/build/import_phone.py     # -> data/phone_prefixes.csv
 python scripts/build/import_numbering.py # -> data/phone_area_codes.csv, data/phone_number_blocks.csv

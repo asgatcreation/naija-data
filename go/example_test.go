@@ -67,3 +67,23 @@ func ExampleWards() {
 	fmt.Println(len(wards), wards[0].Name)
 	// Output: 10 Anifowoshe/Ikeja
 }
+
+func ExampleLGAConstituencies() {
+	units, _ := naija.LGAConstituencies("Surulere", "Lagos")
+	for _, u := range units {
+		fmt.Println(u.Kind, u.Name)
+	}
+	// Output:
+	// senatorial_district Lagos Central
+	// federal_constituency Surulere I
+	// federal_constituency Surulere II
+	// state_constituency Surulere I
+	// state_constituency Surulere II
+}
+
+func ExampleFederalConstituencies() {
+	all, _ := naija.FederalConstituencies("")
+	lagos, _ := naija.FederalConstituencies("Lagos")
+	fmt.Println(len(all), len(lagos), naija.GetConstituency("FC/001/AB").Name)
+	// Output: 360 24 Aba North/Aba South
+}

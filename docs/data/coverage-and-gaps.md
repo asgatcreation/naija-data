@@ -10,6 +10,10 @@ Run `python scripts/validate.py` to re-check every rule below.
 | States + FCT | 37 | 37 (Constitution s.2–3) | ✅ complete |
 | LGAs + FCT area councils | 774 | 768 + 6 = 774 (Constitution s.3(6)) | ✅ complete |
 | Wards / registration areas | 8,809 | 8,809 (INEC) | ✅ complete |
+| Senatorial districts | 109 | 109 (Constitution s.48) | ✅ complete (INEC IReV) |
+| Federal constituencies | 360 | 360 (Constitution s.49) | ✅ complete (INEC IReV) |
+| State constituencies | 990 | 990 in INEC's list (often quoted as 993) | ✅ complete as published by INEC; see below |
+| Ward → senatorial district, federal and state constituency | 8,809 / 8,809 | INEC IReV | ✅ 14 links flagged `unverified` (see below) |
 | Licensed financial institutions | 897 active + 2 historical | CBN register | ✅ complete list; codes partial (see below) |
 | Mobile number blocks | 51 blocks, 45 prefixes | NCC table (Dec 2023) | ✅ complete as published |
 | Landline area codes | 56 | NCC area code page | ✅ complete as published |
@@ -23,7 +27,8 @@ Run `python scripts/validate.py` to re-check every rule below.
 |---|---|---|
 | State ISO 3166-2 code, INEC code, P-code, capital, zone, centroid | 37 / 37 | verified |
 | State creation date | 36 / 36 (+ FCT) | **unverified**: single secondary source |
-| LGA INEC code, P-code, senatorial district, centroid | 774 / 774 | verified |
+| LGA INEC code, P-code, centroid | 774 / 774 | verified |
+| LGA senatorial district | 774 / 774 | INEC IReV (replaces UN COD-AB, which differed for 10 LGAs) |
 | LGA headquarters | 629 / 774 | 6 verified (FCT, Constitution); 623 **unverified** (UN COD-AB only) |
 | LGA aliases (other spellings) | 89 aliases on 76 LGAs | from INEC 2015, COD-AB and Constitution |
 | Ward names cross-checked with INEC 2015 directory | 8,355 / 8,809 | Abia (184) and Delta (270) not cross-checked: their 2015 files were not archived |
@@ -55,6 +60,28 @@ These are real errors in upstream data that naija-data detected and resolved.
 - **Lagos appears twice** among state capitals (Ikeja and Lagos); FCT has none.
 - LGA name typos: "Obia/Akpor" (Obio/Akpor), "Markafi" (Makarfi), "Atigbo" (Atisbo).
 - 14 LGAs have two or more candidate headquarters, and 4 "headquarters" are garbled or are rivers ("Moro, River" for Ilorin West, "Jamao?Çoare" for Jama'are); all are left empty rather than guessed.
+
+### INEC Result Viewing portal (IReV): electoral units
+- **990, not 993, state constituencies.** INEC's own list for the 2023 House of Assembly elections numbers
+  them SC/001 to SC/990, and every one of the 8,809 wards is linked to one of them (FCT wards to a nameless
+  placeholder, dropped because the FCT has no House of Assembly). The figure of 993 that circulates in the
+  press is not in INEC's list; no source naming the 3 extra constituencies was found.
+- **Three duplicated codes**, corrected from the sequence (`SC_CODE_FIXES` in `scripts/build/import_electoral.py`):
+  Ika South (Delta) typed SC/252 → SC/251; Billiri West (Gombe) typed SC/076 → SC/376; Remo North (Ogun) typed SC/941 → SC/741.
+- **Misspelled names**: "Ademawa", "Deltal" and "Nassarawa" in senatorial district names (→ Adamawa, Delta,
+  Nasarawa); "Ugwuna Agbo L.G.A" → Ugwunagbo; two Ogun names missing a closing bracket. INEC's spelling stays an alias.
+- **14 suspected ward mislinks**, kept as INEC has them but marked `unverified_fields: state_constituency`:
+  each is a ward whose state constituency lies, for all its other wards, in a different federal
+  constituency, and in most cases a ward of the same name exists in the neighbouring LGA (for example the
+  "Tarauni" ward of Gabasawa LGA is linked to the Tarauni constituency, and the "Tarauni" ward of Tarauni LGA
+  to Gabasawa). Wards: Umuhu/Ezechi and Umuhu (Abia); Ten (Calabar Municipal); Tarauni ×2, Goron Dutse ×2 and
+  Falgore (Kano); Takware (Kebbi); Oji-Aji ×2 (Kogi); Port Harcourt Township and Rumuwoji (One) (Rivers).
+- **Real splits, not errors**: Surulere, Lagos Island, Mushin and Oshodi/Isolo (Lagos) and Port Harcourt
+  (Rivers) are each split between two federal constituencies; Obingwa/Ugwunagbo/Osisioma (Abia) and
+  Gezawa/Gabasawa (Kano) federal constituencies span two senatorial districts; and the Boripe/Boluwaduro
+  state constituency (Osun) crosses a federal constituency boundary.
+- **UN COD-AB senatorial districts differ from INEC for 10 LGAs**: Osisioma Ngwa, Kaga, Biase, Kajuru, Kauru,
+  Jega, Karaye, Offa, Damaturu and Talata Mafara. INEC, which runs the elections, is followed.
 
 ### Constitution (government-hosted transcription)
 - Typing errors ("Tqngaza", "Ogbmosho", "Matazuu") and missing commas merge or split LGAs ("Kaura, Namoda"), so a naive parse finds 764 of 768 LGAs. Used for capitals and aliases, not as the master list.
@@ -97,3 +124,7 @@ These are real errors in upstream data that naija-data detected and resolved.
     FRSC is drafted in [docs/requests/frsc-plate-codes.md](../requests/frsc-plate-codes.md).
 12. **Government, armed forces, paramilitary and diplomatic plate formats** are not validated: the sample
     plate images in the available copy of the Regulations are missing.
+13. **State constituency count.** naija-data has the 990 state constituencies in INEC's list; if INEC
+    publishes the 3 further constituencies often quoted (993), they will be added with their source.
+14. **Electoral boundaries change.** INEC can review constituencies (Constitution s.73 and s.113); the data is
+    from the 2023 general elections and later by-elections in IReV.

@@ -9,6 +9,26 @@ This project follows [Semantic Versioning](https://semver.org/):
 
 ## [Unreleased]
 
+### Added
+- Electoral units from INEC's Result Viewing portal: 109 senatorial districts, 360 federal constituencies
+  and 990 state constituencies (`data/senatorial_districts.csv`, `federal_constituencies.csv`,
+  `state_constituencies.csv`), each with INEC's code and the LGAs it covers.
+- Every ward now carries its `senatorial_district`, `federal_constituency` and `state_constituency` codes,
+  and `unverified_fields` (14 ward links that look wrong in INEC's data are flagged).
+- Functions in Python, JavaScript (`naija-data/constituencies`) and Go: `senatorial_districts`,
+  `federal_constituencies`, `state_constituencies`, `constituencies`, `get_constituency`,
+  `find_constituencies`, `lga_constituencies`, `constituency_lgas`, `constituency_wards`.
+- REST API: `/v1/constituencies`, `/v1/senatorial-districts`, `/v1/federal-constituencies`,
+  `/v1/state-constituencies`, `/v1/constituencies/{code}/lgas|wards`, `/v1/lgas/{lga}/constituencies`.
+- Playground: Senate / House of Reps / House of Assembly picker; the ward picker shows each ward's
+  senatorial district and constituencies; the NUBAN checker explains phone-number wallets (OPay, PalmPay).
+
+### Changed (data)
+- LGA `senatorial_district` now comes from INEC instead of UN COD-AB. 10 LGAs move: Osisioma Ngwa
+  (Abia Central), Kaga (Borno North), Biase (Cross River South), Kajuru (Kaduna Central), Kauru (Kaduna South),
+  Jega (Kebbi Central), Karaye (Kano South), Offa (Kwara South), Damaturu (Yobe East), Talata Mafara
+  (Zamfara West). Nasarawa districts are spelled "Nasarawa" and the FCT district is "FCT".
+
 ## [0.1.1] - 2026-10-16
 
 ### Fixed

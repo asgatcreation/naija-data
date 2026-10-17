@@ -25,6 +25,20 @@ const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
   </section>
 
   <section>
+    <h2 id="constituencies">Senate, House of Reps and House of Assembly</h2>
+    <p>INEC's 109 senatorial districts, 360 federal constituencies and 990 state constituencies, with the LGAs in each.</p>
+    <div class="row">
+      <div><label for="pg-c-state">State</label><select id="pg-c-state"><option value="">Choose a state</option></select></div>
+      <div><label for="pg-c-kind">Seat</label><select id="pg-c-kind">
+        <option value="senatorial_district">Senate: senatorial districts</option>
+        <option value="federal_constituency">House of Reps: federal constituencies</option>
+        <option value="state_constituency">House of Assembly: state constituencies</option>
+      </select></div>
+    </div>
+    <ul id="pg-c-out" class="results not-content" aria-live="polite"></ul>
+  </section>
+
+  <section>
     <h2 id="nuban">Check an account number (NUBAN)</h2>
     <p>Example from the CBN standard: <code>0000014579</code> at First Bank (code 011).</p>
     <div class="row">
@@ -32,6 +46,9 @@ const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
       <div><label for="pg-bank">Bank (optional)</label><select id="pg-bank"><option value="">Any bank: list candidates</option></select></div>
     </div>
     <div id="pg-nuban" class="out not-content" aria-live="polite"></div>
+    <p><small>OPay, PalmPay and similar wallets are not in the list: they have no CBN bank code, and their account
+      number is usually the phone number without its first 0, so the NUBAN check digit does not apply to them. When an
+      account number is also a valid mobile number, it is shown below.</small></p>
   </section>
 
   <section>
@@ -53,8 +70,11 @@ const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
 <script>
   import {
     banks, banksForNuban, getBank, getLga, getState, isValidNuban, lgas, parsePhone, parsePlate, phoneError, plateError,
-    search, states,
+    search, states, type LGA,
   } from "naija-data";
+  type Units = typeof import("naija-data/constituencies");
+  let unitsModule: Promise<Units> | undefined;
+  const loadUnits = () => (unitsModule ??= import("naija-data/constituencies")); // fetched only when first needed
 
   const root = document.querySelector<HTMLElement>(".pg")!;
   const API = root.dataset.api!;
@@ -106,17 +126,51 @@ const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
     wardSel.replaceChildren(option("", "Loading wards…"));
     const l = getLga(lgaSel.value);
     if (!l) return;
-    const { wards } = await import("naija-data/wards"); // fetched only when first needed
+    const [{ wards }, units] = await Promise.all([import("naija-data/wards"), loadUnits()]); // fetched only when first needed
     const list = wards(l);
     wardSel.replaceChildren(option("", `Choose a ward (${list.length})`), ...list.map((w) => option(w.code, w.name)));
     wardSel.disabled = false;
-    place.textContent = `${l.name} (${l.code}, INEC ${l.inec_code}) · ${l.senatorial_district ?? ""} · ${list.length} wards`;
+    const fcs = units.lgaConstituencies(l).filter((u) => u.kind === "federal_constituency").map((u) => u.name);
+    place.textContent = [
+      `${l.name} (${l.code}, INEC ${l.inec_code}) · ${list.length} wards`,
+      `Senatorial district: ${l.senatorial_district ?? ""}`,
+      `Federal constituency: ${fcs.join(" or ")}`,
+    ].join("\n");
   });
-  wardSel.addEventListener("change", () => {
+  wardSel.addEventListener("change", async () => {
     const l = getLga(lgaSel.value);
-    const w = wardSel.selectedOptions[0];
-    if (l && w?.value) place.textContent = `${w.textContent} · INEC code ${w.value} · ${l.name}, ${getState(l.state_code)?.name}`;
+    if (!l || !wardSel.value) return;
+    const [{ getWard }, { getConstituency }] = await Promise.all([import("naija-data/wards"), loadUnits()]);
+    const w = getWard(wardSel.value)!;
+    const name = (code: string | null) => (code ? getConstituency(code)?.name ?? code : "none (the FCT has no House of Assembly)");
+    const flag = w.unverified_fields.includes("state_constituency") ? " (unverified: INEC's link looks wrong)" : "";
+    place.textContent = [
+      `${w.name} · INEC code ${w.code} · ${l.name}, ${getState(l.state_code)?.name}`,
+      `Senatorial district: ${name(w.senatorial_district)}`,
+      `Federal constituency: ${name(w.federal_constituency)}`,
+      `State constituency: ${name(w.state_constituency)}${flag}`,
+    ].join("\n");
   });
+
+  // ---- constituencies
+  const cState = $<HTMLSelectElement>("pg-c-state");
+  const cKind = $<HTMLSelectElement>("pg-c-kind");
+  const cOut = $("pg-c-out");
+  for (const s of states()) cState.append(option(s.code, s.name));
+  const showUnits = async () => {
+    const s = getState(cState.value);
+    if (!s) return void (cOut.innerHTML = "");
+    const { constituencies, constituencyLgas } = await loadUnits();
+    const list = constituencies(cKind.value as Parameters<typeof constituencies>[0], s);
+    const lgaNames = (ls: LGA[]) => ls.map((l) => esc(l.name)).join(", ");
+    cOut.innerHTML = list.length
+      ? list.map((u) => `<li><strong>${esc(u.name)}</strong> <span class="tag">${esc(u.inec_code)}</span><br>` +
+          `<small>${lgaNames(constituencyLgas(u))}</small></li>`).join("") +
+        `<li>${apiLink(`/constituencies?kind=${cKind.value}&state=${s.code}`)}</li>`
+      : `<li>${esc(s.name)} has no House of Assembly, so no state constituencies.</li>`;
+  };
+  cState.addEventListener("change", showUnits);
+  cKind.addEventListener("change", showUnits);
 
   // ---- NUBAN
   const acct = $<HTMLInputElement>("pg-acct");
@@ -136,9 +190,13 @@ const API = "https://naija-data-api.asgatcreation.workers.dev/v1";
         ${apiLink(`/validate/nuban?account=${digits}&bank=${bank.id}`)}`;
     } else {
       const c = banksForNuban(digits);
+      const asPhone = parsePhone("0" + digits);
+      const wallet = asPhone?.type === "mobile"
+        ? `<p><small>${digits} is also the mobile number ${asPhone.local} (${esc(asPhone.network)}): it could be a wallet account
+            such as OPay or PalmPay, which uses the phone number.</small></p>` : "";
       nubanOut.innerHTML = `<p>The check digit fits <strong>${c.length}</strong> institutions:</p>
         <p>${c.slice(0, 40).map((b) => esc(b.short_name ?? b.name)).join(" · ")}${c.length > 40 ? " …" : ""}</p>
-        ${apiLink(`/validate/nuban?account=${digits}`)}`;
+        ${wallet}${apiLink(`/validate/nuban?account=${digits}`)}`;
     }
   };
   acct.addEventListener("input", showNuban);

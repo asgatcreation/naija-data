@@ -59,7 +59,7 @@ export function getState(query: string | State): State | null {
   return getStateIndex().get(norm(q)) ?? null;
 }
 
-function requireState(state: string | State): State {
+export function requireState(state: string | State): State {
   const s = getState(state);
   if (!s) throw new Error(`Unknown state: ${JSON.stringify(state)}`);
   return s;

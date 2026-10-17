@@ -70,6 +70,13 @@ func lgaCode(l LGA) string   { return l.Code }
 func wardCode(w Ward) string { return w.Code }
 func bankID(b Bank) string   { return b.ID }
 
+func unitCodes(us []Constituency, err error) any {
+	if err != nil {
+		return errResult
+	}
+	return codes(us, func(u Constituency) string { return u.Code })
+}
+
 func runCase(c parityCase) any {
 	a := c.Args
 	switch c.Fn {
@@ -195,6 +202,31 @@ func runCase(c parityCase) any {
 		return out
 	case "prefixes":
 		return Prefixes(str(a[0]))
+	case "constituencies":
+		return unitCodes(Constituencies(str(a[0]), str(a[1])))
+	case "get_constituency":
+		if u := GetConstituency(str(a[0])); u != nil {
+			return u.Code
+		}
+		return nil
+	case "constituency_record":
+		return GetConstituency(str(a[0]))
+	case "find_constituencies":
+		return unitCodes(FindConstituencies(str(a[0]), str(a[1]), str(a[2])))
+	case "constituency_lgas":
+		ls, err := ConstituencyLGAs(str(a[0]))
+		if err != nil {
+			return errResult
+		}
+		return codes(ls, lgaCode)
+	case "constituency_wards":
+		ws, err := ConstituencyWards(str(a[0]))
+		if err != nil {
+			return errResult
+		}
+		return codes(ws, wardCode)
+	case "lga_constituencies":
+		return unitCodes(LGAConstituencies(str(a[0]), str(a[1])))
 	}
 	panic("unknown parity fn " + c.Fn)
 }

@@ -11,6 +11,7 @@ const cases = {
   "banks + NUBAN": `import { getBank, isValidNuban, banksForNuban } from "naija-data"; console.log(getBank, isValidNuban, banksForNuban);`,
   "everything in naija-data": `import * as ng from "naija-data"; console.log(ng);`,
   "naija-data/wards": `import { wards } from "naija-data/wards"; console.log(wards);`,
+  "naija-data/constituencies": `import { federalConstituencies, lgaConstituencies } from "naija-data/constituencies"; console.log(federalConstituencies, lgaConstituencies);`,
   "naija-data/zod (without zod itself)": `import { phoneSchema } from "naija-data/zod"; console.log(phoneSchema);`,
 };
 

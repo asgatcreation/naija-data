@@ -11,7 +11,11 @@
     "state_code",
     "name",
     "slug",
+    "senatorial_district",
+    "federal_constituency",
+    "state_constituency",
     "aliases",
+    "unverified_fields",
     "sources"
   ],
   "properties": {
@@ -35,9 +39,26 @@
       "type": "string",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
     },
+    "senatorial_district": {
+      "type": "string",
+      "pattern": "^SD\\d{3}$"
+    },
+    "federal_constituency": {
+      "type": "string",
+      "pattern": "^FC\\d{3}$"
+    },
+    "state_constituency": {
+      "type": "string",
+      "pattern": "^$|^SC\\d{3}$",
+      "description": "Empty for FCT wards: the FCT has no House of Assembly."
+    },
     "aliases": {
       "type": "string",
       "pattern": "^$|^[^|\\s][^|]*[^|\\s]?(\\|[^|\\s][^|]*[^|\\s]?)*$"
+    },
+    "unverified_fields": {
+      "type": "string",
+      "pattern": "^$|^state_constituency$"
     },
     "sources": {
       "type": "string",

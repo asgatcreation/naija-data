@@ -25,9 +25,13 @@ EXPECTED = {
     "states": 37,  # 36 states + FCT (Constitution s.2(2) and s.3(1))
     "lgas": 774,  # 768 LGAs + 6 FCT area councils (Constitution s.3(6), First Schedule)
     "wards": 8809,  # INEC registration areas (inecnigeria.org/polling-units)
+    "senatorial_districts": 109,  # 3 per state + 1 for the FCT (Constitution s.48)
+    "federal_constituencies": 360,  # House of Representatives seats (Constitution s.49)
+    "state_constituencies": 990,  # INEC's list for the 2023 House of Assembly elections (IReV)
 }
-CSV_FILES = ["states", "lgas", "wards", "banks", "phone_prefixes", "phone_area_codes", "phone_number_blocks",
-             "plate_categories"]
+ELECTORAL = {"senatorial_districts": "SD", "federal_constituencies": "FC", "state_constituencies": "SC"}
+CSV_FILES = ["states", "lgas", "wards", *ELECTORAL, "banks", "phone_prefixes", "phone_area_codes",
+             "phone_number_blocks", "plate_categories"]
 NAMELESS = {"phone_prefixes", "phone_area_codes", "phone_number_blocks", "plate_categories"}
 
 
@@ -186,6 +190,65 @@ def check_admin(states, lgas, wards) -> list[str]:
     return errors
 
 
+def check_electoral(states, lgas, wards, units: dict[str, list[dict]]) -> list[str]:
+    errors = []
+    state_by_code = {s["code"]: s for s in states}
+    by_code = {}
+    for name, prefix in ELECTORAL.items():
+        rows = units[name]
+        if len(rows) != EXPECTED[name]:
+            errors.append(f"{name}.csv: expected {EXPECTED[name]} rows, found {len(rows)}")
+        errors += unique(name, rows, "code") + unique(name, rows, "inec_code") + unique(name, rows, "state_code", "slug")
+        for r in rows:
+            if r["state_code"] not in state_by_code:
+                errors.append(f"{name}.csv: {r['code']}: unknown state {r['state_code']}")
+            if int(r["code"][2:]) != int(r["inec_code"].split("/")[1]):
+                errors.append(f"{name}.csv: {r['code']}: number differs from INEC code {r['inec_code']}")
+            by_code[r["code"]] = r
+
+    # Every unit has wards; every ward's units exist and are in the ward's state.
+    used = Counter()
+    for w in wards:
+        for col in ("senatorial_district", "federal_constituency", "state_constituency"):
+            code = w[col]
+            if not code:
+                if col != "state_constituency" or w["state_code"] != "FC":
+                    errors.append(f"wards.csv: {w['code']}: {col} is empty")
+                continue
+            used[code] += 1
+            unit = by_code.get(code)
+            if not unit:
+                errors.append(f"wards.csv: {w['code']}: unknown {col} {code}")
+            elif unit["state_code"] != w["state_code"]:
+                errors.append(f"wards.csv: {w['code']}: {col} {code} is in another state ({unit['state_code']})")
+        if w["state_code"] == "FC" and w["state_constituency"]:
+            errors.append(f"wards.csv: {w['code']}: the FCT has no House of Assembly, so no state constituency")
+    for code, unit in by_code.items():
+        if not used[code]:
+            errors.append(f"{code} {unit['name']} has no wards")
+
+    # Senatorial districts: 3 per state, 1 for the FCT; an LGA lies in exactly one district,
+    # and lgas.csv names it.
+    per_state = {name: Counter(r["state_code"] for r in units[name]) for name in ELECTORAL}
+    for s in states:
+        want = 1 if s["code"] == "FC" else 3
+        if per_state["senatorial_districts"][s["code"]] != want:
+            errors.append(f"{s['name']}: {per_state['senatorial_districts'][s['code']]} senatorial districts, expected {want}")
+        sc = per_state["state_constituencies"][s["code"]]
+        if s["code"] != "FC" and not 24 <= sc <= 40:  # Constitution s.91: 24 to 40 members
+            errors.append(f"{s['name']}: {sc} state constituencies, outside 24-40 (Constitution s.91)")
+    lga_sd = defaultdict(set)
+    for w in wards:
+        lga_sd[w["lga_code"]].add(w["senatorial_district"])
+    for l in lgas:
+        sds = lga_sd[l["code"]]
+        if len(sds) != 1:
+            errors.append(f"lgas.csv: {l['name']}: wards in {len(sds)} senatorial districts")
+        elif by_code.get(next(iter(sds)), {}).get("name") != l["senatorial_district"]:
+            errors.append(f"lgas.csv: {l['name']}: senatorial_district {l['senatorial_district']!r} differs from its wards' district")
+    return errors
+
+
 def check_banks(banks) -> list[str]:
     errors = unique("banks", banks, "id")
     ids = {b["id"] for b in banks}
@@ -271,6 +334,7 @@ def validate() -> list[str]:
         return errors
 
     errors += check_admin(tables["states"], tables["lgas"], tables["wards"])
+    errors += check_electoral(tables["states"], tables["lgas"], tables["wards"], {n: tables[n] for n in ELECTORAL})
     errors += check_dates("states", tables["states"], "created")
     errors += check_banks(tables["banks"])
     errors += check_phone(tables["phone_prefixes"])

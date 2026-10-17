@@ -4,6 +4,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { test } from "node:test";
 import * as ng from "../dist/index.js";
 import * as wd from "../dist/wards.js";
+import * as cd from "../dist/constituencies.js";
 
 const FIXTURE = new URL("../../../fixtures/parity.json", import.meta.url);
 
@@ -46,6 +47,13 @@ function run(fn, args) {
       case "plate_categories": return ng.plateCategories();
       case "search_wards": return wd.searchWards(args[0], { limit: args[1] }).map((r) => [r.kind, r.code, r.score, r.matched]);
       case "prefixes": return ng.prefixes(args[0]);
+      case "constituencies": return codes(cd.constituencies(args[0], args[1]));
+      case "get_constituency": return cd.getConstituency(args[0])?.code ?? null;
+      case "constituency_record": return cd.getConstituency(args[0]);
+      case "find_constituencies": return codes(cd.findConstituencies(args[0], args[1], args[2]));
+      case "constituency_lgas": return codes(cd.constituencyLgas(args[0]));
+      case "constituency_wards": return codes(wd.constituencyWards(args[0]));
+      case "lga_constituencies": return codes(cd.lgaConstituencies(args[0], args[1]));
       default: throw new TypeError(`Unknown parity fn ${fn}`);
     }
   } catch (e) {

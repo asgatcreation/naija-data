@@ -1,0 +1,110 @@
+code,state_code,inec_code,name,slug,aliases,sources
+SD001,AB,SD/001/AB,Abia North,abia-north,,inec-irev
+SD002,AB,SD/002/AB,Abia Central,abia-central,,inec-irev
+SD003,AB,SD/003/AB,Abia South,abia-south,,inec-irev
+SD004,AD,SD/004/AD,Adamawa North,adamawa-north,,inec-irev
+SD005,AD,SD/005/AD,Adamawa South,adamawa-south,,inec-irev
+SD006,AD,SD/006/AD,Adamawa Central,adamawa-central,,inec-irev
+SD007,AK,SD/007/AK,Akwa Ibom North East,akwa-ibom-north-east,,inec-irev
+SD008,AK,SD/008/AK,Akwa Ibom North West,akwa-ibom-north-west,,inec-irev
+SD009,AK,SD/009/AK,Akwa Ibom South,akwa-ibom-south,,inec-irev
+SD010,AN,SD/010/AN,Anambra North,anambra-north,,inec-irev
+SD011,AN,SD/011/AN,Anambra Central,anambra-central,,inec-irev
+SD012,AN,SD/012/AN,Anambra South,anambra-south,,inec-irev
+SD013,BA,SD/013/BA,Bauchi South,bauchi-south,,inec-irev
+SD014,BA,SD/014/BA,Bauchi Central,bauchi-central,,inec-irev
+SD015,BA,SD/015/BA,Bauchi North,bauchi-north,,inec-irev
+SD016,BY,SD/016/BY,Bayelsa East,bayelsa-east,,inec-irev
+SD017,BY,SD/017/BY,Bayelsa Central,bayelsa-central,,inec-irev
+SD018,BY,SD/018/BY,Bayelsa West,bayelsa-west,,inec-irev
+SD019,BE,SD/019/BN,Benue North East,benue-north-east,,inec-irev
+SD020,BE,SD/020/BN,Benue North West,benue-north-west,,inec-irev
+SD021,BE,SD/021/BN,Benue South,benue-south,,inec-irev
+SD022,BO,SD/022/BO,Borno North,borno-north,,inec-irev
+SD023,BO,SD/023/BO,Borno Central,borno-central,,inec-irev
+SD024,BO,SD/024/BO,Borno South,borno-south,,inec-irev
+SD025,CR,SD/025/CR,Cross River North,cross-river-north,,inec-irev
+SD026,CR,SD/026/CR,Cross River Central,cross-river-central,,inec-irev
+SD027,CR,SD/027/CR,Cross River South,cross-river-south,,inec-irev
+SD028,DE,SD/028/DT,Delta Central,delta-central,,inec-irev
+SD029,DE,SD/029/DT,Delta North,delta-north,,inec-irev
+SD030,DE,SD/030/DT,Delta South,delta-south,,inec-irev
+SD031,EB,SD/031/EB,Ebonyi North,ebonyi-north,,inec-irev
+SD032,EB,SD/032/EB,Ebonyi Central,ebonyi-central,,inec-irev
+SD033,EB,SD/033/EB,Ebonyi South,ebonyi-south,,inec-irev
+SD034,ED,SD/034/ED,Edo Central,edo-central,,inec-irev
+SD035,ED,SD/035/ED,Edo North,edo-north,,inec-irev
+SD036,ED,SD/036/ED,Edo South,edo-south,,inec-irev
+SD037,EK,SD/037/EK,Ekiti North,ekiti-north,,inec-irev
+SD038,EK,SD/038/EK,Ekiti Central,ekiti-central,,inec-irev
+SD039,EK,SD/039/EK,Ekiti South,ekiti-south,,inec-irev
+SD040,EN,SD/040/EN,Enugu East,enugu-east,,inec-irev
+SD041,EN,SD/041/EN,Enugu West,enugu-west,,inec-irev
+SD042,EN,SD/042/EN,Enugu North,enugu-north,,inec-irev
+SD043,GO,SD/043/GM,Gombe Central,gombe-central,,inec-irev
+SD044,GO,SD/044/GM,Gombe South,gombe-south,,inec-irev
+SD045,GO,SD/045/GM,Gombe North,gombe-north,,inec-irev
+SD046,IM,SD/046/IM,Imo East,imo-east,,inec-irev
+SD047,IM,SD/047/IM,Imo West,imo-west,,inec-irev
+SD048,IM,SD/048/IM,Imo North,imo-north,,inec-irev
+SD049,JI,SD/049/JG,Jigawa South-West,jigawa-south-west,,inec-irev
+SD050,JI,SD/050/JG,Jigawa North-East,jigawa-north-east,,inec-irev
+SD051,JI,SD/051/JG,Jigawa North-West,jigawa-north-west,,inec-irev
+SD052,KD,SD/052/KD,Kaduna North,kaduna-north,,inec-irev
+SD053,KD,SD/053/KD,Kaduna Central,kaduna-central,,inec-irev
+SD054,KD,SD/054/KD,Kaduna South,kaduna-south,,inec-irev
+SD055,KN,SD/055/KN,Kano Central,kano-central,,inec-irev
+SD056,KN,SD/056/KN,Kano North,kano-north,,inec-irev
+SD057,KN,SD/057/KN,Kano South,kano-south,,inec-irev
+SD058,KT,SD/058/KT,Katsina North,katsina-north,,inec-irev
+SD059,KT,SD/059/KT,Katsina South,katsina-south,,inec-irev
+SD060,KT,SD/060/KT,Katsina Central,katsina-central,,inec-irev
+SD061,KE,SD/061/KB,Kebbi North,kebbi-north,,inec-irev
+SD062,KE,SD/062/KB,Kebbi Central,kebbi-central,,inec-irev
+SD063,KE,SD/063/KB,Kebbi South,kebbi-south,,inec-irev
+SD064,KO,SD/064/KG,Kogi Central,kogi-central,,inec-irev
+SD065,KO,SD/065/KG,Kogi East,kogi-east,,inec-irev
+SD066,KO,SD/066/KG,Kogi West,kogi-west,,inec-irev
+SD067,KW,SD/067/KW,Kwara North,kwara-north,,inec-irev
+SD068,KW,SD/068/KW,Kwara Central,kwara-central,,inec-irev
+SD069,KW,SD/069/KW,Kwara South,kwara-south,,inec-irev
+SD070,LA,SD/070/LA,Lagos Central,lagos-central,,inec-irev
+SD071,LA,SD/071/LA,Lagos East,lagos-east,,inec-irev
+SD072,LA,SD/072/LA,Lagos West,lagos-west,,inec-irev
+SD073,NA,SD/073/NW,Nasarawa North,nasarawa-north,,inec-irev
+SD074,NA,SD/074/NW,Nasarawa West,nasarawa-west,,inec-irev
+SD075,NA,SD/075/NW,Nasarawa South,nasarawa-south,,inec-irev
+SD076,NI,SD/076/NG,Niger East,niger-east,,inec-irev
+SD077,NI,SD/077/NG,Niger North,niger-north,,inec-irev
+SD078,NI,SD/078/NG,Niger South,niger-south,,inec-irev
+SD079,OG,SD/079/OG,Ogun Central,ogun-central,,inec-irev
+SD080,OG,SD/080/OG,Ogun East,ogun-east,,inec-irev
+SD081,OG,SD/081/OG,Ogun West,ogun-west,,inec-irev
+SD082,ON,SD/082/OD,Ondo North,ondo-north,,inec-irev
+SD083,ON,SD/083/OD,Ondo Central,ondo-central,,inec-irev
+SD084,ON,SD/084/OD,Ondo South,ondo-south,,inec-irev
+SD085,OS,SD/085/OS,Osun Central,osun-central,,inec-irev
+SD086,OS,SD/086/OS,Osun East,osun-east,,inec-irev
+SD087,OS,SD/087/OS,Osun West,osun-west,,inec-irev
+SD088,OY,SD/088/OY,Oyo Central,oyo-central,,inec-irev
+SD089,OY,SD/089/OY,Oyo North,oyo-north,,inec-irev
+SD090,OY,SD/090/OY,Oyo South,oyo-south,,inec-irev
+SD091,PL,SD/091/PL,Plateau South,plateau-south,,inec-irev
+SD092,PL,SD/092/PL,Plateau Central,plateau-central,,inec-irev
+SD093,PL,SD/093/PL,Plateau North,plateau-north,,inec-irev
+SD094,RI,SD/094/RV,Rivers East,rivers-east,,inec-irev
+SD095,RI,SD/095/RV,Rivers South East,rivers-south-east,,inec-irev
+SD096,RI,SD/096/RV,Rivers West,rivers-west,,inec-irev
+SD097,SO,SD/097/SO,Sokoto East,sokoto-east,,inec-irev
+SD098,SO,SD/098/SO,Sokoto North,sokoto-north,,inec-irev
+SD099,SO,SD/099/SO,Sokoto South,sokoto-south,,inec-irev
+SD100,TA,SD/100/TR,Taraba South,taraba-south,,inec-irev
+SD101,TA,SD/101/TR,Taraba Central,taraba-central,,inec-irev
+SD102,TA,SD/102/TR,Taraba North,taraba-north,,inec-irev
+SD103,YO,SD/103/YB,Yobe East,yobe-east,,inec-irev
+SD104,YO,SD/104/YB,Yobe North,yobe-north,,inec-irev
+SD105,YO,SD/105/YB,Yobe South,yobe-south,,inec-irev
+SD106,ZA,SD/106/ZF,Zamfara North,zamfara-north,,inec-irev
+SD107,ZA,SD/107/ZF,Zamfara Central,zamfara-central,,inec-irev
+SD108,ZA,SD/108/ZF,Zamfara West,zamfara-west,,inec-irev
+SD109,FC,SD/109/FCT,FCT,fct,,inec-irev

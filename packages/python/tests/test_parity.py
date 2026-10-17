@@ -41,6 +41,14 @@ def run(fn, args):
             return [x.to_dict() for x in getattr(ng, fn)()]
         if fn == "search_wards":
             return [[x.kind, x.code, x.score, x.matched] for x in ng.search_wards(args[0], limit=args[1])]
+        if fn in ("constituencies", "find_constituencies", "lga_constituencies", "constituency_lgas",
+                  "constituency_wards"):
+            return [x.code for x in getattr(ng, fn)(*args)]
+        if fn == "get_constituency":
+            u = ng.get_constituency(*args)
+            return u.code if u else None
+        if fn == "constituency_record":
+            return ng.get_constituency(*args).to_dict()
         return getattr(ng, fn)(*args)
     except ValueError:
         return {"error": True}

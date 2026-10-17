@@ -25,6 +25,10 @@ TARGETS = [
 ]
 
 
+ELECTORAL = {"senatorial_district": "senatorial_districts", "federal_constituency": "federal_constituencies",
+             "state_constituency": "state_constituencies"}
+
+
 def rows(name: str) -> list[dict]:
     with (DATA / f"{name}.csv").open(encoding="utf-8", newline="") as f:
         return list(csv.DictReader(f))
@@ -53,9 +57,23 @@ def build() -> dict[str, object]:
         "aliases": lst(r["aliases"]), "unverified_fields": lst(r["unverified_fields"]), "sources": lst(r["sources"]),
     } for r in rows("lgas")]
     # Wards are the largest table: stored as columns + rows to keep the files small.
-    ward_fields = ["code", "lga_code", "state_code", "name", "slug", "aliases"]
+    ward_rows = rows("wards")
+    ward_fields = ["code", "lga_code", "state_code", "name", "slug", "senatorial_district", "federal_constituency",
+                   "state_constituency", "aliases", "unverified_fields"]
     wards = {"fields": ward_fields,
-             "rows": [[r["code"], r["lga_code"], r["state_code"], r["name"], r["slug"], lst(r["aliases"])] for r in rows("wards")]}
+             "rows": [[r["code"], r["lga_code"], r["state_code"], r["name"], r["slug"], r["senatorial_district"],
+                       r["federal_constituency"], r["state_constituency"] or None, lst(r["aliases"]),
+                       lst(r["unverified_fields"])] for r in ward_rows]}
+    # Electoral units, each with the LGAs it covers in full or in part (from the ward links).
+    unit_lgas: dict[str, list[str]] = {}
+    for r in ward_rows:
+        for col in ("senatorial_district", "federal_constituency", "state_constituency"):
+            if r[col] and r["lga_code"] not in unit_lgas.setdefault(r[col], []):
+                unit_lgas[r[col]].append(r["lga_code"])
+    constituencies = [{
+        "kind": kind, "code": r["code"], "state_code": r["state_code"], "inec_code": r["inec_code"], "name": r["name"],
+        "slug": r["slug"], "aliases": lst(r["aliases"]), "lga_codes": sorted(unit_lgas[r["code"]]), "sources": lst(r["sources"]),
+    } for kind, file in ELECTORAL.items() for r in rows(file)]
     banks = [{
         "id": r["id"], "name": r["name"], "short_name": r["short_name"] or None, "type": r["type"],
         "cbn_code": r["cbn_code"] or None, "nip_code": r["nip_code"] or None, "ussd": r["ussd"] or None,
@@ -74,7 +92,9 @@ def build() -> dict[str, object]:
                              for r in rows("plate_categories")]}
     meta = {
         "data_version": max(s["retrieved"] for s in sources),
-        "counts": {"states": len(states), "lgas": len(lgas), "wards": len(wards["rows"]), "banks": len(banks),
+        "counts": {"states": len(states), "lgas": len(lgas), "wards": len(wards["rows"]),
+                   **{file: sum(c["kind"] == kind for c in constituencies) for kind, file in ELECTORAL.items()},
+                   "banks": len(banks),
                    "mobile_blocks": len(phone["mobile"]), "number_blocks": len(phone["blocks"]),
                    "area_codes": len(phone["area_codes"]), "plate_categories": len(plates["categories"])},
         "licence": "CC-BY-4.0",
@@ -82,7 +102,7 @@ def build() -> dict[str, object]:
         "sources": [{"id": s["id"], "name": s["name"], "url": s["url"], "retrieved": s["retrieved"], "licence": s["licence"]}
                     for s in sources],
     }
-    return {"meta": meta, "states": states, "lgas": lgas, "wards": wards, "banks": banks, "phone": phone, "plates": plates}
+    return {"meta": meta, "states": states, "lgas": lgas, "wards": wards, "constituencies": constituencies, "banks": banks, "phone": phone, "plates": plates}
 
 
 # Licence files every published package must carry.

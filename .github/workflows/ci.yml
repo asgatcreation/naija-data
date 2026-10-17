@@ -113,6 +113,7 @@ jobs:
           npm install /tmp/naija-data-*.tgz
           node -e "const ng = require('naija-data'); if (ng.getState('lagos').capital !== 'Ikeja') process.exit(1)"
           node --input-type=module -e "import { wards } from 'naija-data/wards'; if (wards('Ikeja', 'Lagos').length !== 10) process.exit(1)"
+          node --input-type=module -e "import { federalConstituencies } from 'naija-data/constituencies'; if (federalConstituencies().length !== 360) process.exit(1)"
           npm install zod@4.6.5
           node --input-type=module -e "import { phoneSchema } from 'naija-data/zod'; if (phoneSchema().parse('0803 123 4567') !== '+2348031234567') process.exit(1)"
           npx naija bank 058

@@ -20,6 +20,33 @@ return identical results. Names follow each language's conventions.
 | `search(q, kinds, limit)` | `search(q, {limit})` | `Search(q, opts)` | Fuzzy matches for states and LGAs, with scores 0-1000 |
 | `search_wards(q, limit)` | `searchWards(q, {limit})` | `SearchWards(q, opts)` | Fuzzy matches for wards |
 
+## Senate, House of Representatives and House of Assembly
+
+INEC's electoral units: 109 senatorial districts, 360 federal constituencies and 990 state
+constituencies (the FCT has no House of Assembly). Each is a `Constituency` record with `kind`, `code`
+(`SD001`, `FC001`, `SC001`), `inec_code` (`FC/001/AB`), `name`, `lga_codes` and `sources`. Every ward
+carries the codes of its `senatorial_district`, `federal_constituency` and `state_constituency`.
+In JavaScript these functions come from `naija-data/constituencies` (and `constituencyWards` from `naija-data/wards`).
+
+| Python | JavaScript | Go | Returns |
+|---|---|---|---|
+| `senatorial_districts(state=None)` | `senatorialDistricts(state?)` | `SenatorialDistricts(state)` | Senatorial districts, all or of one state |
+| `federal_constituencies(state=None)` | `federalConstituencies(state?)` | `FederalConstituencies(state)` | Federal constituencies (House of Reps seats) |
+| `state_constituencies(state=None)` | `stateConstituencies(state?)` | `StateConstituencies(state)` | State constituencies (House of Assembly seats) |
+| `constituencies(kind=None, state=None)` | `constituencies(kind?, state?)` | `Constituencies(kind, state)` | Any or all kinds |
+| `get_constituency(code)` | `getConstituency(code)` | `GetConstituency(code)` | Unit by code or INEC code, or none |
+| `find_constituencies(name, kind, state)` | `findConstituencies(name, kind?, state?)` | `FindConstituencies(name, kind, state)` | Every unit with that name or alias |
+| `lga_constituencies(lga, state=None)` | `lgaConstituencies(lga, state?)` | `LGAConstituencies(lga, state)` | The units an LGA lies in (several when it is split) |
+| `constituency_lgas(code)` | `constituencyLgas(code)` | `ConstituencyLGAs(code)` | LGAs a unit covers in full or in part |
+| `constituency_wards(code)` | `constituencyWards(code)` from `naija-data/wards` | `ConstituencyWards(code)` | Wards that make up a unit |
+
+```python
+import naija_data as ng
+[u.name for u in ng.lga_constituencies("Surulere", "Lagos")]
+# ['Lagos Central', 'Surulere I', 'Surulere II', 'Surulere I', 'Surulere II']
+ng.get_lga("Offa").senatorial_district  # 'Kwara South'
+```
+
 ## Banks and NUBAN
 
 | Python | JavaScript | Go | Returns |

@@ -50,6 +50,13 @@ whenever the data or the behaviour changes, and review the diff.
 | `plate_categories` | – | list of plate category records |
 | `search_wards` | query, limit | list of `[kind, code, score, matched]` |
 | `prefixes` | network or null | list of prefixes |
+| `constituencies` | kind or null, state or null | list of unit codes |
+| `get_constituency` | code or INEC code | unit code, or null |
+| `constituency_record` | code | full record |
+| `find_constituencies` | name, kind or null, state or null | list of unit codes |
+| `lga_constituencies` | LGA, state or null | list of unit codes |
+| `constituency_lgas` | code | list of LGA codes |
+| `constituency_wards` | code | list of ward codes |
 
 ## Shared algorithms
 

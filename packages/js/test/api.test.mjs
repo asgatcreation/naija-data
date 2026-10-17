@@ -38,3 +38,18 @@ test("CommonJS require works for both entry points", () => {
   assert.equal(cjs.getState("kano").name, "Kano");
   assert.equal(cjsWards.wards("Ikeja", "Lagos").length, 10);
 });
+
+test("ESM: constituencies", async () => {
+  const cd = await import("naija-data/constituencies");
+  const { constituencyWards } = await import("naija-data/wards");
+  assert.equal(cd.senatorialDistricts().length, 109);
+  assert.equal(cd.federalConstituencies().length, 360);
+  assert.equal(cd.stateConstituencies().length, 990);
+  assert.deepEqual(cd.stateConstituencies("FCT"), []);
+  assert.deepEqual(cd.lgaConstituencies("Surulere", "Lagos").map((u) => u.name),
+    ["Lagos Central", "Surulere I", "Surulere II", "Surulere I", "Surulere II"]);
+  assert.equal(cd.getConstituency("fc/001/ab").name, "Aba North/Aba South");
+  assert.equal(constituencyWards("SC001").length, 9);
+  const require = createRequire(import.meta.url);
+  assert.equal(require("naija-data/constituencies").getConstituency("SD001").kind, "senatorial_district");
+});

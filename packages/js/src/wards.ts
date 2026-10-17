@@ -3,18 +3,23 @@
 
 import wardData from "./data/wards.json";
 import { rank, requireLga, type Candidate, type SearchOptions } from "./admin";
-import type { LGA, SearchResult, State, Ward } from "./types";
+import { requireConstituency } from "./constituencies";
+import type { Constituency, LGA, SearchResult, State, Ward } from "./types";
 
-type Row = [string, string, string, string, string, string[]];
+type Row = [string, string, string, string, string, string, string, string | null, string[], string[]];
 
 let all: Ward[] | undefined;
 let byLga: Map<string, Ward[]> | undefined;
 
 function load(): Ward[] {
   if (!all) {
-    all = (wardData.rows as Row[]).map(([code, lga_code, state_code, name, slug, aliases]) => ({
-      code, lga_code, state_code, name, slug, aliases,
-    }));
+    all = (wardData.rows as Row[]).map(
+      ([code, lga_code, state_code, name, slug, senatorial_district, federal_constituency, state_constituency, aliases,
+        unverified_fields]) => ({
+        code, lga_code, state_code, name, slug, senatorial_district, federal_constituency, state_constituency, aliases,
+        unverified_fields,
+      }),
+    );
     byLga = new Map();
     for (const w of all) {
       const list = byLga.get(w.lga_code) ?? [];
@@ -45,6 +50,12 @@ export function searchWards(query: string, options: SearchOptions = {}): SearchR
     options.limit ?? 10,
     options.minScore ?? 600,
   );
+}
+
+/** Wards (INEC registration areas) that make up a senatorial district or constituency, in INEC code order. */
+export function constituencyWards(code: string | Constituency): Ward[] {
+  const u = requireConstituency(code);
+  return load().filter((w) => w[u.kind] === u.code); // ward fields are named after the kinds
 }
 
 export type { Ward } from "./types";

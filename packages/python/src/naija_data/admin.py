@@ -36,6 +36,7 @@ def _wards() -> Tuple[Ward, ...]:
     for row in raw["rows"]:
         d = dict(zip(fields, row))
         d["aliases"] = tuple(d["aliases"])
+        d["unverified_fields"] = tuple(d["unverified_fields"])
         out.append(Ward(**d))
     return tuple(out)
 

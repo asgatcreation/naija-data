@@ -10,9 +10,11 @@ import json
 import sys
 from typing import List, Optional
 
-from . import (banks, banks_for_nuban, find_banks, get_bank, get_lga, get_state, is_valid_nuban, lgas,
-               meta, parse_phone, parse_plate, phone_error, plate_error, search, states,
-               wards, __version__)
+from . import (banks, banks_for_nuban, find_banks, get_bank, get_lga, get_state, is_valid_nuban, lga_constituencies,
+               lgas, meta, parse_phone, parse_plate, phone_error, plate_error, search, states, wards, __version__)
+
+KIND_LABELS = {"senatorial_district": "senatorial district", "federal_constituency": "federal constituency",
+               "state_constituency": "state constituency"}
 
 
 def _out(args, data, lines: List[str]) -> int:
@@ -35,6 +37,9 @@ def main(argv: Optional[List[str]] = None) -> int:
     sp = sub.add_parser("lga", help="list a state's LGAs, or show one LGA");  sp.add_argument("query")
     sp.add_argument("--state", help="state, when an LGA name exists in several states")
     sp = sub.add_parser("wards", help="list an LGA's wards");  sp.add_argument("lga")
+    sp.add_argument("--state")
+    sp = sub.add_parser("constituencies", help="an LGA's senatorial district and federal and state constituencies")
+    sp.add_argument("lga")
     sp.add_argument("--state")
     sp = sub.add_parser("search", help="fuzzy search states and LGAs");  sp.add_argument("query")
     sp = sub.add_parser("bank", help="look up a bank by code or name");  sp.add_argument("query")
@@ -66,6 +71,9 @@ def main(argv: Optional[List[str]] = None) -> int:
     if args.cmd == "wards":
         rows = wards(args.lga, args.state)
         return _out(args, [w.to_dict() for w in rows], [f"  {w.code}  {w.name}" for w in rows])
+    if args.cmd == "constituencies":
+        rows = lga_constituencies(args.lga, args.state)
+        return _out(args, [u.to_dict() for u in rows], [f"  {KIND_LABELS[u.kind]:21} {u.code}  {u.name}" for u in rows])
     if args.cmd == "search":
         rows = search(args.query)
         return _out(args, [r.to_dict() for r in rows], [f"  {r.score:4}  {r.kind:5} {r.code:9} {r.name}" + (

@@ -175,3 +175,48 @@ def test_cli(capsys):
     assert main(["phone", "0900 123 4567"]) == 1
     assert main(["plate", "DKN", "135", "3"]) == 0
     assert "Kano" in capsys.readouterr().out
+    assert main(["constituencies", "Surulere", "--state", "Lagos"]) == 0
+    assert "Surulere II" in capsys.readouterr().out
+
+
+def test_constituency_totals():
+    assert len(ng.senatorial_districts()) == 109
+    assert len(ng.federal_constituencies()) == 360
+    assert len(ng.state_constituencies()) == 990
+    assert len(ng.federal_constituencies("Lagos")) == 24
+    assert len(ng.state_constituencies("Lagos")) == 40
+    assert ng.state_constituencies("FCT") == []  # the FCT has no House of Assembly
+    assert [u.name for u in ng.senatorial_districts("FCT")] == ["FCT"]
+
+
+def test_constituency_lookups():
+    fc = ng.get_constituency("FC/001/AB")
+    assert fc is ng.get_constituency("fc001")
+    assert (fc.kind, fc.name) == ("federal_constituency", "Aba North/Aba South")
+    assert [l.name for l in ng.constituency_lgas(fc)] == ["Aba North", "Aba South"]
+    assert ng.get_constituency("FC999") is None
+    with pytest.raises(ValueError):
+        ng.constituency_wards("nope")
+    with pytest.raises(ValueError):
+        ng.constituencies("ward")
+
+
+def test_lga_constituencies():
+    # Surulere (Lagos) is split between two federal and two state constituencies.
+    units = ng.lga_constituencies("Surulere", "Lagos")
+    assert [(u.kind, u.name) for u in units] == [
+        ("senatorial_district", "Lagos Central"), ("federal_constituency", "Surulere I"),
+        ("federal_constituency", "Surulere II"), ("state_constituency", "Surulere I"),
+        ("state_constituency", "Surulere II")]
+    # INEC places Offa in Kwara South (OCHA COD-AB had Kwara Central).
+    assert ng.get_lga("Offa").senatorial_district == "Kwara South"
+    assert ng.lga_constituencies("Offa")[0].name == "Kwara South"
+
+
+def test_ward_constituencies():
+    w = ng.get_ward("01-01-01")
+    assert (w.senatorial_district, w.federal_constituency, w.state_constituency) == ("SD003", "FC001", "SC001")
+    assert all(x.state_constituency is None for x in ng.wards("Abaji", "FCT"))
+    sc = ng.get_constituency(w.state_constituency)
+    assert w in ng.constituency_wards(sc)
+    assert sum(len(ng.constituency_wards(u)) for u in ng.senatorial_districts()) == 8809

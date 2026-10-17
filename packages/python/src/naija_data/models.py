@@ -53,7 +53,26 @@ class Ward(_Record):
     state_code: str
     name: str
     slug: str
+    senatorial_district: str  # code, e.g. "SD001"
+    federal_constituency: str  # code, e.g. "FC001"
+    state_constituency: Optional[str]  # code, e.g. "SC001"; None in the FCT (no House of Assembly)
     aliases: Tuple[str, ...]
+    unverified_fields: Tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class Constituency(_Record):
+    """A senatorial district (Senate), federal constituency (House of Representatives) or state
+    constituency (State House of Assembly), as delimited by INEC."""
+    kind: str  # "senatorial_district", "federal_constituency" or "state_constituency"
+    code: str  # "SD001", "FC001", "SC001"
+    state_code: str
+    inec_code: str  # INEC's code, e.g. "FC/001/AB"
+    name: str
+    slug: str
+    aliases: Tuple[str, ...]
+    lga_codes: Tuple[str, ...]  # LGAs it covers in full or in part
+    sources: Tuple[str, ...]
 
 
 @dataclass(frozen=True)

@@ -1,7 +1,8 @@
 # naija-data (JavaScript / TypeScript)
 
-Accurate, sourced Nigerian reference data: 36 states + FCT, 774 LGAs, 8,809 wards, CBN-licensed
-banks with NUBAN validation, and mobile phone helpers. Zero dependencies, ESM + CommonJS, full
+Accurate, sourced Nigerian reference data: 36 states + FCT, 774 LGAs, 8,809 wards, INEC's senatorial
+districts and federal and state constituencies, CBN-licensed banks with NUBAN validation, phone and plate
+validation. Zero dependencies, ESM + CommonJS, full
 TypeScript types, tree-shakeable.
 
 Website and playground: https://naija-data.asgatcreation.workers.dev · REST API: https://naija-data-api.asgatcreation.workers.dev/v1
@@ -13,11 +14,14 @@ npm install naija-data
 ```ts
 import { getState, lgas, search, getBank, isValidNuban, banksForNuban, normalizePhone, parsePhone, phoneError, parsePlate } from "naija-data";
 import { wards } from "naija-data/wards"; // 8,809 wards: separate entry point, only loaded if imported
+import { federalConstituencies, lgaConstituencies } from "naija-data/constituencies";
 
 getState("lagos")?.capital;               // "Ikeja"
 lgas("FCT").map((l) => l.name);          // ["Abaji", "Abuja Municipal", "Bwari", ...]
 search("lagso")[0].name;                  // "Lagos" (typo-tolerant, knows aliases and accents: "Ọ̀yọ́")
 wards("Ikeja", "Lagos")[0].name;          // "Anifowoshe/Ikeja"
+federalConstituencies().length;           // 360 (House of Representatives seats)
+lgaConstituencies("Ikeja", "Lagos").map((u) => u.name); // ["Lagos West", "Ikeja", "Ikeja I", "Ikeja II"]
 
 getBank("058")?.name;                     // "Guaranty Trust Bank Plc"
 isValidNuban("0000014579", "011");        // true (CBN check-digit algorithm)
@@ -43,7 +47,7 @@ const Signup = z.object({
 });
 ```
 
-Command line: `npx naija-data lga lagos`, `npx naija-data bank 058`, `npx naija-data nuban 0000014579`.
+Command line: `npx naija-data lga lagos`, `npx naija-data constituencies ikeja --state lagos`, `npx naija-data bank 058`, `npx naija-data nuban 0000014579`.
 
 ## Bundle size
 
@@ -58,6 +62,7 @@ What your bundle grows by (minified + gzipped, measured with esbuild):
 | states + LGAs + `search` | 30 KB |
 | everything in `naija-data` | 54 KB |
 | `naija-data/zod` (plus zod itself) | 5.3 KB |
+| `naija-data/constituencies` (includes LGAs) | 66 KB |
 | `naija-data/wards` | 148 KB |
 
 Record fields keep the dataset's names (`state.iso_code`, `bank.cbn_code`), identical in the Python
